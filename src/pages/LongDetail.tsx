@@ -2,7 +2,6 @@ import { tr, display } from "../i18n";
 import { Link, useParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { catalog, longTrails } from "../lib/catalog";
-import { estimate } from "../lib/drive";
 import TrailCard from "../components/TrailCard";
 import { Facts, Sources, NotFound } from "../components/Common";
 import { useSaved } from "../lib/saved";
@@ -58,7 +57,7 @@ export default function LongDetail() {
         <Link className="text-link" to="/">{tr("חיפוש בכל המאגר")}</Link>
       </div>
       <div className="trail-grid">
-        {display(list.map(s => <TrailCard key={s.id} trail={s} drive={estimate(s, "legacy")} saved={saved.includes(s.id)} onSave={() => toggle(s.id)} />))}
+        {display(list.map(s => <TrailCard key={s.id} trail={s} saved={saved.includes(s.id)} onSave={() => toggle(s.id)} />))}
       </div>
     </main>;
 }
