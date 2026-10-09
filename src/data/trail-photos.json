@@ -1,0 +1,38 @@
+{
+  "ofer": {
+    "src": "/photos/trail-ofer.webp",
+    "title": "PikiWiki Israel 14783 Ofer Forest.jpg",
+    "author": "ארכיון הצילומים קק\"ל, ישראל סיני",
+    "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_14783_Ofer_Forest.jpg",
+    "licence": "CC BY 2.5",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+    "captionHe": "יער עופר, תצלום ארכיון סביב 1999. אתר המסלול, לא תיעוד של כל הלולאה או של מצב השטח כיום.",
+    "captionEn": "Ofer Forest, archive photograph circa 1999. The route site, not documentation of the entire loop or current conditions.",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+    "authorEn": "KKL-JNF photo archive, Israel Sinai"
+  },
+  "hanadiv": {
+    "src": "/photos/trail-hanadiv.webp",
+    "title": "Ein Tzur pond.JPG",
+    "author": "Avi1111 dr. avishai teicher",
+    "source": "https://commons.wikimedia.org/wiki/File:Ein_Tzur_pond.JPG",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "captionHe": "בריכת עין צור על לולאת המעיין ברמת הנדיב, 2015. לא תיעוד של מצב המים או הגישה כיום.",
+    "captionEn": "Ein Tzur pond on the Ramat HaNadiv spring loop, 2015. Not a record of current water or access conditions.",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
+    "authorEn": "Avi1111 dr. avishai teicher"
+  },
+  "shofet": {
+    "src": "/photos/trail-shofet.webp",
+    "title": "HaShofet-stream-trail-30935.jpg",
+    "author": "Bukvoed",
+    "source": "https://commons.wikimedia.org/wiki/File:HaShofet-stream-trail-30935.jpg",
+    "licence": "CC BY 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+    "captionHe": "צמחייה לצד שביל נחל השופט ליד הזורע, אפריל 2017. לא תיעוד של מצב המסלול כיום.",
+    "captionEn": "Vegetation beside the HaShofet stream trail near HaZorea, April 2017. Not a record of current trail conditions.",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+    "authorEn": "Bukvoed"
+  }
+}
