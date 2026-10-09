@@ -1184,10 +1184,16 @@
   "s_c2211ad3fb7b": "Khan Yotam to Yagur",
   "s_accdab50eb30": "Kibbutz Yagur",
   "distance": "{{value}} km",
-  "drive": "Approx. {{minutes}} min · {{km}} km",
+  "drive": "Driving distance: ~{{km}} km · Driving time: ~{{minutes}} min",
   "verifiedCount": "{{count}} checked routes",
   "extendedCount": "{{count}} leads to check",
   "segmentCount": "{{count}} trail sections",
   "savedCount": "Saved ({{count}})",
-  "roadCount": "Road routing for {{count}} displayed trails"
+  "roadCount": "Road routing for {{count}} displayed trails",
+  "s_39d87ea30c89": "Trail details",
+  "s_45db82a8447b": "Getting there by car",
+  "s_ab46ec35ca4a": "Travel to the starting point, not trail length or walking time.",
+  "s_162551950446": "Driving from:",
+  "s_56ad81855d02": "Driving estimate unavailable",
+  "s_6bdfe5afe697": "Ramat Gan"
 }
