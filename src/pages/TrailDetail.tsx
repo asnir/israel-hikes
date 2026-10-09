@@ -3,10 +3,10 @@ import NavigationMenu from "../components/NavigationMenu";
 import TrailGallery from "../components/TrailGallery";
 import trailPhotos from "../data/trail-photos.json";
 import AreaPhoto from "../components/AreaPhoto";
-import { tr, display } from "../i18n";
+import { tr, display, driveText } from "../i18n";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { ArrowUpLeft, ArrowRight, Bookmark, AlertTriangle, Compass, Clock } from "lucide-react";
+import { ArrowUpLeft, ArrowRight, Bookmark, AlertTriangle, Compass, Car } from "lucide-react";
 import { catalog, categoryLabels, type Trail } from "../lib/catalog";
 import { cities, estimate, methodLabel } from "../lib/drive";
 import { Facts, Sources, NotFound, safetyLinks } from "../components/Common";
@@ -19,8 +19,10 @@ function AccessBlock({
   const a = t.access;
   const [city, C] = useState("legacy");
   const d = estimate(t, city);
-  return <section className="detail-section">
-      <h2>{tr("הגעה לנקודת ההתחלה")}</h2>
+  const origin = city === "legacy" ? "רמת גן" : city === "jerusalem-legacy" ? "ירושלים" : cities.find(c => c.id === city)?.name || "לא ידוע";
+  return <section className="detail-section access-section" aria-labelledby="arrival-heading">
+      <h2 id="arrival-heading"><Car size={23} aria-hidden="true" />{tr("הגעה ברכב")}</h2>
+      <p>{tr("נסיעה לנקודת ההתחלה, לא אורך המסלול או זמן ההליכה.")}</p>
       <label className="filter-field">{tr("מוצא לאומדן")}<select value={city} onChange={e => C(e.target.value)}>
           <option value="legacy">{tr("רמת גן · אומדן קודם")}</option>
           <option value="jerusalem-legacy">{tr("ירושלים · אומדן קודם")}</option>
@@ -30,8 +32,7 @@ function AccessBlock({
         </select>
       </label>
       <p className="drive-large">
-        <Clock size={22} />
-        {display(d ? "כ-" + d.minutes + " דקות · כ-" + d.km + " ק״מ" : "לא ידוע")}
+        <span>{tr("נסיעה ממוצא:")} <strong>{display(origin)}</strong><br />{d ? driveText(d.minutes, d.km) : tr("אומדן נסיעה לא ידוע")}</span>
       </p>
       <p className="fine-print">
         {display(d ? methodLabel[d.method] + ". ללא פקקים." : "נקודת התחלה או מרחק לא אומתו.")}{display(" ")}{tr("האומדנים מרמת גן ומירושלים הם נתוני מוצא קודמים, ולא מדידה חדשה ממרכז העיר.")}</p>
