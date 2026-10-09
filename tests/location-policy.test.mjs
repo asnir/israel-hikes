@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+test('Deployment headers allow owner-page location only, camera and microphone stay denied',()=>{const headers=fs.readFileSync('public/_headers','utf8');assert.ok(headers.includes('geolocation=(self)'));assert.ok(headers.includes('camera=()'));assert.ok(headers.includes('microphone=()'));assert.ok(!headers.includes('geolocation=*'))});

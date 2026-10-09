@@ -1,8 +1,11 @@
-import {chromium} from 'playwright';import {spawn} from 'node:child_process';import assert from 'node:assert/strict';import {mkdirSync} from 'node:fs';
+import {chromium} from 'playwright';import {spawn} from 'node:child_process';import assert from 'node:assert/strict';import {mkdirSync,readFileSync} from 'node:fs';
 const folder=process.env.SCREENSHOT_DIR||'/tmp/location-ui';mkdirSync(folder,{recursive:true});
 const server=spawn('node',['node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--port','4183'],{stdio:'ignore'});let browser;
 try{browser=await chromium.launch();const context=await browser.newContext({permissions:['geolocation'],geolocation:{latitude:32.5965,longitude:34.9735,accuracy:20}});const page=await context.newPage();
 for(let i=0;i<50;i++){try{await page.goto('http://127.0.0.1:4183');break}catch{await new Promise(r=>setTimeout(r,100))}}
+const policy=readFileSync('public/_headers','utf8').match(/Permissions-Policy: (.*)/)[1];
+await context.route('**/*',async route=>{if(route.request().resourceType()!=='document')return route.continue();const response=await route.fetch();await route.fulfill({response,headers:{...response.headers(),'permissions-policy':policy}})});
+
 for(const lang of ['he','en'])for(const width of [390,1440]){
  await page.setViewportSize({width,height:1000});await page.goto('http://127.0.0.1:4183/?lang='+lang);await page.waitForSelector('.trail-card');
  let privateCalls=0;page.on('request',r=>{if(/\/api\/(route|geocode)/.test(r.url()))privateCalls++});
