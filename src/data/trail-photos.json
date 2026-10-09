@@ -9,7 +9,8 @@
     "captionHe": "יער עופר, תצלום ארכיון סביב 1999. אתר המסלול, לא תיעוד של כל הלולאה או של מצב השטח כיום.",
     "captionEn": "Ofer Forest, archive photograph circa 1999. The route site, not documentation of the entire loop or current conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop.",
-    "authorEn": "KKL-JNF photo archive, Israel Sinai"
+    "authorEn": "KKL-JNF photo archive, Israel Sinai",
+    "thumbSrc": "/photos/trail-ofer-thumb.webp"
   },
   "hanadiv": {
     "src": "/photos/trail-hanadiv.webp",
@@ -21,7 +22,8 @@
     "captionHe": "בריכת עין צור על לולאת המעיין ברמת הנדיב, 2015. לא תיעוד של מצב המים או הגישה כיום.",
     "captionEn": "Ein Tzur pond on the Ramat HaNadiv spring loop, 2015. Not a record of current water or access conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
-    "authorEn": "Avi1111 dr. avishai teicher"
+    "authorEn": "Avi1111 dr. avishai teicher",
+    "thumbSrc": "/photos/trail-hanadiv-thumb.webp"
   },
   "shofet": {
     "src": "/photos/trail-shofet.webp",
@@ -33,7 +35,8 @@
     "captionHe": "צמחייה לצד שביל נחל השופט ליד הזורע, אפריל 2017. לא תיעוד של מצב המסלול כיום.",
     "captionEn": "Vegetation beside the HaShofet stream trail near HaZorea, April 2017. Not a record of current trail conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop.",
-    "authorEn": "Bukvoed"
+    "authorEn": "Bukvoed",
+    "thumbSrc": "/photos/trail-shofet-thumb.webp"
   },
   "oren": {
     "src": "/photos/trail-oren.webp",
@@ -46,7 +49,8 @@
     "captionHe": "פתח מערת ישח לצד מסלול נחל אורן, מאי 2023. לא תיעוד של כל הלולאה או של מצב הגישה כיום; אין בכך אישור כניסה למערה.",
     "captionEn": "Yishach Cave entrance beside the Oren route, May 2023. Not the entire loop or current access conditions; this does not authorize cave entry.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
-    "titleEn": "IHM Yishach Cave 1.jpeg"
+    "titleEn": "IHM Yishach Cave 1.jpeg",
+    "thumbSrc": "/photos/trail-oren-thumb.webp"
   },
   "ext-26": {
     "src": "/photos/trail-banias.webp",
@@ -59,7 +63,8 @@
     "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "captionHe": "השביל התלוי בבניאס, אפריל 2014. צילום מהאתר; לא תיעוד של זרימה או של מצב הגישה כיום.",
     "captionEn": "Banias suspended trail, April 2014. A photograph of the route site, not current flow or access conditions.",
-    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0."
+    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
+    "thumbSrc": "/photos/trail-banias-thumb.webp"
   },
   "ext-96": {
     "src": "/photos/trail-taninim.webp",
@@ -72,7 +77,8 @@
     "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
     "captionHe": "סכר ותעלות בשמורת נחל תנינים, יולי 2015. אתר המסלול הקצר בשמורה, לא כל הנחל או מצב המים כיום.",
     "captionEn": "Dam and canals at Taninim nature reserve, July 2015. The short reserve-route site, not the entire river or current water conditions.",
-    "changes": "Resized and converted to WebP; displayed with a responsive crop."
+    "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+    "thumbSrc": "/photos/trail-taninim-thumb.webp"
   },
   "ext-89": {
     "src": "/photos/trail-taninim.webp",
@@ -85,6 +91,7 @@
     "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
     "captionHe": "סכר ותעלות בשמורת נחל תנינים, יולי 2015. אתר בתחילת המסלול לקיסריה, לא כל המסלול או מצב המים כיום.",
     "captionEn": "Dam and canals at Taninim nature reserve, July 2015. A site at the start of the Caesarea route, not the entire route or current water conditions.",
-    "changes": "Resized and converted to WebP; displayed with a responsive crop."
+    "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+    "thumbSrc": "/photos/trail-taninim-thumb.webp"
   }
 }

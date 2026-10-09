@@ -1,3 +1,5 @@
+import trailPhotos from "../data/trail-photos.json";
+import { language } from "../i18n";
 import { tr, display, distance, driveText } from "../i18n";
 import { Link } from "react-router-dom";
 import { ArrowUpLeft, Mountain, Route, Clock, Bookmark, AlertTriangle } from "lucide-react";
@@ -14,11 +16,15 @@ export default function TrailCard({
   saved: boolean;
   onSave: () => void;
 }) {
+  const photo=(trailPhotos as Record<string, typeof trailPhotos.ofer>)[t.id];
   return <article className={"trail-card " + (t.flag ? "flagged" : "")}>
-      <div className={"card-landscape landscape-" + (t.category === "segment" ? "long" : t.landscape.join("").includes("מעיין") || t.landscape.join("").includes("נחל") ? "water" : "forest")} aria-hidden="true">
+      {photo ? <figure className="card-photo">
+        <img src={photo.thumbSrc} alt={language()==="he" ? photo.captionHe : photo.captionEn} loading="lazy" decoding="async" width="480" height="240" />
+        <figcaption><span>{language()==="he" ? "צילום אתר ארכיוני · " : "Archive site photo · "}</span><a href={photo.source} target="_blank" rel="noopener noreferrer">{language()==="he" ? photo.author : photo.authorEn}</a> · <a href={photo.licenceUrl} target="_blank" rel="noopener noreferrer">{photo.licence}</a> · {language()==="he" ? "חיתוך לתצוגה" : "Cropped thumbnail"}</figcaption>
+      </figure> : <div className={"card-landscape landscape-" + (t.category === "segment" ? "long" : t.landscape.join("").includes("מעיין") || t.landscape.join("").includes("נחל") ? "water" : "forest")} aria-hidden="true">
         <Mountain size={72} strokeWidth={0.7} />
         <span>{display(t.region)}</span>
-      </div>
+      </div>}
       <div className="card-body">
         <div className="card-top">
           <span className={"badge " + t.category}>
