@@ -60,3 +60,7 @@ Resized/converted WebP derivatives and responsive display crops are distributed 
 - License: [CC BY 2.5](https://creativecommons.org/licenses/by/2.5)
 - Changes: Resized and converted to WebP; displayed with a responsive crop.
 - Caption: Dam and canals at Taninim nature reserve, July 2015. The short reserve-route site, not the entire river or current water conditions.
+
+## List thumbnails
+
+Each `trail-*-thumb.webp` is a 480x240 responsive crop of the corresponding licensed `trail-*.webp` listed above. Original creator/source/license remain unchanged. CC BY-SA derivatives remain under their original license. Cards include creator, source, license and crop notice; detailed route figures retain the dated location/current-condition caveat. Unmapped trails show an illustration, not a borrowed regional photo.
