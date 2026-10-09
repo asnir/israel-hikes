@@ -11,6 +11,11 @@ async function check(name){
  const expected=await fs.readFile(path.join('dist',name));
  assert.ok(actual.equals(expected),`Deployed bytes differ: ${name}`);
 }
-await check('index.html');
-for(const name of await fs.readdir('dist/assets'))await check(`assets/${name}`);
+const names=['index.html',...(await fs.readdir('dist/assets')).map(name=>`assets/${name}`)];
+// Cloudflare can briefly serve the preceding version after deploy acknowledges.
+// Retry the whole exact-byte check, never weaken it or approve a stale build.
+for(let attempt=0;attempt<7;attempt++){
+ try{for(const name of names)await check(name);break;}
+ catch(error){if(attempt===6)throw error;console.log(`Waiting for deployment propagation (${attempt+1}/7): ${error.message}`);await new Promise(resolve=>setTimeout(resolve,10000));}
+}
 console.log('Live Worker serves the exact built index and assets');
