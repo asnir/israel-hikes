@@ -9,12 +9,13 @@
     "run_worker_first": ["/api/*"],
   },
   "durable_objects": {
-    "bindings": [{ "name": "UPSTREAM", "class_name": "UpstreamGateway" }],
+    "bindings": [{ "name": "UPSTREAM", "class_name": "UpstreamGateway" }, {"name":"CONTACT","class_name":"ContactGateway"}],
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["UpstreamGateway"] }],
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["UpstreamGateway"] }, {"tag":"v2","new_sqlite_classes":["ContactGateway"]}],
   "vars": {
     "NOMINATIM_URL": "https://nominatim.openstreetmap.org",
     "OSRM_URL": "https://router.project-osrm.org",
     "SERVICE_ENABLED": "true",
+    "CONTACT_ENABLED":"false",
   },
 }

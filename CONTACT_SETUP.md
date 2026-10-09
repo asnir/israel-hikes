@@ -1,0 +1,25 @@
+# Contact form setup (disabled by default)
+
+The form publishes PUBLIC GitHub issues, never PRs. It asks for no personal contact fields. Visitors review their content and consent to public posting. Do not put names, emails, phone numbers, medical details, credentials or private documents in submissions. Pattern rejection cannot identify every kind of personal information; the warning and review are essential.
+
+## Owner setup in your own browser
+
+1. Confirm the Cloudflare account is Workers Free. Deploy the site Worker named `israel-hikes` through the approved deployment route. Do not change `sliding-puzzle` or any other existing Worker.
+2. Cloudflare dashboard > Turnstile > Add widget. Name: `Israel hikes contact`. Add ONLY the exact live site's hostname, without `https://` or a path. Choose Managed. Do not use unrestricted hostname settings. Copy the site key (public) and secret key (private).
+3. GitHub > profile menu > Settings > Developer settings > Personal access tokens > Fine-grained tokens > Generate new token. Resource owner: `asnir`. Choose an explicit expiry you can renew (e.g. 90 days). Repository access: Only select repositories > `israel-hikes` ONLY. Repository permissions: Issues > Read and write. Metadata Read is automatic. No Contents, Pull requests, Actions or administration permissions. Review before Generate token. The token creates issues under the token owner's GitHub identity; visitors are clearly identified as external submitters in the issue body. Keep the token out of chat.
+4. Cloudflare > Workers & Pages > `israel-hikes` > Settings > Variables and Secrets. Add encrypted Secret `GITHUB_ISSUES_TOKEN` with the fine-grained PAT and encrypted Secret `TURNSTILE_SECRET_KEY` with the Turnstile secret. Paste them yourself. Never store either as plain text or in repository files, Vite variables, screenshots, logs or issue text.
+5. On that SAME Worker, add plain Text variables `TURNSTILE_SITE_KEY` (public site key), `CONTACT_HOSTNAME` (exact live hostname), and finally `CONTACT_ENABLED` = `true` only after review/approval. Until all are present and enabled, `/api/contact-config` returns disabled and the site says the form is unavailable, without linking to the repository.
+6. Important: `wrangler.jsonc` defaults CONTACT_ENABLED to false. Dashboard Text variable edits can be overwritten by a later deployment. Before enabling production, put the approved nonsecret site key, hostname and CONTACT_ENABLED into reviewed Worker config in a PR, or deliberately keep CONTACT_ENABLED=false until each deployment is checked. Secret values remain dashboard secrets and are not in config. Never accidentally enable a test hostname or test CAPTCHA key in production.
+7. Verify the live form on both languages. A production test creates a public issue, so get owner approval for its exact test title/body first. Test empty/error states and blocked CAPTCHA without sending first. Then confirm one issue is created with the expected template and no private fields. CAPTCHA + GitHub integration have only mocked tests until this check completes.
+
+## Boundaries and operation
+
+The site validates same origin, hostname, JSON content type, a 12KB body limit, field lengths, allowed submission types, public-source scheme, and public-post consent. Turnstile tokens are verified server-side, including action `contact` and the exact configured hostname. No secret is sent to the browser.
+
+SQLite Durable Object rate limits apply across users: maximum three attempts per hashed visitor IP per UTC day, at least 60 seconds apart, and 25 attempts total daily. Invalid CAPTCHA attempts count. IP addresses are hashed with a keyed HMAC and rotated daily; raw IP and submission contents are not stored. Metadata/receipts expire after two days. Shared networks may hit a common limit. This caps spam but is not a guarantee against abuse or free-tier exhaustion. The emergency off switch is CONTACT_ENABLED=false.
+
+The issue endpoint is fixed to asnir/israel-hikes. Markdown/HTML/mention controls in visitor input are neutralized, and input is labelled unverified, not owner instructions. No labels, assignees, PR creation, code edits or merge operations exist. A request ID prevents blind duplicate creation after ambiguous failures: the visitor receives a receipt ID on success, or is told to keep the submission ID and not immediately resend after an ambiguous failure. Do not automatically retry GitHub issue writes.
+
+Owner review is required before changes. The ongoing issue watcher is separate from deployment and must be set up explicitly. Token expiry/revocation or Turnstile failure makes the form fail closed. Contact-form secret rotation and issue retention are owner operations. GitHub issues remain publicly visible after receipt metadata expires.
+
+Sources: https://developers.cloudflare.com/turnstile/get-started/server-side-validation/ ; https://developers.cloudflare.com/turnstile/get-started/client-side-rendering/ ; https://docs.github.com/en/rest/issues/issues ; https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
