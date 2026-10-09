@@ -37,6 +37,6 @@ test('Public feeds preserve source caution/provenance and contain no owner/conta
  const worker=await fs.readFile('worker/index.ts','utf8');assert(worker.indexOf('catalogResponse(request')<worker.indexOf('env.SERVICE_ENABLED'));assert(worker.indexOf('if(catalogRead)')<worker.indexOf('env.CONTACT.get'));
 });
 test('Generated feeds are part of exact deployment verification',async()=>{
- const {listReadAssets}=await import('../scripts/check-live-assets.mjs');const paths=await listReadAssets();
+ const {listReadAssets}=await import('../scripts/check-live-assets.mjs');const paths=await listReadAssets(root);
  assert(paths.includes('llms.txt'));assert(paths.includes('sitemap.xml'));assert(paths.includes('data/catalog.json'));assert.equal(paths.filter(p=>p.startsWith('data/trails/')).length,catalog.length);
 });
