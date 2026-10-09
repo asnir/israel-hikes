@@ -76,10 +76,10 @@ test("combined filters apply to every category", () => {
       matches(
         t,
         "",
-        { ...blank, structure: "מעגלי", drive: "עד 90 דקות" },
+        { ...blank, structure: "מעגלי", drive: "עד 100 ק״מ" },
         estimate(t, "telaviv"),
       )
     )
-      assert(t.structure === "מעגלי" && estimate(t, "telaviv").minutes <= 90);
+      assert(t.structure === "מעגלי" && estimate(t, "telaviv").km <= 100);
   }
 });
