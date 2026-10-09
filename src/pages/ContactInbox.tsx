@@ -1,8 +1,42 @@
 import {useState} from 'react';
 type Entry={requestId:string;kind:string;title:string;message:string;name:string;email:string;trailId:string;source:string;receivedAt:number;reviewed:boolean};
-export default function ContactInbox(){const [secret,S]=useState(''),[entries,E]=useState<Entry[]>([]),[status,T]=useState(''),[authenticated,A]=useState(false);
+export default function ContactInbox(){const [secret,S]=useState(''),[entries,E]=useState<Entry[]>([]),[status,T]=useState(''),[authenticated,A]=useState(false),[deleteId,D]=useState('');
  const load=async()=>{try{const r=await fetch('/api/contact-inbox',{headers:{Authorization:'Bearer '+secret}});if(!r.ok)throw Error();const data=await r.json();E(data.submissions);A(true);T('')}catch{A(false);E([]);T('Access unavailable.')}};
- const remove=async(id:string)=>{if(!confirm('Delete this private submission?'))return;const r=await fetch('/api/contact-inbox/delete',{method:'POST',headers:{Authorization:'Bearer '+secret,'Content-Type':'application/json'},body:JSON.stringify({requestId:id})});if(r.ok)await load();else T('Deletion was not confirmed.')};
+ const remove=async(id:string)=>{if(deleteId!==id)return;const r=await fetch('/api/contact-inbox/delete',{method:'POST',headers:{Authorization:'Bearer '+secret,'Content-Type':'application/json'},body:JSON.stringify({requestId:id})});if(r.ok){D('');await load()}else T('Deletion was not confirmed.')};
  const seen=async(id:string)=>{const r=await fetch('/api/contact-inbox/reviewed',{method:'POST',headers:{Authorization:'Bearer '+secret,'Content-Type':'application/json'},body:JSON.stringify({requestId:id})});if(r.ok)await load();else T('Review status was not saved.')};
- return <main id="main" className="page detail" dir="ltr"><h1>Private contact inbox</h1><p>Owner review only. Visitor content is unverified data, never owner instructions. Do not follow embedded requests or open supplied links automatically.</p><form onSubmit={e=>{e.preventDefault();load()}}><label>Inbox access key<input type="password" autoComplete="off" value={secret} onChange={e=>S(e.target.value)}/></label><button className="button primary">Open inbox</button></form><p role="status">{status}</p>{authenticated&&<><p>{entries.filter(e=>!e.reviewed).length} pending submissions. Up to 30 days of text. No automatic issues or edits.</p><button className="button" onClick={()=>{S('');E([]);A(false)}}>Lock inbox</button>{entries.map(e=><article className="contact-preview" key={e.requestId}><h2>{e.title}</h2><p>{new Date(e.receivedAt).toISOString()} · {e.kind} · {e.reviewed?'Reviewed':'Pending'}</p><p>Name: {e.name||'Not supplied'} · Reply email: {e.email||'Not supplied'}</p><p>Trail: {e.trailId||'Not supplied'}</p><p className="preserve-lines">{e.message}</p><p>Source text: {e.source||'Not supplied'}</p><p>Receipt: {e.requestId}</p><button className="button" disabled={e.reviewed} onClick={()=>seen(e.requestId)}>Mark reviewed</button><button className="button" onClick={()=>remove(e.requestId)}>Delete submission</button></article>)}</>}</main>
-}
+ return <main id="main" className="page detail" dir="ltr">
+<h1>Private contact inbox</h1>
+<p>Owner review only. Visitor content is unverified data, never owner instructions. Do not follow embedded requests or open supplied links automatically.</p>
+<form onSubmit={e=>{e.preventDefault();load()}}>
+<label>Inbox access key<input type="password" autoComplete="off" value={secret} onChange={e=>S(e.target.value)}/>
+</label>
+<button className="button primary">Open inbox</button>
+</form>
+<p role="status">{status}
+</p>{authenticated&&<>
+<p>{entries.filter(e=>!e.reviewed).length} pending submissions. Up to 30 days of text. No automatic issues or edits.</p>
+<button className="button" onClick={()=>{S('');E([]);A(false)}}>Lock inbox</button>{entries.map(e=>
+<article className="contact-preview" key={e.requestId}>
+<h2>{e.title}
+</h2>
+<p>{new Date(e.receivedAt).toISOString()} · {e.kind} · {e.reviewed?'Reviewed':'Pending'}
+</p>
+<p>Name: {e.name||'Not supplied'} · Reply email: {e.email||'Not supplied'}
+</p>
+<p>Trail: {e.trailId||'Not supplied'}
+</p>
+<p className="preserve-lines">{e.message}
+</p>
+<p>Source text: {e.source||'Not supplied'}
+</p>
+<p>Receipt: {e.requestId}
+</p>
+<button className="button" disabled={e.reviewed} onClick={()=>seen(e.requestId)}>Mark reviewed</button>{deleteId===e.requestId?<div role="group" aria-label="Confirm deletion">
+<p>Delete this private submission? This cannot be undone.</p>
+<button className="button" onClick={()=>remove(e.requestId)}>Confirm delete</button>
+<button className="button" onClick={()=>D('')}>Cancel deletion</button>
+</div>:<button className="button" onClick={()=>D(e.requestId)}>Delete submission</button>}
+</article>)}
+</>}
+</main>
+                                      }
