@@ -3,7 +3,7 @@ import NavigationMenu from "../components/NavigationMenu";
 import TrailGallery from "../components/TrailGallery";
 import trailPhotos from "../data/trail-photos.json";
 import AreaPhoto from "../components/AreaPhoto";
-import { tr, display, driveText } from "../i18n";
+import { tr, display, drivingDistance } from "../i18n";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowUpLeft, ArrowRight, Bookmark, AlertTriangle, Compass, Car } from "lucide-react";
@@ -32,10 +32,10 @@ function AccessBlock({
         </select>
       </label>
       <p className="drive-large">
-        <span>{tr("נסיעה ממוצא:")} <strong>{display(origin)}</strong><br />{d ? driveText(d.minutes, d.km) : tr("אומדן נסיעה לא ידוע")}</span>
+        <span>{tr("נסיעה ממוצא:")} <strong>{display(origin)}</strong><br />{d ? drivingDistance(d.km) : tr("אומדן נסיעה לא ידוע")}</span>
       </p>
       <p className="fine-print">
-        {display(d ? methodLabel[d.method] + ". ללא פקקים." : "נקודת התחלה או מרחק לא אומתו.")}{display(" ")}{tr("האומדנים מרמת גן ומירושלים הם נתוני מוצא קודמים, ולא מדידה חדשה ממרכז העיר.")}</p>
+        {display(d ? methodLabel[d.method] + "." : "נקודת התחלה או מרחק לא אומתו.")}{display(" ")}{tr("האומדנים מרמת גן ומירושלים הם נתוני מוצא קודמים, ולא מדידה חדשה ממרכז העיר.")}</p>
       <NavigationMenu trail={t} />
       {display(a && <p className="fine-print">{tr("יעד:")}{display(a.label)}{tr(". תחילת התוואי אינה בהכרח חניה נגישה או אישור כניסה ברכב. אין כאן ניווט לאורך מסלול ההליכה.")}</p>)}
       {display(a?.source && <Sources refs={[["מקור נקודת ההתחלה", a.source]]} />)}
