@@ -14,7 +14,7 @@ try {
   assert.equal(await page.locator('.card-bottom').first().innerText().then(s=>/\d/.test(s)),false,'No driving numbers in card footer');
   await page.screenshot({path:folder+`/cards-${lang}-${width}.png`});
   await page.goto('http://127.0.0.1:4179/trail/hanadiv?lang='+lang);await page.waitForSelector('.access-section');
-  const text=await page.locator('.access-section').innerText();assert.ok(text.includes(lang==='he'?'רמת גן':'Ramat Gan'));assert.ok(text.includes('78'));assert.ok(text.includes('80'));assert.ok(text.includes(lang==='he'?'לא אורך המסלול':'not trail length'));
+  const text=await page.locator('.access-section').innerText();assert.ok(text.includes(lang==='he'?'רמת גן':'Ramat Gan'));assert.ok(text.includes('78'));assert.ok(!text.includes('80'));assert.ok(!text.includes(lang==='he'?'זמן נסיעה:':'Driving time:'));assert.ok(text.includes(lang==='he'?'לא אורך המסלול':'not trail length'));
   const facts=await page.locator('.detail-columns > div > .detail-section').first().innerText();assert.ok(!facts.includes('78'));assert.ok(!facts.includes('80'));
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   await page.locator('.access-section').scrollIntoViewIfNeeded();await page.screenshot({path:folder+`/page-arrival-${lang}-${width}.png`});
