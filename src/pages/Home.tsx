@@ -46,7 +46,7 @@ export default function Home() {
       const d = driveFor(t);
       return (!onlySaved || saved.includes(t.id)) && matches(t, q, f, d);
     });
-    if (sort === "distance") list.sort((a, b) => (driveFor(a)?.minutes ?? Infinity) - (driveFor(b)?.minutes ?? Infinity));
+    if (sort === "distance") list.sort((a, b) => (driveFor(a)?.km ?? Infinity) - (driveFor(b)?.km ?? Infinity));
     if (sort === "length") list.sort((a, b) => (a.km ?? Infinity) - (b.km ?? Infinity));
     return list;
   }, [q, f, city, origin, routed, onlySaved, saved, sort]);
@@ -143,7 +143,7 @@ export default function Home() {
             </button>
             <select aria-label={tr("מיון תוצאות")} value={sort} onChange={e => Sort(e.target.value)}>
               <option value="default">{tr("סדר המאגר")}</option>
-              <option value="distance">{tr("נסיעה קצרה קודם")}</option>
+              <option value="distance">{tr("מרחק נסיעה קצר קודם")}</option>
               <option value="length">{tr("מסלול קצר קודם")}</option>
             </select>
             <div className="view-switch">
