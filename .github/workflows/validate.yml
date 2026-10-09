@@ -101,6 +101,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: node scripts/production-wrangler-version.mjs
       - name: Deploy only israel-hikes after owner environment approval
+        id: production-upload
         uses: cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0 # v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -108,4 +109,5 @@ jobs:
           wranglerVersion: ${{ steps.production-wrangler.outputs.version }}
           command: deploy --config wrangler.jsonc --name israel-hikes
       - name: Verify production serves the approved build
+        if: ${{ always() && (steps.production-upload.outcome == 'success' || steps.production-upload.outcome == 'failure') }}
         run: node scripts/check-live-assets.mjs https://israel-hikes.amikamsnir.workers.dev/
