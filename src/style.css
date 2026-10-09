@@ -1487,3 +1487,8 @@ button:disabled {opacity:.65;cursor:not-allowed;}
 .card-title:focus-visible { outline: none; }
 .trail-card:has(.card-title:focus-visible) { outline: 3px solid var(--green); outline-offset: 2px; }
 .trail-card button, .trail-card a:not(.card-title) { position: relative; z-index: 2; }
+
+.current-location-control {display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-block:12px;}
+.current-location-control small {max-width:480px; line-height:1.6;}
+.current-location-control [role="status"] {flex-basis:100%;}
+.location-age {flex-basis:100%;}
