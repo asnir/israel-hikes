@@ -62,6 +62,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: ${{ steps.preview-wrangler.outputs.version }}
+          preCommands: node scripts/production-wrangler-version.mjs --patch-scoped-subdomain
           command: deploy --config wrangler.preview.jsonc --name israel-hikes-preview
       - name: Verify preview serves this exact build
         run: node scripts/check-live-assets.mjs https://israel-hikes-preview.amikamsnir.workers.dev/
@@ -113,6 +114,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: ${{ steps.production-wrangler.outputs.version }}
+          preCommands: node scripts/production-wrangler-version.mjs --patch-scoped-subdomain
           command: deploy --config wrangler.jsonc --name israel-hikes
       - name: Verify production serves the approved build
         if: ${{ always() && (steps.production-upload.outcome == 'success' || steps.production-upload.outcome == 'failure') }}
