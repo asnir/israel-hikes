@@ -15,7 +15,7 @@ export default function About() {
         <p>{tr("אומדני הערים נגזרו ממרחק כביש שנמדד ב-OSRM ב-9.10.2026, חלקי 60 קמ״ש, מעוגל ל-5 דקות. נקודות המוצא הן נקודות עיר בקירוב. האומדנים הישנים מרמת גן ומירושלים נשמרו בנפרד ואינם מתחילים בהכרח במרכז העיר.")}</p>
         <p>{tr("חיפוש כתובת מתבצע רק בלחיצה. לפני חישוב כביש, אומדן הדינמי הוא מרחק אווירי כפול 1.35, לא מרחק כביש. זמן OSRM, אם זמין, הוא ניתוב ללא תנועה בזמן אמת. שירותי הציבור מוגבלים ועלולים להיכשל. 46 רשומות ללא התחלה מאומתת נשארות בלי סיכה ובלי אומדן.")}</p>
         <p>{tr("Google Maps נפתח לניווט אל נקודת ההתחלה, לא לאורך השביל. סיכה אינה אישור חניה או דרך גישה.")}</p>
-        <Sources refs={[["מדיניות Nominatim", "https://operations.osmfoundation.org/policies/nominatim/"], ["מדיניות אריחי OpenStreetMap", "https://operations.osmfoundation.org/policies/tiles/"], ["שירות OSRM הציבורי", "https://github.com/Project-OSRM/osrm-backend/wiki/Demo-server"]]} />
+        <Sources refs={[["מדיניות Nominatim", "https://operations.osmfoundation.org/policies/nominatim/"], ["מדיניות אריחי OpenStreetMap", "https://operations.osmfoundation.org/policies/tiles/"]]} />
       </section>
       <section className="detail-section">
         <h2>{tr("מה נשאר מחוץ להמלצות המקוריות?")}</h2>

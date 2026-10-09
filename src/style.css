@@ -1456,3 +1456,13 @@ html.reduce-motion *, html.reduce-motion *::before, html.reduce-motion *::after 
 .long-invitation p, .long-mini-list small {color:#4c6256;}
 .source-map-frame {width:100%; height:430px; border:1px solid #bccbbd; margin-block:16px;}
 .route-map-section .button {margin:4px;}
+
+.contact-page {max-width:860px;}
+.contact-page form {display:grid;gap:18px;}
+.contact-page label {display:grid;gap:8px;font-weight:600;}
+.contact-page input,.contact-page textarea,.contact-page select {font:inherit;padding:12px;border:1px solid #6d806e;border-radius:8px;max-width:100%;width:100%;box-sizing:border-box;}
+.contact-page .contact-consent {display:flex;align-items:flex-start;gap:12px;}
+.contact-consent input {width:20px;flex-shrink:0;}
+.contact-preview {padding:20px;border:2px solid #235c49;border-radius:12px;overflow-wrap:anywhere;}
+.preserve-lines {white-space:pre-wrap;}
+button:disabled {opacity:.65;cursor:not-allowed;}

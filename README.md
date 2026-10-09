@@ -90,3 +90,7 @@ Regional photographs are stored locally with individual attribution and licence 
 ## GitHub Actions deployment (owner setup)
 
 Store `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as repository Actions secrets, never in code. The token must be restricted to the intended account. Confirm Workers Free in that account and approve the deployment route before enabling it. The workflow stays disabled until the repository Actions variable `CLOUDFLARE_DEPLOY_ENABLED` is exactly `true`. Only main pushes after passing `validate` may deploy; pull requests never receive deployment secrets. A read-only token-active check runs first; it cannot certify token scope or the billing plan. The pinned official Cloudflare action deploys only the Worker named `israel-hikes`, not other Workers. No step upgrades billing. Changes to an already-paid account can still incur usage charges, so plan verification is required before enabling deployment.
+
+## Public contact form
+
+Setup and secret boundaries: see `CONTACT_SETUP.md`. The form is bilingual, has a public-post warning and visitor review/consent, and creates only structured issues. It is disabled by default until approved Turnstile keys, exact hostname and a repository issues-only PAT are configured. Runtime secrets never go into Vite or source. Tests mock external services and never create live issues. Production verification requires separate approval for its exact test submission.
