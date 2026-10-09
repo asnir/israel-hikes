@@ -17,10 +17,8 @@ The environment gate protects workflow deployments, not account owners who delib
 
 Approval UI reference: https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-deployments/reviewing-deployments
 
-## Narrow dashboard bootstrap
+## Scoped-token deployment compatibility
 
-The preview job reads the preview Worker deployment origin the same way before every upload, because the preview Worker was also dashboard-created.
+Both jobs use exact Wrangler 4.30.0 for the existing two-Worker token. Before upload, a checked patch replaces only the account-level workers.dev suffix lookup with the site's known suffix, amikamsnir.workers.dev. Worker-scoped subdomain settings, code upload, migration checks and trigger updates are unchanged; their errors remain fatal. Unknown uploader version or changed helper source stops deployment.
 
-The owner-approved production job reads only the production hiking Worker deployment origin. If it is dashboard-created, the first upload uses exact Wrangler 4.30.0, which supports this assets/Durable Objects configuration and asks the usual dashboard overwrite confirmation without importing unrelated account-level route/domain metadata. It retains secrets, applies the checked local configuration and never broadens the per-Worker token. The existing production environment review remains mandatory. Once the first successful upload is Wrangler-owned, subsequent jobs select current exact Wrangler 4.149.0 automatically. Unknown origin or unreadable metadata stops the job. The bootstrap is not a guarantee that upload will succeed; deployed bytes are checked afterward.
-
-Production verification also runs when the upload command fails late, because a metadata/trigger read can fail after the Worker version was uploaded. A successful byte check in that case proves the site is serving the tested assets, not that all trigger updates completed. The original failed deploy step remains failed; no failure is hidden or ignored, and the owner gate is unchanged.
+The live byte check runs after a successful upload. Production consumes that staging run's exact assets and Worker source. No deploy failure is ignored or treated as green based only on static assets.
