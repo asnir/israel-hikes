@@ -1,0 +1,6 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {checkDeployment} from '../scripts/check-live-assets.mjs';
+const origin='https://israel-hikes-preview.amikamsnir.workers.dev/';
+const defaults={readdir:async()=>['app.js'],readFile:async()=>Buffer.from('expected'),log:()=>{}};
+test('Live check retries stale propagation then checks every exact asset',async()=>{let calls=0,waits=0;await checkDeployment(origin,{...defaults,sleep:async ms=>{assert.equal(ms,10000);waits++},fetcher:async()=>({status:200,arrayBuffer:async()=>Buffer.from(++calls===1?'old':'expected')})});assert.equal(waits,1);assert.equal(calls,3)});
+test('Live check fails after bounded retries, never accepts old bytes or HTTP failure',async()=>{for(const status of [200,503]){let calls=0,waits=0;await assert.rejects(checkDeployment(origin,{...defaults,sleep:async()=>waits++,fetcher:async()=>{calls++;return {status,arrayBuffer:async()=>Buffer.from('old')}}}));assert.equal(calls,7);assert.equal(waits,6)}});
+test('Live check rejects unrelated Workers before any network access',async()=>{let calls=0;await assert.rejects(checkDeployment('https://other.workers.dev/',{...defaults,fetcher:async()=>calls++}));assert.equal(calls,0)});
