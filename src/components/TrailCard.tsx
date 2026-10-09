@@ -18,10 +18,9 @@ export default function TrailCard({
 }) {
   const photo=(trailPhotos as Record<string, typeof trailPhotos.ofer>)[t.id];
   return <article className={"trail-card " + (t.flag ? "flagged" : "")}>
-      {photo ? <figure className="card-photo">
-        <img src={photo.thumbSrc} alt={language()==="he" ? photo.captionHe : photo.captionEn} loading="lazy" decoding="async" width="480" height="240" />
-        <figcaption><span>{language()==="he" ? "צילום אתר ארכיוני · " : "Archive site photo · "}</span><a href={photo.source} target="_blank" rel="noopener noreferrer">{language()==="he" ? photo.author : photo.authorEn}</a> · <a href={photo.licenceUrl} target="_blank" rel="noopener noreferrer">{photo.licence}</a> · {language()==="he" ? "חיתוך לתצוגה" : "Cropped thumbnail"}</figcaption>
-      </figure> : <div className={"card-landscape landscape-" + (t.category === "segment" ? "long" : t.landscape.join("").includes("מעיין") || t.landscape.join("").includes("נחל") ? "water" : "forest")} aria-hidden="true">
+      {photo ? <Link className="card-photo" to={"/trail/"+t.id} title={language()==="he"?"פרטי המסלול וקרדיט לצילום":"Trail details and photo credit"}>
+        <img src={photo.thumbSrc} alt={(language()==="he" ? photo.captionHe+" צילום: "+photo.author : photo.captionEn+" Photo: "+photo.authorEn)+" · "+photo.licence} loading="lazy" decoding="async" width="480" height="240" />
+      </Link> : <div className={"card-landscape landscape-" + (t.category === "segment" ? "long" : t.landscape.join("").includes("מעיין") || t.landscape.join("").includes("נחל") ? "water" : "forest")} aria-hidden="true">
         <Mountain size={72} strokeWidth={0.7} />
         <span>{display(t.region)}</span>
       </div>}
