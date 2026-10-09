@@ -53,10 +53,10 @@ export class ContactHandler {
   const rows=await this.storage.list<any>();const submissions=[...rows].filter(([k,v])=>k.startsWith('contact-submission:')&&v.expires>this.now()).map(([,v])=>v).sort((a,b)=>b.receivedAt-a.receivedAt);
   if(request.method==='GET'&&url.pathname==='/api/contact-inbox/summary')return Response.json({pending:submissions.filter(v=>!v.reviewed).length,total:submissions.length}, {headers});
   if(request.method==='GET'&&url.pathname==='/api/contact-inbox')return Response.json({submissions},{headers});
-  if(request.method==='POST'&&url.pathname==='/api/contact-inbox/reviewed'){
+  if(request.method==='POST'&&['/api/contact-inbox/reviewed','/api/contact-inbox/delete'].includes(url.pathname)){
    if(request.headers.get('Origin')!==url.origin)return reply('origin',403);if(!request.headers.get('Content-Type')?.startsWith('application/json'))return reply('format',415);
    const text=await request.text();if(text.length>200)return reply('too-large',413);let id;try{id=JSON.parse(text).requestId}catch{return reply('invalid',400)}if(typeof id!=='string'||!/^[a-f0-9-]{36}$/i.test(id))return reply('invalid',400);
-   const key='contact-submission:'+id,entry=await this.storage.get<any>(key);if(!entry)return reply('not-found',404);await this.storage.put(key,{...entry,reviewed:true});return Response.json({reviewed:true},{headers});
+   const key='contact-submission:'+id,entry=await this.storage.get<any>(key);if(!entry)return reply('not-found',404);if(url.pathname.endsWith('/delete')){await this.storage.delete([key,'contact-receipt:'+id]);return Response.json({deleted:true},{headers})}await this.storage.put(key,{...entry,reviewed:true});return Response.json({reviewed:true},{headers});
   }
   return reply('method',405);
  }

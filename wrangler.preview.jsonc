@@ -16,6 +16,8 @@
     "NOMINATIM_URL": "https://nominatim.openstreetmap.org",
     "OSRM_URL": "https://router.project-osrm.org",
     "SERVICE_ENABLED": "true",
-    "CONTACT_ENABLED":"false",
+    "CONTACT_ENABLED":"true",
+    "TURNSTILE_SITE_KEY":"0x4AAAAAAFSJ_s55yp2kS7m6",
+    "CONTACT_HOSTNAME":"israel-hikes-preview.amikamsnir.workers.dev",
   },
 }
