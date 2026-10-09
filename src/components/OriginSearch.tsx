@@ -1,7 +1,8 @@
 import { tr, display } from "../i18n";
-import { useState } from "react";
-import { MapPin, Search } from "lucide-react";
+import { useState, useRef } from "react";
+import { MapPin, Search, LocateFixed } from "lucide-react";
 import { cities, geocode } from "../lib/drive";
+import { readCurrentLocation, isFreshLocation, type LocationFix } from "../lib/location";
 export default function OriginSearch({
   city,
   setCity,
@@ -9,7 +10,7 @@ export default function OriginSearch({
 }: {
   city: string;
   setCity: (s: string) => void;
-  onOrigin: (p: [number, number], label: string) => void;
+  onOrigin: (p: [number, number], label: string, fix?: LocationFix) => void;
 }) {
   const [q, Q] = useState(""),
     [results, R] = useState<{
@@ -19,6 +20,22 @@ export default function OriginSearch({
     }[]>([]),
     [busy, B] = useState(false),
     [error, E] = useState("");
+  const requestVersion = useRef(0);
+  const [locating, BL] = useState(false);
+  async function locate() {
+    const version = ++requestVersion.current;
+    BL(true); E("");
+    try {
+      const fix = await readCurrentLocation(navigator.geolocation || null);
+      if (version !== requestVersion.current) return;
+      if (!isFreshLocation(fix.observedAt)) throw new Error("Stale fix");
+      onOrigin(fix.point, tr("המיקום הנוכחי שלי"), fix); R([]);
+    } catch (error) {
+      if (version !== requestVersion.current) return;
+      const code = (error as GeolocationPositionError).code;
+      E(code === 1 ? "הגישה למיקום נדחתה. אפשר לאשר בדפדפן או לבחור עיר או כתובת." : code === 3 ? "הבקשה למיקום הסתיימה ללא תשובה. אפשר לנסות שוב או לבחור עיר או כתובת." : "המיקום אינו זמין כרגע. אפשר לנסות שוב או לבחור עיר או כתובת.");
+    } finally { if (version === requestVersion.current) BL(false); }
+  }
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (busy || q.trim().length < 3) return;
@@ -38,16 +55,22 @@ export default function OriginSearch({
         <MapPin size={18} />
         <span>{tr("מאיפה יוצאים?")}</span>
         <select aria-label={tr("עיר מוצא")} value={city} onChange={e => {
-        setCity(e.target.value);
+        requestVersion.current++; BL(false); setCity(e.target.value);
         R([]);
         E("");
       }}>
+          {city === "custom" && <option value="custom" disabled>{tr("נקודת מוצא שנבחרה")}</option>}
           <option value="legacy">{tr("רמת גן · אומדן קודם")}</option>
           <option value="jerusalem-legacy">{tr("ירושלים · אומדן קודם")}</option>
           {display(cities.map(c => <option key={c.id} value={c.id}>
               {display(c.name)}{tr("· מרכז בקירוב")}</option>))}
         </select>
       </label>
+      <div className="current-location-control">
+        <button type="button" className="button" disabled={locating} onClick={locate}><LocateFixed size={18} />{tr(locating ? "מבקש מיקום…" : "המיקום הנוכחי שלי")}</button>
+        <small>{tr("רק בלחיצה ובאישור הדפדפן. המיקום נשאר בדף עד לחישוב כביש מפורש; אין מעקב ברקע.")}</small>
+        {display(error && <p role="status">{display(error)}</p>)}
+      </div>
       <details>
         <summary>{tr("או חיפוש כתובת אחרת")}</summary>
         <p className="privacy-note">{tr("כתובת החיפוש נשלחת ל-OpenStreetMap ולשירות ניתוב. אין להזין מידע אישי או סודי. החיפוש מתבצע רק בלחיצה, לא תוך כדי הקלדה.")}</p>
@@ -58,10 +81,9 @@ export default function OriginSearch({
             {display(busy ? "מחפש…" : "חיפוש")}
           </button>
         </form>
-        {display(error && <p role="status">{display(error)}</p>)}
         {display(results.length > 0 && <div className="address-results">
             {display(results.map(r => <button key={r.label} onClick={() => {
-          onOrigin([r.lat, r.lon], r.label);
+          requestVersion.current++; BL(false); onOrigin([r.lat, r.lon], r.label);
           R([]);
         }}>
                 <bdi>{display(r.label)}</bdi>
