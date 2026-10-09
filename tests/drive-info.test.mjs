@@ -8,6 +8,6 @@ test('Driving figures cannot be rendered as trail-card facts',()=>{
  for(const page of ['Home','LongDetail'])assert.ok(!fs.readFileSync('src/pages/'+page+'.tsx','utf8').includes('drive={'));
 });
 test('Arrival panel keeps origin and driving context separate from walking facts',()=>{
- assert.ok(detail.includes('access-section'));assert.ok(detail.includes('aria-labelledby="arrival-heading"'));assert.ok(detail.includes('Car size={23}'));assert.ok(detail.includes('city === "legacy" ? "רמת גן"'));assert.ok(detail.includes('driveText(d.minutes, d.km)'));assert.ok(detail.includes('לא אורך המסלול או זמן ההליכה'));
- for(const lang of ['he','en']){const j=JSON.parse(fs.readFileSync('src/locales/'+lang+'.json'));assert.ok(j.drive.includes('{{km}}'));assert.ok(j.drive.includes('{{minutes}}'));assert.ok(j.drive.includes(lang==='he'?'מרחק נסיעה':'Driving distance'))}
+ assert.ok(detail.includes('access-section'));assert.ok(detail.includes('aria-labelledby="arrival-heading"'));assert.ok(detail.includes('Car size={23}'));assert.ok(detail.includes('city === "legacy" ? "רמת גן"'));assert.ok(detail.includes('drivingDistance(d.km)'));assert.ok(detail.includes('לא אורך המסלול או זמן ההליכה'));
+ for(const lang of ['he','en']){const j=JSON.parse(fs.readFileSync('src/locales/'+lang+'.json'));assert.ok(j.drivingDistance.includes('{{km}}'));assert.ok(!j.drivingDistance.includes('{{minutes}}'));assert.ok(j.drivingDistance.includes(lang==='he'?'מרחק נסיעה':'Driving distance'))}
 });
