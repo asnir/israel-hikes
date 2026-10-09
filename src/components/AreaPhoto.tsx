@@ -24,7 +24,7 @@ export default function AreaPhoto({trail}:{trail:Trail}) {
     <img src={p.src} alt={specific ? (language()==="he" ? specific.captionHe : specific.captionEn) : language()==="he" ? `תצלום נוף אזורי: ${tr(trail.region)}, לא תיעוד של המסלול` : `Regional landscape: ${tr(trail.region)}. Not a photograph of this specific trail.`} loading="lazy" width="1400" height="700" />
     <figcaption>
       <span>{specific ? (language()==="he" ? specific.captionHe : specific.captionEn) : language()==="he" ? "נוף אזורי להמחשה, לא תיעוד של המסלול או של מצב השטח כיום." : "Regional landscape for context, not the specific trail or current conditions."}</span>
-      <small><a href={p.source} target="_blank" rel="noopener noreferrer">{p.title}</a> · {specific && language()==="en" && "authorEn" in specific ? specific.authorEn : p.author} · <a href={p.licenceUrl} target="_blank" rel="noopener noreferrer">{p.licence}</a> · {language()==="he" ? "הוקטן, הומר ל-WebP ונחתך לתצוגה" : p.changes}</small>
+      <small><a href={p.source} target="_blank" rel="noopener noreferrer">{language()==="en" && specific && "titleEn" in specific ? String(specific.titleEn) : p.title}</a> · {specific && language()==="en" && "authorEn" in specific ? specific.authorEn : p.author} · <a href={p.licenceUrl} target="_blank" rel="noopener noreferrer">{p.licence}</a> · {language()==="he" ? "הוקטן, הומר ל-WebP ונחתך לתצוגה" : p.changes}</small>
     </figcaption>
   </figure>;
 }

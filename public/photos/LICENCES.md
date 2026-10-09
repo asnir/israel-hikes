@@ -35,3 +35,12 @@ Resized/converted WebP derivatives and responsive display crops are distributed 
 - License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)
 - Changes: Resized and converted to WebP; displayed with a responsive crop.
 - Caption: Vegetation beside the HaShofet stream trail near HaZorea, April 2017. Not a record of current trail conditions.
+
+## trail-oren.webp
+
+- Source: https://commons.wikimedia.org/wiki/File:IHM_%D7%9E%D7%A2%D7%A8%D7%AA_%D7%99%D7%A9%D7%97_1.jpeg
+- Author: gschetrit
+- License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- Changes: Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.
+- Site check: Commons object/camera location 32.718566, 35.002013 matches Yishach Cave on the catalog route (Nakeb272).
+- Caption: Yishach Cave entrance beside the Oren route, May 2023. Not the entire loop or current access conditions; this does not authorize cave entry.
