@@ -101,7 +101,7 @@ export class UpstreamGateway extends DurableObject<Env> {
       // One durable object per service serializes ALL users; cap demand instead of building a queue.
       let release: () => void = () => {};
       const previous = this.running;
-      this.running = new Promise((r) => (release = r));
+      this.running = new Promise<void>((r) => (release = r));
       await previous;
       try {
         const cachedAgain = await this.ctx.storage.get<{

@@ -1,6 +1,5 @@
 import { chromium } from "playwright";
 import { spawn } from "node:child_process";
-import fs from "node:fs";
 const server = spawn(
   "node",
   ["node_modules/vite/bin/vite.js", "--host", "127.0.0.1"],

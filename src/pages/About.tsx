@@ -1,4 +1,4 @@
-import { tr, display } from "../i18n";
+import { tr } from "../i18n";
 import { Sources, safetyLinks } from "../components/Common";
 export default function About() {
   return <main id="main" className="page about">
