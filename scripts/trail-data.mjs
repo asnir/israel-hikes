@@ -12,7 +12,7 @@ export function validateEntry(category,t){
  if(category==='verified')need(Array.isArray(t.steps)&&t.steps.every(text),'steps must be a string array');
  const refs=category==='verified'?t.refs:category==='extended'?t.links:[[t.src,t.url]];
  need(Array.isArray(refs)&&refs.length>0,'At least one public source is required');for(const ref of refs)need(Array.isArray(ref)&&ref.length===2&&ref.every(text)&&/^https:\/\//.test(ref[1]),'Source must be [label, https URL]');
- const forbidden=/docs\.google\.com\/document|[\w.+-]+@[\w.-]+\.[a-z]{2,}|\+972|(?<![\d.])05\d{8}(?!\d)/i;need(!forbidden.test(JSON.stringify(t)),'Private information candidate');
+ const forbidden=/docs\.google\.com\/document|[\w.+-]+@[\w.-]+\.[a-z]{2,}|\+972|(?<![\d.])05\d{8}(?!\d)/i;need(!forbidden.test(JSON.stringify(t)),'Private information candidate');for(const ref of refs){const u=new URL(ref[1]);need(!u.username&&!u.password,'Credentials in source URL are forbidden')} 
 }
 export function readData(root=dataDir){return Object.fromEntries(Object.entries(groups).map(([c,f])=>[c,JSON.parse(fs.readFileSync(`${root}/${f}.json`))]));}
 export function validateData(data,longIds){const ids=[];for(const [c,rows]of Object.entries(data)){if(!groups[c])throw Error('Unknown category');for(const t of rows){validateEntry(c,t);ids.push(idFor(c,t));if(c==='segment'&&!longIds.includes(t.trail))throw Error('Unknown long trail')}}if(new Set(ids).size!==ids.length)throw Error('Duplicate route ID');return ids;}
