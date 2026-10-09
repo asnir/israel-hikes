@@ -1,0 +1,9 @@
+# Historical English route-description keys, manually inspected as public prose.
+# Exact fingerprints only; no file-wide or rule-wide exclusions.
+0b0404788c5c02c9fa51f79a468711a7166664ee:src/locales/en.json:generic-api-key:387
+0b0404788c5c02c9fa51f79a468711a7166664ee:src/locales/en.json:generic-api-key:471
+0b0404788c5c02c9fa51f79a468711a7166664ee:src/locales/en.json:generic-api-key:487
+0b0404788c5c02c9fa51f79a468711a7166664ee:src/locales/en.json:generic-api-key:508
+0b0404788c5c02c9fa51f79a468711a7166664ee:src/locales/en.json:generic-api-key:738
+0b0404788c5c02c9fa51f79a468711a7166664ee:src/locales/en.json:generic-api-key:983
+0b0404788c5c02c9fa51f79a468711a7166664ee:src/locales/en.json:generic-api-key:996
