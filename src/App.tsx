@@ -1,3 +1,4 @@
+import ContactInbox from "./pages/ContactInbox";
 import Contact from "./pages/Contact";
 import AccessibilityMenu from "./components/AccessibilityMenu";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
@@ -58,6 +59,7 @@ export default function App() {
         <Route path="/trail/:id" element={<TrailDetail />} />
         <Route path="/long" element={<LongHub />} />
         <Route path="/long/:id" element={<LongDetail />} />
+        <Route path="/contact-inbox" element={<ContactInbox />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/accessibility" element={<AccessibilityStatement />} />
         <Route path="/about" element={<About />} />
