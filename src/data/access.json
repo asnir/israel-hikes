@@ -1,0 +1,3001 @@
+{
+  "6": {
+    "destination": "33.264550,35.745522",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/x0aYgpWtrN",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 212,
+      "minutes": 210
+    },
+    "jerusalem": {
+      "km": 257,
+      "minutes": 255
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.264550%2C35.745522&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "7": {
+    "destination": "33.251197,35.728508",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/czLWd4WGRe",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 209,
+      "minutes": 210
+    },
+    "jerusalem": {
+      "km": 254,
+      "minutes": 255
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.251197%2C35.728508&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "8": {
+    "destination": "33.244312,35.690593",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/hmoPl34aWm",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 202,
+      "minutes": 200
+    },
+    "jerusalem": {
+      "km": 247,
+      "minutes": 245
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.244312%2C35.690593&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "9": {
+    "destination": "33.250110,35.692023",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/zvjwFOtuaS",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 202,
+      "minutes": 200
+    },
+    "jerusalem": {
+      "km": 246,
+      "minutes": 245
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.250110%2C35.692023&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "11": {
+    "destination": "33.253815,35.759712",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/ouNlLzH5aZ",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 204,
+      "minutes": 205
+    },
+    "jerusalem": {
+      "km": 249,
+      "minutes": 250
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.253815%2C35.759712&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "12": {
+    "destination": "33.236157,35.677491",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/bRFKVVetNO",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 200,
+      "minutes": 200
+    },
+    "jerusalem": {
+      "km": 245,
+      "minutes": 245
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.236157%2C35.677491&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "13": {
+    "destination": "33.216318,35.642458",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/GzrfjAAi2l",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 193,
+      "minutes": 195
+    },
+    "jerusalem": {
+      "km": 238,
+      "minutes": 240
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.216318%2C35.642458&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "14": {
+    "destination": "33.140688,35.777666",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/EVsUGSt2ur",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 192,
+      "minutes": 190
+    },
+    "jerusalem": {
+      "km": 236,
+      "minutes": 235
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.140688%2C35.777666&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "15": {
+    "destination": "33.079122,35.827730",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Tn73B9aRh6",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 189,
+      "minutes": 190
+    },
+    "jerusalem": {
+      "km": 234,
+      "minutes": 235
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.079122%2C35.827730&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "16": {
+    "destination": "33.043853,35.671049",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/6QwcINwkU1",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 174,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 218,
+      "minutes": 220
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.043853%2C35.671049&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "17": {
+    "destination": "33.006026,35.626665",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/AA9stk72xw",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 164,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 208,
+      "minutes": 210
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.006026%2C35.626665&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "18": {
+    "destination": "32.983691,35.715836",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/DWJkS8rHCx",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 172,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 216,
+      "minutes": 215
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.983691%2C35.715836&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "19": {
+    "destination": "32.952793,35.706567",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Yh3AvfqSb5",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 167,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 212,
+      "minutes": 210
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.952793%2C35.706567&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "20": {
+    "destination": "32.895383,35.771203",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/t5ulToWZh3",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 177,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 221,
+      "minutes": 220
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.895383%2C35.771203&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "22": {
+    "destination": "32.848065,35.739863",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/VbN0dEiUPu",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 187,
+      "minutes": 185
+    },
+    "jerusalem": {
+      "km": 231,
+      "minutes": 230
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.848065%2C35.739863&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "23": {
+    "destination": "32.814365,35.662802",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/KhNwGSfSrY",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 172,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 216,
+      "minutes": 215
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.814365%2C35.662802&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "24": {
+    "destination": "32.758099,35.659201",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/sz4AsHd2B0",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 164,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 209,
+      "minutes": 210
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.758099%2C35.659201&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "25": {
+    "destination": "32.90568,35.748459",
+    "label": "שמורת הטבע גמלא (יעד שם מקום)",
+    "source": "https://www.parks.org.il/trip/gamla-3/",
+    "basis": "place-query",
+    "ramatGan": {
+      "km": 181,
+      "minutes": 180
+    },
+    "jerusalem": {
+      "km": 226,
+      "minutes": 225
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.90568%2C35.748459&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation",
+    "placeId": "ChIJB4JbCaoEHBURR3MBay-jHWU"
+  },
+  "26": {
+    "destination": "33.240871,35.680717",
+    "label": "חניון מפל הבניאס",
+    "source": "https://www.nakeb.co.il/hike/432",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=33.2408707939,35.6807172065",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 201,
+      "minutes": 200
+    },
+    "jerusalem": {
+      "km": 245,
+      "minutes": 245
+    }
+  },
+  "27": {
+    "destination": "32.941593,35.700935",
+    "label": "חניון היהודיה",
+    "source": "https://www.nakeb.co.il/hike/186",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.94159303272302,35.70093481159563",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 166,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 210,
+      "minutes": 210
+    }
+  },
+  "28": {
+    "destination": "33.118762,35.567311",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/yOoQI96BR9",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 173,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 218,
+      "minutes": 220
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.118762%2C35.567311&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "29": {
+    "destination": "33.089793,35.564166",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/yS4O6mOSKJ",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 182,
+      "minutes": 180
+    },
+    "jerusalem": {
+      "km": 226,
+      "minutes": 225
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.089793%2C35.564166&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "30": {
+    "destination": "33.082570,35.459828",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/zT88QzRnJv",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 179,
+      "minutes": 180
+    },
+    "jerusalem": {
+      "km": 223,
+      "minutes": 225
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.082570%2C35.459828&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "31": {
+    "destination": "33.038535,35.504891",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/dYfGy1HSqa",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 173,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 218,
+      "minutes": 220
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.038535%2C35.504891&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "32": {
+    "destination": "33.023366,35.447706",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Booq0wUGn8",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 163,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 207,
+      "minutes": 205
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.023366%2C35.447706&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "33": {
+    "destination": "33.066130,35.245231",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/LFUTjik6lr",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 161,
+      "minutes": 160
+    },
+    "jerusalem": {
+      "km": 205,
+      "minutes": 205
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.066130%2C35.245231&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "34": {
+    "destination": "33.037034,35.361455",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/wPFrb9pO5j",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 172,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 216,
+      "minutes": 215
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.037034%2C35.361455&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "36": {
+    "destination": "33.022372,35.325193",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/nzWrr1mLsD",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 153,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 198,
+      "minutes": 200
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.022372%2C35.325193&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "38": {
+    "destination": "33.037936,35.235079",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/LXrs1rb4aW",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 147,
+      "minutes": 145
+    },
+    "jerusalem": {
+      "km": 192,
+      "minutes": 190
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.037936%2C35.235079&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "39": {
+    "destination": "33.013578,35.347563",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/B3hsXfmu1h",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 156,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 200,
+      "minutes": 200
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.013578%2C35.347563&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "40": {
+    "destination": "33.007672,35.260876",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/aBX1VA3uhP",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 145,
+      "minutes": 145
+    },
+    "jerusalem": {
+      "km": 190,
+      "minutes": 190
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.007672%2C35.260876&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "41": {
+    "destination": "32.988370,35.242769",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/6OBPcxnpQO",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 144,
+      "minutes": 145
+    },
+    "jerusalem": {
+      "km": 188,
+      "minutes": 190
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.988370%2C35.242769&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "42": {
+    "destination": "33.008794,35.393852",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/nMv36N8u9N",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 171,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 215,
+      "minutes": 215
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=33.008794%2C35.393852&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "43": {
+    "destination": "32.979045,35.442496",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/dAaQeyn16F",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 157,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 202,
+      "minutes": 200
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.979045%2C35.442496&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "44": {
+    "destination": "32.979217,35.442803",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Crs7pHa9V3",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 157,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 202,
+      "minutes": 200
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.979217%2C35.442803&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "45": {
+    "destination": "32.969319,35.534106",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/K6s1lepcE7",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 155,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 199,
+      "minutes": 200
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.969319%2C35.534106&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "46": {
+    "destination": "32.966552,35.345781",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/yCK166e3GY",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 142,
+      "minutes": 140
+    },
+    "jerusalem": {
+      "km": 186,
+      "minutes": 185
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.966552%2C35.345781&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "47": {
+    "destination": "32.957619,35.408122",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/RChaQI1eAm",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 155,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 199,
+      "minutes": 200
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.957619%2C35.408122&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "49": {
+    "destination": "32.913223,35.336103",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/kTuCFFx53G",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 135,
+      "minutes": 135
+    },
+    "jerusalem": {
+      "km": 179,
+      "minutes": 180
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.913223%2C35.336103&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "50": {
+    "destination": "32.930770,35.367971",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/USJddUe1iA",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 135,
+      "minutes": 135
+    },
+    "jerusalem": {
+      "km": 180,
+      "minutes": 180
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.930770%2C35.367971&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "51": {
+    "destination": "32.873662,35.488208",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/BVxLirHZLe",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 150,
+      "minutes": 150
+    },
+    "jerusalem": {
+      "km": 194,
+      "minutes": 195
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.873662%2C35.488208&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "52": {
+    "destination": "32.911736,35.485669",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/dufASj7ZCa",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 149,
+      "minutes": 150
+    },
+    "jerusalem": {
+      "km": 193,
+      "minutes": 195
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.911736%2C35.485669&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "55": {
+    "destination": "32.833062,35.319015",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/0uIYYPZIGW",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 122,
+      "minutes": 120
+    },
+    "jerusalem": {
+      "km": 166,
+      "minutes": 165
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.833062%2C35.319015&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "56": {
+    "destination": "32.810517,35.522448",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/rHv9Gu6eu3",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 142,
+      "minutes": 140
+    },
+    "jerusalem": {
+      "km": 187,
+      "minutes": 185
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.810517%2C35.522448&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "57": {
+    "destination": "32.821832,35.494933",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/N7FwfKfYcN",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 139,
+      "minutes": 140
+    },
+    "jerusalem": {
+      "km": 183,
+      "minutes": 185
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.821832%2C35.494933&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "59": {
+    "destination": "32.718438,35.337281",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/upkZHWD23P",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 116,
+      "minutes": 115
+    },
+    "jerusalem": {
+      "km": 161,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.718438%2C35.337281&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "60": {
+    "destination": "32.694626,35.505702",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Eog9FOhmB4",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 119,
+      "minutes": 120
+    },
+    "jerusalem": {
+      "km": 164,
+      "minutes": 165
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.694626%2C35.505702&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "61": {
+    "destination": "32.666664,35.553950",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/z4QOz6z5gC",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 135,
+      "minutes": 135
+    },
+    "jerusalem": {
+      "km": 180,
+      "minutes": 180
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.666664%2C35.553950&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "62": {
+    "destination": "32.635532,35.449285",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/gcipZfiqL5",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 114,
+      "minutes": 115
+    },
+    "jerusalem": {
+      "km": 158,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.635532%2C35.449285&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "63": {
+    "destination": "32.605756,35.502577",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/gE3bYLKten",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 115,
+      "minutes": 115
+    },
+    "jerusalem": {
+      "km": 160,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.605756%2C35.502577&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "65": {
+    "destination": "32.642591,35.452506",
+    "label": "שער אחורי קיבוץ גזית",
+    "source": "https://www.nakeb.co.il/hike/369",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.6425906361,35.4525062128",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 111,
+      "minutes": 110
+    },
+    "jerusalem": {
+      "km": 156,
+      "minutes": 155
+    }
+  },
+  "66": {
+    "destination": "32.821794,35.495664",
+    "label": "חניון הר ארבל",
+    "source": "https://www.nakeb.co.il/hike/349",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.8217935923,35.4956640534",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 139,
+      "minutes": 140
+    },
+    "jerusalem": {
+      "km": 183,
+      "minutes": 185
+    }
+  },
+  "67": {
+    "destination": "32.688108,35.386536",
+    "label": "פסגת הר תבור",
+    "source": "https://www.nakeb.co.il/hike/70",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.68810781353991,35.386535752715396",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 111,
+      "minutes": 110
+    },
+    "jerusalem": {
+      "km": 156,
+      "minutes": 155
+    }
+  },
+  "68": {
+    "destination": "32.993791,35.414857",
+    "label": "חניון הפיסגה בהר מירון",
+    "source": "https://www.nakeb.co.il/hike/35",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.99379105947239,35.41485679218727",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 175,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 219,
+      "minutes": 220
+    }
+  },
+  "69": {
+    "destination": "32.979363,35.443129",
+    "label": "חניון נחל מירון",
+    "source": "https://www.nakeb.co.il/hike/41",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.979363,35.443129000000006",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 157,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 202,
+      "minutes": 200
+    }
+  },
+  "70": {
+    "destination": "32.745861,35.025990",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/SkH71WoCBf",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 97,
+      "minutes": 95
+    },
+    "jerusalem": {
+      "km": 150,
+      "minutes": 150
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.745861%2C35.025990&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "71": {
+    "destination": "32.738402,34.966427",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/VDdz6FAgOs",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 88,
+      "minutes": 90
+    },
+    "jerusalem": {
+      "km": 146,
+      "minutes": 145
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.738402%2C34.966427&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "72": {
+    "destination": "32.734230,35.040551",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/hbCwHsTvhO",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 94,
+      "minutes": 95
+    },
+    "jerusalem": {
+      "km": 140,
+      "minutes": 140
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.734230%2C35.040551&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "73": {
+    "destination": "32.727313,35.015259",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/YFkaS6QfTN",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 90,
+      "minutes": 90
+    },
+    "jerusalem": {
+      "km": 149,
+      "minutes": 150
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.727313%2C35.015259&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "74": {
+    "destination": "32.727232,35.015252",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/htWOnhLaUh",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 90,
+      "minutes": 90
+    },
+    "jerusalem": {
+      "km": 149,
+      "minutes": 150
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.727232%2C35.015252&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "75": {
+    "destination": "32.702318,34.982790",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/yYjrZPYXE8",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 87,
+      "minutes": 85
+    },
+    "jerusalem": {
+      "km": 145,
+      "minutes": 145
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.702318%2C34.982790&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "76": {
+    "destination": "32.651078,34.964322",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Y0LZZTBGrF",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 79,
+      "minutes": 80
+    },
+    "jerusalem": {
+      "km": 141,
+      "minutes": 140
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.651078%2C34.964322&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "77": {
+    "destination": "32.683355,35.088868",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/AR05wG3Vw6",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 90,
+      "minutes": 90
+    },
+    "jerusalem": {
+      "km": 134,
+      "minutes": 135
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.683355%2C35.088868&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "78": {
+    "destination": "32.651082,34.964356",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/ZvXe5ZDifK",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 79,
+      "minutes": 80
+    },
+    "jerusalem": {
+      "km": 141,
+      "minutes": 140
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.651082%2C34.964356&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "79": {
+    "destination": "32.618020,35.111314",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/LKMnGbhKzm",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 94,
+      "minutes": 95
+    },
+    "jerusalem": {
+      "km": 139,
+      "minutes": 140
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.618020%2C35.111314&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "81": {
+    "destination": "32.603251,35.084391",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/JPMZqX9hxV",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 84,
+      "minutes": 85
+    },
+    "jerusalem": {
+      "km": 129,
+      "minutes": 130
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.603251%2C35.084391&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "82": {
+    "destination": "32.530949,34.944302",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/RCkPe2xo4h",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 66,
+      "minutes": 65
+    },
+    "jerusalem": {
+      "km": 121,
+      "minutes": 120
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.530949%2C34.944302&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "84": {
+    "destination": "32.461897,35.432679",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/vhugW280zM",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 113,
+      "minutes": 115
+    },
+    "jerusalem": {
+      "km": 157,
+      "minutes": 155
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.461897%2C35.432679&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "86": {
+    "destination": "32.832201,34.978000",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Yh6GzeklOm",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 100,
+      "minutes": 100
+    },
+    "jerusalem": {
+      "km": 154,
+      "minutes": 155
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.832201%2C34.978000&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "87": {
+    "destination": "32.784729,34.955775",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/W0vKIkQMO4",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 95,
+      "minutes": 95
+    },
+    "jerusalem": {
+      "km": 153,
+      "minutes": 155
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.784729%2C34.955775&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "88": {
+    "destination": "32.641864,34.924210",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/eRDN1Cd8cF",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 81,
+      "minutes": 80
+    },
+    "jerusalem": {
+      "km": 143,
+      "minutes": 145
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.641864%2C34.924210&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "89": {
+    "destination": "32.546228,34.916187",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/pKKWAebSL3",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 67,
+      "minutes": 65
+    },
+    "jerusalem": {
+      "km": 126,
+      "minutes": 125
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.546228%2C34.916187&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "90": {
+    "destination": "32.367206,34.908430",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/gZpFVRZ6Ok",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 39,
+      "minutes": 40
+    },
+    "jerusalem": {
+      "km": 96,
+      "minutes": 95
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.367206%2C34.908430&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "91": {
+    "destination": "32.365266,34.859090",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/CNszmHlqe9",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 44,
+      "minutes": 45
+    },
+    "jerusalem": {
+      "km": 102,
+      "minutes": 100
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.365266%2C34.859090&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "94": {
+    "destination": "32.049366,34.748445",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/6XW4lucXbE",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 16,
+      "minutes": 15
+    },
+    "jerusalem": {
+      "km": 67,
+      "minutes": 65
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.049366%2C34.748445&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "95": {
+    "destination": "32.004093,34.961553",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/EmgVYpy5Sq",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 21,
+      "minutes": 20
+    },
+    "jerusalem": {
+      "km": 49,
+      "minutes": 50
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.004093%2C34.961553&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "96": {
+    "destination": "32.5466654,34.9160501",
+    "label": "שמורת טבע נחל תנינים (יעד שם מקום)",
+    "source": "https://www.parks.org.il/trip/taninim-2/",
+    "basis": "place-query",
+    "ramatGan": {
+      "km": 67,
+      "minutes": 65
+    },
+    "jerusalem": {
+      "km": 126,
+      "minutes": 125
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.5466654%2C34.9160501&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation",
+    "placeId": "ChIJwSkE72wMHRURFmR9Z2zpu1s"
+  },
+  "97": {
+    "destination": "32.532169,34.979653",
+    "label": "עיקול כק\"מ וחצי לפני אביאל",
+    "source": "https://www.nakeb.co.il/hike/307",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.5321689385,34.9796526982",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 73,
+      "minutes": 75
+    },
+    "jerusalem": {
+      "km": 127,
+      "minutes": 125
+    }
+  },
+  "98": {
+    "destination": "31.832282,34.978083",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/gO1Ew6QEiH",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 44,
+      "minutes": 45
+    },
+    "jerusalem": {
+      "km": 34,
+      "minutes": 35
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.832282%2C34.978083&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "100": {
+    "destination": "31.750663,35.130356",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/tyIBvrw6Ni",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 65,
+      "minutes": 65
+    },
+    "jerusalem": {
+      "km": 15,
+      "minutes": 15
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.750663%2C35.130356&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "101": {
+    "destination": "31.733662,35.075491",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/S7MBj7XLfS",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 60,
+      "minutes": 60
+    },
+    "jerusalem": {
+      "km": 24,
+      "minutes": 25
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.733662%2C35.075491&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "102": {
+    "destination": "31.772245,35.181807",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/fNpMWOMIc5",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 59,
+      "minutes": 60
+    },
+    "jerusalem": {
+      "km": 6,
+      "minutes": 5
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.772245%2C35.181807&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "103": {
+    "destination": "31.711888,35.095045",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/k2F0wNiVOp",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 64,
+      "minutes": 65
+    },
+    "jerusalem": {
+      "km": 28,
+      "minutes": 30
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.711888%2C35.095045&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "104": {
+    "destination": "31.76533269999999,35.1611631",
+    "label": "מעיין מרים ירושלים (יעד שם מקום)",
+    "source": "https://www.parks.org.il/trip/encarem/",
+    "basis": "place-query",
+    "ramatGan": {
+      "km": 61,
+      "minutes": 60
+    },
+    "jerusalem": {
+      "km": 9,
+      "minutes": 10
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.76533269999999%2C35.1611631&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation",
+    "placeId": "ChIJRzu2yXHXAhUR5gM3sJxu_hs"
+  },
+  "105": {
+    "destination": "31.773683,35.176497",
+    "label": "סמוך ליד ושם",
+    "source": "https://www.nakeb.co.il/hike/352",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.77368282,35.176496918",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 60,
+      "minutes": 60
+    },
+    "jerusalem": {
+      "km": 7,
+      "minutes": 5
+    }
+  },
+  "106": {
+    "destination": "31.654773,34.939026",
+    "label": "חורבת מדרס (תחילת יום הסיור) (יעד שם מקום)",
+    "source": "https://www.parks.org.il/trip/govrin-3/",
+    "basis": "place-query",
+    "ramatGan": {
+      "km": 63,
+      "minutes": 65
+    },
+    "jerusalem": {
+      "km": 47,
+      "minutes": 45
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.654773%2C34.939026&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation",
+    "placeId": "ChIJlTfdgg_qAhURPyfw-Yi2ySU"
+  },
+  "107": {
+    "destination": "31.832142,35.305386",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/ta2Z3C0Z8H",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 74,
+      "minutes": 75
+    },
+    "jerusalem": {
+      "km": 20,
+      "minutes": 20
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.832142%2C35.305386&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "108": {
+    "destination": "31.826536,35.322946",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/eNfIJL1FTT",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 74,
+      "minutes": 75
+    },
+    "jerusalem": {
+      "km": 20,
+      "minutes": 20
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.826536%2C35.322946&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "110": {
+    "destination": "31.675825,35.439277",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/1EjrD89PSF",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 109,
+      "minutes": 110
+    },
+    "jerusalem": {
+      "km": 55,
+      "minutes": 55
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.675825%2C35.439277&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "111": {
+    "destination": "31.591236,35.376889",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/cqRYzd0HTU",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 127,
+      "minutes": 125
+    },
+    "jerusalem": {
+      "km": 73,
+      "minutes": 75
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.591236%2C35.376889&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "114": {
+    "destination": "31.380431,35.368002",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/l9CUJfGpaX",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 189,
+      "minutes": 190
+    },
+    "jerusalem": {
+      "km": 92,
+      "minutes": 90
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.380431%2C35.368002&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "116": {
+    "destination": "31.331207,35.278272",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/yELuTI5mo2",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 149,
+      "minutes": 150
+    },
+    "jerusalem": {
+      "km": 147,
+      "minutes": 145
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.331207%2C35.278272&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "117": {
+    "destination": "31.331496,35.277686",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/ucRAYEx9SG",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 149,
+      "minutes": 150
+    },
+    "jerusalem": {
+      "km": 147,
+      "minutes": 145
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.331496%2C35.277686&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "118": {
+    "destination": "31.287898,35.238583",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/aLlWFybL6c",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 141,
+      "minutes": 140
+    },
+    "jerusalem": {
+      "km": 140,
+      "minutes": 140
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.287898%2C35.238583&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "119": {
+    "destination": "31.312330,35.364833",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/mlBOJKmU8H",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 182,
+      "minutes": 180
+    },
+    "jerusalem": {
+      "km": 101,
+      "minutes": 100
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.312330%2C35.364833&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "120": {
+    "destination": "31.312775,35.365331",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/0LqmDckA9g",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 182,
+      "minutes": 180
+    },
+    "jerusalem": {
+      "km": 101,
+      "minutes": 100
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.312775%2C35.365331&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "121": {
+    "destination": "31.263636,35.203892",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/CuDxlgYYzD",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 136,
+      "minutes": 135
+    },
+    "jerusalem": {
+      "km": 135,
+      "minutes": 135
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.263636%2C35.203892&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "122": {
+    "destination": "31.261707,35.239129",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/I41JfWwFij",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 139,
+      "minutes": 140
+    },
+    "jerusalem": {
+      "km": 137,
+      "minutes": 135
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.261707%2C35.239129&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "123": {
+    "destination": "31.245758,35.206521",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/5CF8muUuLu",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 135,
+      "minutes": 135
+    },
+    "jerusalem": {
+      "km": 134,
+      "minutes": 135
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.245758%2C35.206521&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "124": {
+    "destination": "31.214885,35.161482",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/4sFy3uVbaH",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 136,
+      "minutes": 135
+    },
+    "jerusalem": {
+      "km": 135,
+      "minutes": 135
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.214885%2C35.161482&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "125": {
+    "destination": "31.261378,35.367745",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/VrdHxgHXx6",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 173,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 171,
+      "minutes": 170
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.261378%2C35.367745&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "126": {
+    "destination": "31.173939,35.319261",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/eibU13YGIu",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 152,
+      "minutes": 150
+    },
+    "jerusalem": {
+      "km": 150,
+      "minutes": 150
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.173939%2C35.319261&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "127": {
+    "destination": "31.151291,35.365548",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/NDxOuP5zm1",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 160,
+      "minutes": 160
+    },
+    "jerusalem": {
+      "km": 159,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.151291%2C35.365548&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "128": {
+    "destination": "31.080652,35.376695",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/jGsPmvYPXS",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 177,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 176,
+      "minutes": 175
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.080652%2C35.376695&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "129": {
+    "destination": "31.072925,35.343087",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/YiIupjNS7F",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 179,
+      "minutes": 180
+    },
+    "jerusalem": {
+      "km": 177,
+      "minutes": 175
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.072925%2C35.343087&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "130": {
+    "destination": "31.076850,35.044594",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/dQZypZKhAi",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 145,
+      "minutes": 145
+    },
+    "jerusalem": {
+      "km": 144,
+      "minutes": 145
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.076850%2C35.044594&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "131": {
+    "destination": "31.032705,35.238452",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/IlFSbDgsVq",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 163,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 162,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.032705%2C35.238452&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "132": {
+    "destination": "31.002067,35.279803",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/UM7BGWUZ9K",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 171,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 169,
+      "minutes": 170
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.002067%2C35.279803&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "133": {
+    "destination": "31.026877,35.240642",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/UZeh54U0jK",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 164,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 162,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.026877%2C35.240642&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "134": {
+    "destination": "31.027014,35.240772",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/2jUNRUh2Yf",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 164,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 162,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.027014%2C35.240772&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "135": {
+    "destination": "31.002600,35.272057",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/TrwPmy2Xnl",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 170,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 168,
+      "minutes": 170
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=31.002600%2C35.272057&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "138": {
+    "destination": "30.971279,35.250997",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/IpcsrKu4Z0",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 169,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 167,
+      "minutes": 165
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.971279%2C35.250997&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "139": {
+    "destination": "30.934328,35.151087",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/gdyzvaTQzi",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 170,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 168,
+      "minutes": 170
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.934328%2C35.151087&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "140": {
+    "destination": "30.815153,35.238992",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/47Ha9lF2QG",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 199,
+      "minutes": 200
+    },
+    "jerusalem": {
+      "km": 197,
+      "minutes": 195
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.815153%2C35.238992&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "141": {
+    "destination": "30.901391,35.141109",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/8EI5qy51l1",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 186,
+      "minutes": 185
+    },
+    "jerusalem": {
+      "km": 185,
+      "minutes": 185
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.901391%2C35.141109&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "142": {
+    "destination": "30.932493,35.142532",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/9b4mixkpxa",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 169,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 168,
+      "minutes": 170
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.932493%2C35.142532&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "143": {
+    "destination": "30.902243,35.129323",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/b78UCC3MG5",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 186,
+      "minutes": 185
+    },
+    "jerusalem": {
+      "km": 185,
+      "minutes": 185
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.902243%2C35.129323&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "144": {
+    "destination": "30.954030,35.077056",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/6IC4h6BkEP",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 162,
+      "minutes": 160
+    },
+    "jerusalem": {
+      "km": 160,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.954030%2C35.077056&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "145": {
+    "destination": "30.914671,35.017978",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/qtErNpIXAc",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 165,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 164,
+      "minutes": 165
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.914671%2C35.017978&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "146": {
+    "destination": "30.919481,35.019684",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/I2QeYwbROD",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 165,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 163,
+      "minutes": 165
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.919481%2C35.019684&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "147": {
+    "destination": "30.858348,34.932579",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/C3wRWnYouq",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 176,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 175,
+      "minutes": 175
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.858348%2C34.932579&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "148": {
+    "destination": "30.879080,34.962503",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/1uVYTshFVX",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 172,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 170,
+      "minutes": 170
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.879080%2C34.962503&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "149": {
+    "destination": "30.801425,35.033616",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/XDCEWvUNdh",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 186,
+      "minutes": 185
+    },
+    "jerusalem": {
+      "km": 185,
+      "minutes": 185
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.801425%2C35.033616&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "150": {
+    "destination": "30.960986,34.983694",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/L74DK0lVBP",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 151,
+      "minutes": 150
+    },
+    "jerusalem": {
+      "km": 149,
+      "minutes": 150
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.960986%2C34.983694&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "151": {
+    "destination": "30.875710,34.785839",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/JwgaAKj5JE",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 155,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 153,
+      "minutes": 155
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.875710%2C34.785839&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "152": {
+    "destination": "30.892197,34.827145",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/dvVli0KbJb",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 155,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 154,
+      "minutes": 155
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.892197%2C34.827145&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "153": {
+    "destination": "30.830954,34.741751",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/oV8Fg6cQp1",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 162,
+      "minutes": 160
+    },
+    "jerusalem": {
+      "km": 161,
+      "minutes": 160
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.830954%2C34.741751&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "154": {
+    "destination": "30.823024,34.740481",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/MCmHv8KXRc",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 168,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 166,
+      "minutes": 165
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.823024%2C34.740481&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "155": {
+    "destination": "30.792864,34.768779",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/G76Qy8Luug",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 168,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 166,
+      "minutes": 165
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.792864%2C34.768779&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "157": {
+    "destination": "30.646136,34.940815",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/lmRNtLLGso",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 209,
+      "minutes": 210
+    },
+    "jerusalem": {
+      "km": 207,
+      "minutes": 205
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.646136%2C34.940815&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "158": {
+    "destination": "30.591549,34.918113",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/afrSr66xXE",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 208,
+      "minutes": 210
+    },
+    "jerusalem": {
+      "km": 207,
+      "minutes": 205
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.591549%2C34.918113&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "159": {
+    "destination": "30.588962,34.865509",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/GQV2WrnUM5",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 201,
+      "minutes": 200
+    },
+    "jerusalem": {
+      "km": 200,
+      "minutes": 200
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.588962%2C34.865509&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "160": {
+    "destination": "30.593292,34.709261",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/lH8RHNDqgK",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 196,
+      "minutes": 195
+    },
+    "jerusalem": {
+      "km": 195,
+      "minutes": 195
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.593292%2C34.709261&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "161": {
+    "destination": "30.596902,34.695236",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Wf0TUhAtR3",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 198,
+      "minutes": 200
+    },
+    "jerusalem": {
+      "km": 196,
+      "minutes": 195
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.596902%2C34.695236&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "162": {
+    "destination": "30.550511,34.651861",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/AH9msh7W8A",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 205,
+      "minutes": 205
+    },
+    "jerusalem": {
+      "km": 204,
+      "minutes": 205
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.550511%2C34.651861&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "163": {
+    "destination": "30.331160,34.935482",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/ujUjueNeyj",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 239,
+      "minutes": 240
+    },
+    "jerusalem": {
+      "km": 237,
+      "minutes": 235
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.331160%2C34.935482&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "164": {
+    "destination": "30.319876,34.974494",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/ypRf6uKeYA",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 240,
+      "minutes": 240
+    },
+    "jerusalem": {
+      "km": 238,
+      "minutes": 240
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.319876%2C34.974494&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "165": {
+    "destination": "30.355461,35.153882",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/UsSHqFyaOT",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 252,
+      "minutes": 250
+    },
+    "jerusalem": {
+      "km": 250,
+      "minutes": 250
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=30.355461%2C35.153882&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "166": {
+    "destination": "29.734765,34.869770",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/vaPHTKo960",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 319,
+      "minutes": 320
+    },
+    "jerusalem": {
+      "km": 317,
+      "minutes": 315
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=29.734765%2C34.869770&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "167": {
+    "destination": "29.694047,34.866453",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/e1rocAporD",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 329,
+      "minutes": 330
+    },
+    "jerusalem": {
+      "km": 328,
+      "minutes": 330
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=29.694047%2C34.866453&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "168": {
+    "destination": "29.646770,34.943064",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/cYpN04RStP",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 340,
+      "minutes": 340
+    },
+    "jerusalem": {
+      "km": 339,
+      "minutes": 340
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=29.646770%2C34.943064&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "169": {
+    "destination": "29.646769,34.943061",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/Wr3BWl8faH",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 340,
+      "minutes": 340
+    },
+    "jerusalem": {
+      "km": 339,
+      "minutes": 340
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=29.646769%2C34.943061&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "170": {
+    "destination": "29.587807,34.886033",
+    "label": "תחילת התוואי במפת המקור",
+    "source": "https://israelhiking.osm.org.il/share/SwIv57NJSx",
+    "basis": "coordinate",
+    "ramatGan": {
+      "km": 337,
+      "minutes": 335
+    },
+    "jerusalem": {
+      "km": 336,
+      "minutes": 335
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=29.587807%2C34.886033&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation"
+  },
+  "172": {
+    "destination": "30.793022,34.768160",
+    "label": "גן לאומי עבדת",
+    "source": "https://www.nakeb.co.il/hike/271",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.7930215321185,34.7681602309732",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 168,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 166,
+      "minutes": 165
+    }
+  },
+  "173": {
+    "destination": "30.972292,35.302434",
+    "label": "כשני ק\"מ מדרום לצומת הערבה",
+    "source": "https://www.nakeb.co.il/hike/176",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.97229181493631,35.302433601985655",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 177,
+      "minutes": 175
+    },
+    "jerusalem": {
+      "km": 176,
+      "minutes": 175
+    }
+  },
+  "y2y-a": {
+    "destination": "32.994123,35.475841",
+    "label": "חניון עין זיתים",
+    "source": "https://www.nakeb.co.il/hike/33",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.99412302247805,35.47584056854248",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 163,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 208,
+      "minutes": 210
+    }
+  },
+  "y2y-b": {
+    "destination": "32.945958,35.453204",
+    "label": "הר מצפה הימים, 1 ק\"מ דרומית לכפר שמאי",
+    "source": "https://www.nakeb.co.il/hike/34",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.94595752300764,35.453204441070554",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 153,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 197,
+      "minutes": 195
+    }
+  },
+  "y2y-c": {
+    "destination": "32.912161,35.485231",
+    "label": "כביש 85 קילומטר מזרחה מצומת נחל עמוד",
+    "source": "https://www.nakeb.co.il/hike/46",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.912160682733315,35.48523052839131",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 149,
+      "minutes": 150
+    },
+    "jerusalem": {
+      "km": 193,
+      "minutes": 195
+    }
+  },
+  "y2y-d": {
+    "destination": "33.036217,35.235164",
+    "label": "חניון המונפור",
+    "source": "https://www.nakeb.co.il/hike/168",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=33.03621668274014,35.23516415144465",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 147,
+      "minutes": 145
+    },
+    "jerusalem": {
+      "km": 191,
+      "minutes": 190
+    }
+  },
+  "int-1": {
+    "destination": "29.510561,34.921536",
+    "label": "בית ספר שדה אילת",
+    "source": "https://www.nakeb.co.il/hike/405",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=29.510560658,34.9215360821",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 351,
+      "minutes": 350
+    },
+    "jerusalem": {
+      "km": 349,
+      "minutes": 350
+    }
+  },
+  "int-2": {
+    "destination": "29.588214,34.880442",
+    "label": "חניון לילה הר יהורם",
+    "source": "https://www.nakeb.co.il/hike/406",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=29.5882141698,34.8804423895",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 336,
+      "minutes": 335
+    },
+    "jerusalem": {
+      "km": 335,
+      "minutes": 335
+    }
+  },
+  "int-3": {
+    "destination": "29.703792,34.956674",
+    "label": "חניון לילה נחל רחם",
+    "source": "https://www.nakeb.co.il/hike/407",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=29.7037918816,34.9566737683",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 333,
+      "minutes": 335
+    },
+    "jerusalem": {
+      "km": 332,
+      "minutes": 330
+    }
+  },
+  "int-4": {
+    "destination": "29.788358,34.990473",
+    "label": "פארק תמנע",
+    "source": "https://www.nakeb.co.il/hike/408",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=29.7883583195,34.9904729167",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 322,
+      "minutes": 320
+    },
+    "jerusalem": {
+      "km": 321,
+      "minutes": 320
+    }
+  },
+  "int-5": {
+    "destination": "29.917648,34.994361",
+    "label": "שחרות",
+    "source": "https://www.nakeb.co.il/hike/409",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=29.9176478337,34.9943608424",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 294,
+      "minutes": 295
+    },
+    "jerusalem": {
+      "km": 292,
+      "minutes": 290
+    }
+  },
+  "int-6": {
+    "destination": "30.316624,35.009641",
+    "label": "חניון לילה במפגש ציחור-פארן",
+    "source": "https://www.nakeb.co.il/hike/410",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.316624137,35.009641099",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 246,
+      "minutes": 245
+    },
+    "jerusalem": {
+      "km": 244,
+      "minutes": 245
+    }
+  },
+  "int-7": {
+    "destination": "30.417039,35.141925",
+    "label": "חניון לילה נחל ברק",
+    "source": "https://www.nakeb.co.il/hike/413",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.4170392871,35.1419253715",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 243,
+      "minutes": 245
+    },
+    "jerusalem": {
+      "km": 242,
+      "minutes": 240
+    }
+  },
+  "int-8": {
+    "destination": "30.560981,35.168981",
+    "label": "צופר",
+    "source": "https://www.nakeb.co.il/hike/414",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.5609807219,35.1689807846",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 229,
+      "minutes": 230
+    },
+    "jerusalem": {
+      "km": 227,
+      "minutes": 225
+    }
+  },
+  "int-9": {
+    "destination": "30.633184,35.050463",
+    "label": "חניון גב חולית",
+    "source": "https://www.nakeb.co.il/hike/415",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.6331844778,35.0504630503",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 235,
+      "minutes": 235
+    },
+    "jerusalem": {
+      "km": 233,
+      "minutes": 235
+    }
+  },
+  "int-10": {
+    "destination": "30.592980,34.916907",
+    "label": "חניון לילה נחל גוונים",
+    "source": "https://www.nakeb.co.il/hike/437",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.5929800879,34.91690666",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 208,
+      "minutes": 210
+    },
+    "jerusalem": {
+      "km": 207,
+      "minutes": 205
+    }
+  },
+  "int-11": {
+    "destination": "30.614538,34.805537",
+    "label": "מצפה רמון",
+    "source": "https://www.nakeb.co.il/hike/416",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.6145378084,34.8055373715",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 189,
+      "minutes": 190
+    },
+    "jerusalem": {
+      "km": 188,
+      "minutes": 190
+    }
+  },
+  "int-12": {
+    "destination": "30.728921,34.896166",
+    "label": "חניון נחל חוה",
+    "source": "https://www.nakeb.co.il/hike/417",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.7289212928,34.896166272",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 215,
+      "minutes": 215
+    },
+    "jerusalem": {
+      "km": 214,
+      "minutes": 215
+    }
+  },
+  "int-13": {
+    "destination": "30.836434,34.832975",
+    "label": "חניון חוד עקב",
+    "source": "https://www.nakeb.co.il/hike/421",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.8364337196,34.8329754658",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 161,
+      "minutes": 160
+    },
+    "jerusalem": {
+      "km": 160,
+      "minutes": 160
+    }
+  },
+  "int-14": {
+    "destination": "30.914789,35.017756",
+    "label": "מפעלי אורון",
+    "source": "https://www.nakeb.co.il/hike/424",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.9147890554,35.0177564619",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 165,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 164,
+      "minutes": 165
+    }
+  },
+  "int-15": {
+    "destination": "30.934384,35.150254",
+    "label": "חניון מצפה המכתש (הקטן)",
+    "source": "https://www.nakeb.co.il/hike/425",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=30.9343841714,35.1502538254",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 169,
+      "minutes": 170
+    },
+    "jerusalem": {
+      "km": 168,
+      "minutes": 170
+    }
+  },
+  "int-16": {
+    "destination": "31.026592,35.241166",
+    "label": "מצד תמר",
+    "source": "https://www.nakeb.co.il/hike/444",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.0265916409,35.2411655734",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 164,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 162,
+      "minutes": 160
+    }
+  },
+  "int-17": {
+    "destination": "31.070470,35.353178",
+    "label": "חניון מישור עמיעז",
+    "source": "https://www.nakeb.co.il/hike/430",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.0704702017,35.353178293",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 178,
+      "minutes": 180
+    },
+    "jerusalem": {
+      "km": 176,
+      "minutes": 175
+    }
+  },
+  "int-18": {
+    "destination": "31.204720,35.361614",
+    "label": "חניון עין בוקק",
+    "source": "https://www.nakeb.co.il/hike/446",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.2047202651,35.3616136239",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 166,
+      "minutes": 165
+    },
+    "jerusalem": {
+      "km": 165,
+      "minutes": 165
+    }
+  },
+  "int-19": {
+    "destination": "31.317706,35.347728",
+    "label": "חניון מצדה מערב",
+    "source": "https://www.nakeb.co.il/hike/447",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.3177057655,35.3477283425",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 157,
+      "minutes": 155
+    },
+    "jerusalem": {
+      "km": 156,
+      "minutes": 155
+    }
+  },
+  "int-20": {
+    "destination": "31.305415,35.268438",
+    "label": "כפר הנוקדים",
+    "source": "https://www.nakeb.co.il/hike/448",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.305415,35.268438",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 146,
+      "minutes": 145
+    },
+    "jerusalem": {
+      "km": 144,
+      "minutes": 145
+    }
+  },
+  "int-21": {
+    "destination": "31.258545,35.159554",
+    "label": "ערד",
+    "source": "https://www.nakeb.co.il/hike/440",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.2585446107,35.1595543744",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 131,
+      "minutes": 130
+    },
+    "jerusalem": {
+      "km": 130,
+      "minutes": 130
+    }
+  },
+  "int-22": {
+    "destination": "31.340589,35.064198",
+    "label": "לב יתיר",
+    "source": "https://www.nakeb.co.il/hike/441",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.3405893192,35.0641984165",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 125,
+      "minutes": 125
+    },
+    "jerusalem": {
+      "km": 124,
+      "minutes": 125
+    }
+  },
+  "int-23": {
+    "destination": "31.360191,34.899453",
+    "label": "סנסנה",
+    "source": "https://www.nakeb.co.il/hike/453",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.3601914173,34.8994526638",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 99,
+      "minutes": 100
+    },
+    "jerusalem": {
+      "km": 98,
+      "minutes": 100
+    }
+  },
+  "int-24": {
+    "destination": "31.448189,34.770541",
+    "label": "בית קמה",
+    "source": "https://www.nakeb.co.il/hike/454",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.4481892847,34.7705412197",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 81,
+      "minutes": 80
+    },
+    "jerusalem": {
+      "km": 80,
+      "minutes": 80
+    }
+  },
+  "int-25": {
+    "destination": "31.497675,34.709908",
+    "label": "קיבוץ רוחמה",
+    "source": "https://www.nakeb.co.il/hike/455",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.4976751728,34.7099084435",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 93,
+      "minutes": 95
+    },
+    "jerusalem": {
+      "km": 91,
+      "minutes": 90
+    }
+  },
+  "int-26": {
+    "destination": "31.563012,34.847319",
+    "label": "תל לכיש",
+    "source": "https://www.nakeb.co.il/hike/456",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.5630120604,34.8473186867",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 70,
+      "minutes": 70
+    },
+    "jerusalem": {
+      "km": 62,
+      "minutes": 60
+    }
+  },
+  "int-27": {
+    "destination": "31.677702,34.930639",
+    "label": "שריגים",
+    "source": "https://www.nakeb.co.il/hike/457",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.6777020353,34.9306393683",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 61,
+      "minutes": 60
+    },
+    "jerusalem": {
+      "km": 45,
+      "minutes": 45
+    }
+  },
+  "int-28": {
+    "destination": "31.722869,35.093317",
+    "label": "צור הדסה",
+    "source": "https://www.nakeb.co.il/hike/458",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.7228687583,35.0933172688",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 62,
+      "minutes": 60
+    },
+    "jerusalem": {
+      "km": 26,
+      "minutes": 25
+    }
+  },
+  "int-29": {
+    "destination": "31.760049,35.166685",
+    "label": "עין כרם",
+    "source": "https://www.nakeb.co.il/hike/459",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.7600487844,35.1666847917",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 64,
+      "minutes": 65
+    },
+    "jerusalem": {
+      "km": 10,
+      "minutes": 10
+    }
+  },
+  "int-30": {
+    "destination": "31.775940,35.070614",
+    "label": "רמת רזיאל",
+    "source": "https://www.nakeb.co.il/hike/460",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.7759395918,35.0706141315",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 53,
+      "minutes": 55
+    },
+    "jerusalem": {
+      "km": 23,
+      "minutes": 25
+    }
+  },
+  "int-31": {
+    "destination": "31.817431,34.981752",
+    "label": "נווה שלום",
+    "source": "https://www.nakeb.co.il/hike/461",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=31.8174307359,34.9817520783",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 44,
+      "minutes": 45
+    },
+    "jerusalem": {
+      "km": 34,
+      "minutes": 35
+    }
+  },
+  "int-32": {
+    "destination": "32.568793,34.967586",
+    "label": "זכרון יעקב",
+    "source": "https://www.nakeb.co.il/hike/462",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.5687928905,34.9675860599",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 75,
+      "minutes": 75
+    },
+    "jerusalem": {
+      "km": 133,
+      "minutes": 135
+    }
+  },
+  "int-33": {
+    "destination": "32.701490,34.970813",
+    "label": "חאן יותם (עין הוד)",
+    "source": "https://www.nakeb.co.il/hike/463",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.7014898731,34.9708131297",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 86,
+      "minutes": 85
+    },
+    "jerusalem": {
+      "km": 144,
+      "minutes": 145
+    }
+  },
+  "ofer": {
+    "destination": "32.670103,34.965084",
+    "label": "חניון נחל מערות",
+    "source": "https://www.nakeb.co.il/hike/298",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.6701029769016,34.965083934216",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 80,
+      "minutes": 80
+    },
+    "jerusalem": {
+      "km": 142,
+      "minutes": 140
+    }
+  },
+  "oren": {
+    "destination": "32.727437,35.015142",
+    "label": "חניון חוות משמר הכרמל",
+    "source": "https://www.nakeb.co.il/hike/272",
+    "basis": "coordinate",
+    "mapUrl": "https://maps.google.com/maps?saddr=&daddr=32.72743733088294,35.015141707772415",
+    "mapType": "navigation",
+    "ramatGan": {
+      "km": 90,
+      "minutes": 90
+    },
+    "jerusalem": {
+      "km": 149,
+      "minutes": 150
+    }
+  },
+  "hanadiv": {
+    "destination": "32.5517088,34.9469511",
+    "label": "חניון רמת הנדיב",
+    "source": "https://www.ramat-hanadiv.org.il/routs/שביל-האחוזה/",
+    "basis": "place-query",
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.5517088%2C34.9469511&travelmode=driving&dir_action=navigate",
+    "placeId": "ChIJU6IVaxoLHRURQ4t1CDRacZY",
+    "ramatGan": {
+      "km": 78,
+      "minutes": 80
+    },
+    "jerusalem": {
+      "km": 136,
+      "minutes": 135
+    },
+    "mapType": "navigation"
+  },
+  "shofet": {
+    "destination": "32.6287445,35.1072866",
+    "label": "מגרש חניה פרור נחל השופט",
+    "source": "https://www.kkl.org.il/travel/trips/290971/",
+    "basis": "place-query",
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.6287445%2C35.1072866&travelmode=driving&dir_action=navigate",
+    "placeId": "ChIJqUVXWgCpHRURUPHACIlhHyw",
+    "ramatGan": {
+      "km": 89,
+      "minutes": 90
+    },
+    "jerusalem": {
+      "km": 133,
+      "minutes": 135
+    },
+    "mapType": "navigation"
+  },
+  "dalia": {
+    "destination": "32.6025125,35.0184109",
+    "label": "מפגש בת שלמה (יעד שם מקום)",
+    "source": "https://holechtov.co.il/route/%D7%9E%D7%A4%D7%92%D7%A9-%D7%91%D7%AA-%D7%A9%D7%9C%D7%9E%D7%94/",
+    "basis": "place-query",
+    "ramatGan": {
+      "km": 83,
+      "minutes": 85
+    },
+    "jerusalem": {
+      "km": 128,
+      "minutes": 130
+    },
+    "mapUrl": "https://www.google.com/maps/dir/?api=1&destination=32.6025125%2C35.0184109&travelmode=driving&dir_action=navigate",
+    "mapType": "navigation",
+    "placeId": "ChIJm0wKAjanHRURvJaNbr0NqUY"
+  }
+}

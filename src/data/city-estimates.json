@@ -1,0 +1,6002 @@
+{
+  "telaviv": {
+    "ofer": {
+      "km": 76,
+      "minutes": 75
+    },
+    "hanadiv": {
+      "km": 65,
+      "minutes": 65
+    },
+    "shofet": {
+      "km": 93,
+      "minutes": 95
+    },
+    "dalia": {
+      "km": 74,
+      "minutes": 75
+    },
+    "oren": {
+      "km": 85,
+      "minutes": 85
+    },
+    "ext-6": {
+      "km": 209,
+      "minutes": 210
+    },
+    "ext-7": {
+      "km": 206,
+      "minutes": 205
+    },
+    "ext-8": {
+      "km": 198,
+      "minutes": 200
+    },
+    "ext-9": {
+      "km": 198,
+      "minutes": 200
+    },
+    "ext-11": {
+      "km": 206,
+      "minutes": 205
+    },
+    "ext-12": {
+      "km": 196,
+      "minutes": 195
+    },
+    "ext-13": {
+      "km": 189,
+      "minutes": 190
+    },
+    "ext-14": {
+      "km": 193,
+      "minutes": 195
+    },
+    "ext-15": {
+      "km": 190,
+      "minutes": 190
+    },
+    "ext-16": {
+      "km": 177,
+      "minutes": 175
+    },
+    "ext-17": {
+      "km": 166,
+      "minutes": 165
+    },
+    "ext-18": {
+      "km": 173,
+      "minutes": 175
+    },
+    "ext-19": {
+      "km": 168,
+      "minutes": 170
+    },
+    "ext-20": {
+      "km": 178,
+      "minutes": 180
+    },
+    "ext-22": {
+      "km": 188,
+      "minutes": 190
+    },
+    "ext-23": {
+      "km": 158,
+      "minutes": 160
+    },
+    "ext-24": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-25": {
+      "km": 182,
+      "minutes": 180
+    },
+    "ext-26": {
+      "km": 198,
+      "minutes": 200
+    },
+    "ext-27": {
+      "km": 167,
+      "minutes": 165
+    },
+    "ext-28": {
+      "km": 175,
+      "minutes": 175
+    },
+    "ext-29": {
+      "km": 177,
+      "minutes": 175
+    },
+    "ext-30": {
+      "km": 172,
+      "minutes": 170
+    },
+    "ext-31": {
+      "km": 166,
+      "minutes": 165
+    },
+    "ext-32": {
+      "km": 157,
+      "minutes": 155
+    },
+    "ext-33": {
+      "km": 158,
+      "minutes": 160
+    },
+    "ext-34": {
+      "km": 157,
+      "minutes": 155
+    },
+    "ext-36": {
+      "km": 152,
+      "minutes": 150
+    },
+    "ext-38": {
+      "km": 145,
+      "minutes": 145
+    },
+    "ext-39": {
+      "km": 154,
+      "minutes": 155
+    },
+    "ext-40": {
+      "km": 145,
+      "minutes": 145
+    },
+    "ext-41": {
+      "km": 135,
+      "minutes": 135
+    },
+    "ext-42": {
+      "km": 160,
+      "minutes": 160
+    },
+    "ext-43": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-44": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-45": {
+      "km": 156,
+      "minutes": 155
+    },
+    "ext-46": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-47": {
+      "km": 149,
+      "minutes": 150
+    },
+    "ext-49": {
+      "km": 137,
+      "minutes": 135
+    },
+    "ext-50": {
+      "km": 137,
+      "minutes": 135
+    },
+    "ext-51": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-52": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-55": {
+      "km": 124,
+      "minutes": 125
+    },
+    "ext-56": {
+      "km": 139,
+      "minutes": 140
+    },
+    "ext-57": {
+      "km": 140,
+      "minutes": 140
+    },
+    "ext-59": {
+      "km": 118,
+      "minutes": 120
+    },
+    "ext-60": {
+      "km": 122,
+      "minutes": 120
+    },
+    "ext-61": {
+      "km": 137,
+      "minutes": 135
+    },
+    "ext-62": {
+      "km": 116,
+      "minutes": 115
+    },
+    "ext-63": {
+      "km": 134,
+      "minutes": 135
+    },
+    "ext-65": {
+      "km": 117,
+      "minutes": 115
+    },
+    "ext-66": {
+      "km": 140,
+      "minutes": 140
+    },
+    "ext-67": {
+      "km": 114,
+      "minutes": 115
+    },
+    "ext-68": {
+      "km": 164,
+      "minutes": 165
+    },
+    "ext-69": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-70": {
+      "km": 92,
+      "minutes": 90
+    },
+    "ext-71": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-72": {
+      "km": 89,
+      "minutes": 90
+    },
+    "ext-73": {
+      "km": 85,
+      "minutes": 85
+    },
+    "ext-74": {
+      "km": 85,
+      "minutes": 85
+    },
+    "ext-75": {
+      "km": 80,
+      "minutes": 80
+    },
+    "ext-76": {
+      "km": 74,
+      "minutes": 75
+    },
+    "ext-77": {
+      "km": 92,
+      "minutes": 90
+    },
+    "ext-78": {
+      "km": 74,
+      "minutes": 75
+    },
+    "ext-79": {
+      "km": 91,
+      "minutes": 90
+    },
+    "ext-81": {
+      "km": 86,
+      "minutes": 85
+    },
+    "ext-82": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-84": {
+      "km": 115,
+      "minutes": 115
+    },
+    "ext-86": {
+      "km": 95,
+      "minutes": 95
+    },
+    "ext-87": {
+      "km": 90,
+      "minutes": 90
+    },
+    "ext-88": {
+      "km": 77,
+      "minutes": 75
+    },
+    "ext-89": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-90": {
+      "km": 41,
+      "minutes": 40
+    },
+    "ext-91": {
+      "km": 39,
+      "minutes": 40
+    },
+    "ext-94": {
+      "km": 5,
+      "minutes": 5
+    },
+    "ext-95": {
+      "km": 28,
+      "minutes": 30
+    },
+    "ext-96": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-97": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-98": {
+      "km": 40,
+      "minutes": 40
+    },
+    "ext-100": {
+      "km": 70,
+      "minutes": 70
+    },
+    "ext-101": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-102": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-103": {
+      "km": 68,
+      "minutes": 70
+    },
+    "ext-104": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-105": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-106": {
+      "km": 67,
+      "minutes": 65
+    },
+    "ext-107": {
+      "km": 70,
+      "minutes": 70
+    },
+    "ext-108": {
+      "km": 75,
+      "minutes": 75
+    },
+    "ext-110": {
+      "km": 104,
+      "minutes": 105
+    },
+    "ext-111": {
+      "km": 96,
+      "minutes": 95
+    },
+    "ext-114": {
+      "km": 141,
+      "minutes": 140
+    },
+    "ext-116": {
+      "km": 147,
+      "minutes": 145
+    },
+    "ext-117": {
+      "km": 147,
+      "minutes": 145
+    },
+    "ext-118": {
+      "km": 139,
+      "minutes": 140
+    },
+    "ext-119": {
+      "km": 150,
+      "minutes": 150
+    },
+    "ext-120": {
+      "km": 150,
+      "minutes": 150
+    },
+    "ext-121": {
+      "km": 134,
+      "minutes": 135
+    },
+    "ext-122": {
+      "km": 137,
+      "minutes": 135
+    },
+    "ext-123": {
+      "km": 133,
+      "minutes": 135
+    },
+    "ext-124": {
+      "km": 132,
+      "minutes": 130
+    },
+    "ext-125": {
+      "km": 171,
+      "minutes": 170
+    },
+    "ext-126": {
+      "km": 150,
+      "minutes": 150
+    },
+    "ext-127": {
+      "km": 158,
+      "minutes": 160
+    },
+    "ext-128": {
+      "km": 175,
+      "minutes": 175
+    },
+    "ext-129": {
+      "km": 176,
+      "minutes": 175
+    },
+    "ext-130": {
+      "km": 142,
+      "minutes": 140
+    },
+    "ext-131": {
+      "km": 162,
+      "minutes": 160
+    },
+    "ext-132": {
+      "km": 168,
+      "minutes": 170
+    },
+    "ext-133": {
+      "km": 162,
+      "minutes": 160
+    },
+    "ext-134": {
+      "km": 162,
+      "minutes": 160
+    },
+    "ext-135": {
+      "km": 168,
+      "minutes": 170
+    },
+    "ext-138": {
+      "km": 173,
+      "minutes": 175
+    },
+    "ext-139": {
+      "km": 168,
+      "minutes": 170
+    },
+    "ext-140": {
+      "km": 196,
+      "minutes": 195
+    },
+    "ext-141": {
+      "km": 184,
+      "minutes": 185
+    },
+    "ext-142": {
+      "km": 167,
+      "minutes": 165
+    },
+    "ext-143": {
+      "km": 184,
+      "minutes": 185
+    },
+    "ext-144": {
+      "km": 160,
+      "minutes": 160
+    },
+    "ext-145": {
+      "km": 163,
+      "minutes": 165
+    },
+    "ext-146": {
+      "km": 162,
+      "minutes": 160
+    },
+    "ext-147": {
+      "km": 172,
+      "minutes": 170
+    },
+    "ext-148": {
+      "km": 169,
+      "minutes": 170
+    },
+    "ext-149": {
+      "km": 184,
+      "minutes": 185
+    },
+    "ext-150": {
+      "km": 147,
+      "minutes": 145
+    },
+    "ext-151": {
+      "km": 152,
+      "minutes": 150
+    },
+    "ext-152": {
+      "km": 155,
+      "minutes": 155
+    },
+    "ext-153": {
+      "km": 165,
+      "minutes": 165
+    },
+    "ext-154": {
+      "km": 162,
+      "minutes": 160
+    },
+    "ext-155": {
+      "km": 165,
+      "minutes": 165
+    },
+    "ext-157": {
+      "km": 208,
+      "minutes": 210
+    },
+    "ext-158": {
+      "km": 206,
+      "minutes": 205
+    },
+    "ext-159": {
+      "km": 199,
+      "minutes": 200
+    },
+    "ext-160": {
+      "km": 194,
+      "minutes": 195
+    },
+    "ext-161": {
+      "km": 195,
+      "minutes": 195
+    },
+    "ext-162": {
+      "km": 203,
+      "minutes": 205
+    },
+    "ext-163": {
+      "km": 237,
+      "minutes": 235
+    },
+    "ext-164": {
+      "km": 238,
+      "minutes": 240
+    },
+    "ext-165": {
+      "km": 249,
+      "minutes": 250
+    },
+    "ext-166": {
+      "km": 315,
+      "minutes": 315
+    },
+    "ext-167": {
+      "km": 322,
+      "minutes": 320
+    },
+    "ext-168": {
+      "km": 332,
+      "minutes": 330
+    },
+    "ext-169": {
+      "km": 332,
+      "minutes": 330
+    },
+    "ext-170": {
+      "km": 336,
+      "minutes": 335
+    },
+    "ext-172": {
+      "km": 165,
+      "minutes": 165
+    },
+    "ext-173": {
+      "km": 175,
+      "minutes": 175
+    },
+    "seg-y2y-a": {
+      "km": 156,
+      "minutes": 155
+    },
+    "seg-y2y-b": {
+      "km": 147,
+      "minutes": 145
+    },
+    "seg-y2y-c": {
+      "km": 151,
+      "minutes": 150
+    },
+    "seg-y2y-d": {
+      "km": 145,
+      "minutes": 145
+    },
+    "seg-int-1": {
+      "km": 342,
+      "minutes": 340
+    },
+    "seg-int-2": {
+      "km": 334,
+      "minutes": 335
+    },
+    "seg-int-3": {
+      "km": 324,
+      "minutes": 325
+    },
+    "seg-int-4": {
+      "km": 311,
+      "minutes": 310
+    },
+    "seg-int-5": {
+      "km": 291,
+      "minutes": 290
+    },
+    "seg-int-6": {
+      "km": 242,
+      "minutes": 240
+    },
+    "seg-int-7": {
+      "km": 241,
+      "minutes": 240
+    },
+    "seg-int-8": {
+      "km": 226,
+      "minutes": 225
+    },
+    "seg-int-9": {
+      "km": 239,
+      "minutes": 240
+    },
+    "seg-int-10": {
+      "km": 206,
+      "minutes": 205
+    },
+    "seg-int-11": {
+      "km": 187,
+      "minutes": 185
+    },
+    "seg-int-12": {
+      "km": 190,
+      "minutes": 190
+    },
+    "seg-int-13": {
+      "km": 159,
+      "minutes": 160
+    },
+    "seg-int-14": {
+      "km": 163,
+      "minutes": 165
+    },
+    "seg-int-15": {
+      "km": 168,
+      "minutes": 170
+    },
+    "seg-int-16": {
+      "km": 162,
+      "minutes": 160
+    },
+    "seg-int-17": {
+      "km": 175,
+      "minutes": 175
+    },
+    "seg-int-18": {
+      "km": 164,
+      "minutes": 165
+    },
+    "seg-int-19": {
+      "km": 155,
+      "minutes": 155
+    },
+    "seg-int-20": {
+      "km": 144,
+      "minutes": 145
+    },
+    "seg-int-21": {
+      "km": 130,
+      "minutes": 130
+    },
+    "seg-int-22": {
+      "km": 122,
+      "minutes": 120
+    },
+    "seg-int-23": {
+      "km": 97,
+      "minutes": 95
+    },
+    "seg-int-24": {
+      "km": 81,
+      "minutes": 80
+    },
+    "seg-int-25": {
+      "km": 84,
+      "minutes": 85
+    },
+    "seg-int-26": {
+      "km": 68,
+      "minutes": 70
+    },
+    "seg-int-27": {
+      "km": 65,
+      "minutes": 65
+    },
+    "seg-int-28": {
+      "km": 66,
+      "minutes": 65
+    },
+    "seg-int-29": {
+      "km": 66,
+      "minutes": 65
+    },
+    "seg-int-30": {
+      "km": 57,
+      "minutes": 55
+    },
+    "seg-int-31": {
+      "km": 46,
+      "minutes": 45
+    },
+    "seg-int-32": {
+      "km": 66,
+      "minutes": 65
+    },
+    "seg-int-33": {
+      "km": 79,
+      "minutes": 80
+    }
+  },
+  "haifa": {
+    "ofer": {
+      "km": 19,
+      "minutes": 20
+    },
+    "hanadiv": {
+      "km": 35,
+      "minutes": 35
+    },
+    "shofet": {
+      "km": 30,
+      "minutes": 30
+    },
+    "dalia": {
+      "km": 35,
+      "minutes": 35
+    },
+    "oren": {
+      "km": 13,
+      "minutes": 15
+    },
+    "ext-6": {
+      "km": 126,
+      "minutes": 125
+    },
+    "ext-7": {
+      "km": 123,
+      "minutes": 125
+    },
+    "ext-8": {
+      "km": 116,
+      "minutes": 115
+    },
+    "ext-9": {
+      "km": 115,
+      "minutes": 115
+    },
+    "ext-11": {
+      "km": 123,
+      "minutes": 125
+    },
+    "ext-12": {
+      "km": 114,
+      "minutes": 115
+    },
+    "ext-13": {
+      "km": 107,
+      "minutes": 105
+    },
+    "ext-14": {
+      "km": 111,
+      "minutes": 110
+    },
+    "ext-15": {
+      "km": 110,
+      "minutes": 110
+    },
+    "ext-16": {
+      "km": 94,
+      "minutes": 95
+    },
+    "ext-17": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-18": {
+      "km": 94,
+      "minutes": 95
+    },
+    "ext-19": {
+      "km": 89,
+      "minutes": 90
+    },
+    "ext-20": {
+      "km": 99,
+      "minutes": 100
+    },
+    "ext-22": {
+      "km": 109,
+      "minutes": 110
+    },
+    "ext-23": {
+      "km": 100,
+      "minutes": 100
+    },
+    "ext-24": {
+      "km": 92,
+      "minutes": 90
+    },
+    "ext-25": {
+      "km": 103,
+      "minutes": 105
+    },
+    "ext-26": {
+      "km": 115,
+      "minutes": 115
+    },
+    "ext-27": {
+      "km": 88,
+      "minutes": 90
+    },
+    "ext-28": {
+      "km": 93,
+      "minutes": 95
+    },
+    "ext-29": {
+      "km": 88,
+      "minutes": 90
+    },
+    "ext-30": {
+      "km": 80,
+      "minutes": 80
+    },
+    "ext-31": {
+      "km": 77,
+      "minutes": 75
+    },
+    "ext-32": {
+      "km": 68,
+      "minutes": 70
+    },
+    "ext-33": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-34": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-36": {
+      "km": 59,
+      "minutes": 60
+    },
+    "ext-38": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-39": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-40": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-41": {
+      "km": 46,
+      "minutes": 45
+    },
+    "ext-42": {
+      "km": 67,
+      "minutes": 65
+    },
+    "ext-43": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-44": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-45": {
+      "km": 73,
+      "minutes": 75
+    },
+    "ext-46": {
+      "km": 54,
+      "minutes": 55
+    },
+    "ext-47": {
+      "km": 60,
+      "minutes": 60
+    },
+    "ext-49": {
+      "km": 48,
+      "minutes": 50
+    },
+    "ext-50": {
+      "km": 48,
+      "minutes": 50
+    },
+    "ext-51": {
+      "km": 76,
+      "minutes": 75
+    },
+    "ext-52": {
+      "km": 68,
+      "minutes": 70
+    },
+    "ext-55": {
+      "km": 35,
+      "minutes": 35
+    },
+    "ext-56": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-57": {
+      "km": 66,
+      "minutes": 65
+    },
+    "ext-59": {
+      "km": 42,
+      "minutes": 40
+    },
+    "ext-60": {
+      "km": 72,
+      "minutes": 70
+    },
+    "ext-61": {
+      "km": 81,
+      "minutes": 80
+    },
+    "ext-62": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-63": {
+      "km": 85,
+      "minutes": 85
+    },
+    "ext-65": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-66": {
+      "km": 66,
+      "minutes": 65
+    },
+    "ext-67": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-68": {
+      "km": 71,
+      "minutes": 70
+    },
+    "ext-69": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-70": {
+      "km": 8,
+      "minutes": 10
+    },
+    "ext-71": {
+      "km": 11,
+      "minutes": 10
+    },
+    "ext-72": {
+      "km": 10,
+      "minutes": 10
+    },
+    "ext-73": {
+      "km": 13,
+      "minutes": 15
+    },
+    "ext-74": {
+      "km": 13,
+      "minutes": 15
+    },
+    "ext-75": {
+      "km": 17,
+      "minutes": 15
+    },
+    "ext-76": {
+      "km": 23,
+      "minutes": 25
+    },
+    "ext-77": {
+      "km": 21,
+      "minutes": 20
+    },
+    "ext-78": {
+      "km": 23,
+      "minutes": 25
+    },
+    "ext-79": {
+      "km": 28,
+      "minutes": 30
+    },
+    "ext-81": {
+      "km": 31,
+      "minutes": 30
+    },
+    "ext-82": {
+      "km": 37,
+      "minutes": 35
+    },
+    "ext-84": {
+      "km": 69,
+      "minutes": 70
+    },
+    "ext-86": {
+      "km": 9,
+      "minutes": 10
+    },
+    "ext-87": {
+      "km": 7,
+      "minutes": 5
+    },
+    "ext-88": {
+      "km": 27,
+      "minutes": 25
+    },
+    "ext-89": {
+      "km": 37,
+      "minutes": 35
+    },
+    "ext-90": {
+      "km": 57,
+      "minutes": 55
+    },
+    "ext-91": {
+      "km": 58,
+      "minutes": 60
+    },
+    "ext-94": {
+      "km": 99,
+      "minutes": 100
+    },
+    "ext-95": {
+      "km": 102,
+      "minutes": 100
+    },
+    "ext-96": {
+      "km": 37,
+      "minutes": 35
+    },
+    "ext-97": {
+      "km": 46,
+      "minutes": 45
+    },
+    "ext-98": {
+      "km": 124,
+      "minutes": 125
+    },
+    "ext-100": {
+      "km": 154,
+      "minutes": 155
+    },
+    "ext-101": {
+      "km": 148,
+      "minutes": 150
+    },
+    "ext-102": {
+      "km": 147,
+      "minutes": 145
+    },
+    "ext-103": {
+      "km": 152,
+      "minutes": 150
+    },
+    "ext-104": {
+      "km": 148,
+      "minutes": 150
+    },
+    "ext-105": {
+      "km": 148,
+      "minutes": 150
+    },
+    "ext-106": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-107": {
+      "km": 154,
+      "minutes": 155
+    },
+    "ext-108": {
+      "km": 159,
+      "minutes": 160
+    },
+    "ext-110": {
+      "km": 188,
+      "minutes": 190
+    },
+    "ext-111": {
+      "km": 180,
+      "minutes": 180
+    },
+    "ext-114": {
+      "km": 225,
+      "minutes": 225
+    },
+    "ext-116": {
+      "km": 237,
+      "minutes": 235
+    },
+    "ext-117": {
+      "km": 237,
+      "minutes": 235
+    },
+    "ext-118": {
+      "km": 229,
+      "minutes": 230
+    },
+    "ext-119": {
+      "km": 234,
+      "minutes": 235
+    },
+    "ext-120": {
+      "km": 234,
+      "minutes": 235
+    },
+    "ext-121": {
+      "km": 224,
+      "minutes": 225
+    },
+    "ext-122": {
+      "km": 226,
+      "minutes": 225
+    },
+    "ext-123": {
+      "km": 223,
+      "minutes": 225
+    },
+    "ext-124": {
+      "km": 222,
+      "minutes": 220
+    },
+    "ext-125": {
+      "km": 261,
+      "minutes": 260
+    },
+    "ext-126": {
+      "km": 240,
+      "minutes": 240
+    },
+    "ext-127": {
+      "km": 248,
+      "minutes": 250
+    },
+    "ext-128": {
+      "km": 265,
+      "minutes": 265
+    },
+    "ext-129": {
+      "km": 266,
+      "minutes": 265
+    },
+    "ext-130": {
+      "km": 232,
+      "minutes": 230
+    },
+    "ext-131": {
+      "km": 252,
+      "minutes": 250
+    },
+    "ext-132": {
+      "km": 258,
+      "minutes": 260
+    },
+    "ext-133": {
+      "km": 252,
+      "minutes": 250
+    },
+    "ext-134": {
+      "km": 252,
+      "minutes": 250
+    },
+    "ext-135": {
+      "km": 258,
+      "minutes": 260
+    },
+    "ext-138": {
+      "km": 263,
+      "minutes": 265
+    },
+    "ext-139": {
+      "km": 258,
+      "minutes": 260
+    },
+    "ext-140": {
+      "km": 286,
+      "minutes": 285
+    },
+    "ext-141": {
+      "km": 274,
+      "minutes": 275
+    },
+    "ext-142": {
+      "km": 257,
+      "minutes": 255
+    },
+    "ext-143": {
+      "km": 274,
+      "minutes": 275
+    },
+    "ext-144": {
+      "km": 249,
+      "minutes": 250
+    },
+    "ext-145": {
+      "km": 253,
+      "minutes": 255
+    },
+    "ext-146": {
+      "km": 252,
+      "minutes": 250
+    },
+    "ext-147": {
+      "km": 262,
+      "minutes": 260
+    },
+    "ext-148": {
+      "km": 259,
+      "minutes": 260
+    },
+    "ext-149": {
+      "km": 274,
+      "minutes": 275
+    },
+    "ext-150": {
+      "km": 237,
+      "minutes": 235
+    },
+    "ext-151": {
+      "km": 242,
+      "minutes": 240
+    },
+    "ext-152": {
+      "km": 245,
+      "minutes": 245
+    },
+    "ext-153": {
+      "km": 255,
+      "minutes": 255
+    },
+    "ext-154": {
+      "km": 252,
+      "minutes": 250
+    },
+    "ext-155": {
+      "km": 255,
+      "minutes": 255
+    },
+    "ext-157": {
+      "km": 297,
+      "minutes": 295
+    },
+    "ext-158": {
+      "km": 296,
+      "minutes": 295
+    },
+    "ext-159": {
+      "km": 289,
+      "minutes": 290
+    },
+    "ext-160": {
+      "km": 284,
+      "minutes": 285
+    },
+    "ext-161": {
+      "km": 285,
+      "minutes": 285
+    },
+    "ext-162": {
+      "km": 293,
+      "minutes": 295
+    },
+    "ext-163": {
+      "km": 326,
+      "minutes": 325
+    },
+    "ext-164": {
+      "km": 328,
+      "minutes": 330
+    },
+    "ext-165": {
+      "km": 339,
+      "minutes": 340
+    },
+    "ext-166": {
+      "km": 405,
+      "minutes": 405
+    },
+    "ext-167": {
+      "km": 412,
+      "minutes": 410
+    },
+    "ext-168": {
+      "km": 422,
+      "minutes": 420
+    },
+    "ext-169": {
+      "km": 422,
+      "minutes": 420
+    },
+    "ext-170": {
+      "km": 426,
+      "minutes": 425
+    },
+    "ext-172": {
+      "km": 255,
+      "minutes": 255
+    },
+    "ext-173": {
+      "km": 265,
+      "minutes": 265
+    },
+    "seg-y2y-a": {
+      "km": 67,
+      "minutes": 65
+    },
+    "seg-y2y-b": {
+      "km": 58,
+      "minutes": 60
+    },
+    "seg-y2y-c": {
+      "km": 68,
+      "minutes": 70
+    },
+    "seg-y2y-d": {
+      "km": 52,
+      "minutes": 50
+    },
+    "seg-int-1": {
+      "km": 432,
+      "minutes": 430
+    },
+    "seg-int-2": {
+      "km": 424,
+      "minutes": 425
+    },
+    "seg-int-3": {
+      "km": 414,
+      "minutes": 415
+    },
+    "seg-int-4": {
+      "km": 401,
+      "minutes": 400
+    },
+    "seg-int-5": {
+      "km": 381,
+      "minutes": 380
+    },
+    "seg-int-6": {
+      "km": 332,
+      "minutes": 330
+    },
+    "seg-int-7": {
+      "km": 331,
+      "minutes": 330
+    },
+    "seg-int-8": {
+      "km": 316,
+      "minutes": 315
+    },
+    "seg-int-9": {
+      "km": 329,
+      "minutes": 330
+    },
+    "seg-int-10": {
+      "km": 296,
+      "minutes": 295
+    },
+    "seg-int-11": {
+      "km": 277,
+      "minutes": 275
+    },
+    "seg-int-12": {
+      "km": 280,
+      "minutes": 280
+    },
+    "seg-int-13": {
+      "km": 248,
+      "minutes": 250
+    },
+    "seg-int-14": {
+      "km": 253,
+      "minutes": 255
+    },
+    "seg-int-15": {
+      "km": 258,
+      "minutes": 260
+    },
+    "seg-int-16": {
+      "km": 252,
+      "minutes": 250
+    },
+    "seg-int-17": {
+      "km": 265,
+      "minutes": 265
+    },
+    "seg-int-18": {
+      "km": 254,
+      "minutes": 255
+    },
+    "seg-int-19": {
+      "km": 245,
+      "minutes": 245
+    },
+    "seg-int-20": {
+      "km": 234,
+      "minutes": 235
+    },
+    "seg-int-21": {
+      "km": 220,
+      "minutes": 220
+    },
+    "seg-int-22": {
+      "km": 212,
+      "minutes": 210
+    },
+    "seg-int-23": {
+      "km": 187,
+      "minutes": 185
+    },
+    "seg-int-24": {
+      "km": 171,
+      "minutes": 170
+    },
+    "seg-int-25": {
+      "km": 183,
+      "minutes": 185
+    },
+    "seg-int-26": {
+      "km": 158,
+      "minutes": 160
+    },
+    "seg-int-27": {
+      "km": 148,
+      "minutes": 150
+    },
+    "seg-int-28": {
+      "km": 150,
+      "minutes": 150
+    },
+    "seg-int-29": {
+      "km": 150,
+      "minutes": 150
+    },
+    "seg-int-30": {
+      "km": 140,
+      "minutes": 140
+    },
+    "seg-int-31": {
+      "km": 130,
+      "minutes": 130
+    },
+    "seg-int-32": {
+      "km": 33,
+      "minutes": 35
+    },
+    "seg-int-33": {
+      "km": 16,
+      "minutes": 15
+    }
+  },
+  "beersheva": {
+    "ofer": {
+      "km": 184,
+      "minutes": 185
+    },
+    "hanadiv": {
+      "km": 168,
+      "minutes": 170
+    },
+    "shofet": {
+      "km": 177,
+      "minutes": 175
+    },
+    "dalia": {
+      "km": 170,
+      "minutes": 170
+    },
+    "oren": {
+      "km": 186,
+      "minutes": 185
+    },
+    "ext-6": {
+      "km": 293,
+      "minutes": 295
+    },
+    "ext-7": {
+      "km": 290,
+      "minutes": 290
+    },
+    "ext-8": {
+      "km": 283,
+      "minutes": 285
+    },
+    "ext-9": {
+      "km": 283,
+      "minutes": 285
+    },
+    "ext-11": {
+      "km": 290,
+      "minutes": 290
+    },
+    "ext-12": {
+      "km": 281,
+      "minutes": 280
+    },
+    "ext-13": {
+      "km": 274,
+      "minutes": 275
+    },
+    "ext-14": {
+      "km": 278,
+      "minutes": 280
+    },
+    "ext-15": {
+      "km": 275,
+      "minutes": 275
+    },
+    "ext-16": {
+      "km": 261,
+      "minutes": 260
+    },
+    "ext-17": {
+      "km": 250,
+      "minutes": 250
+    },
+    "ext-18": {
+      "km": 258,
+      "minutes": 260
+    },
+    "ext-19": {
+      "km": 253,
+      "minutes": 255
+    },
+    "ext-20": {
+      "km": 262,
+      "minutes": 260
+    },
+    "ext-22": {
+      "km": 272,
+      "minutes": 270
+    },
+    "ext-23": {
+      "km": 243,
+      "minutes": 245
+    },
+    "ext-24": {
+      "km": 235,
+      "minutes": 235
+    },
+    "ext-25": {
+      "km": 267,
+      "minutes": 265
+    },
+    "ext-26": {
+      "km": 283,
+      "minutes": 285
+    },
+    "ext-27": {
+      "km": 252,
+      "minutes": 250
+    },
+    "ext-28": {
+      "km": 260,
+      "minutes": 260
+    },
+    "ext-29": {
+      "km": 261,
+      "minutes": 260
+    },
+    "ext-30": {
+      "km": 256,
+      "minutes": 255
+    },
+    "ext-31": {
+      "km": 251,
+      "minutes": 250
+    },
+    "ext-32": {
+      "km": 241,
+      "minutes": 240
+    },
+    "ext-33": {
+      "km": 242,
+      "minutes": 240
+    },
+    "ext-34": {
+      "km": 242,
+      "minutes": 240
+    },
+    "ext-36": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-38": {
+      "km": 230,
+      "minutes": 230
+    },
+    "ext-39": {
+      "km": 239,
+      "minutes": 240
+    },
+    "ext-40": {
+      "km": 230,
+      "minutes": 230
+    },
+    "ext-41": {
+      "km": 220,
+      "minutes": 220
+    },
+    "ext-42": {
+      "km": 244,
+      "minutes": 245
+    },
+    "ext-43": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-44": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-45": {
+      "km": 241,
+      "minutes": 240
+    },
+    "ext-46": {
+      "km": 227,
+      "minutes": 225
+    },
+    "ext-47": {
+      "km": 233,
+      "minutes": 235
+    },
+    "ext-49": {
+      "km": 222,
+      "minutes": 220
+    },
+    "ext-50": {
+      "km": 222,
+      "minutes": 220
+    },
+    "ext-51": {
+      "km": 235,
+      "minutes": 235
+    },
+    "ext-52": {
+      "km": 235,
+      "minutes": 235
+    },
+    "ext-55": {
+      "km": 209,
+      "minutes": 210
+    },
+    "ext-56": {
+      "km": 224,
+      "minutes": 225
+    },
+    "ext-57": {
+      "km": 225,
+      "minutes": 225
+    },
+    "ext-59": {
+      "km": 203,
+      "minutes": 205
+    },
+    "ext-60": {
+      "km": 206,
+      "minutes": 205
+    },
+    "ext-61": {
+      "km": 222,
+      "minutes": 220
+    },
+    "ext-62": {
+      "km": 201,
+      "minutes": 200
+    },
+    "ext-63": {
+      "km": 219,
+      "minutes": 220
+    },
+    "ext-65": {
+      "km": 202,
+      "minutes": 200
+    },
+    "ext-66": {
+      "km": 225,
+      "minutes": 225
+    },
+    "ext-67": {
+      "km": 198,
+      "minutes": 200
+    },
+    "ext-68": {
+      "km": 248,
+      "minutes": 250
+    },
+    "ext-69": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-70": {
+      "km": 186,
+      "minutes": 185
+    },
+    "ext-71": {
+      "km": 192,
+      "minutes": 190
+    },
+    "ext-72": {
+      "km": 182,
+      "minutes": 180
+    },
+    "ext-73": {
+      "km": 186,
+      "minutes": 185
+    },
+    "ext-74": {
+      "km": 186,
+      "minutes": 185
+    },
+    "ext-75": {
+      "km": 189,
+      "minutes": 190
+    },
+    "ext-76": {
+      "km": 183,
+      "minutes": 185
+    },
+    "ext-77": {
+      "km": 177,
+      "minutes": 175
+    },
+    "ext-78": {
+      "km": 183,
+      "minutes": 185
+    },
+    "ext-79": {
+      "km": 175,
+      "minutes": 175
+    },
+    "ext-81": {
+      "km": 171,
+      "minutes": 170
+    },
+    "ext-82": {
+      "km": 163,
+      "minutes": 165
+    },
+    "ext-84": {
+      "km": 200,
+      "minutes": 200
+    },
+    "ext-86": {
+      "km": 196,
+      "minutes": 195
+    },
+    "ext-87": {
+      "km": 197,
+      "minutes": 195
+    },
+    "ext-88": {
+      "km": 185,
+      "minutes": 185
+    },
+    "ext-89": {
+      "km": 169,
+      "minutes": 170
+    },
+    "ext-90": {
+      "km": 134,
+      "minutes": 135
+    },
+    "ext-91": {
+      "km": 137,
+      "minutes": 135
+    },
+    "ext-94": {
+      "km": 100,
+      "minutes": 100
+    },
+    "ext-95": {
+      "km": 92,
+      "minutes": 90
+    },
+    "ext-96": {
+      "km": 169,
+      "minutes": 170
+    },
+    "ext-97": {
+      "km": 166,
+      "minutes": 165
+    },
+    "ext-98": {
+      "km": 79,
+      "minutes": 80
+    },
+    "ext-100": {
+      "km": 100,
+      "minutes": 100
+    },
+    "ext-101": {
+      "km": 80,
+      "minutes": 80
+    },
+    "ext-102": {
+      "km": 98,
+      "minutes": 100
+    },
+    "ext-103": {
+      "km": 79,
+      "minutes": 80
+    },
+    "ext-104": {
+      "km": 94,
+      "minutes": 95
+    },
+    "ext-105": {
+      "km": 97,
+      "minutes": 95
+    },
+    "ext-106": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-107": {
+      "km": 114,
+      "minutes": 115
+    },
+    "ext-108": {
+      "km": 119,
+      "minutes": 120
+    },
+    "ext-110": {
+      "km": 134,
+      "minutes": 135
+    },
+    "ext-111": {
+      "km": 100,
+      "minutes": 100
+    },
+    "ext-114": {
+      "km": 99,
+      "minutes": 100
+    },
+    "ext-116": {
+      "km": 60,
+      "minutes": 60
+    },
+    "ext-117": {
+      "km": 60,
+      "minutes": 60
+    },
+    "ext-118": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-119": {
+      "km": 93,
+      "minutes": 95
+    },
+    "ext-120": {
+      "km": 93,
+      "minutes": 95
+    },
+    "ext-121": {
+      "km": 47,
+      "minutes": 45
+    },
+    "ext-122": {
+      "km": 49,
+      "minutes": 50
+    },
+    "ext-123": {
+      "km": 46,
+      "minutes": 45
+    },
+    "ext-124": {
+      "km": 45,
+      "minutes": 45
+    },
+    "ext-125": {
+      "km": 84,
+      "minutes": 85
+    },
+    "ext-126": {
+      "km": 63,
+      "minutes": 65
+    },
+    "ext-127": {
+      "km": 71,
+      "minutes": 70
+    },
+    "ext-128": {
+      "km": 88,
+      "minutes": 90
+    },
+    "ext-129": {
+      "km": 89,
+      "minutes": 90
+    },
+    "ext-130": {
+      "km": 41,
+      "minutes": 40
+    },
+    "ext-131": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-132": {
+      "km": 67,
+      "minutes": 65
+    },
+    "ext-133": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-134": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-135": {
+      "km": 67,
+      "minutes": 65
+    },
+    "ext-138": {
+      "km": 72,
+      "minutes": 70
+    },
+    "ext-139": {
+      "km": 67,
+      "minutes": 65
+    },
+    "ext-140": {
+      "km": 95,
+      "minutes": 95
+    },
+    "ext-141": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-142": {
+      "km": 66,
+      "minutes": 65
+    },
+    "ext-143": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-144": {
+      "km": 59,
+      "minutes": 60
+    },
+    "ext-145": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-146": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-147": {
+      "km": 69,
+      "minutes": 70
+    },
+    "ext-148": {
+      "km": 68,
+      "minutes": 70
+    },
+    "ext-149": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-150": {
+      "km": 44,
+      "minutes": 45
+    },
+    "ext-151": {
+      "km": 49,
+      "minutes": 50
+    },
+    "ext-152": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-153": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-154": {
+      "km": 58,
+      "minutes": 60
+    },
+    "ext-155": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-157": {
+      "km": 104,
+      "minutes": 105
+    },
+    "ext-158": {
+      "km": 102,
+      "minutes": 100
+    },
+    "ext-159": {
+      "km": 95,
+      "minutes": 95
+    },
+    "ext-160": {
+      "km": 91,
+      "minutes": 90
+    },
+    "ext-161": {
+      "km": 92,
+      "minutes": 90
+    },
+    "ext-162": {
+      "km": 99,
+      "minutes": 100
+    },
+    "ext-163": {
+      "km": 133,
+      "minutes": 135
+    },
+    "ext-164": {
+      "km": 135,
+      "minutes": 135
+    },
+    "ext-165": {
+      "km": 148,
+      "minutes": 150
+    },
+    "ext-166": {
+      "km": 212,
+      "minutes": 210
+    },
+    "ext-167": {
+      "km": 219,
+      "minutes": 220
+    },
+    "ext-168": {
+      "km": 229,
+      "minutes": 230
+    },
+    "ext-169": {
+      "km": 229,
+      "minutes": 230
+    },
+    "ext-170": {
+      "km": 232,
+      "minutes": 230
+    },
+    "ext-172": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-173": {
+      "km": 74,
+      "minutes": 75
+    },
+    "seg-y2y-a": {
+      "km": 240,
+      "minutes": 240
+    },
+    "seg-y2y-b": {
+      "km": 232,
+      "minutes": 230
+    },
+    "seg-y2y-c": {
+      "km": 235,
+      "minutes": 235
+    },
+    "seg-y2y-d": {
+      "km": 230,
+      "minutes": 230
+    },
+    "seg-int-1": {
+      "km": 239,
+      "minutes": 240
+    },
+    "seg-int-2": {
+      "km": 230,
+      "minutes": 230
+    },
+    "seg-int-3": {
+      "km": 221,
+      "minutes": 220
+    },
+    "seg-int-4": {
+      "km": 208,
+      "minutes": 210
+    },
+    "seg-int-5": {
+      "km": 188,
+      "minutes": 190
+    },
+    "seg-int-6": {
+      "km": 138,
+      "minutes": 140
+    },
+    "seg-int-7": {
+      "km": 140,
+      "minutes": 140
+    },
+    "seg-int-8": {
+      "km": 125,
+      "minutes": 125
+    },
+    "seg-int-9": {
+      "km": 138,
+      "minutes": 140
+    },
+    "seg-int-10": {
+      "km": 102,
+      "minutes": 100
+    },
+    "seg-int-11": {
+      "km": 84,
+      "minutes": 85
+    },
+    "seg-int-12": {
+      "km": 87,
+      "minutes": 85
+    },
+    "seg-int-13": {
+      "km": 55,
+      "minutes": 55
+    },
+    "seg-int-14": {
+      "km": 62,
+      "minutes": 60
+    },
+    "seg-int-15": {
+      "km": 67,
+      "minutes": 65
+    },
+    "seg-int-16": {
+      "km": 61,
+      "minutes": 60
+    },
+    "seg-int-17": {
+      "km": 88,
+      "minutes": 90
+    },
+    "seg-int-18": {
+      "km": 77,
+      "minutes": 75
+    },
+    "seg-int-19": {
+      "km": 68,
+      "minutes": 70
+    },
+    "seg-int-20": {
+      "km": 57,
+      "minutes": 55
+    },
+    "seg-int-21": {
+      "km": 43,
+      "minutes": 45
+    },
+    "seg-int-22": {
+      "km": 35,
+      "minutes": 35
+    },
+    "seg-int-23": {
+      "km": 22,
+      "minutes": 20
+    },
+    "seg-int-24": {
+      "km": 25,
+      "minutes": 25
+    },
+    "seg-int-25": {
+      "km": 37,
+      "minutes": 35
+    },
+    "seg-int-26": {
+      "km": 48,
+      "minutes": 50
+    },
+    "seg-int-27": {
+      "km": 60,
+      "minutes": 60
+    },
+    "seg-int-28": {
+      "km": 77,
+      "minutes": 75
+    },
+    "seg-int-29": {
+      "km": 96,
+      "minutes": 95
+    },
+    "seg-int-30": {
+      "km": 81,
+      "minutes": 80
+    },
+    "seg-int-31": {
+      "km": 80,
+      "minutes": 80
+    },
+    "seg-int-32": {
+      "km": 176,
+      "minutes": 175
+    },
+    "seg-int-33": {
+      "km": 188,
+      "minutes": 190
+    }
+  },
+  "safed": {
+    "ofer": {
+      "km": 90,
+      "minutes": 90
+    },
+    "hanadiv": {
+      "km": 99,
+      "minutes": 100
+    },
+    "shofet": {
+      "km": 86,
+      "minutes": 85
+    },
+    "dalia": {
+      "km": 91,
+      "minutes": 90
+    },
+    "oren": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-6": {
+      "km": 63,
+      "minutes": 65
+    },
+    "ext-7": {
+      "km": 60,
+      "minutes": 60
+    },
+    "ext-8": {
+      "km": 53,
+      "minutes": 55
+    },
+    "ext-9": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-11": {
+      "km": 60,
+      "minutes": 60
+    },
+    "ext-12": {
+      "km": 50,
+      "minutes": 50
+    },
+    "ext-13": {
+      "km": 43,
+      "minutes": 45
+    },
+    "ext-14": {
+      "km": 48,
+      "minutes": 50
+    },
+    "ext-15": {
+      "km": 47,
+      "minutes": 45
+    },
+    "ext-16": {
+      "km": 31,
+      "minutes": 30
+    },
+    "ext-17": {
+      "km": 20,
+      "minutes": 20
+    },
+    "ext-18": {
+      "km": 33,
+      "minutes": 35
+    },
+    "ext-19": {
+      "km": 39,
+      "minutes": 40
+    },
+    "ext-20": {
+      "km": 48,
+      "minutes": 50
+    },
+    "ext-22": {
+      "km": 58,
+      "minutes": 60
+    },
+    "ext-23": {
+      "km": 49,
+      "minutes": 50
+    },
+    "ext-24": {
+      "km": 59,
+      "minutes": 60
+    },
+    "ext-25": {
+      "km": 48,
+      "minutes": 50
+    },
+    "ext-26": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-27": {
+      "km": 37,
+      "minutes": 35
+    },
+    "ext-28": {
+      "km": 29,
+      "minutes": 30
+    },
+    "ext-29": {
+      "km": 26,
+      "minutes": 25
+    },
+    "ext-30": {
+      "km": 21,
+      "minutes": 20
+    },
+    "ext-31": {
+      "km": 16,
+      "minutes": 15
+    },
+    "ext-32": {
+      "km": 13,
+      "minutes": 15
+    },
+    "ext-33": {
+      "km": 39,
+      "minutes": 40
+    },
+    "ext-34": {
+      "km": 23,
+      "minutes": 25
+    },
+    "ext-36": {
+      "km": 28,
+      "minutes": 30
+    },
+    "ext-38": {
+      "km": 40,
+      "minutes": 40
+    },
+    "ext-39": {
+      "km": 25,
+      "minutes": 25
+    },
+    "ext-40": {
+      "km": 37,
+      "minutes": 35
+    },
+    "ext-41": {
+      "km": 40,
+      "minutes": 40
+    },
+    "ext-42": {
+      "km": 22,
+      "minutes": 20
+    },
+    "ext-43": {
+      "km": 11,
+      "minutes": 10
+    },
+    "ext-44": {
+      "km": 11,
+      "minutes": 10
+    },
+    "ext-45": {
+      "km": 10,
+      "minutes": 10
+    },
+    "ext-46": {
+      "km": 32,
+      "minutes": 30
+    },
+    "ext-47": {
+      "km": 25,
+      "minutes": 25
+    },
+    "ext-49": {
+      "km": 34,
+      "minutes": 35
+    },
+    "ext-50": {
+      "km": 25,
+      "minutes": 25
+    },
+    "ext-51": {
+      "km": 29,
+      "minutes": 30
+    },
+    "ext-52": {
+      "km": 21,
+      "minutes": 20
+    },
+    "ext-55": {
+      "km": 40,
+      "minutes": 40
+    },
+    "ext-56": {
+      "km": 32,
+      "minutes": 30
+    },
+    "ext-57": {
+      "km": 44,
+      "minutes": 45
+    },
+    "ext-59": {
+      "km": 57,
+      "minutes": 55
+    },
+    "ext-60": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-61": {
+      "km": 54,
+      "minutes": 55
+    },
+    "ext-62": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-63": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-65": {
+      "km": 63,
+      "minutes": 65
+    },
+    "ext-66": {
+      "km": 44,
+      "minutes": 45
+    },
+    "ext-67": {
+      "km": 60,
+      "minutes": 60
+    },
+    "ext-68": {
+      "km": 26,
+      "minutes": 25
+    },
+    "ext-69": {
+      "km": 11,
+      "minutes": 10
+    },
+    "ext-70": {
+      "km": 78,
+      "minutes": 80
+    },
+    "ext-71": {
+      "km": 82,
+      "minutes": 80
+    },
+    "ext-72": {
+      "km": 79,
+      "minutes": 80
+    },
+    "ext-73": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-74": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-75": {
+      "km": 88,
+      "minutes": 90
+    },
+    "ext-76": {
+      "km": 105,
+      "minutes": 105
+    },
+    "ext-77": {
+      "km": 92,
+      "minutes": 90
+    },
+    "ext-78": {
+      "km": 105,
+      "minutes": 105
+    },
+    "ext-79": {
+      "km": 84,
+      "minutes": 85
+    },
+    "ext-81": {
+      "km": 87,
+      "minutes": 85
+    },
+    "ext-82": {
+      "km": 101,
+      "minutes": 100
+    },
+    "ext-84": {
+      "km": 92,
+      "minutes": 90
+    },
+    "ext-86": {
+      "km": 75,
+      "minutes": 75
+    },
+    "ext-87": {
+      "km": 77,
+      "minutes": 75
+    },
+    "ext-88": {
+      "km": 107,
+      "minutes": 105
+    },
+    "ext-89": {
+      "km": 106,
+      "minutes": 105
+    },
+    "ext-90": {
+      "km": 125,
+      "minutes": 125
+    },
+    "ext-91": {
+      "km": 127,
+      "minutes": 125
+    },
+    "ext-94": {
+      "km": 170,
+      "minutes": 170
+    },
+    "ext-95": {
+      "km": 159,
+      "minutes": 160
+    },
+    "ext-96": {
+      "km": 106,
+      "minutes": 105
+    },
+    "ext-97": {
+      "km": 110,
+      "minutes": 110
+    },
+    "ext-98": {
+      "km": 180,
+      "minutes": 180
+    },
+    "ext-100": {
+      "km": 210,
+      "minutes": 210
+    },
+    "ext-101": {
+      "km": 204,
+      "minutes": 205
+    },
+    "ext-102": {
+      "km": 203,
+      "minutes": 205
+    },
+    "ext-103": {
+      "km": 208,
+      "minutes": 210
+    },
+    "ext-104": {
+      "km": 204,
+      "minutes": 205
+    },
+    "ext-105": {
+      "km": 204,
+      "minutes": 205
+    },
+    "ext-106": {
+      "km": 207,
+      "minutes": 205
+    },
+    "ext-107": {
+      "km": 210,
+      "minutes": 210
+    },
+    "ext-108": {
+      "km": 189,
+      "minutes": 190
+    },
+    "ext-110": {
+      "km": 187,
+      "minutes": 185
+    },
+    "ext-111": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-114": {
+      "km": 225,
+      "minutes": 225
+    },
+    "ext-116": {
+      "km": 293,
+      "minutes": 295
+    },
+    "ext-117": {
+      "km": 293,
+      "minutes": 295
+    },
+    "ext-118": {
+      "km": 285,
+      "minutes": 285
+    },
+    "ext-119": {
+      "km": 233,
+      "minutes": 235
+    },
+    "ext-120": {
+      "km": 233,
+      "minutes": 235
+    },
+    "ext-121": {
+      "km": 280,
+      "minutes": 280
+    },
+    "ext-122": {
+      "km": 283,
+      "minutes": 285
+    },
+    "ext-123": {
+      "km": 279,
+      "minutes": 280
+    },
+    "ext-124": {
+      "km": 278,
+      "minutes": 280
+    },
+    "ext-125": {
+      "km": 237,
+      "minutes": 235
+    },
+    "ext-126": {
+      "km": 296,
+      "minutes": 295
+    },
+    "ext-127": {
+      "km": 251,
+      "minutes": 250
+    },
+    "ext-128": {
+      "km": 270,
+      "minutes": 270
+    },
+    "ext-129": {
+      "km": 272,
+      "minutes": 270
+    },
+    "ext-130": {
+      "km": 288,
+      "minutes": 290
+    },
+    "ext-131": {
+      "km": 308,
+      "minutes": 310
+    },
+    "ext-132": {
+      "km": 314,
+      "minutes": 315
+    },
+    "ext-133": {
+      "km": 308,
+      "minutes": 310
+    },
+    "ext-134": {
+      "km": 308,
+      "minutes": 310
+    },
+    "ext-135": {
+      "km": 314,
+      "minutes": 315
+    },
+    "ext-138": {
+      "km": 319,
+      "minutes": 320
+    },
+    "ext-139": {
+      "km": 314,
+      "minutes": 315
+    },
+    "ext-140": {
+      "km": 342,
+      "minutes": 340
+    },
+    "ext-141": {
+      "km": 330,
+      "minutes": 330
+    },
+    "ext-142": {
+      "km": 313,
+      "minutes": 315
+    },
+    "ext-143": {
+      "km": 330,
+      "minutes": 330
+    },
+    "ext-144": {
+      "km": 306,
+      "minutes": 305
+    },
+    "ext-145": {
+      "km": 309,
+      "minutes": 310
+    },
+    "ext-146": {
+      "km": 308,
+      "minutes": 310
+    },
+    "ext-147": {
+      "km": 318,
+      "minutes": 320
+    },
+    "ext-148": {
+      "km": 315,
+      "minutes": 315
+    },
+    "ext-149": {
+      "km": 330,
+      "minutes": 330
+    },
+    "ext-150": {
+      "km": 293,
+      "minutes": 295
+    },
+    "ext-151": {
+      "km": 298,
+      "minutes": 300
+    },
+    "ext-152": {
+      "km": 301,
+      "minutes": 300
+    },
+    "ext-153": {
+      "km": 311,
+      "minutes": 310
+    },
+    "ext-154": {
+      "km": 308,
+      "minutes": 310
+    },
+    "ext-155": {
+      "km": 311,
+      "minutes": 310
+    },
+    "ext-157": {
+      "km": 354,
+      "minutes": 355
+    },
+    "ext-158": {
+      "km": 352,
+      "minutes": 350
+    },
+    "ext-159": {
+      "km": 345,
+      "minutes": 345
+    },
+    "ext-160": {
+      "km": 340,
+      "minutes": 340
+    },
+    "ext-161": {
+      "km": 341,
+      "minutes": 340
+    },
+    "ext-162": {
+      "km": 349,
+      "minutes": 350
+    },
+    "ext-163": {
+      "km": 383,
+      "minutes": 385
+    },
+    "ext-164": {
+      "km": 384,
+      "minutes": 385
+    },
+    "ext-165": {
+      "km": 396,
+      "minutes": 395
+    },
+    "ext-166": {
+      "km": 461,
+      "minutes": 460
+    },
+    "ext-167": {
+      "km": 468,
+      "minutes": 470
+    },
+    "ext-168": {
+      "km": 478,
+      "minutes": 480
+    },
+    "ext-169": {
+      "km": 478,
+      "minutes": 480
+    },
+    "ext-170": {
+      "km": 458,
+      "minutes": 460
+    },
+    "ext-172": {
+      "km": 311,
+      "minutes": 310
+    },
+    "ext-173": {
+      "km": 321,
+      "minutes": 320
+    },
+    "seg-y2y-a": {
+      "km": 6,
+      "minutes": 5
+    },
+    "seg-y2y-b": {
+      "km": 18,
+      "minutes": 20
+    },
+    "seg-y2y-c": {
+      "km": 21,
+      "minutes": 20
+    },
+    "seg-y2y-d": {
+      "km": 40,
+      "minutes": 40
+    },
+    "seg-int-1": {
+      "km": 455,
+      "minutes": 455
+    },
+    "seg-int-2": {
+      "km": 458,
+      "minutes": 460
+    },
+    "seg-int-3": {
+      "km": 470,
+      "minutes": 470
+    },
+    "seg-int-4": {
+      "km": 457,
+      "minutes": 455
+    },
+    "seg-int-5": {
+      "km": 437,
+      "minutes": 435
+    },
+    "seg-int-6": {
+      "km": 388,
+      "minutes": 390
+    },
+    "seg-int-7": {
+      "km": 388,
+      "minutes": 390
+    },
+    "seg-int-8": {
+      "km": 372,
+      "minutes": 370
+    },
+    "seg-int-9": {
+      "km": 385,
+      "minutes": 385
+    },
+    "seg-int-10": {
+      "km": 352,
+      "minutes": 350
+    },
+    "seg-int-11": {
+      "km": 333,
+      "minutes": 335
+    },
+    "seg-int-12": {
+      "km": 336,
+      "minutes": 335
+    },
+    "seg-int-13": {
+      "km": 305,
+      "minutes": 305
+    },
+    "seg-int-14": {
+      "km": 309,
+      "minutes": 310
+    },
+    "seg-int-15": {
+      "km": 314,
+      "minutes": 315
+    },
+    "seg-int-16": {
+      "km": 308,
+      "minutes": 310
+    },
+    "seg-int-17": {
+      "km": 270,
+      "minutes": 270
+    },
+    "seg-int-18": {
+      "km": 245,
+      "minutes": 245
+    },
+    "seg-int-19": {
+      "km": 301,
+      "minutes": 300
+    },
+    "seg-int-20": {
+      "km": 290,
+      "minutes": 290
+    },
+    "seg-int-21": {
+      "km": 276,
+      "minutes": 275
+    },
+    "seg-int-22": {
+      "km": 268,
+      "minutes": 270
+    },
+    "seg-int-23": {
+      "km": 243,
+      "minutes": 245
+    },
+    "seg-int-24": {
+      "km": 227,
+      "minutes": 225
+    },
+    "seg-int-25": {
+      "km": 239,
+      "minutes": 240
+    },
+    "seg-int-26": {
+      "km": 214,
+      "minutes": 215
+    },
+    "seg-int-27": {
+      "km": 204,
+      "minutes": 205
+    },
+    "seg-int-28": {
+      "km": 206,
+      "minutes": 205
+    },
+    "seg-int-29": {
+      "km": 206,
+      "minutes": 205
+    },
+    "seg-int-30": {
+      "km": 196,
+      "minutes": 195
+    },
+    "seg-int-31": {
+      "km": 186,
+      "minutes": 185
+    },
+    "seg-int-32": {
+      "km": 97,
+      "minutes": 95
+    },
+    "seg-int-33": {
+      "km": 86,
+      "minutes": 85
+    }
+  },
+  "eilat": {
+    "ofer": {
+      "km": 417,
+      "minutes": 415
+    },
+    "hanadiv": {
+      "km": 401,
+      "minutes": 400
+    },
+    "shofet": {
+      "km": 410,
+      "minutes": 410
+    },
+    "dalia": {
+      "km": 403,
+      "minutes": 405
+    },
+    "oren": {
+      "km": 419,
+      "minutes": 420
+    },
+    "ext-6": {
+      "km": 496,
+      "minutes": 495
+    },
+    "ext-7": {
+      "km": 499,
+      "minutes": 500
+    },
+    "ext-8": {
+      "km": 494,
+      "minutes": 495
+    },
+    "ext-9": {
+      "km": 493,
+      "minutes": 495
+    },
+    "ext-11": {
+      "km": 493,
+      "minutes": 495
+    },
+    "ext-12": {
+      "km": 492,
+      "minutes": 490
+    },
+    "ext-13": {
+      "km": 485,
+      "minutes": 485
+    },
+    "ext-14": {
+      "km": 480,
+      "minutes": 480
+    },
+    "ext-15": {
+      "km": 471,
+      "minutes": 470
+    },
+    "ext-16": {
+      "km": 464,
+      "minutes": 465
+    },
+    "ext-17": {
+      "km": 461,
+      "minutes": 460
+    },
+    "ext-18": {
+      "km": 453,
+      "minutes": 455
+    },
+    "ext-19": {
+      "km": 448,
+      "minutes": 450
+    },
+    "ext-20": {
+      "km": 452,
+      "minutes": 450
+    },
+    "ext-22": {
+      "km": 456,
+      "minutes": 455
+    },
+    "ext-23": {
+      "km": 440,
+      "minutes": 440
+    },
+    "ext-24": {
+      "km": 431,
+      "minutes": 430
+    },
+    "ext-25": {
+      "km": 457,
+      "minutes": 455
+    },
+    "ext-26": {
+      "km": 493,
+      "minutes": 495
+    },
+    "ext-27": {
+      "km": 447,
+      "minutes": 445
+    },
+    "ext-28": {
+      "km": 471,
+      "minutes": 470
+    },
+    "ext-29": {
+      "km": 494,
+      "minutes": 495
+    },
+    "ext-30": {
+      "km": 489,
+      "minutes": 490
+    },
+    "ext-31": {
+      "km": 484,
+      "minutes": 485
+    },
+    "ext-32": {
+      "km": 474,
+      "minutes": 475
+    },
+    "ext-33": {
+      "km": 475,
+      "minutes": 475
+    },
+    "ext-34": {
+      "km": 475,
+      "minutes": 475
+    },
+    "ext-36": {
+      "km": 469,
+      "minutes": 470
+    },
+    "ext-38": {
+      "km": 463,
+      "minutes": 465
+    },
+    "ext-39": {
+      "km": 472,
+      "minutes": 470
+    },
+    "ext-40": {
+      "km": 463,
+      "minutes": 465
+    },
+    "ext-41": {
+      "km": 453,
+      "minutes": 455
+    },
+    "ext-42": {
+      "km": 477,
+      "minutes": 475
+    },
+    "ext-43": {
+      "km": 469,
+      "minutes": 470
+    },
+    "ext-44": {
+      "km": 469,
+      "minutes": 470
+    },
+    "ext-45": {
+      "km": 451,
+      "minutes": 450
+    },
+    "ext-46": {
+      "km": 460,
+      "minutes": 460
+    },
+    "ext-47": {
+      "km": 466,
+      "minutes": 465
+    },
+    "ext-49": {
+      "km": 455,
+      "minutes": 455
+    },
+    "ext-50": {
+      "km": 455,
+      "minutes": 455
+    },
+    "ext-51": {
+      "km": 439,
+      "minutes": 440
+    },
+    "ext-52": {
+      "km": 468,
+      "minutes": 470
+    },
+    "ext-55": {
+      "km": 442,
+      "minutes": 440
+    },
+    "ext-56": {
+      "km": 428,
+      "minutes": 430
+    },
+    "ext-57": {
+      "km": 434,
+      "minutes": 435
+    },
+    "ext-59": {
+      "km": 436,
+      "minutes": 435
+    },
+    "ext-60": {
+      "km": 425,
+      "minutes": 425
+    },
+    "ext-61": {
+      "km": 410,
+      "minutes": 410
+    },
+    "ext-62": {
+      "km": 419,
+      "minutes": 420
+    },
+    "ext-63": {
+      "km": 406,
+      "minutes": 405
+    },
+    "ext-65": {
+      "km": 420,
+      "minutes": 420
+    },
+    "ext-66": {
+      "km": 434,
+      "minutes": 435
+    },
+    "ext-67": {
+      "km": 428,
+      "minutes": 430
+    },
+    "ext-68": {
+      "km": 481,
+      "minutes": 480
+    },
+    "ext-69": {
+      "km": 469,
+      "minutes": 470
+    },
+    "ext-70": {
+      "km": 419,
+      "minutes": 420
+    },
+    "ext-71": {
+      "km": 425,
+      "minutes": 425
+    },
+    "ext-72": {
+      "km": 415,
+      "minutes": 415
+    },
+    "ext-73": {
+      "km": 419,
+      "minutes": 420
+    },
+    "ext-74": {
+      "km": 419,
+      "minutes": 420
+    },
+    "ext-75": {
+      "km": 422,
+      "minutes": 420
+    },
+    "ext-76": {
+      "km": 416,
+      "minutes": 415
+    },
+    "ext-77": {
+      "km": 410,
+      "minutes": 410
+    },
+    "ext-78": {
+      "km": 416,
+      "minutes": 415
+    },
+    "ext-79": {
+      "km": 408,
+      "minutes": 410
+    },
+    "ext-81": {
+      "km": 404,
+      "minutes": 405
+    },
+    "ext-82": {
+      "km": 396,
+      "minutes": 395
+    },
+    "ext-84": {
+      "km": 408,
+      "minutes": 410
+    },
+    "ext-86": {
+      "km": 429,
+      "minutes": 430
+    },
+    "ext-87": {
+      "km": 430,
+      "minutes": 430
+    },
+    "ext-88": {
+      "km": 418,
+      "minutes": 420
+    },
+    "ext-89": {
+      "km": 402,
+      "minutes": 400
+    },
+    "ext-90": {
+      "km": 367,
+      "minutes": 365
+    },
+    "ext-91": {
+      "km": 370,
+      "minutes": 370
+    },
+    "ext-94": {
+      "km": 333,
+      "minutes": 335
+    },
+    "ext-95": {
+      "km": 325,
+      "minutes": 325
+    },
+    "ext-96": {
+      "km": 402,
+      "minutes": 400
+    },
+    "ext-97": {
+      "km": 399,
+      "minutes": 400
+    },
+    "ext-98": {
+      "km": 312,
+      "minutes": 310
+    },
+    "ext-100": {
+      "km": 307,
+      "minutes": 305
+    },
+    "ext-101": {
+      "km": 313,
+      "minutes": 315
+    },
+    "ext-102": {
+      "km": 304,
+      "minutes": 305
+    },
+    "ext-103": {
+      "km": 312,
+      "minutes": 310
+    },
+    "ext-104": {
+      "km": 327,
+      "minutes": 325
+    },
+    "ext-105": {
+      "km": 305,
+      "minutes": 305
+    },
+    "ext-106": {
+      "km": 294,
+      "minutes": 295
+    },
+    "ext-107": {
+      "km": 303,
+      "minutes": 305
+    },
+    "ext-108": {
+      "km": 297,
+      "minutes": 295
+    },
+    "ext-110": {
+      "km": 261,
+      "minutes": 260
+    },
+    "ext-111": {
+      "km": 313,
+      "minutes": 315
+    },
+    "ext-114": {
+      "km": 226,
+      "minutes": 225
+    },
+    "ext-116": {
+      "km": 230,
+      "minutes": 230
+    },
+    "ext-117": {
+      "km": 231,
+      "minutes": 230
+    },
+    "ext-118": {
+      "km": 223,
+      "minutes": 225
+    },
+    "ext-119": {
+      "km": 219,
+      "minutes": 220
+    },
+    "ext-120": {
+      "km": 220,
+      "minutes": 220
+    },
+    "ext-121": {
+      "km": 218,
+      "minutes": 220
+    },
+    "ext-122": {
+      "km": 220,
+      "minutes": 220
+    },
+    "ext-123": {
+      "km": 218,
+      "minutes": 220
+    },
+    "ext-124": {
+      "km": 232,
+      "minutes": 230
+    },
+    "ext-125": {
+      "km": 210,
+      "minutes": 210
+    },
+    "ext-126": {
+      "km": 204,
+      "minutes": 205
+    },
+    "ext-127": {
+      "km": 198,
+      "minutes": 200
+    },
+    "ext-128": {
+      "km": 192,
+      "minutes": 190
+    },
+    "ext-129": {
+      "km": 193,
+      "minutes": 195
+    },
+    "ext-130": {
+      "km": 209,
+      "minutes": 210
+    },
+    "ext-131": {
+      "km": 184,
+      "minutes": 185
+    },
+    "ext-132": {
+      "km": 176,
+      "minutes": 175
+    },
+    "ext-133": {
+      "km": 183,
+      "minutes": 185
+    },
+    "ext-134": {
+      "km": 183,
+      "minutes": 185
+    },
+    "ext-135": {
+      "km": 177,
+      "minutes": 175
+    },
+    "ext-138": {
+      "km": 182,
+      "minutes": 180
+    },
+    "ext-139": {
+      "km": 219,
+      "minutes": 220
+    },
+    "ext-140": {
+      "km": 150,
+      "minutes": 150
+    },
+    "ext-141": {
+      "km": 235,
+      "minutes": 235
+    },
+    "ext-142": {
+      "km": 218,
+      "minutes": 220
+    },
+    "ext-143": {
+      "km": 235,
+      "minutes": 235
+    },
+    "ext-144": {
+      "km": 210,
+      "minutes": 210
+    },
+    "ext-145": {
+      "km": 214,
+      "minutes": 215
+    },
+    "ext-146": {
+      "km": 213,
+      "minutes": 215
+    },
+    "ext-147": {
+      "km": 206,
+      "minutes": 205
+    },
+    "ext-148": {
+      "km": 220,
+      "minutes": 220
+    },
+    "ext-149": {
+      "km": 234,
+      "minutes": 235
+    },
+    "ext-150": {
+      "km": 211,
+      "minutes": 210
+    },
+    "ext-151": {
+      "km": 184,
+      "minutes": 185
+    },
+    "ext-152": {
+      "km": 189,
+      "minutes": 190
+    },
+    "ext-153": {
+      "km": 181,
+      "minutes": 180
+    },
+    "ext-154": {
+      "km": 176,
+      "minutes": 175
+    },
+    "ext-155": {
+      "km": 171,
+      "minutes": 170
+    },
+    "ext-157": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-158": {
+      "km": 137,
+      "minutes": 135
+    },
+    "ext-159": {
+      "km": 140,
+      "minutes": 140
+    },
+    "ext-160": {
+      "km": 167,
+      "minutes": 165
+    },
+    "ext-161": {
+      "km": 169,
+      "minutes": 170
+    },
+    "ext-162": {
+      "km": 176,
+      "minutes": 175
+    },
+    "ext-163": {
+      "km": 103,
+      "minutes": 105
+    },
+    "ext-164": {
+      "km": 99,
+      "minutes": 100
+    },
+    "ext-165": {
+      "km": 99,
+      "minutes": 100
+    },
+    "ext-166": {
+      "km": 31,
+      "minutes": 30
+    },
+    "ext-167": {
+      "km": 31,
+      "minutes": 30
+    },
+    "ext-168": {
+      "km": 33,
+      "minutes": 35
+    },
+    "ext-169": {
+      "km": 33,
+      "minutes": 35
+    },
+    "ext-170": {
+      "km": 11,
+      "minutes": 10
+    },
+    "ext-172": {
+      "km": 171,
+      "minutes": 170
+    },
+    "ext-173": {
+      "km": 169,
+      "minutes": 170
+    },
+    "seg-y2y-a": {
+      "km": 473,
+      "minutes": 475
+    },
+    "seg-y2y-b": {
+      "km": 465,
+      "minutes": 465
+    },
+    "seg-y2y-c": {
+      "km": 468,
+      "minutes": 470
+    },
+    "seg-y2y-d": {
+      "km": 463,
+      "minutes": 465
+    },
+    "seg-int-1": {
+      "km": 8,
+      "minutes": 10
+    },
+    "seg-int-2": {
+      "km": 11,
+      "minutes": 10
+    },
+    "seg-int-3": {
+      "km": 25,
+      "minutes": 25
+    },
+    "seg-int-4": {
+      "km": 30,
+      "minutes": 30
+    },
+    "seg-int-5": {
+      "km": 82,
+      "minutes": 80
+    },
+    "seg-int-6": {
+      "km": 108,
+      "minutes": 110
+    },
+    "seg-int-7": {
+      "km": 104,
+      "minutes": 105
+    },
+    "seg-int-8": {
+      "km": 122,
+      "minutes": 120
+    },
+    "seg-int-9": {
+      "km": 147,
+      "minutes": 145
+    },
+    "seg-int-10": {
+      "km": 138,
+      "minutes": 140
+    },
+    "seg-int-11": {
+      "km": 149,
+      "minutes": 150
+    },
+    "seg-int-12": {
+      "km": 176,
+      "minutes": 175
+    },
+    "seg-int-13": {
+      "km": 192,
+      "minutes": 190
+    },
+    "seg-int-14": {
+      "km": 214,
+      "minutes": 215
+    },
+    "seg-int-15": {
+      "km": 219,
+      "minutes": 220
+    },
+    "seg-int-16": {
+      "km": 183,
+      "minutes": 185
+    },
+    "seg-int-17": {
+      "km": 192,
+      "minutes": 190
+    },
+    "seg-int-18": {
+      "km": 204,
+      "minutes": 205
+    },
+    "seg-int-19": {
+      "km": 239,
+      "minutes": 240
+    },
+    "seg-int-20": {
+      "km": 228,
+      "minutes": 230
+    },
+    "seg-int-21": {
+      "km": 222,
+      "minutes": 220
+    },
+    "seg-int-22": {
+      "km": 245,
+      "minutes": 245
+    },
+    "seg-int-23": {
+      "km": 250,
+      "minutes": 250
+    },
+    "seg-int-24": {
+      "km": 258,
+      "minutes": 260
+    },
+    "seg-int-25": {
+      "km": 270,
+      "minutes": 270
+    },
+    "seg-int-26": {
+      "km": 281,
+      "minutes": 280
+    },
+    "seg-int-27": {
+      "km": 293,
+      "minutes": 295
+    },
+    "seg-int-28": {
+      "km": 310,
+      "minutes": 310
+    },
+    "seg-int-29": {
+      "km": 304,
+      "minutes": 305
+    },
+    "seg-int-30": {
+      "km": 314,
+      "minutes": 315
+    },
+    "seg-int-31": {
+      "km": 313,
+      "minutes": 315
+    },
+    "seg-int-32": {
+      "km": 409,
+      "minutes": 410
+    },
+    "seg-int-33": {
+      "km": 421,
+      "minutes": 420
+    }
+  },
+  "nazareth": {
+    "ofer": {
+      "km": 54,
+      "minutes": 55
+    },
+    "hanadiv": {
+      "km": 48,
+      "minutes": 50
+    },
+    "shofet": {
+      "km": 34,
+      "minutes": 35
+    },
+    "dalia": {
+      "km": 40,
+      "minutes": 40
+    },
+    "oren": {
+      "km": 43,
+      "minutes": 45
+    },
+    "ext-6": {
+      "km": 104,
+      "minutes": 105
+    },
+    "ext-7": {
+      "km": 101,
+      "minutes": 100
+    },
+    "ext-8": {
+      "km": 94,
+      "minutes": 95
+    },
+    "ext-9": {
+      "km": 94,
+      "minutes": 95
+    },
+    "ext-11": {
+      "km": 101,
+      "minutes": 100
+    },
+    "ext-12": {
+      "km": 92,
+      "minutes": 90
+    },
+    "ext-13": {
+      "km": 85,
+      "minutes": 85
+    },
+    "ext-14": {
+      "km": 89,
+      "minutes": 90
+    },
+    "ext-15": {
+      "km": 86,
+      "minutes": 85
+    },
+    "ext-16": {
+      "km": 72,
+      "minutes": 70
+    },
+    "ext-17": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-18": {
+      "km": 68,
+      "minutes": 70
+    },
+    "ext-19": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-20": {
+      "km": 73,
+      "minutes": 75
+    },
+    "ext-22": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-23": {
+      "km": 69,
+      "minutes": 70
+    },
+    "ext-24": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-25": {
+      "km": 78,
+      "minutes": 80
+    },
+    "ext-26": {
+      "km": 93,
+      "minutes": 95
+    },
+    "ext-27": {
+      "km": 62,
+      "minutes": 60
+    },
+    "ext-28": {
+      "km": 71,
+      "minutes": 70
+    },
+    "ext-29": {
+      "km": 79,
+      "minutes": 80
+    },
+    "ext-30": {
+      "km": 76,
+      "minutes": 75
+    },
+    "ext-31": {
+      "km": 71,
+      "minutes": 70
+    },
+    "ext-32": {
+      "km": 55,
+      "minutes": 55
+    },
+    "ext-33": {
+      "km": 77,
+      "minutes": 75
+    },
+    "ext-34": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-36": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-38": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-39": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-40": {
+      "km": 64,
+      "minutes": 65
+    },
+    "ext-41": {
+      "km": 55,
+      "minutes": 55
+    },
+    "ext-42": {
+      "km": 63,
+      "minutes": 65
+    },
+    "ext-43": {
+      "km": 50,
+      "minutes": 50
+    },
+    "ext-44": {
+      "km": 50,
+      "minutes": 50
+    },
+    "ext-45": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-46": {
+      "km": 50,
+      "minutes": 50
+    },
+    "ext-47": {
+      "km": 47,
+      "minutes": 45
+    },
+    "ext-49": {
+      "km": 56,
+      "minutes": 55
+    },
+    "ext-50": {
+      "km": 43,
+      "minutes": 45
+    },
+    "ext-51": {
+      "km": 46,
+      "minutes": 45
+    },
+    "ext-52": {
+      "km": 46,
+      "minutes": 45
+    },
+    "ext-55": {
+      "km": 34,
+      "minutes": 35
+    },
+    "ext-56": {
+      "km": 35,
+      "minutes": 35
+    },
+    "ext-57": {
+      "km": 35,
+      "minutes": 35
+    },
+    "ext-59": {
+      "km": 5,
+      "minutes": 5
+    },
+    "ext-60": {
+      "km": 39,
+      "minutes": 40
+    },
+    "ext-61": {
+      "km": 51,
+      "minutes": 50
+    },
+    "ext-62": {
+      "km": 34,
+      "minutes": 35
+    },
+    "ext-63": {
+      "km": 55,
+      "minutes": 55
+    },
+    "ext-65": {
+      "km": 35,
+      "minutes": 35
+    },
+    "ext-66": {
+      "km": 35,
+      "minutes": 35
+    },
+    "ext-67": {
+      "km": 18,
+      "minutes": 20
+    },
+    "ext-68": {
+      "km": 67,
+      "minutes": 65
+    },
+    "ext-69": {
+      "km": 49,
+      "minutes": 50
+    },
+    "ext-70": {
+      "km": 38,
+      "minutes": 40
+    },
+    "ext-71": {
+      "km": 47,
+      "minutes": 45
+    },
+    "ext-72": {
+      "km": 39,
+      "minutes": 40
+    },
+    "ext-73": {
+      "km": 43,
+      "minutes": 45
+    },
+    "ext-74": {
+      "km": 43,
+      "minutes": 45
+    },
+    "ext-75": {
+      "km": 59,
+      "minutes": 60
+    },
+    "ext-76": {
+      "km": 53,
+      "minutes": 55
+    },
+    "ext-77": {
+      "km": 41,
+      "minutes": 40
+    },
+    "ext-78": {
+      "km": 53,
+      "minutes": 55
+    },
+    "ext-79": {
+      "km": 33,
+      "minutes": 35
+    },
+    "ext-81": {
+      "km": 35,
+      "minutes": 35
+    },
+    "ext-82": {
+      "km": 50,
+      "minutes": 50
+    },
+    "ext-84": {
+      "km": 38,
+      "minutes": 40
+    },
+    "ext-86": {
+      "km": 41,
+      "minutes": 40
+    },
+    "ext-87": {
+      "km": 42,
+      "minutes": 40
+    },
+    "ext-88": {
+      "km": 55,
+      "minutes": 55
+    },
+    "ext-89": {
+      "km": 54,
+      "minutes": 55
+    },
+    "ext-90": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-91": {
+      "km": 76,
+      "minutes": 75
+    },
+    "ext-94": {
+      "km": 110,
+      "minutes": 110
+    },
+    "ext-95": {
+      "km": 98,
+      "minutes": 100
+    },
+    "ext-96": {
+      "km": 54,
+      "minutes": 55
+    },
+    "ext-97": {
+      "km": 50,
+      "minutes": 50
+    },
+    "ext-98": {
+      "km": 120,
+      "minutes": 120
+    },
+    "ext-100": {
+      "km": 150,
+      "minutes": 150
+    },
+    "ext-101": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-102": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-103": {
+      "km": 147,
+      "minutes": 145
+    },
+    "ext-104": {
+      "km": 144,
+      "minutes": 145
+    },
+    "ext-105": {
+      "km": 144,
+      "minutes": 145
+    },
+    "ext-106": {
+      "km": 147,
+      "minutes": 145
+    },
+    "ext-107": {
+      "km": 150,
+      "minutes": 150
+    },
+    "ext-108": {
+      "km": 155,
+      "minutes": 155
+    },
+    "ext-110": {
+      "km": 155,
+      "minutes": 155
+    },
+    "ext-111": {
+      "km": 176,
+      "minutes": 175
+    },
+    "ext-114": {
+      "km": 192,
+      "minutes": 190
+    },
+    "ext-116": {
+      "km": 233,
+      "minutes": 235
+    },
+    "ext-117": {
+      "km": 233,
+      "minutes": 235
+    },
+    "ext-118": {
+      "km": 225,
+      "minutes": 225
+    },
+    "ext-119": {
+      "km": 201,
+      "minutes": 200
+    },
+    "ext-120": {
+      "km": 201,
+      "minutes": 200
+    },
+    "ext-121": {
+      "km": 220,
+      "minutes": 220
+    },
+    "ext-122": {
+      "km": 222,
+      "minutes": 220
+    },
+    "ext-123": {
+      "km": 219,
+      "minutes": 220
+    },
+    "ext-124": {
+      "km": 218,
+      "minutes": 220
+    },
+    "ext-125": {
+      "km": 205,
+      "minutes": 205
+    },
+    "ext-126": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-127": {
+      "km": 244,
+      "minutes": 245
+    },
+    "ext-128": {
+      "km": 261,
+      "minutes": 260
+    },
+    "ext-129": {
+      "km": 262,
+      "minutes": 260
+    },
+    "ext-130": {
+      "km": 228,
+      "minutes": 230
+    },
+    "ext-131": {
+      "km": 247,
+      "minutes": 245
+    },
+    "ext-132": {
+      "km": 254,
+      "minutes": 255
+    },
+    "ext-133": {
+      "km": 247,
+      "minutes": 245
+    },
+    "ext-134": {
+      "km": 247,
+      "minutes": 245
+    },
+    "ext-135": {
+      "km": 254,
+      "minutes": 255
+    },
+    "ext-138": {
+      "km": 259,
+      "minutes": 260
+    },
+    "ext-139": {
+      "km": 254,
+      "minutes": 255
+    },
+    "ext-140": {
+      "km": 282,
+      "minutes": 280
+    },
+    "ext-141": {
+      "km": 270,
+      "minutes": 270
+    },
+    "ext-142": {
+      "km": 253,
+      "minutes": 255
+    },
+    "ext-143": {
+      "km": 270,
+      "minutes": 270
+    },
+    "ext-144": {
+      "km": 245,
+      "minutes": 245
+    },
+    "ext-145": {
+      "km": 249,
+      "minutes": 250
+    },
+    "ext-146": {
+      "km": 248,
+      "minutes": 250
+    },
+    "ext-147": {
+      "km": 258,
+      "minutes": 260
+    },
+    "ext-148": {
+      "km": 255,
+      "minutes": 255
+    },
+    "ext-149": {
+      "km": 269,
+      "minutes": 270
+    },
+    "ext-150": {
+      "km": 233,
+      "minutes": 235
+    },
+    "ext-151": {
+      "km": 238,
+      "minutes": 240
+    },
+    "ext-152": {
+      "km": 241,
+      "minutes": 240
+    },
+    "ext-153": {
+      "km": 251,
+      "minutes": 250
+    },
+    "ext-154": {
+      "km": 247,
+      "minutes": 245
+    },
+    "ext-155": {
+      "km": 251,
+      "minutes": 250
+    },
+    "ext-157": {
+      "km": 293,
+      "minutes": 295
+    },
+    "ext-158": {
+      "km": 292,
+      "minutes": 290
+    },
+    "ext-159": {
+      "km": 284,
+      "minutes": 285
+    },
+    "ext-160": {
+      "km": 280,
+      "minutes": 280
+    },
+    "ext-161": {
+      "km": 281,
+      "minutes": 280
+    },
+    "ext-162": {
+      "km": 289,
+      "minutes": 290
+    },
+    "ext-163": {
+      "km": 322,
+      "minutes": 320
+    },
+    "ext-164": {
+      "km": 324,
+      "minutes": 325
+    },
+    "ext-165": {
+      "km": 335,
+      "minutes": 335
+    },
+    "ext-166": {
+      "km": 401,
+      "minutes": 400
+    },
+    "ext-167": {
+      "km": 408,
+      "minutes": 410
+    },
+    "ext-168": {
+      "km": 418,
+      "minutes": 420
+    },
+    "ext-169": {
+      "km": 418,
+      "minutes": 420
+    },
+    "ext-170": {
+      "km": 426,
+      "minutes": 425
+    },
+    "ext-172": {
+      "km": 251,
+      "minutes": 250
+    },
+    "ext-173": {
+      "km": 261,
+      "minutes": 260
+    },
+    "seg-y2y-a": {
+      "km": 61,
+      "minutes": 60
+    },
+    "seg-y2y-b": {
+      "km": 45,
+      "minutes": 45
+    },
+    "seg-y2y-c": {
+      "km": 46,
+      "minutes": 45
+    },
+    "seg-y2y-d": {
+      "km": 64,
+      "minutes": 65
+    },
+    "seg-int-1": {
+      "km": 422,
+      "minutes": 420
+    },
+    "seg-int-2": {
+      "km": 420,
+      "minutes": 420
+    },
+    "seg-int-3": {
+      "km": 410,
+      "minutes": 410
+    },
+    "seg-int-4": {
+      "km": 397,
+      "minutes": 395
+    },
+    "seg-int-5": {
+      "km": 377,
+      "minutes": 375
+    },
+    "seg-int-6": {
+      "km": 328,
+      "minutes": 330
+    },
+    "seg-int-7": {
+      "km": 327,
+      "minutes": 325
+    },
+    "seg-int-8": {
+      "km": 312,
+      "minutes": 310
+    },
+    "seg-int-9": {
+      "km": 325,
+      "minutes": 325
+    },
+    "seg-int-10": {
+      "km": 291,
+      "minutes": 290
+    },
+    "seg-int-11": {
+      "km": 273,
+      "minutes": 275
+    },
+    "seg-int-12": {
+      "km": 276,
+      "minutes": 275
+    },
+    "seg-int-13": {
+      "km": 244,
+      "minutes": 245
+    },
+    "seg-int-14": {
+      "km": 249,
+      "minutes": 250
+    },
+    "seg-int-15": {
+      "km": 254,
+      "minutes": 255
+    },
+    "seg-int-16": {
+      "km": 247,
+      "minutes": 245
+    },
+    "seg-int-17": {
+      "km": 261,
+      "minutes": 260
+    },
+    "seg-int-18": {
+      "km": 213,
+      "minutes": 215
+    },
+    "seg-int-19": {
+      "km": 241,
+      "minutes": 240
+    },
+    "seg-int-20": {
+      "km": 230,
+      "minutes": 230
+    },
+    "seg-int-21": {
+      "km": 216,
+      "minutes": 215
+    },
+    "seg-int-22": {
+      "km": 208,
+      "minutes": 210
+    },
+    "seg-int-23": {
+      "km": 183,
+      "minutes": 185
+    },
+    "seg-int-24": {
+      "km": 167,
+      "minutes": 165
+    },
+    "seg-int-25": {
+      "km": 179,
+      "minutes": 180
+    },
+    "seg-int-26": {
+      "km": 154,
+      "minutes": 155
+    },
+    "seg-int-27": {
+      "km": 144,
+      "minutes": 145
+    },
+    "seg-int-28": {
+      "km": 146,
+      "minutes": 145
+    },
+    "seg-int-29": {
+      "km": 146,
+      "minutes": 145
+    },
+    "seg-int-30": {
+      "km": 136,
+      "minutes": 135
+    },
+    "seg-int-31": {
+      "km": 125,
+      "minutes": 125
+    },
+    "seg-int-32": {
+      "km": 46,
+      "minutes": 45
+    },
+    "seg-int-33": {
+      "km": 57,
+      "minutes": 55
+    }
+  },
+  "afula": {
+    "ofer": {
+      "km": 52,
+      "minutes": 50
+    },
+    "hanadiv": {
+      "km": 46,
+      "minutes": 45
+    },
+    "shofet": {
+      "km": 25,
+      "minutes": 25
+    },
+    "dalia": {
+      "km": 38,
+      "minutes": 40
+    },
+    "oren": {
+      "km": 48,
+      "minutes": 50
+    },
+    "ext-6": {
+      "km": 114,
+      "minutes": 115
+    },
+    "ext-7": {
+      "km": 111,
+      "minutes": 110
+    },
+    "ext-8": {
+      "km": 104,
+      "minutes": 105
+    },
+    "ext-9": {
+      "km": 103,
+      "minutes": 105
+    },
+    "ext-11": {
+      "km": 111,
+      "minutes": 110
+    },
+    "ext-12": {
+      "km": 101,
+      "minutes": 100
+    },
+    "ext-13": {
+      "km": 94,
+      "minutes": 95
+    },
+    "ext-14": {
+      "km": 99,
+      "minutes": 100
+    },
+    "ext-15": {
+      "km": 98,
+      "minutes": 100
+    },
+    "ext-16": {
+      "km": 82,
+      "minutes": 80
+    },
+    "ext-17": {
+      "km": 71,
+      "minutes": 70
+    },
+    "ext-18": {
+      "km": 78,
+      "minutes": 80
+    },
+    "ext-19": {
+      "km": 74,
+      "minutes": 75
+    },
+    "ext-20": {
+      "km": 78,
+      "minutes": 80
+    },
+    "ext-22": {
+      "km": 84,
+      "minutes": 85
+    },
+    "ext-23": {
+      "km": 67,
+      "minutes": 65
+    },
+    "ext-24": {
+      "km": 59,
+      "minutes": 60
+    },
+    "ext-25": {
+      "km": 83,
+      "minutes": 85
+    },
+    "ext-26": {
+      "km": 103,
+      "minutes": 105
+    },
+    "ext-27": {
+      "km": 72,
+      "minutes": 70
+    },
+    "ext-28": {
+      "km": 80,
+      "minutes": 80
+    },
+    "ext-29": {
+      "km": 89,
+      "minutes": 90
+    },
+    "ext-30": {
+      "km": 86,
+      "minutes": 85
+    },
+    "ext-31": {
+      "km": 81,
+      "minutes": 80
+    },
+    "ext-32": {
+      "km": 65,
+      "minutes": 65
+    },
+    "ext-33": {
+      "km": 88,
+      "minutes": 90
+    },
+    "ext-34": {
+      "km": 74,
+      "minutes": 75
+    },
+    "ext-36": {
+      "km": 71,
+      "minutes": 70
+    },
+    "ext-38": {
+      "km": 76,
+      "minutes": 75
+    },
+    "ext-39": {
+      "km": 73,
+      "minutes": 75
+    },
+    "ext-40": {
+      "km": 76,
+      "minutes": 75
+    },
+    "ext-41": {
+      "km": 66,
+      "minutes": 65
+    },
+    "ext-42": {
+      "km": 73,
+      "minutes": 75
+    },
+    "ext-43": {
+      "km": 59,
+      "minutes": 60
+    },
+    "ext-44": {
+      "km": 59,
+      "minutes": 60
+    },
+    "ext-45": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-46": {
+      "km": 60,
+      "minutes": 60
+    },
+    "ext-47": {
+      "km": 57,
+      "minutes": 55
+    },
+    "ext-49": {
+      "km": 61,
+      "minutes": 60
+    },
+    "ext-50": {
+      "km": 53,
+      "minutes": 55
+    },
+    "ext-51": {
+      "km": 56,
+      "minutes": 55
+    },
+    "ext-52": {
+      "km": 56,
+      "minutes": 55
+    },
+    "ext-55": {
+      "km": 51,
+      "minutes": 50
+    },
+    "ext-56": {
+      "km": 45,
+      "minutes": 45
+    },
+    "ext-57": {
+      "km": 45,
+      "minutes": 45
+    },
+    "ext-59": {
+      "km": 16,
+      "minutes": 15
+    },
+    "ext-60": {
+      "km": 30,
+      "minutes": 30
+    },
+    "ext-61": {
+      "km": 47,
+      "minutes": 45
+    },
+    "ext-62": {
+      "km": 25,
+      "minutes": 25
+    },
+    "ext-63": {
+      "km": 44,
+      "minutes": 45
+    },
+    "ext-65": {
+      "km": 26,
+      "minutes": 25
+    },
+    "ext-66": {
+      "km": 45,
+      "minutes": 45
+    },
+    "ext-67": {
+      "km": 22,
+      "minutes": 20
+    },
+    "ext-68": {
+      "km": 77,
+      "minutes": 75
+    },
+    "ext-69": {
+      "km": 59,
+      "minutes": 60
+    },
+    "ext-70": {
+      "km": 43,
+      "minutes": 45
+    },
+    "ext-71": {
+      "km": 52,
+      "minutes": 50
+    },
+    "ext-72": {
+      "km": 44,
+      "minutes": 45
+    },
+    "ext-73": {
+      "km": 48,
+      "minutes": 50
+    },
+    "ext-74": {
+      "km": 48,
+      "minutes": 50
+    },
+    "ext-75": {
+      "km": 57,
+      "minutes": 55
+    },
+    "ext-76": {
+      "km": 51,
+      "minutes": 50
+    },
+    "ext-77": {
+      "km": 39,
+      "minutes": 40
+    },
+    "ext-78": {
+      "km": 51,
+      "minutes": 50
+    },
+    "ext-79": {
+      "km": 23,
+      "minutes": 25
+    },
+    "ext-81": {
+      "km": 25,
+      "minutes": 25
+    },
+    "ext-82": {
+      "km": 44,
+      "minutes": 45
+    },
+    "ext-84": {
+      "km": 26,
+      "minutes": 25
+    },
+    "ext-86": {
+      "km": 47,
+      "minutes": 45
+    },
+    "ext-87": {
+      "km": 47,
+      "minutes": 45
+    },
+    "ext-88": {
+      "km": 53,
+      "minutes": 55
+    },
+    "ext-89": {
+      "km": 49,
+      "minutes": 50
+    },
+    "ext-90": {
+      "km": 54,
+      "minutes": 55
+    },
+    "ext-91": {
+      "km": 60,
+      "minutes": 60
+    },
+    "ext-94": {
+      "km": 99,
+      "minutes": 100
+    },
+    "ext-95": {
+      "km": 87,
+      "minutes": 85
+    },
+    "ext-96": {
+      "km": 49,
+      "minutes": 50
+    },
+    "ext-97": {
+      "km": 39,
+      "minutes": 40
+    },
+    "ext-98": {
+      "km": 109,
+      "minutes": 110
+    },
+    "ext-100": {
+      "km": 139,
+      "minutes": 140
+    },
+    "ext-101": {
+      "km": 132,
+      "minutes": 130
+    },
+    "ext-102": {
+      "km": 132,
+      "minutes": 130
+    },
+    "ext-103": {
+      "km": 137,
+      "minutes": 135
+    },
+    "ext-104": {
+      "km": 133,
+      "minutes": 135
+    },
+    "ext-105": {
+      "km": 133,
+      "minutes": 135
+    },
+    "ext-106": {
+      "km": 136,
+      "minutes": 135
+    },
+    "ext-107": {
+      "km": 139,
+      "minutes": 140
+    },
+    "ext-108": {
+      "km": 144,
+      "minutes": 145
+    },
+    "ext-110": {
+      "km": 144,
+      "minutes": 145
+    },
+    "ext-111": {
+      "km": 165,
+      "minutes": 165
+    },
+    "ext-114": {
+      "km": 182,
+      "minutes": 180
+    },
+    "ext-116": {
+      "km": 222,
+      "minutes": 220
+    },
+    "ext-117": {
+      "km": 222,
+      "minutes": 220
+    },
+    "ext-118": {
+      "km": 214,
+      "minutes": 215
+    },
+    "ext-119": {
+      "km": 190,
+      "minutes": 190
+    },
+    "ext-120": {
+      "km": 190,
+      "minutes": 190
+    },
+    "ext-121": {
+      "km": 209,
+      "minutes": 210
+    },
+    "ext-122": {
+      "km": 211,
+      "minutes": 210
+    },
+    "ext-123": {
+      "km": 208,
+      "minutes": 210
+    },
+    "ext-124": {
+      "km": 207,
+      "minutes": 205
+    },
+    "ext-125": {
+      "km": 194,
+      "minutes": 195
+    },
+    "ext-126": {
+      "km": 225,
+      "minutes": 225
+    },
+    "ext-127": {
+      "km": 233,
+      "minutes": 235
+    },
+    "ext-128": {
+      "km": 250,
+      "minutes": 250
+    },
+    "ext-129": {
+      "km": 251,
+      "minutes": 250
+    },
+    "ext-130": {
+      "km": 217,
+      "minutes": 215
+    },
+    "ext-131": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-132": {
+      "km": 243,
+      "minutes": 245
+    },
+    "ext-133": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-134": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-135": {
+      "km": 243,
+      "minutes": 245
+    },
+    "ext-138": {
+      "km": 248,
+      "minutes": 250
+    },
+    "ext-139": {
+      "km": 243,
+      "minutes": 245
+    },
+    "ext-140": {
+      "km": 271,
+      "minutes": 270
+    },
+    "ext-141": {
+      "km": 259,
+      "minutes": 260
+    },
+    "ext-142": {
+      "km": 242,
+      "minutes": 240
+    },
+    "ext-143": {
+      "km": 259,
+      "minutes": 260
+    },
+    "ext-144": {
+      "km": 234,
+      "minutes": 235
+    },
+    "ext-145": {
+      "km": 238,
+      "minutes": 240
+    },
+    "ext-146": {
+      "km": 237,
+      "minutes": 235
+    },
+    "ext-147": {
+      "km": 247,
+      "minutes": 245
+    },
+    "ext-148": {
+      "km": 244,
+      "minutes": 245
+    },
+    "ext-149": {
+      "km": 258,
+      "minutes": 260
+    },
+    "ext-150": {
+      "km": 222,
+      "minutes": 220
+    },
+    "ext-151": {
+      "km": 227,
+      "minutes": 225
+    },
+    "ext-152": {
+      "km": 230,
+      "minutes": 230
+    },
+    "ext-153": {
+      "km": 240,
+      "minutes": 240
+    },
+    "ext-154": {
+      "km": 236,
+      "minutes": 235
+    },
+    "ext-155": {
+      "km": 240,
+      "minutes": 240
+    },
+    "ext-157": {
+      "km": 282,
+      "minutes": 280
+    },
+    "ext-158": {
+      "km": 281,
+      "minutes": 280
+    },
+    "ext-159": {
+      "km": 273,
+      "minutes": 275
+    },
+    "ext-160": {
+      "km": 269,
+      "minutes": 270
+    },
+    "ext-161": {
+      "km": 270,
+      "minutes": 270
+    },
+    "ext-162": {
+      "km": 278,
+      "minutes": 280
+    },
+    "ext-163": {
+      "km": 311,
+      "minutes": 310
+    },
+    "ext-164": {
+      "km": 313,
+      "minutes": 315
+    },
+    "ext-165": {
+      "km": 324,
+      "minutes": 325
+    },
+    "ext-166": {
+      "km": 390,
+      "minutes": 390
+    },
+    "ext-167": {
+      "km": 397,
+      "minutes": 395
+    },
+    "ext-168": {
+      "km": 407,
+      "minutes": 405
+    },
+    "ext-169": {
+      "km": 407,
+      "minutes": 405
+    },
+    "ext-170": {
+      "km": 415,
+      "minutes": 415
+    },
+    "ext-172": {
+      "km": 240,
+      "minutes": 240
+    },
+    "ext-173": {
+      "km": 250,
+      "minutes": 250
+    },
+    "seg-y2y-a": {
+      "km": 70,
+      "minutes": 70
+    },
+    "seg-y2y-b": {
+      "km": 55,
+      "minutes": 55
+    },
+    "seg-y2y-c": {
+      "km": 56,
+      "minutes": 55
+    },
+    "seg-y2y-d": {
+      "km": 76,
+      "minutes": 75
+    },
+    "seg-int-1": {
+      "km": 411,
+      "minutes": 410
+    },
+    "seg-int-2": {
+      "km": 409,
+      "minutes": 410
+    },
+    "seg-int-3": {
+      "km": 399,
+      "minutes": 400
+    },
+    "seg-int-4": {
+      "km": 386,
+      "minutes": 385
+    },
+    "seg-int-5": {
+      "km": 366,
+      "minutes": 365
+    },
+    "seg-int-6": {
+      "km": 317,
+      "minutes": 315
+    },
+    "seg-int-7": {
+      "km": 316,
+      "minutes": 315
+    },
+    "seg-int-8": {
+      "km": 301,
+      "minutes": 300
+    },
+    "seg-int-9": {
+      "km": 314,
+      "minutes": 315
+    },
+    "seg-int-10": {
+      "km": 281,
+      "minutes": 280
+    },
+    "seg-int-11": {
+      "km": 262,
+      "minutes": 260
+    },
+    "seg-int-12": {
+      "km": 265,
+      "minutes": 265
+    },
+    "seg-int-13": {
+      "km": 233,
+      "minutes": 235
+    },
+    "seg-int-14": {
+      "km": 238,
+      "minutes": 240
+    },
+    "seg-int-15": {
+      "km": 243,
+      "minutes": 245
+    },
+    "seg-int-16": {
+      "km": 236,
+      "minutes": 235
+    },
+    "seg-int-17": {
+      "km": 250,
+      "minutes": 250
+    },
+    "seg-int-18": {
+      "km": 202,
+      "minutes": 200
+    },
+    "seg-int-19": {
+      "km": 230,
+      "minutes": 230
+    },
+    "seg-int-20": {
+      "km": 219,
+      "minutes": 220
+    },
+    "seg-int-21": {
+      "km": 205,
+      "minutes": 205
+    },
+    "seg-int-22": {
+      "km": 197,
+      "minutes": 195
+    },
+    "seg-int-23": {
+      "km": 172,
+      "minutes": 170
+    },
+    "seg-int-24": {
+      "km": 156,
+      "minutes": 155
+    },
+    "seg-int-25": {
+      "km": 168,
+      "minutes": 170
+    },
+    "seg-int-26": {
+      "km": 143,
+      "minutes": 145
+    },
+    "seg-int-27": {
+      "km": 133,
+      "minutes": 135
+    },
+    "seg-int-28": {
+      "km": 135,
+      "minutes": 135
+    },
+    "seg-int-29": {
+      "km": 135,
+      "minutes": 135
+    },
+    "seg-int-30": {
+      "km": 125,
+      "minutes": 125
+    },
+    "seg-int-31": {
+      "km": 115,
+      "minutes": 115
+    },
+    "seg-int-32": {
+      "km": 44,
+      "minutes": 45
+    },
+    "seg-int-33": {
+      "km": 55,
+      "minutes": 55
+    }
+  },
+  "jerusalem": {
+    "ofer": {
+      "km": 141,
+      "minutes": 140
+    },
+    "hanadiv": {
+      "km": 125,
+      "minutes": 125
+    },
+    "shofet": {
+      "km": 134,
+      "minutes": 135
+    },
+    "dalia": {
+      "km": 127,
+      "minutes": 125
+    },
+    "oren": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-6": {
+      "km": 250,
+      "minutes": 250
+    },
+    "ext-7": {
+      "km": 247,
+      "minutes": 245
+    },
+    "ext-8": {
+      "km": 240,
+      "minutes": 240
+    },
+    "ext-9": {
+      "km": 240,
+      "minutes": 240
+    },
+    "ext-11": {
+      "km": 247,
+      "minutes": 245
+    },
+    "ext-12": {
+      "km": 238,
+      "minutes": 240
+    },
+    "ext-13": {
+      "km": 231,
+      "minutes": 230
+    },
+    "ext-14": {
+      "km": 235,
+      "minutes": 235
+    },
+    "ext-15": {
+      "km": 232,
+      "minutes": 230
+    },
+    "ext-16": {
+      "km": 218,
+      "minutes": 220
+    },
+    "ext-17": {
+      "km": 207,
+      "minutes": 205
+    },
+    "ext-18": {
+      "km": 214,
+      "minutes": 215
+    },
+    "ext-19": {
+      "km": 210,
+      "minutes": 210
+    },
+    "ext-20": {
+      "km": 193,
+      "minutes": 195
+    },
+    "ext-22": {
+      "km": 197,
+      "minutes": 195
+    },
+    "ext-23": {
+      "km": 182,
+      "minutes": 180
+    },
+    "ext-24": {
+      "km": 172,
+      "minutes": 170
+    },
+    "ext-25": {
+      "km": 198,
+      "minutes": 200
+    },
+    "ext-26": {
+      "km": 239,
+      "minutes": 240
+    },
+    "ext-27": {
+      "km": 208,
+      "minutes": 210
+    },
+    "ext-28": {
+      "km": 217,
+      "minutes": 215
+    },
+    "ext-29": {
+      "km": 218,
+      "minutes": 220
+    },
+    "ext-30": {
+      "km": 213,
+      "minutes": 215
+    },
+    "ext-31": {
+      "km": 208,
+      "minutes": 210
+    },
+    "ext-32": {
+      "km": 198,
+      "minutes": 200
+    },
+    "ext-33": {
+      "km": 199,
+      "minutes": 200
+    },
+    "ext-34": {
+      "km": 199,
+      "minutes": 200
+    },
+    "ext-36": {
+      "km": 193,
+      "minutes": 195
+    },
+    "ext-38": {
+      "km": 187,
+      "minutes": 185
+    },
+    "ext-39": {
+      "km": 196,
+      "minutes": 195
+    },
+    "ext-40": {
+      "km": 187,
+      "minutes": 185
+    },
+    "ext-41": {
+      "km": 177,
+      "minutes": 175
+    },
+    "ext-42": {
+      "km": 201,
+      "minutes": 200
+    },
+    "ext-43": {
+      "km": 193,
+      "minutes": 195
+    },
+    "ext-44": {
+      "km": 193,
+      "minutes": 195
+    },
+    "ext-45": {
+      "km": 198,
+      "minutes": 200
+    },
+    "ext-46": {
+      "km": 184,
+      "minutes": 185
+    },
+    "ext-47": {
+      "km": 190,
+      "minutes": 190
+    },
+    "ext-49": {
+      "km": 178,
+      "minutes": 180
+    },
+    "ext-50": {
+      "km": 179,
+      "minutes": 180
+    },
+    "ext-51": {
+      "km": 192,
+      "minutes": 190
+    },
+    "ext-52": {
+      "km": 192,
+      "minutes": 190
+    },
+    "ext-55": {
+      "km": 166,
+      "minutes": 165
+    },
+    "ext-56": {
+      "km": 181,
+      "minutes": 180
+    },
+    "ext-57": {
+      "km": 182,
+      "minutes": 180
+    },
+    "ext-59": {
+      "km": 160,
+      "minutes": 160
+    },
+    "ext-60": {
+      "km": 163,
+      "minutes": 165
+    },
+    "ext-61": {
+      "km": 151,
+      "minutes": 150
+    },
+    "ext-62": {
+      "km": 157,
+      "minutes": 155
+    },
+    "ext-63": {
+      "km": 148,
+      "minutes": 150
+    },
+    "ext-65": {
+      "km": 159,
+      "minutes": 160
+    },
+    "ext-66": {
+      "km": 181,
+      "minutes": 180
+    },
+    "ext-67": {
+      "km": 155,
+      "minutes": 155
+    },
+    "ext-68": {
+      "km": 205,
+      "minutes": 205
+    },
+    "ext-69": {
+      "km": 193,
+      "minutes": 195
+    },
+    "ext-70": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-71": {
+      "km": 148,
+      "minutes": 150
+    },
+    "ext-72": {
+      "km": 139,
+      "minutes": 140
+    },
+    "ext-73": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-74": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-75": {
+      "km": 146,
+      "minutes": 145
+    },
+    "ext-76": {
+      "km": 140,
+      "minutes": 140
+    },
+    "ext-77": {
+      "km": 134,
+      "minutes": 135
+    },
+    "ext-78": {
+      "km": 140,
+      "minutes": 140
+    },
+    "ext-79": {
+      "km": 132,
+      "minutes": 130
+    },
+    "ext-81": {
+      "km": 128,
+      "minutes": 130
+    },
+    "ext-82": {
+      "km": 120,
+      "minutes": 120
+    },
+    "ext-84": {
+      "km": 114,
+      "minutes": 115
+    },
+    "ext-86": {
+      "km": 153,
+      "minutes": 155
+    },
+    "ext-87": {
+      "km": 153,
+      "minutes": 155
+    },
+    "ext-88": {
+      "km": 142,
+      "minutes": 140
+    },
+    "ext-89": {
+      "km": 126,
+      "minutes": 125
+    },
+    "ext-90": {
+      "km": 95,
+      "minutes": 95
+    },
+    "ext-91": {
+      "km": 101,
+      "minutes": 100
+    },
+    "ext-94": {
+      "km": 66,
+      "minutes": 65
+    },
+    "ext-95": {
+      "km": 49,
+      "minutes": 50
+    },
+    "ext-96": {
+      "km": 126,
+      "minutes": 125
+    },
+    "ext-97": {
+      "km": 123,
+      "minutes": 125
+    },
+    "ext-98": {
+      "km": 29,
+      "minutes": 30
+    },
+    "ext-100": {
+      "km": 13,
+      "minutes": 15
+    },
+    "ext-101": {
+      "km": 23,
+      "minutes": 25
+    },
+    "ext-102": {
+      "km": 6,
+      "minutes": 5
+    },
+    "ext-103": {
+      "km": 20,
+      "minutes": 20
+    },
+    "ext-104": {
+      "km": 9,
+      "minutes": 10
+    },
+    "ext-105": {
+      "km": 7,
+      "minutes": 5
+    },
+    "ext-106": {
+      "km": 41,
+      "minutes": 40
+    },
+    "ext-107": {
+      "km": 17,
+      "minutes": 15
+    },
+    "ext-108": {
+      "km": 19,
+      "minutes": 20
+    },
+    "ext-110": {
+      "km": 47,
+      "minutes": 45
+    },
+    "ext-111": {
+      "km": 34,
+      "minutes": 35
+    },
+    "ext-114": {
+      "km": 85,
+      "minutes": 85
+    },
+    "ext-116": {
+      "km": 101,
+      "minutes": 100
+    },
+    "ext-117": {
+      "km": 101,
+      "minutes": 100
+    },
+    "ext-118": {
+      "km": 93,
+      "minutes": 95
+    },
+    "ext-119": {
+      "km": 93,
+      "minutes": 95
+    },
+    "ext-120": {
+      "km": 93,
+      "minutes": 95
+    },
+    "ext-121": {
+      "km": 88,
+      "minutes": 90
+    },
+    "ext-122": {
+      "km": 91,
+      "minutes": 90
+    },
+    "ext-123": {
+      "km": 87,
+      "minutes": 85
+    },
+    "ext-124": {
+      "km": 86,
+      "minutes": 85
+    },
+    "ext-125": {
+      "km": 98,
+      "minutes": 100
+    },
+    "ext-126": {
+      "km": 104,
+      "minutes": 105
+    },
+    "ext-127": {
+      "km": 112,
+      "minutes": 110
+    },
+    "ext-128": {
+      "km": 129,
+      "minutes": 130
+    },
+    "ext-129": {
+      "km": 130,
+      "minutes": 130
+    },
+    "ext-130": {
+      "km": 116,
+      "minutes": 115
+    },
+    "ext-131": {
+      "km": 121,
+      "minutes": 120
+    },
+    "ext-132": {
+      "km": 127,
+      "minutes": 125
+    },
+    "ext-133": {
+      "km": 121,
+      "minutes": 120
+    },
+    "ext-134": {
+      "km": 121,
+      "minutes": 120
+    },
+    "ext-135": {
+      "km": 127,
+      "minutes": 125
+    },
+    "ext-138": {
+      "km": 132,
+      "minutes": 130
+    },
+    "ext-139": {
+      "km": 142,
+      "minutes": 140
+    },
+    "ext-140": {
+      "km": 156,
+      "minutes": 155
+    },
+    "ext-141": {
+      "km": 158,
+      "minutes": 160
+    },
+    "ext-142": {
+      "km": 141,
+      "minutes": 140
+    },
+    "ext-143": {
+      "km": 158,
+      "minutes": 160
+    },
+    "ext-144": {
+      "km": 134,
+      "minutes": 135
+    },
+    "ext-145": {
+      "km": 137,
+      "minutes": 135
+    },
+    "ext-146": {
+      "km": 136,
+      "minutes": 135
+    },
+    "ext-147": {
+      "km": 150,
+      "minutes": 150
+    },
+    "ext-148": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-149": {
+      "km": 158,
+      "minutes": 160
+    },
+    "ext-150": {
+      "km": 125,
+      "minutes": 125
+    },
+    "ext-151": {
+      "km": 130,
+      "minutes": 130
+    },
+    "ext-152": {
+      "km": 133,
+      "minutes": 135
+    },
+    "ext-153": {
+      "km": 142,
+      "minutes": 140
+    },
+    "ext-154": {
+      "km": 139,
+      "minutes": 140
+    },
+    "ext-155": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-157": {
+      "km": 185,
+      "minutes": 185
+    },
+    "ext-158": {
+      "km": 183,
+      "minutes": 185
+    },
+    "ext-159": {
+      "km": 176,
+      "minutes": 175
+    },
+    "ext-160": {
+      "km": 172,
+      "minutes": 170
+    },
+    "ext-161": {
+      "km": 173,
+      "minutes": 175
+    },
+    "ext-162": {
+      "km": 180,
+      "minutes": 180
+    },
+    "ext-163": {
+      "km": 214,
+      "minutes": 215
+    },
+    "ext-164": {
+      "km": 216,
+      "minutes": 215
+    },
+    "ext-165": {
+      "km": 209,
+      "minutes": 210
+    },
+    "ext-166": {
+      "km": 293,
+      "minutes": 295
+    },
+    "ext-167": {
+      "km": 300,
+      "minutes": 300
+    },
+    "ext-168": {
+      "km": 300,
+      "minutes": 300
+    },
+    "ext-169": {
+      "km": 300,
+      "minutes": 300
+    },
+    "ext-170": {
+      "km": 313,
+      "minutes": 315
+    },
+    "ext-172": {
+      "km": 143,
+      "minutes": 145
+    },
+    "ext-173": {
+      "km": 134,
+      "minutes": 135
+    },
+    "seg-y2y-a": {
+      "km": 197,
+      "minutes": 195
+    },
+    "seg-y2y-b": {
+      "km": 188,
+      "minutes": 190
+    },
+    "seg-y2y-c": {
+      "km": 192,
+      "minutes": 190
+    },
+    "seg-y2y-d": {
+      "km": 187,
+      "minutes": 185
+    },
+    "seg-int-1": {
+      "km": 310,
+      "minutes": 310
+    },
+    "seg-int-2": {
+      "km": 311,
+      "minutes": 310
+    },
+    "seg-int-3": {
+      "km": 292,
+      "minutes": 290
+    },
+    "seg-int-4": {
+      "km": 279,
+      "minutes": 280
+    },
+    "seg-int-5": {
+      "km": 269,
+      "minutes": 270
+    },
+    "seg-int-6": {
+      "km": 219,
+      "minutes": 220
+    },
+    "seg-int-7": {
+      "km": 201,
+      "minutes": 200
+    },
+    "seg-int-8": {
+      "km": 186,
+      "minutes": 185
+    },
+    "seg-int-9": {
+      "km": 198,
+      "minutes": 200
+    },
+    "seg-int-10": {
+      "km": 183,
+      "minutes": 185
+    },
+    "seg-int-11": {
+      "km": 164,
+      "minutes": 165
+    },
+    "seg-int-12": {
+      "km": 168,
+      "minutes": 170
+    },
+    "seg-int-13": {
+      "km": 136,
+      "minutes": 135
+    },
+    "seg-int-14": {
+      "km": 137,
+      "minutes": 135
+    },
+    "seg-int-15": {
+      "km": 142,
+      "minutes": 140
+    },
+    "seg-int-16": {
+      "km": 121,
+      "minutes": 120
+    },
+    "seg-int-17": {
+      "km": 129,
+      "minutes": 130
+    },
+    "seg-int-18": {
+      "km": 105,
+      "minutes": 105
+    },
+    "seg-int-19": {
+      "km": 109,
+      "minutes": 110
+    },
+    "seg-int-20": {
+      "km": 98,
+      "minutes": 100
+    },
+    "seg-int-21": {
+      "km": 84,
+      "minutes": 85
+    },
+    "seg-int-22": {
+      "km": 70,
+      "minutes": 70
+    },
+    "seg-int-23": {
+      "km": 71,
+      "minutes": 70
+    },
+    "seg-int-24": {
+      "km": 76,
+      "minutes": 75
+    },
+    "seg-int-25": {
+      "km": 88,
+      "minutes": 90
+    },
+    "seg-int-26": {
+      "km": 56,
+      "minutes": 55
+    },
+    "seg-int-27": {
+      "km": 39,
+      "minutes": 40
+    },
+    "seg-int-28": {
+      "km": 20,
+      "minutes": 20
+    },
+    "seg-int-29": {
+      "km": 8,
+      "minutes": 10
+    },
+    "seg-int-30": {
+      "km": 21,
+      "minutes": 20
+    },
+    "seg-int-31": {
+      "km": 34,
+      "minutes": 35
+    },
+    "seg-int-32": {
+      "km": 133,
+      "minutes": 135
+    },
+    "seg-int-33": {
+      "km": 145,
+      "minutes": 145
+    }
+  }
+}
