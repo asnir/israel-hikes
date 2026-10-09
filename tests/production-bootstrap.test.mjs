@@ -5,3 +5,14 @@ test('Old version applies once only to dashboard origin; current follows bootstr
 test('Bootstrap reads only production hiking Worker and fails closed',async()=>{let seen;const opts={accountId:'a'.repeat(32),token:'test-placeholder',fetcher:async u=>{seen=u;return {ok:true,json:async()=>({success:true,result:metadata('dash')})}}};assert.equal(await productionVersion(opts),'4.30.0');assert.equal(seen,'https://api.cloudflare.com/client/v4/accounts/'+opts.accountId+'/workers/services/israel-hikes');await assert.rejects(productionVersion({...opts,fetcher:async()=>({ok:false})}));await assert.rejects(productionVersion({...opts,fetcher:async()=>({ok:true,json:async()=>({success:false})})}));await assert.rejects(productionVersion({...opts,accountId:''}))});
 
 test('Production verification runs after upload error without masking the failed step',async()=>{const{readFile}=await import('node:fs/promises');const s=await readFile('.github/workflows/validate.yml','utf8');assert.match(s,/id: production-upload/);assert.match(s,/always\(\).*steps\.production-upload\.outcome == 'failure'/);assert.ok(!/continue-on-error/.test(s));assert.match(s,/environment:\n      name: production/)});
+
+test('Preview job selects its own dashboard bootstrap version and rejects other Workers',async()=>{
+ let seen;const opts={accountId:'a'.repeat(32),token:'test-placeholder',worker:'israel-hikes-preview',fetcher:async u=>{seen=u;return {ok:true,json:async()=>({success:true,result:metadata('dash')})}}};
+ assert.equal(await productionVersion(opts),'4.30.0');
+ assert.ok(seen.endsWith('/workers/services/israel-hikes-preview'));
+ await assert.rejects(productionVersion({...opts,worker:'puzzle'}));
+ const{readFile}=await import('node:fs/promises');const s=await readFile('.github/workflows/validate.yml','utf8');
+ assert.match(s,/id: preview-wrangler/);
+ assert.match(s,/wranglerVersion: \$\{\{ steps\.preview-wrangler\.outputs\.version \}\}/);
+ assert.match(s,/production-wrangler-version\.mjs israel-hikes-preview/);
+});
