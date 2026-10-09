@@ -1,6 +1,6 @@
 {
   "ofer": {
-    "src": "/photos/trail-ofer.webp",
+    "src": "/photos/ofer/hero.webp",
     "title": "PikiWiki Israel 14783 Ofer Forest.jpg",
     "author": "ארכיון הצילומים קק\"ל, ישראל סיני",
     "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_14783_Ofer_Forest.jpg",
@@ -10,10 +10,24 @@
     "captionEn": "Ofer Forest, archive photograph circa 1999. The route site, not documentation of the entire loop or current conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop.",
     "authorEn": "KKL-JNF photo archive, Israel Sinai",
-    "thumbSrc": "/photos/trail-ofer-thumb.webp"
+    "thumbSrc": "/photos/ofer/thumb.webp",
+    "gallery": [
+      {
+        "src": "/photos/ofer/hero.webp",
+        "title": "PikiWiki Israel 14783 Ofer Forest.jpg",
+        "author": "ארכיון הצילומים קק\"ל, ישראל סיני",
+        "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_14783_Ofer_Forest.jpg",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "captionHe": "יער עופר, תצלום ארכיון סביב 1999. אתר המסלול, לא תיעוד של כל הלולאה או של מצב השטח כיום.",
+        "captionEn": "Ofer Forest, archive photograph circa 1999. The route site, not documentation of the entire loop or current conditions.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+        "authorEn": "KKL-JNF photo archive, Israel Sinai"
+      }
+    ]
   },
   "hanadiv": {
-    "src": "/photos/trail-hanadiv.webp",
+    "src": "/photos/hanadiv/hero.webp",
     "title": "Ein Tzur pond.JPG",
     "author": "Avi1111 dr. avishai teicher",
     "source": "https://commons.wikimedia.org/wiki/File:Ein_Tzur_pond.JPG",
@@ -23,10 +37,24 @@
     "captionEn": "Ein Tzur pond on the Ramat HaNadiv spring loop, 2015. Not a record of current water or access conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
     "authorEn": "Avi1111 dr. avishai teicher",
-    "thumbSrc": "/photos/trail-hanadiv-thumb.webp"
+    "thumbSrc": "/photos/hanadiv/thumb.webp",
+    "gallery": [
+      {
+        "src": "/photos/hanadiv/hero.webp",
+        "title": "Ein Tzur pond.JPG",
+        "author": "Avi1111 dr. avishai teicher",
+        "source": "https://commons.wikimedia.org/wiki/File:Ein_Tzur_pond.JPG",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "captionHe": "בריכת עין צור על לולאת המעיין ברמת הנדיב, 2015. לא תיעוד של מצב המים או הגישה כיום.",
+        "captionEn": "Ein Tzur pond on the Ramat HaNadiv spring loop, 2015. Not a record of current water or access conditions.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
+        "authorEn": "Avi1111 dr. avishai teicher"
+      }
+    ]
   },
   "shofet": {
-    "src": "/photos/trail-shofet.webp",
+    "src": "/photos/shofet/hero.webp",
     "title": "HaShofet-stream-trail-30935.jpg",
     "author": "Bukvoed",
     "source": "https://commons.wikimedia.org/wiki/File:HaShofet-stream-trail-30935.jpg",
@@ -36,10 +64,24 @@
     "captionEn": "Vegetation beside the HaShofet stream trail near HaZorea, April 2017. Not a record of current trail conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop.",
     "authorEn": "Bukvoed",
-    "thumbSrc": "/photos/trail-shofet-thumb.webp"
+    "thumbSrc": "/photos/shofet/thumb.webp",
+    "gallery": [
+      {
+        "src": "/photos/shofet/hero.webp",
+        "title": "HaShofet-stream-trail-30935.jpg",
+        "author": "Bukvoed",
+        "source": "https://commons.wikimedia.org/wiki/File:HaShofet-stream-trail-30935.jpg",
+        "licence": "CC BY 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/4.0",
+        "captionHe": "צמחייה לצד שביל נחל השופט ליד הזורע, אפריל 2017. לא תיעוד של מצב המסלול כיום.",
+        "captionEn": "Vegetation beside the HaShofet stream trail near HaZorea, April 2017. Not a record of current trail conditions.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+        "authorEn": "Bukvoed"
+      }
+    ]
   },
   "oren": {
-    "src": "/photos/trail-oren.webp",
+    "src": "/photos/oren/hero.webp",
     "title": "IHM מערת ישח 1.jpeg",
     "author": "gschetrit",
     "authorEn": "gschetrit",
@@ -50,10 +92,25 @@
     "captionEn": "Yishach Cave entrance beside the Oren route, May 2023. Not the entire loop or current access conditions; this does not authorize cave entry.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
     "titleEn": "IHM Yishach Cave 1.jpeg",
-    "thumbSrc": "/photos/trail-oren-thumb.webp"
+    "thumbSrc": "/photos/oren/thumb.webp",
+    "gallery": [
+      {
+        "src": "/photos/oren/hero.webp",
+        "title": "IHM מערת ישח 1.jpeg",
+        "author": "gschetrit",
+        "authorEn": "gschetrit",
+        "source": "https://commons.wikimedia.org/wiki/File:IHM_%D7%9E%D7%A2%D7%A8%D7%AA_%D7%99%D7%A9%D7%97_1.jpeg",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "captionHe": "פתח מערת ישח לצד מסלול נחל אורן, מאי 2023. לא תיעוד של כל הלולאה או של מצב הגישה כיום; אין בכך אישור כניסה למערה.",
+        "captionEn": "Yishach Cave entrance beside the Oren route, May 2023. Not the entire loop or current access conditions; this does not authorize cave entry.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
+        "titleEn": "IHM Yishach Cave 1.jpeg"
+      }
+    ]
   },
   "ext-26": {
-    "src": "/photos/trail-banias.webp",
+    "src": "/photos/ext-26/hero.webp",
     "title": "Banias-falls-nahal-hermon-suspended-trail.jpg",
     "titleEn": "Banias suspended trail",
     "author": "Mboesch",
@@ -64,10 +121,25 @@
     "captionHe": "השביל התלוי בבניאס, אפריל 2014. צילום מהאתר; לא תיעוד של זרימה או של מצב הגישה כיום.",
     "captionEn": "Banias suspended trail, April 2014. A photograph of the route site, not current flow or access conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.",
-    "thumbSrc": "/photos/trail-banias-thumb.webp"
+    "thumbSrc": "/photos/ext-26/thumb.webp",
+    "gallery": [
+      {
+        "src": "/photos/ext-26/hero.webp",
+        "title": "Banias-falls-nahal-hermon-suspended-trail.jpg",
+        "titleEn": "Banias suspended trail",
+        "author": "Mboesch",
+        "authorEn": "Mboesch",
+        "source": "https://commons.wikimedia.org/wiki/File:Banias-falls-nahal-hermon-suspended-trail.jpg",
+        "licence": "CC BY-SA 4.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "captionHe": "השביל התלוי בבניאס, אפריל 2014. צילום מהאתר; לא תיעוד של זרימה או של מצב הגישה כיום.",
+        "captionEn": "Banias suspended trail, April 2014. A photograph of the route site, not current flow or access conditions.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0."
+      }
+    ]
   },
   "ext-96": {
-    "src": "/photos/trail-taninim.webp",
+    "src": "/photos/ext-96/hero.webp",
     "title": "PikiWiki Israel 48360 Taninim River Reserve 1.jpg",
     "titleEn": "Taninim reserve dam and canals",
     "author": "אלישבע ורנר-רייז Pikiwiki Israel",
@@ -78,10 +150,25 @@
     "captionHe": "סכר ותעלות בשמורת נחל תנינים, יולי 2015. אתר המסלול הקצר בשמורה, לא כל הנחל או מצב המים כיום.",
     "captionEn": "Dam and canals at Taninim nature reserve, July 2015. The short reserve-route site, not the entire river or current water conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop.",
-    "thumbSrc": "/photos/trail-taninim-thumb.webp"
+    "thumbSrc": "/photos/ext-96/thumb.webp",
+    "gallery": [
+      {
+        "src": "/photos/ext-96/hero.webp",
+        "title": "PikiWiki Israel 48360 Taninim River Reserve 1.jpg",
+        "titleEn": "Taninim reserve dam and canals",
+        "author": "אלישבע ורנר-רייז Pikiwiki Israel",
+        "authorEn": "Elisheva Werner-Reiss Pikiwiki Israel",
+        "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_48360_Taninim_River_Reserve_1.jpg",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "captionHe": "סכר ותעלות בשמורת נחל תנינים, יולי 2015. אתר המסלול הקצר בשמורה, לא כל הנחל או מצב המים כיום.",
+        "captionEn": "Dam and canals at Taninim nature reserve, July 2015. The short reserve-route site, not the entire river or current water conditions.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      }
+    ]
   },
   "ext-89": {
-    "src": "/photos/trail-taninim.webp",
+    "src": "/photos/ext-96/hero.webp",
     "title": "PikiWiki Israel 48360 Taninim River Reserve 1.jpg",
     "titleEn": "Taninim reserve dam and canals",
     "author": "אלישבע ורנר-רייז Pikiwiki Israel",
@@ -92,6 +179,21 @@
     "captionHe": "סכר ותעלות בשמורת נחל תנינים, יולי 2015. אתר בתחילת המסלול לקיסריה, לא כל המסלול או מצב המים כיום.",
     "captionEn": "Dam and canals at Taninim nature reserve, July 2015. A site at the start of the Caesarea route, not the entire route or current water conditions.",
     "changes": "Resized and converted to WebP; displayed with a responsive crop.",
-    "thumbSrc": "/photos/trail-taninim-thumb.webp"
+    "thumbSrc": "/photos/ext-96/thumb.webp",
+    "gallery": [
+      {
+        "src": "/photos/ext-96/hero.webp",
+        "title": "PikiWiki Israel 48360 Taninim River Reserve 1.jpg",
+        "titleEn": "Taninim reserve dam and canals",
+        "author": "אלישבע ורנר-רייז Pikiwiki Israel",
+        "authorEn": "Elisheva Werner-Reiss Pikiwiki Israel",
+        "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_48360_Taninim_River_Reserve_1.jpg",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "captionHe": "סכר ותעלות בשמורת נחל תנינים, יולי 2015. אתר בתחילת המסלול לקיסריה, לא כל המסלול או מצב המים כיום.",
+        "captionEn": "Dam and canals at Taninim nature reserve, July 2015. A site at the start of the Caesarea route, not the entire route or current water conditions.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      }
+    ]
   }
 }

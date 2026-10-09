@@ -64,3 +64,7 @@ Resized/converted WebP derivatives and responsive display crops are distributed 
 ## List thumbnails
 
 Each `trail-*-thumb.webp` is a 480x240 responsive crop of the corresponding licensed `trail-*.webp` listed above. Original creator/source/license remain unchanged. CC BY-SA derivatives remain under their original license. Cards include creator, source, license and crop notice; detailed route figures retain the dated location/current-condition caveat. Unmapped trails show an illustration, not a borrowed regional photo.
+
+## Per-trail folders
+
+Checked trail-site images now live in /photos/{trail-id}/hero.webp and thumb.webp. Each folder carries CREDITS.md with source, creator, license, changes and the dated location caveat. WebP is kept deliberately: files retain their actual encoding instead of being renamed to .jpg. Regional context remains separate; it is never silently used as a trail gallery. The two Taninim routes share one photographed starting site. ext-89 therefore references the ext-96 asset folder rather than duplicating the same binary; ext-89 retains its own caption and credit record. Galleries currently contain only the one individually documented image per mapped route, with no duplicate image added to suggest a larger collection. Additional licensed photos can be added as numbered entries later.

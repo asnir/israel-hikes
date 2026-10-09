@@ -1474,3 +1474,5 @@ button:disabled {opacity:.65;cursor:not-allowed;}
 .card-photo figcaption a {color:inherit; text-underline-offset:2px;}
 
 .card-photo:focus-visible{outline:3px solid var(--green);outline-offset:-3px}
+
+.gallery-controls {display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap; margin-top:-12px; margin-bottom:24px;}

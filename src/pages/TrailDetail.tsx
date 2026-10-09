@@ -1,5 +1,7 @@
 import RouteMap from "../components/RouteMap";
 import NavigationMenu from "../components/NavigationMenu";
+import TrailGallery from "../components/TrailGallery";
+import trailPhotos from "../data/trail-photos.json";
 import AreaPhoto from "../components/AreaPhoto";
 import { tr, display } from "../i18n";
 import { useState } from "react";
@@ -49,6 +51,7 @@ export default function TrailDetail() {
   } = useSaved();
   if (!t) return <NotFound />;
   const d = t.detail;
+  const photos = (trailPhotos as Record<string, typeof trailPhotos.ofer>)[t.id]?.gallery;
   return <main id="main" className="page detail">
       <Link className="back-link" to="/">
         <ArrowRight size={17} />{tr("לכל המסלולים")}</Link>
@@ -65,7 +68,7 @@ export default function TrailDetail() {
           {display(saved.includes(t.id) ? "נשמר במכשיר" : "שמירת המסלול")}
         </button>
       </div>
-      <AreaPhoto trail={t} />
+      {photos?.length ? <TrailGallery photos={photos} /> : <AreaPhoto trail={t} />}
       <p className="detail-lead">{display(t.summary)}</p>
       <div className="notice">
         <Compass size={22} />
