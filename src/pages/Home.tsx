@@ -168,7 +168,7 @@ export default function Home() {
           </div> : view === "map" ? <Suspense fallback={<p>{tr("טוען מפה…")}</p>}>
             <TrailMap trails={filtered} selected={selected} onSelect={S} />
           </Suspense> : <div className="trail-grid">
-            {display(shown.map(t => <TrailCard key={t.id} trail={t} drive={driveFor(t)} saved={saved.includes(t.id)} onSave={() => toggle(t.id)} />))}
+            {display(shown.map(t => <TrailCard key={t.id} trail={t} saved={saved.includes(t.id)} onSave={() => toggle(t.id)} />))}
           </div>)}
         {display(view === "grid" && filtered.length > lim && <div className="load-more">
             <button className="button" onClick={() => L(lim + 24)}>{tr("עוד מסלולים")}<span>({display(filtered.length - lim)}{tr("נוספים)")}</span>
