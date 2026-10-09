@@ -15,7 +15,7 @@ export default {
     const url = new URL(request.url);
     if (!url.pathname.startsWith("/api/")) return env.ASSETS.fetch(request);
     if(url.pathname==="/api/contact-config")return Response.json({enabled:enabled(env),siteKey:enabled(env)?env.TURNSTILE_SITE_KEY:null},{headers:{"Cache-Control":"no-store"}});
-    if(url.pathname==="/api/contact")return env.CONTACT.get(env.CONTACT.idFromName("contact")).fetch(request);
+    if(url.pathname==="/api/contact"||url.pathname.startsWith("/api/contact-inbox"))return env.CONTACT.get(env.CONTACT.idFromName("contact")).fetch(request);
     if (env.SERVICE_ENABLED === "false")
       return Response.json({ error: "Services disabled" }, { status: 503 });
     if (
