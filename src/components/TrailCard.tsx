@@ -1,18 +1,15 @@
 import trailPhotos from "../data/trail-photos.json";
 import { language } from "../i18n";
-import { tr, display, distance, driveText } from "../i18n";
+import { tr, display, distance } from "../i18n";
 import { Link } from "react-router-dom";
-import { ArrowUpLeft, Mountain, Route, Clock, Bookmark, AlertTriangle } from "lucide-react";
+import { ArrowUpLeft, Mountain, Route, Bookmark, AlertTriangle } from "lucide-react";
 import { categoryLabels, type Trail } from "../lib/catalog";
-import { methodLabel, type Drive } from "../lib/drive";
 export default function TrailCard({
   trail: t,
-  drive,
   saved,
   onSave
 }: {
   trail: Trail;
-  drive: Drive | null;
   saved: boolean;
   onSave: () => void;
 }) {
@@ -55,16 +52,13 @@ export default function TrailCard({
           {display(t.landscape.slice(0, 2).map(s => <span key={s}>{display(s)}</span>))}
         </div>
         <div className="card-bottom">
-          <span title={display(drive ? methodLabel[drive.method] : "")}>
-            <Clock size={15} />
-            {display(drive ? driveText(drive.minutes, drive.km) : "נסיעה: לא ידוע")}
-          </span>
+          <span>{tr("פרטי המסלול")}</span>
           <Link to={"/trail/" + t.id} aria-label={display("מידע על " + t.name)}>
             <ArrowUpLeft size={22} />
           </Link>
         </div>
         <small>
-          {display(t.provenance)} · {display(drive ? "הערכה, ללא פקקים" : "המידע חסר")}
+          {display(t.provenance)}
         </small>
       </div>
     </article>;

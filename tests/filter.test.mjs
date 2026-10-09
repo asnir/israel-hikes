@@ -4,5 +4,7 @@ const {catalog}=await import('/tmp/hikes-filter-test/catalog.mjs');const {matche
 const blank={category:'',region:'',length:'',difficulty:'',structure:'',water:'',season:'',shade:'',landscape:'',provenance:'',drive:''};
 test('Search finds English and Hebrew names on the same stable record',()=>{const t=catalog.find(t=>t.id==='ofer');assert.ok(matches(t,'Ofer',blank,null));assert.ok(matches(t,'יער עופר',blank,null));assert.ok(!matches(t,'zzzz-no-match',blank,null))});
 test('Each known region filter excludes other regions',()=>{for(const region of [...new Set(catalog.map(t=>t.region))].filter(Boolean)){const hits=catalog.filter(t=>matches(t,'',{...blank,region},null));assert.ok(hits.length>0);assert.ok(hits.every(t=>t.region===region))}});
-test('Unknown drive cannot pass a known-duration filter',()=>{assert.ok(!matches(catalog[0],'',{...blank,drive:'עד 90 דקות'},null));assert.ok(matches(catalog[0],'',{...blank,drive:'לא ידוע'},null))});
+test('Unknown drive cannot pass a known-distance filter',()=>{assert.ok(!matches(catalog[0],'',{...blank,drive:'עד 100 ק״מ'},null));assert.ok(matches(catalog[0],'',{...blank,drive:'לא ידוע'},null))});
 test('Distance calculation is symmetric, finite and zero at the same point',()=>{assert.equal(haversine([32,35],[32,35]),0);assert.equal(haversine([31,34],[32,35]),haversine([32,35],[31,34]));for(const t of catalog){const d=estimate(t,'haifa');if(d)assert.ok(Number.isFinite(d.km)&&d.km>=0&&d.minutes>=0)}});
+
+test("Driving distance filter uses km, never minutes",()=>{const t=catalog[0];assert.ok(matches(t,"",{...blank,drive:"עד 100 ק״מ"},{km:78,minutes:150,method:"legacy"}));assert.ok(!matches(t,"",{...blank,drive:"עד 100 ק״מ"},{km:150,minutes:78,method:"legacy"}))});

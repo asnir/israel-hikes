@@ -60,3 +60,5 @@ export function fmtNumber(value: number) { return new Intl.NumberFormat(language
 export function distance(km: number) { return i18n.t("distance", { value: fmtNumber(km) }); }
 export function driveText(minutes: number, km: number) { return i18n.t("drive", { minutes: fmtNumber(minutes), km: fmtNumber(km) }); }
 export default i18n;
+
+export function drivingDistance(km: number) { return i18n.t("drivingDistance", { km: fmtNumber(km) }); }

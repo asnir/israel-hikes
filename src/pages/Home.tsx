@@ -46,7 +46,7 @@ export default function Home() {
       const d = driveFor(t);
       return (!onlySaved || saved.includes(t.id)) && matches(t, q, f, d);
     });
-    if (sort === "distance") list.sort((a, b) => (driveFor(a)?.minutes ?? Infinity) - (driveFor(b)?.minutes ?? Infinity));
+    if (sort === "distance") list.sort((a, b) => (driveFor(a)?.km ?? Infinity) - (driveFor(b)?.km ?? Infinity));
     if (sort === "length") list.sort((a, b) => (a.km ?? Infinity) - (b.km ?? Infinity));
     return list;
   }, [q, f, city, origin, routed, onlySaved, saved, sort]);
@@ -143,7 +143,7 @@ export default function Home() {
             </button>
             <select aria-label={tr("מיון תוצאות")} value={sort} onChange={e => Sort(e.target.value)}>
               <option value="default">{tr("סדר המאגר")}</option>
-              <option value="distance">{tr("נסיעה קצרה קודם")}</option>
+              <option value="distance">{tr("מרחק נסיעה קצר קודם")}</option>
               <option value="length">{tr("מסלול קצר קודם")}</option>
             </select>
             <div className="view-switch">
@@ -168,7 +168,7 @@ export default function Home() {
           </div> : view === "map" ? <Suspense fallback={<p>{tr("טוען מפה…")}</p>}>
             <TrailMap trails={filtered} selected={selected} onSelect={S} />
           </Suspense> : <div className="trail-grid">
-            {display(shown.map(t => <TrailCard key={t.id} trail={t} drive={driveFor(t)} saved={saved.includes(t.id)} onSave={() => toggle(t.id)} />))}
+            {display(shown.map(t => <TrailCard key={t.id} trail={t} saved={saved.includes(t.id)} onSave={() => toggle(t.id)} />))}
           </div>)}
         {display(view === "grid" && filtered.length > lim && <div className="load-more">
             <button className="button" onClick={() => L(lim + 24)}>{tr("עוד מסלולים")}<span>({display(filtered.length - lim)}{tr("נוספים)")}</span>
