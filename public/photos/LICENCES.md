@@ -44,3 +44,19 @@ Resized/converted WebP derivatives and responsive display crops are distributed 
 - Changes: Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.
 - Site check: Commons object/camera location 32.718566, 35.002013 matches Yishach Cave on the catalog route (Nakeb272).
 - Caption: Yishach Cave entrance beside the Oren route, May 2023. Not the entire loop or current access conditions; this does not authorize cave entry.
+
+## trail-banias.webp
+
+- Source: https://commons.wikimedia.org/wiki/File:Banias-falls-nahal-hermon-suspended-trail.jpg
+- Author: Mboesch
+- License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- Changes: Resized and converted to WebP; displayed with a responsive crop. Derivative remains CC BY-SA 4.0.
+- Caption: Banias suspended trail, April 2014. A photograph of the route site, not current flow or access conditions.
+
+## trail-taninim.webp
+
+- Source: https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_48360_Taninim_River_Reserve_1.jpg
+- Author: אלישבע ורנר-רייז Pikiwiki Israel
+- License: [CC BY 2.5](https://creativecommons.org/licenses/by/2.5)
+- Changes: Resized and converted to WebP; displayed with a responsive crop.
+- Caption: Dam and canals at Taninim nature reserve, July 2015. The short reserve-route site, not the entire river or current water conditions.
