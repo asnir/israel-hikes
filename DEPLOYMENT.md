@@ -16,3 +16,7 @@ Workers Free only. Do not upgrade billing or alter the puzzle Workers.
 The environment gate protects workflow deployments, not account owners who deliberately change settings or deploy manually. GitHub accounts remain asnir, so a browser assistant technically shares the owner's ability to approve; the assistant must never press the production approval button for the owner.
 
 Approval UI reference: https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-deployments/reviewing-deployments
+
+## Narrow dashboard bootstrap
+
+The owner-approved production job reads only the production hiking Worker deployment origin. If it is dashboard-created, the first upload uses exact Wrangler 4.30.0, which supports this assets/Durable Objects configuration and asks the usual dashboard overwrite confirmation without importing unrelated account-level route/domain metadata. It retains secrets, applies the checked local configuration and never broadens the per-Worker token. The existing production environment review remains mandatory. Once the first successful upload is Wrangler-owned, subsequent jobs select current exact Wrangler 4.149.0 automatically. Unknown origin or unreadable metadata stops the job. The bootstrap is not a guarantee that upload will succeed; deployed bytes are checked afterward. Contact remains disabled.
