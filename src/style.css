@@ -1480,3 +1480,10 @@ button:disabled {opacity:.65;cursor:not-allowed;}
 .access-section h2 { display: flex; align-items: center; gap: 10px; }
 .access-section h2 svg { flex-shrink: 0; }
 .access-section .drive-large { font-size: 17px !important; line-height: 1.7; padding: 14px; border-radius: 10px; background: #fff; }
+
+/* The title stays a real link; its target covers the non-interactive card area. */
+.trail-card { position: relative; isolation: isolate; }
+.card-title::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.card-title:focus-visible { outline: none; }
+.trail-card:has(.card-title:focus-visible) { outline: 3px solid var(--green); outline-offset: 2px; }
+.trail-card button, .trail-card a:not(.card-title) { position: relative; z-index: 2; }
