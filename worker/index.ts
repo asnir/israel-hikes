@@ -40,13 +40,14 @@ export class UpstreamGateway extends DurableObject<Env> {
         const q = url.searchParams.get("q")?.trim() || "";
         if (q.length < 3 || q.length > 160)
           return Response.json({ error: "Invalid query" }, { status: 400 });
+        const lang = url.searchParams.get("lang") === "en" ? "en" : "he";
         const base =
           this.env.NOMINATIM_URL || "https://nominatim.openstreetmap.org";
         upstream =
           base +
-          "/search?format=jsonv2&limit=5&countrycodes=il&accept-language=he&q=" +
+          "/search?format=jsonv2&limit=5&countrycodes=il&accept-language=" + lang + "&q=" +
           encodeURIComponent(q);
-        key = "geo:" + q.toLocaleLowerCase();
+        key = "geo:" + lang + ":" + q.toLocaleLowerCase();
       } else {
         if (request.method !== "POST")
           return new Response("Method not allowed", { status: 405 });

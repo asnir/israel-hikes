@@ -1,0 +1,10 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {build} from 'esbuild';
+const he=JSON.parse(fs.readFileSync('src/locales/he.json')),en=JSON.parse(fs.readFileSync('src/locales/en.json')),keys=JSON.parse(fs.readFileSync('src/locales/source-keys.json'));
+test('Hebrew and English resource keys and interpolation match',()=>{assert.deepEqual(Object.keys(he).sort(),Object.keys(en).sort());for(const key of Object.keys(he)){assert.ok(en[key].trim(),key);assert.deepEqual((he[key].match(/{{[^}]+}}/g)||[]).sort(),(en[key].match(/{{[^}]+}}/g)||[]).sort(),key);assert.ok(!/[א-ת]/.test(en[key]),key)}});
+test('Every Hebrew trail-content value has an English translation',()=>{function check(v){if(typeof v==='string'&&/[א-ת]/.test(v)&&!v.startsWith('http'))assert.ok(keys[v],v);else if(Array.isArray(v))v.forEach(check);else if(v&&typeof v==='object')Object.values(v).forEach(check)}for(const f of ['recommendations','extended','segments','long-trails','access','cities'])check(JSON.parse(fs.readFileSync('src/data/'+f+'.json')))});
+await build({entryPoints:['src/i18n.ts','src/lib/catalog.ts'],outdir:'/tmp/hikes-i18n-test',bundle:true,platform:'node',format:'esm',outExtension:{'.js':'.mjs'}});
+const {default:i18n,tr}=await import('/tmp/hikes-i18n-test/i18n.mjs');
+test('Hebrew is default and language switching translates safely',async()=>{assert.equal(i18n.resolvedLanguage,'he');assert.equal(tr('לא ידוע'),'לא ידוע');await i18n.changeLanguage('en');assert.equal(tr('לא ידוע'),'Unknown');assert.equal(tr('https://example.invalid/מסלול'),'https://example.invalid/מסלול');await i18n.changeLanguage('he')});

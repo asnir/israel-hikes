@@ -1,3 +1,4 @@
+import { english } from "../i18n";
 import recommendations from "../data/recommendations.json";
 import extended from "../data/extended.json";
 import segments from "../data/segments.json";
@@ -149,5 +150,5 @@ export function searchText(t: Trail) {
     ...t.notes,
   ]
     .join(" ")
-    .toLocaleLowerCase("he");
+    .toLocaleLowerCase("he") + " " + [t.name,t.region,t.summary,...t.notes,...t.landscape].map(english).join(" ").toLowerCase();
 }

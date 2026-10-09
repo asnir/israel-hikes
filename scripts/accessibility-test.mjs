@@ -1,0 +1,8 @@
+import { chromium } from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
+import assert from 'node:assert/strict';
+import { spawn } from 'node:child_process';
+const server=spawn('node',['node_modules/vite/bin/vite.js','preview','--host','127.0.0.1','--port','4174'],{stdio:'ignore'});
+try{const browser=await chromium.launch({headless:true});const context=await browser.newContext({viewport:{width:390,height:844}});const page=await context.newPage();for(let i=0;i<50;i++){try{await page.goto('http://127.0.0.1:4174');break}catch{await new Promise(r=>setTimeout(r,100))}}
+for(const lang of ['he','en']){await page.goto('http://127.0.0.1:4174/?lang='+lang);await page.waitForSelector('.trail-card');for(const path of ['/','/trail/ofer','/long','/accessibility']){await page.goto('http://127.0.0.1:4174'+path);await page.waitForSelector('main');const r=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();assert.equal(r.violations.length,0,lang+' '+path+' '+JSON.stringify(r.violations.map(v=>v.id)));console.log(lang,path,JSON.stringify(r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({html:n.html,summary:n.failureSummary})).slice(0,7)}))));}}
+await browser.close();}finally{server.kill()}
