@@ -3,9 +3,13 @@ import { language, tr } from "../i18n";
 import type { Trail } from "../lib/catalog";
 function photoRegion(t: Trail): string {
   const r=t.region;
+  if (t.id.startsWith("seg-y2y-")) return "galilee";
+  if (t.id.startsWith("seg-jer-")) return "jerusalem";
   if (/גולן/.test(r)) return "golan";
   if (/גליל/.test(r)) return "galilee";
-  if (/כרמל/.test(r) && !/גלבוע|השופט|מנשה/.test(t.name)) return "carmel";
+  if (/גלבוע|פארק המעיינות|מצפה אבינדב/.test(t.name)) return "gilboa";
+  if (/מנשה|השופט/.test(t.name)) return "menashe";
+  if (/כרמל/.test(r)) return "carmel";
   if (/ירושלים|הרי יהודה/.test(r)) return "jerusalem";
   if (/מדבר יהודה|מלח/.test(r)) return "judea";
   if (/חוף/.test(r)) return "coast";
