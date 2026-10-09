@@ -1,12 +1,13 @@
 import i18n, { tr, display } from "../i18n";
 import { matches } from "../lib/filter";
-import { lazy, Suspense, useMemo, useState, useRef } from "react";
+import { lazy, Suspense, useMemo, useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Search, SlidersHorizontal, Map, LayoutGrid, ArrowUpLeft, Bookmark, Compass } from "lucide-react";
 import { catalog, longTrails, type Trail } from "../lib/catalog";
 import { estimate, roughEstimate, routeBatch, type Drive } from "../lib/drive";
 import TrailCard from "../components/TrailCard";
 import OriginSearch from "../components/OriginSearch";
+import { isFreshLocation, locationMaxAge, type LocationFix } from "../lib/location";
 const TrailMap = lazy(() => import("../components/TrailMap"));
 import { useSaved } from "../lib/saved";
 import Hero from "../components/Hero";
@@ -21,6 +22,7 @@ export default function Home() {
     [origin, O] = useState<{
       point: [number, number];
       label: string;
+      fix?: LocationFix;
     } | null>(null),
     [routed, R] = useState<Record<string, Drive>>({}),
     [routing, BR] = useState(false),
@@ -40,7 +42,15 @@ export default function Home() {
     });
     L(24);
   };
-  const driveFor = (t: Trail) => origin ? routed[t.id] || roughEstimate(t, origin.point) : estimate(t, city);
+  const [now, setNow] = useState(Date.now());
+  useEffect(() => { const timer = setInterval(() => setNow(Date.now()), 30000); return () => clearInterval(timer); }, []);
+  useEffect(() => {
+    if (!origin?.fix) return;
+    const expires = setTimeout(() => setNow(Date.now()), Math.max(0, origin.fix.observedAt + locationMaxAge - Date.now()));
+    return () => clearTimeout(expires);
+  }, [origin]);
+  const staleLocation = !!origin?.fix && !isFreshLocation(origin.fix.observedAt, now);
+  const driveFor = (t: Trail) => staleLocation ? null : origin ? routed[t.id] || roughEstimate(t, origin.point) : estimate(t, city);
   const filtered = useMemo(() => {
     const list = catalog.filter(t => {
       const d = driveFor(t);
@@ -49,17 +59,17 @@ export default function Home() {
     if (sort === "distance") list.sort((a, b) => (driveFor(a)?.km ?? Infinity) - (driveFor(b)?.km ?? Infinity));
     if (sort === "length") list.sort((a, b) => (a.km ?? Infinity) - (b.km ?? Infinity));
     return list;
-  }, [q, f, city, origin, routed, onlySaved, saved, sort]);
+  }, [q, f, city, origin, routed, staleLocation, onlySaved, saved, sort]);
   const shown = filtered.slice(0, lim);
   const active = Object.values(f).filter(Boolean).length;
   async function calculate() {
-    if (!origin) return;
+    if (!origin || (origin.fix && !isFreshLocation(origin.fix.observedAt))) return;
     const version = originVersion.current;
     BR(true);
     RS("");
     try {
       const result = await routeBatch(origin.point, shown);
-      if (version !== originVersion.current) return;
+      if (version !== originVersion.current || (origin.fix && !isFreshLocation(origin.fix.observedAt))) return;
       R(prev => ({
         ...prev,
         ...result
@@ -102,25 +112,30 @@ export default function Home() {
           O(null);
           R({});
           RS("");
-        }} onOrigin={(point, label) => {
+        }} onOrigin={(point, label, fix) => {
           originVersion.current++;
+          C("custom");
           O({
             point,
-            label
+            label, fix
           });
+          setNow(Date.now());
+          Sort("distance"); L(24);
           R({});
           RS("");
         }} />
           {display(origin && <div className="dynamic-origin">
               <span>{tr("מוצא:")} <bdi>{origin.label}</bdi></span>
-              <button className="button" onClick={calculate} disabled={routing}>
+              <button className="button" onClick={calculate} disabled={routing || staleLocation}>
                 {display(routing ? "מחשב…" : i18n.t("roadCount", { count: shown.length }))}
               </button>
+              {origin.fix && <p className="location-age" role="status">{tr(staleLocation ? "המיקום ישן. רעננו לפני סינון לפי מרחק או חישוב כביש." : "מיקום שנמדד לפני")} {!staleLocation && <>{Math.max(0, Math.floor((now - origin.fix.observedAt) / 60000))} {tr("דקות")} · {tr("דיוק משוער:")} {Math.round(origin.fix.accuracy)} {tr("מטרים")}</>}</p>}
               <small>{tr("ברירת המחדל: אומדן מרחק אווירי × 1.35, לא מרחק כביש. החישוב דורש שירות זמין.")}</small>
+              <small>{tr("בלחיצה על חישוב כביש, נקודת המוצא נשלחת לשירות OSRM. אין שליחה אוטומטית.")}</small>
               {display(routingStatus && <p role="status">{display(routingStatus)}</p>)}
             </div>)}
           <div className="filter-footer">
-            <p>{tr("זמני נסיעה הם אומדנים ללא פקקים, עצירות או הקפצת רכבים.")}</p>
+            <p>{tr("מרחקים תלויים בנקודת המוצא שנבחרה. אלה אומדנים, לא אורך מסלול ההליכה.")}</p>
             {display((active > 0 || q) && <button onClick={() => {
             F(initialFilters);
             Q("");
