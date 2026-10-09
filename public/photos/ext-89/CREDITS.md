@@ -6,4 +6,4 @@
 - Changes: Resized and converted to WebP; displayed with a responsive crop.
 - Scope: Dam and canals at Taninim nature reserve, July 2015. A site at the start of the Caesarea route, not the entire route or current water conditions.
 
-hero.webp is the full figure; thumb.webp is the list crop. Both retain the source license.
+The full figure and list crop are referenced from ../ext-96/hero.webp and ../ext-96/thumb.webp to avoid duplicating a shared site image. Both retain the source license.
