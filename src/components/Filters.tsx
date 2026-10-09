@@ -60,7 +60,7 @@ export default function FilterFields({
           <Select label="צל" value={f.shade} onChange={v => update("shade", v)} options={["צל מוזכר", "בעיקר חשוף", "לא ידוע"]} />
           <Select label="נוף" value={f.landscape} onChange={v => update("landscape", v)} options={["נחל", "מעיינות", "הר", "יער", "חוף", "מכתש", "מערות"]} />
           <Select label="מקור" value={f.provenance} onChange={v => update("provenance", v)} options={["מקורות פומביים", "מסמך משותף"]} />
-          <Select label="נסיעה משוערת" value={f.drive} onChange={v => update("drive", v)} options={["עד 90 דקות", "מעל 90 דקות", "לא ידוע"]} />
+          <Select label="מרחק נסיעה משוער" value={f.drive} onChange={v => update("drive", v)} options={["עד 100 ק״מ", "מעל 100 ק״מ", "לא ידוע"]} />
           <p className="fine-print">{tr("מידע חסר הוא ״לא ידוע״, לא ״אין״. תגיות נוף נגזרות מתיאורי המקור.")}</p>
         </div>)}
     </>;
