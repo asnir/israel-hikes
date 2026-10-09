@@ -14,7 +14,7 @@ const reply=(error:string,status:number)=>Response.json({error},{status,headers:
 export class ContactHandler {
  private queue:Promise<unknown>=Promise.resolve();
  constructor(private storage:Storage,private env:ContactEnv,private upstream:typeof fetch=(...args)=>fetch(...args),private now:()=>number=Date.now){}
- async fetch(request:Request){const before=this.queue;let unlock!:()=>void;this.queue=new Promise(r=>unlock=r);await before;try{return await this.handle(request)}finally{unlock()}}
+ async fetch(request:Request){const before=this.queue;let unlock!:()=>void;this.queue=new Promise<void>(r=>unlock=r);await before;try{return await this.handle(request)}finally{unlock()}}
  private async handle(request:Request){
   const url=new URL(request.url);
   if(url.pathname.startsWith('/api/contact-inbox'))return this.inbox(request,url);
@@ -22,7 +22,7 @@ export class ContactHandler {
   if(request.method!=='POST')return reply('method',405);
   if(request.headers.get('Origin')!==url.origin||url.hostname!==this.env.CONTACT_HOSTNAME)return reply('origin',403);
   if(!request.headers.get('Content-Type')?.startsWith('application/json'))return reply('format',415);
-  let raw='';try{const reader=request.body?.getReader();if(!reader)return reply('invalid',400);const chunks:Uint8Array[]=[];let bytes=0;while(true){const {done,value}=await reader.read();if(done)break;bytes+=value.length;if(bytes>12000){await reader.cancel();return reply('too-large',413)}chunks.push(value)}const joined=new Uint8Array(bytes);let offset=0;for(const c of chunks){joined.set(c,offset);offset+=c.length}raw=new TextDecoder().decode(joined)}catch{return reply('invalid',400)}
+  let raw:string;try{const reader=request.body?.getReader();if(!reader)return reply('invalid',400);const chunks:Uint8Array[]=[];let bytes=0;while(true){const {done,value}=await reader.read();if(done)break;bytes+=value.length;if(bytes>12000){await reader.cancel();return reply('too-large',413)}chunks.push(value)}const joined=new Uint8Array(bytes);let offset=0;for(const c of chunks){joined.set(c,offset);offset+=c.length}raw=new TextDecoder().decode(joined)}catch{return reply('invalid',400)}
   let s:Submission|null;try{s=validateSubmission(JSON.parse(raw))}catch{return reply('invalid',400)}if(!s)return reply('invalid',400);
   const timestamp=this.now(),day=new Date(timestamp).toISOString().slice(0,10),ip=request.headers.get('CF-Connecting-IP');if(!ip)return reply('unavailable',503);
   const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(this.env.TURNSTILE_SECRET_KEY!),{name:'HMAC',hash:'SHA-256'},false,['sign']);const bytes=await crypto.subtle.sign('HMAC',key,new TextEncoder().encode(day+':'+ip));const hash=Array.from(new Uint8Array(bytes)).map(x=>x.toString(16).padStart(2,'0')).join('');
@@ -61,4 +61,4 @@ export class ContactHandler {
   return reply('method',405);
  }
  async alarm(){const rows=await this.storage.list<any>();const stale=[...rows].filter(([,v])=>v.expires<this.now()).map(([k])=>k);if(stale.length)await this.storage.delete(stale);if(rows.size>stale.length)await this.storage.setAlarm(this.now()+86400000)}
-                                                                                                                                      }
+}
