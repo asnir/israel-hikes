@@ -48,9 +48,9 @@ export function roughEstimate(
 }
 export const methodLabel = {
   legacy: "אומדן קודם לפי ק״מ בכביש",
-  "road-estimate": "אומדן ק״מ בכביש / 60 קמ״ש",
+  "road-estimate": "אומדן מרחק כביש",
   "air-estimate": "מרחק אווירי × 1.35; לא מרחק כביש",
-  osrm: "OSRM, ללא תנועה בזמן אמת",
+  osrm: "מרחק כביש לפי OSRM",
 };
 const geocache = new Map<
   string,
