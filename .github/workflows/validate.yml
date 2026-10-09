@@ -6,6 +6,13 @@ on:
 permissions:
   contents: read
 jobs:
+  secrets:
+    uses: ./.github/workflows/secrets.yml
+  security:
+    uses: ./.github/workflows/security.yml
+    permissions:
+      contents: read
+      security-events: write
   validate:
     runs-on: ubuntu-latest
     steps:
@@ -25,7 +32,7 @@ jobs:
       - run: npm run test:e2e
       - run: npm run test:a11y
   deploy-preview:
-    needs: validate
+    needs: [validate, secrets, security]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10

@@ -1,7 +1,7 @@
 import {test} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
 const workflow=fs.readFileSync('.github/workflows/validate.yml','utf8');
 test('Preview and production are chained, main-only and require explicit enable',()=>{
- assert.match(workflow,/deploy-preview:[\s\S]*needs: validate/);assert.match(workflow,/deploy-production:[\s\S]*needs: \[validate, deploy-preview\]/);
+ assert.match(workflow,/deploy-preview:[\s\S]*needs: \[validate, secrets, security\]/);assert.match(workflow,/deploy-production:[\s\S]*needs: \[validate, deploy-preview\]/);
  assert.equal((workflow.match(/vars\.CLOUDFLARE_DEPLOY_ENABLED == 'true'/g)||[]).length,2);assert.equal((workflow.match(/github.ref == 'refs\/heads\/main'/g)||[]).length,2);
  assert.match(workflow,/deploy-production:[\s\S]*environment:\s*name: production/);assert.ok(!workflow.includes('pull_request_target'));
 });
