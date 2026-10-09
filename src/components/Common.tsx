@@ -1,7 +1,7 @@
 import { tr, display } from "../i18n";
 import { Link } from "react-router-dom";
 import { Compass, ExternalLink } from "lucide-react";
-export const safetyLinks = [["עדכוני סגירה: רט״ג", "https://www.parks.org.il/newsflash/maslulim-2/"], ["הודעות למטיילים: קק״ל", "https://www.kkl.org.il/recreation-and-tours/messages/"]];
+export const safetyLinks = [["עדכוני סגירה: רט״ג", "https://www.parks.org.il/category/newsflash/"], ["הודעות למטיילים: קק״ל", "https://www.kkl.org.il/recreation-and-tours/messages/"]];
 export function Facts({
   items
 }: {
