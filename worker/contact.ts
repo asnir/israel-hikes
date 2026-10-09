@@ -13,7 +13,7 @@ export function enabled(e:ContactEnv){return e.CONTACT_ENABLED==='true'&&!!e.TUR
 const reply=(error:string,status:number)=>Response.json({error},{status,headers:{'Cache-Control':'no-store'}});
 export class ContactHandler {
  private queue:Promise<unknown>=Promise.resolve();
- constructor(private storage:Storage,private env:ContactEnv,private upstream:typeof fetch=fetch,private now:()=>number=Date.now){}
+ constructor(private storage:Storage,private env:ContactEnv,private upstream:typeof fetch=(...args)=>fetch(...args),private now:()=>number=Date.now){}
  async fetch(request:Request){const before=this.queue;let unlock!:()=>void;this.queue=new Promise(r=>unlock=r);await before;try{return await this.handle(request)}finally{unlock()}}
  private async handle(request:Request){
   const url=new URL(request.url);
@@ -61,4 +61,4 @@ export class ContactHandler {
   return reply('method',405);
  }
  async alarm(){const rows=await this.storage.list<any>();const stale=[...rows].filter(([,v])=>v.expires<this.now()).map(([k])=>k);if(stale.length)await this.storage.delete(stale);if(rows.size>stale.length)await this.storage.setAlarm(this.now()+86400000)}
-}
+                                                                                                                                      }
