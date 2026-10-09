@@ -94,3 +94,11 @@ Store `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as repository Actions s
 ## Private contact form
 
 Setup and secret boundaries: see `CONTACT_SETUP.md`. Bilingual private-review form, text fields only and no uploads. SQLite Durable Object stores allowlisted text for up to30days. No automatic public issues, PRs or edits. Disabled until genuine Turnstile keys, exact hostnames and per-environment inbox secrets are configured. An hourly private-inbox watcher must be set up separately after activation; this build alone does not provide ongoing alerts. Unit and UI tests use mocked CAPTCHA, do not claim live activation.
+
+## Read-only structured trail data
+
+`GET /api/catalog` lists every trail ID with summary, provenance, cautions and public source links. `GET /api/trails/{id}` returns the normalized trail facts and original public detail fields. HEAD is supported; other methods return 405 and unknown IDs return JSON 404, not the SPA fallback. Catalog reads use static assets, not the contact database or an upstream provider, and stay available when upstream services are disabled.
+
+`sitemap.xml` lists public pages, including each trail and long-trail hub. `llms.txt` describes discovery and safety limits. Hebrew facts are preserved. Missing start points are `null`; coordinates describe start points, not route tracks. Source-check dates are snapshots, not live verification. These feeds grant no new rights to third-party data or photos. No MCP, agent account or write API is added.
+
+Snapshots are generated from `src/lib/catalog.ts` during every build, so data changes cannot leave a separate hand-maintained catalog behind. Deployment verification checks all structured trail endpoint bytes as well as the page assets before production can proceed.
