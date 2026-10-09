@@ -28,5 +28,65 @@
     "licence": "CC0",
     "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "changes": "Resized and converted to WebP; displayed with a responsive crop."
+  },
+  "jerusalem": {
+    "src": "/photos/jerusalem.webp",
+    "title": "Judean mountains.jpg",
+    "author": "Davidbena",
+    "credit": "Davidbena",
+    "source": "https://commons.wikimedia.org/wiki/File:Judean_mountains.jpg",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative image remains under the same CC BY-SA licence."
+  },
+  "negev": {
+    "src": "/photos/negev.webp",
+    "title": "River in the negev desert, israel.jpg",
+    "author": "Someone35",
+    "credit": "Someone35",
+    "source": "https://commons.wikimedia.org/wiki/File:River_in_the_negev_desert%2C_israel.jpg",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative image remains under the same CC BY-SA licence."
+  },
+  "judea": {
+    "src": "/photos/judea.webp",
+    "title": "Panorama of the Judean Wilderness.jpg",
+    "author": "Ian Scott",
+    "credit": "Ian Scott",
+    "source": "https://commons.wikimedia.org/wiki/File:Panorama_of_the_Judean_Wilderness.jpg",
+    "licence": "CC BY-SA 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative image remains under the same CC BY-SA licence."
+  },
+  "gilboa": {
+    "src": "/photos/gilboa.webp",
+    "title": "Mount Gilboa, Israel 20.jpg",
+    "author": "Hoshvilim",
+    "credit": "Hoshvilim",
+    "source": "https://commons.wikimedia.org/wiki/File:Mount_Gilboa%2C_Israel_20.jpg",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative image remains under the same CC BY-SA licence."
+  },
+  "menashe": {
+    "src": "/photos/menashe.webp",
+    "title": "Shvil Ramot Menashe, April 2021.jpg",
+    "author": "The Turtle Ninja",
+    "credit": "The Turtle Ninja",
+    "source": "https://commons.wikimedia.org/wiki/File:Shvil_Ramot_Menashe%2C_April_2021.jpg",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative image remains under the same CC BY-SA licence."
+  },
+  "coast": {
+    "src": "/photos/coast.webp",
+    "title": "Palmachim beach, Israel.jpg",
+    "author": "Pavel Bernshtam",
+    "credit": "Pavel Bernshtam",
+    "source": "https://commons.wikimedia.org/wiki/File:Palmachim_beach%2C_Israel.jpg",
+    "licence": "CC BY-SA 4.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop. Derivative image remains under the same CC BY-SA licence."
   }
 }
