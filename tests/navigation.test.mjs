@@ -1,0 +1,6 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {build} from 'esbuild';
+await build({entryPoints:['src/lib/navigation.ts','src/lib/catalog.ts'],outdir:'/tmp/hikes-navigation-test',bundle:true,platform:'node',format:'esm',outExtension:{'.js':'.mjs'}});
+const {navigationLinks,routeMapLink}=await import('/tmp/hikes-navigation-test/navigation.mjs');const {catalog,coordinates}=await import('/tmp/hikes-navigation-test/catalog.mjs');
+test('Navigation links use verified starts and preserve coordinates',()=>{for(const t of catalog){const n=navigationLinks(t),c=coordinates(t);assert.equal(Boolean(n),Boolean(c));if(n){const u=new URL(n.waze);assert.equal(u.hostname,'waze.com');assert.equal(u.searchParams.get('ll'),c.join(','));assert.equal(u.searchParams.get('navigate'),'yes');assert.equal(n.coordinates,c.join(','))}}});
+test('Missing starts never create guessed navigation',()=>{const missing=catalog.filter(t=>!coordinates(t));assert.ok(missing.length>0);assert.ok(missing.every(t=>navigationLinks(t)===null))});
+test('Route map links are original validated share URLs only',()=>{for(const t of catalog){const u=routeMapLink(t);if(u)assert.ok(t.refs.some(([,v])=>v===u));}assert.equal(routeMapLink({...catalog[0],refs:[['x','javascript:alert(1)']]}),null)});

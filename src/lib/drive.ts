@@ -1,3 +1,4 @@
+import { language } from "../i18n";
 import citiesData from "../data/cities.json";
 import matrix from "../data/city-estimates.json";
 import { coordinates, type Trail } from "./catalog";
@@ -56,9 +57,9 @@ const geocache = new Map<
   { label: string; lat: number; lon: number }[]
 >();
 export async function geocode(query: string) {
-  const key = query.trim().toLocaleLowerCase();
+  const key = language() + ":" + query.trim().toLocaleLowerCase();
   if (geocache.has(key)) return geocache.get(key)!;
-  const r = await fetch("/api/geocode?q=" + encodeURIComponent(query), {
+  const r = await fetch("/api/geocode?q=" + encodeURIComponent(query) + "&lang=" + language(), {
     signal: AbortSignal.timeout(12000),
   });
   if (!r.ok) throw new Error("Geocoding unavailable");

@@ -1,0 +1,32 @@
+{
+  "src": "web",
+  "name": "Example trail",
+  "region": "Unknown",
+  "km": null,
+  "kmText": "Unknown",
+  "kind": "Unknown",
+  "notes": [
+    "Verify current access before leaving."
+  ],
+  "links": [
+    [
+      "Public route source",
+      "https://example.invalid/trail"
+    ]
+  ],
+  "flag": null,
+  "grp": "Unknown",
+  "n": 1001,
+  "level": "",
+  "seasons": [],
+  "seasonNote": "",
+  "water": "",
+  "waterNote": "",
+  "shade": "",
+  "landscape": [],
+  "driveMin": null,
+  "driveTo": "",
+  "infoSource": "Public source checked YYYY-MM-DD",
+  "infoUrl": "",
+  "effort": "Planning lead, not a checked route."
+}

@@ -1,0 +1,32 @@
+{
+  "carmel": {
+    "src": "/photos/carmel.webp",
+    "title": "PikiWiki Israel 46448 Carmel mountain view.jpg",
+    "author": "alexsandra chertkov",
+    "credit": "alexsandra chertkov via the PikiWiki - Israel free image collection project",
+    "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_46448_Carmel_mountain_view.jpg",
+    "licence": "CC BY 2.5",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop."
+  },
+  "golan": {
+    "src": "/photos/golan.webp",
+    "title": "Landscape Golan WV.JPG",
+    "author": "Grauesel",
+    "credit": "Own work",
+    "source": "https://commons.wikimedia.org/wiki/File:Landscape_Golan_WV.JPG",
+    "licence": "CC BY-SA 3.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop."
+  },
+  "galilee": {
+    "src": "/photos/galilee.webp",
+    "title": "20200213 152120 Landscapes in the Upper Galilee Regional Council February 2020.jpg",
+    "author": "Rakoon",
+    "credit": "Own work",
+    "source": "https://commons.wikimedia.org/wiki/File:20200213_152120_Landscapes_in_the_Upper_Galilee_Regional_Council_February_2020.jpg",
+    "licence": "CC0",
+    "licenceUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop."
+  }
+}

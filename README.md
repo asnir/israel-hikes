@@ -71,3 +71,22 @@ The project includes CI that validates data, runs tests and builds on PRs. Do no
 No personal addresses, account names, private-document links or first-person travel anecdotes are included. Shared-document data is labelled generically as `מסמך משותף`. Source photography is not redistributed without a verified reuse licence; the site uses labelled original landscape illustrations. Public source names and geographic place names are not personal attribution.
 
 The **code** is MIT-licensed. Third-party trail facts, OSM map/geocoding data, linked pages and third-party dependencies retain their own licences. MIT does not relicense third-party content. See `DATA_SOURCES.md` and dependency notices.
+
+## Languages, accessibility and quality checks
+
+Hebrew is the first-visit default. English translates the interface and trail facts, including source cautions. Language choice is stored locally. Canonical route IDs and filter values remain unchanged. Search accepts English and Hebrew names.
+
+```sh
+npx playwright install chromium
+npm run check
+```
+
+`check` validates data/privacy patterns, runs unit tests, builds production assets, and runs browser and axe checks. Browser tests use the local production preview and do not depend on the public geocoder or routing service. `scripts/ui-test.mjs` separately checks the real local Worker flow and needs network access. Required `validate` CI runs unit, build, browser and automated accessibility checks. These checks are not a full accessibility audit.
+
+Accessibility controls include larger text, higher contrast, reduced motion and underlined links. A statement explains tested paths, limits and the public GitHub issue contact. Never put medical or personal details in public issues. New issues are reviewed; fixes require the owner's explicit approval before execution or merge. Monitoring is operational, separate from this website, and must be configured rather than assumed from repository notifications.
+
+Regional photographs are stored locally with individual attribution and licence records in `src/data/photos.json`. They are context, not pictures of a specific trail or current conditions. Missing photo coverage is explicit. Map and GPX sections retain original source links: Israel Hiking Map is currently unsupported, so source availability is not guaranteed. No track is fabricated or relicensed. External maps load only on request.
+
+## GitHub Actions deployment (owner setup)
+
+Store `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as repository Actions secrets, never in code. The token must be restricted to the intended account. Confirm Workers Free in that account and approve the deployment route before enabling it. The workflow stays disabled until the repository Actions variable `CLOUDFLARE_DEPLOY_ENABLED` is exactly `true`. Only main pushes after passing `validate` may deploy; pull requests never receive deployment secrets. A read-only token-active check runs first; it cannot certify token scope or the billing plan. The pinned official Cloudflare action deploys only the Worker named `israel-hikes`, not other Workers. No step upgrades billing. Changes to an already-paid account can still incur usage charges, so plan verification is required before enabling deployment.

@@ -22,3 +22,7 @@ City points are approximate locality/neighborhood geocoding results, not persona
 Source photos from the former page were deliberately not copied into this open-source site because a verified redistribution licence was not available. The labelled decorative landscape drawings are original and depict no particular trail.
 
 All linked source content remains subject to its source's terms. Contributors must supply reusable facts, not copied protected narratives or imagery.
+
+## Region photos
+
+Individual credits, original Wikimedia Commons pages, licence links and changes are recorded in `src/data/photos.json` and displayed with each image. These licences are separate from the code licence. The Golan photo is CC BY-SA 3.0; reuse of that image must follow its licence, including share-alike obligations. Other regions currently have no checked photo, rather than a placeholder implying an exact route photograph.

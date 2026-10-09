@@ -1,0 +1,2 @@
+const token=process.env.CLOUDFLARE_API_TOKEN;if(!token)throw Error('Missing CLOUDFLARE_API_TOKEN');
+const response=await fetch('https://api.cloudflare.com/client/v4/user/tokens/verify',{headers:{Authorization:'Bearer '+token}});const data=await response.json();if(!response.ok||!data.success||data.result?.status!=='active')throw Error('Cloudflare token verification failed');console.log('Cloudflare token is active. Verification does not prove permission scope or account plan.');

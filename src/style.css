@@ -191,7 +191,7 @@ button {
 .hero-stats b {
   font-size: 21px;
   color: #fff;
-  margin-left: 5px;
+  margin-inline-end: 5px;
 }
 .hero-stats span {
   display: flex;
@@ -202,7 +202,7 @@ button {
   position: absolute;
   z-index: 2;
   bottom: 14px;
-  left: 25px;
+  inset-inline-end: 25px;
   font-size: 10px;
   color: #d4ded6;
 }
@@ -408,7 +408,7 @@ select {
 }
 .address-results button {
   background: #f0f4ed;
-  text-align: right;
+  text-align: start;
   padding: 12px;
   border-radius: 7px;
   min-height: 44px;
@@ -556,14 +556,14 @@ select {
   height: 150px;
   border-radius: 50%;
   background: #cad8b950;
-  left: -60px;
+  inset-inline-end: -60px;
   bottom: -110px;
   transform: rotate(-10deg);
 }
 .card-landscape span {
   font-size: 11px;
   color: #53694e;
-  margin-right: auto;
+  margin-inline-start: auto;
   border: 1px solid #b9c8ad;
   background: #f7faf580;
   padding: 4px 10px;
@@ -847,10 +847,10 @@ select {
   margin: 0;
 }
 .steps {
-  padding-right: 24px;
+  padding-inline-start: 24px;
 }
 .steps li {
-  padding-right: 9px;
+  padding-inline-start: 9px;
 }
 .steps li::marker {
   color: var(--green);
@@ -932,7 +932,7 @@ select {
 }
 .long-number {
   position: absolute;
-  left: 25px;
+  inset-inline-end: 25px;
   top: 22px;
   font-size: 35px;
   color: #d8e0d0;
@@ -994,7 +994,7 @@ select {
 .map-selected {
   position: absolute;
   bottom: 50px;
-  right: 20px;
+  inset-inline-start: 20px;
   padding: 20px;
   background: white;
   border: 1px solid var(--border);
@@ -1011,7 +1011,7 @@ select {
   margin: 8px 0 14px;
 }
 .map-selected .button {
-  margin-left: 8px;
+  margin-inline-end: 8px;
 }
 .leaflet-tooltip {
   font-family: "Heebo", Arial, sans-serif;
@@ -1020,7 +1020,7 @@ select {
 .skip-link {
   position: absolute;
   top: -100px;
-  right: 20px;
+  inset-inline-start: 20px;
   z-index: 10000;
   background: white;
   padding: 12px;
@@ -1035,8 +1035,8 @@ select {
 }
 @media (max-width: 1280px) {
   .hero-content {
-    padding-right: 38px;
-    padding-left: 38px;
+    padding-inline-start: 38px;
+    padding-inline-end: 38px;
   }
 }
 @media (max-width: 1000px) {
@@ -1097,9 +1097,7 @@ select {
     gap: 14px;
     font-size: 11px;
   }
-  .site-header nav a:last-child {
-    display: none;
-  }
+
   .hero {
     min-height: 355px;
   }
@@ -1138,7 +1136,7 @@ select {
   }
   .art-caption {
     font-size: 8px;
-    left: 12px;
+    inset-inline-end: 12px;
     bottom: 10px;
   }
   .page {
@@ -1387,8 +1385,8 @@ select {
   }
   .map-selected {
     bottom: 75px;
-    right: 12px;
-    left: 12px;
+    inset-inline-start: 12px;
+    inset-inline-end: 12px;
     max-width: none;
     padding: 16px;
   }
@@ -1413,3 +1411,48 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+.language-switch { display:flex; gap:3px; padding:3px; border:1px solid #b9cbbf; border-radius:10px; flex-shrink:0; }
+.language-switch button { border:0; background:transparent; padding:7px 9px; border-radius:7px; cursor:pointer; font:inherit; font-size:13px; }
+.language-switch button[aria-pressed="true"] { background:#235c49; color:white; }
+html[dir="ltr"] .back-link svg, html[dir="ltr"] .text-link svg, html[dir="ltr"] .card-bottom a svg { transform: scaleX(-1); }
+.leaflet-container { direction:ltr; }
+.leaflet-tooltip, .map-selected { direction:inherit; }
+html[dir="ltr"] .map-selected { direction:ltr; }
+html[dir="rtl"] .map-selected { direction:rtl; }
+@media(max-width:640px) { .site-header { flex-wrap:wrap; gap:12px; } .site-header nav { order:3; width:100%; justify-content:center; } .language-switch { margin-inline-start:auto; } }
+
+.area-photo {margin:24px 0; border-radius:16px; overflow:hidden; background:#edf2ed;}
+.area-photo img {width:100%; height:clamp(200px,35vw,430px); object-fit:cover; display:block;}
+.area-photo figcaption {padding:12px 16px; font-size:13px; line-height:1.6;}
+.area-photo small {display:block; font-size:11px; overflow-wrap:anywhere;}
+@media(max-width:640px){.site-header{height:auto; min-height:92px; padding-block:10px}.site-header nav{flex-wrap:wrap;}}
+.navigation-links {display:flex; flex-wrap:wrap; gap:8px;}
+.navigation-menu h3 {font-size:16px;}
+:focus-visible { outline:3px solid #975a05; outline-offset:4px; }
+.accessibility-widget {position:fixed; inset-inline-end:14px; bottom:14px; z-index:1200;}
+.accessibility-toggle {display:flex; align-items:center; gap:7px; background:#153e35; color:white; border:2px solid white; border-radius:30px; padding:10px 14px; font:inherit; cursor:pointer; box-shadow:0 3px 14px #0003;}
+.accessibility-panel {position:absolute; bottom:60px; inset-inline-end:0; width:min(310px, calc(100vw - 32px)); padding:20px; background:white; border:2px solid #235c49; border-radius:14px; box-shadow:0 5px 25px #0003;}
+.accessibility-panel h2 {font-size:19px; margin:0 0 12px;}
+.accessibility-panel label {display:flex; align-items:center; gap:8px; margin-block:14px;}
+.accessibility-panel a {display:block; margin-block:12px;}
+html.large-text {font-size:120%;}
+html.large-text p, html.large-text li, html.large-text input, html.large-text select, html.large-text .button {font-size:1.1rem;}
+html.high-contrast body {background:#fff; color:#000;}
+html.high-contrast p, html.high-contrast small, html.high-contrast label, html.high-contrast .eyebrow, html.high-contrast .fine-print {color:#000;}
+html.high-contrast .hero p, html.high-contrast .hero .eyebrow, html.high-contrast .hero small {color:#fff;}
+html.high-contrast a {text-decoration:underline;}
+html.underline-links a {text-decoration:underline;}
+html.reduce-motion *, html.reduce-motion *::before, html.reduce-motion *::after {animation:none!important; transition:none!important; scroll-behavior:auto!important;}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
+/* Checked foregrounds for normal-text AA contrast on the site's light surfaces. */
+.eyebrow {color:#486454;}
+.trail-card small, .footer small {color:#50644f; font-size:12px;}
+.badge.extended {color:#4a6047;}
+.fine-print, .filter-field {color:#4c6256;}
+.long-number {color:#71816b;}
+.hero .eyebrow {color:#d3dfd5;}
+
+.long-invitation p, .long-mini-list small {color:#4c6256;}
+.source-map-frame {width:100%; height:430px; border:1px solid #bccbbd; margin-block:16px;}
+.route-map-section .button {margin:4px;}
