@@ -1205,5 +1205,19 @@
   "s_739cad6b57fb": "Address search runs only on submission. Before road routing, the dynamic estimate is straight-line distance multiplied by1.35, not road distance. Public services are limited and may fail.46 records without verified starts have no pin or estimate.",
   "s_7295e37f7f86": "Estimated road distance",
   "s_79d78b422764": "OSRM road distance",
-  "drivingDistance": "Driving distance: ~{{km}} km"
+  "drivingDistance": "Driving distance: ~{{km}} km",
+  "currentLocation0": "My current location",
+  "currentLocation1": "Requesting location…",
+  "currentLocation2": "Only on click and with browser permission. Location stays on this page unless you request road routing; no background tracking.",
+  "currentLocation3": "Location permission was denied. You can allow it in your browser or choose a city or address.",
+  "currentLocation4": "The location request timed out. Try again or choose a city or address.",
+  "currentLocation5": "Location is unavailable. Try again or choose a city or address.",
+  "currentLocation6": "Location is stale. Refresh it before filtering by distance or requesting road routing.",
+  "currentLocation7": "Location measured",
+  "currentLocation8": "minutes ago",
+  "currentLocation9": "Approximate accuracy:",
+  "currentLocation10": "meters",
+  "currentLocation11": "Distances depend on the selected starting point. They are estimates, not walking trail length.",
+  "selectedOrigin": "Selected starting point",
+  "roadLocationDisclosure": "Requesting road routing sends the starting point to OSRM. It is never sent automatically."
 }
