@@ -118,13 +118,13 @@ export default function TrailDetail() {
             <h2>{tr("מקורות ומפות")}</h2>
             <Sources refs={t.refs} />
             <p className="fine-print">{tr("מקור:")}{display(t.provenance)}{tr(". המסמך המשותף אינו מפורסם; מוצגים נתוני מסלולים בלבד. יש לבדוק מידע רשמי עדכני.")}</p>
-            <Sources refs={safetyLinks} />
           </section>
         </div>
         <aside>
           <AccessBlock trail={t} />
           <section className="detail-section safety-card">
             <h3>{tr("לפני שיוצאים")}</h3>
+            <Sources refs={safetyLinks} />
             <ul>
               <li>{tr("בודקים סגירות וגישה אצל הגורם הרשמי.")}</li>
               <li>{tr("מתאימים את הטיול למזג האוויר וליכולת הקבוצה.")}</li>
