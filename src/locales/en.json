@@ -1195,5 +1195,15 @@
   "s_ab46ec35ca4a": "Travel to the starting point, not trail length or walking time.",
   "s_162551950446": "Driving from:",
   "s_56ad81855d02": "Driving estimate unavailable",
-  "s_6bdfe5afe697": "Ramat Gan"
+  "s_6bdfe5afe697": "Ramat Gan",
+  "s_6f93ce99a31f": "Estimated driving distance",
+  "s_0764369fc489": "Up to 100 km",
+  "s_c3c33e05372e": "Over 100 km",
+  "s_00249de77c47": "Shortest driving distance first",
+  "s_bfdb3c90c3a9": "Driving distances and maps",
+  "s_949e29809b3f": "City road distances were measured with OSRM on9 October2026. Origins are approximate city points. Earlier Ramat Gan and Jerusalem distances are kept separately and may not start at the city centre. Driving times are not displayed; open Waze or Google Maps for a current estimate.",
+  "s_739cad6b57fb": "Address search runs only on submission. Before road routing, the dynamic estimate is straight-line distance multiplied by1.35, not road distance. Public services are limited and may fail.46 records without verified starts have no pin or estimate.",
+  "s_7295e37f7f86": "Estimated road distance",
+  "s_79d78b422764": "OSRM road distance",
+  "drivingDistance": "Driving distance: ~{{km}} km"
 }
