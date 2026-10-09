@@ -38,6 +38,6 @@ export function matches(t: Trail, q: string, f: Filters, d: Drive | null) {
     (!f.drive ||
       (f.drive === "לא ידוע"
         ? !d
-        : !!d && (f.drive === "עד 90 דקות" ? d.minutes <= 90 : d.minutes > 90)))
+        : !!d && (f.drive === "עד 100 ק״מ" ? d.km <= 100 : d.km > 100)))
   );
 }
