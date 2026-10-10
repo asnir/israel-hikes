@@ -7,7 +7,7 @@ import { tr, display, drivingDistance } from "../i18n";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowUpLeft, ArrowRight, Bookmark, AlertTriangle, Compass, Car } from "lucide-react";
-import { catalog, categoryLabels, type Trail } from "../lib/catalog";
+import { catalog, type Trail } from "../lib/catalog";
 import { cities, estimate, methodLabel } from "../lib/drive";
 import { Facts, Sources, NotFound, safetyLinks } from "../components/Common";
 import { useSaved } from "../lib/saved";
@@ -57,9 +57,6 @@ export default function TrailDetail() {
       <Link className="back-link" to="/">
         <ArrowRight size={17} />{tr("לכל המסלולים")}</Link>
       <div className="detail-heading">
-        <span className={"badge " + t.category}>
-          {display(categoryLabels[t.category])}
-        </span>
         <h1>{display(t.name)}</h1>
         <p>
           {display(t.region)} · {display(t.level)} · {display(t.structure)}
@@ -73,11 +70,11 @@ export default function TrailDetail() {
       <p className="detail-lead">{display(t.summary)}</p>
       <div className="notice">
         <Compass size={22} />
-        <p>{tr("המידע נכון לבדיקת המקורות ב-9.10.2026, לא למצב השטח כיום. לפני יציאה בודקים סגירות, מזג אוויר וגישה.")}</p>
+        <p>{tr("המידע אינו מתעדכן בזמן אמת. לפני יציאה בודקים סגירות, מזג אוויר וגישה.")}</p>
       </div>
       {display(t.flag && <div className="hazard-block">
           <AlertTriangle />
-          <b>{tr("בדיקת סגירות מ-9.10.2026:")}{display(t.flag)}</b>
+          <b>{tr("אזהרת גישה:")}{display(t.flag)}</b>
         </div>)}
       <div className="detail-columns">
         <div>
@@ -88,7 +85,7 @@ export default function TrailDetail() {
           {display(t.category === "verified" && <>
               <section className="detail-section">
                 <h2>{tr("הגעה, שעות ועלויות")}</h2>
-                <Facts items={[["התחלה וסיום", d.start], ["עלות (בדיקה מ-9.10.2026)", d.entry], ["שעות", d.hours], ["רישום", d.registration]]} />
+                <Facts items={[["התחלה וסיום", d.start], ["עלות", d.entry], ["שעות", d.hours], ["רישום", d.registration]]} />
               </section>
               <section className="detail-section">
                 <h2>{tr("מהלך ההליכה")}</h2>
@@ -115,13 +112,13 @@ export default function TrailDetail() {
             {display(t.notes.length ? <ul>
                 {display(t.notes.map((s, i) => <li key={i}>{display(s)}</li>))}
               </ul> : <p>{tr("לא ידוע. יש לעיין במקור ולבדוק את תנאי השטח.")}</p>)}
-            {display(t.category === "extended" && <p className="fine-print">{tr("מסלולי המאגר הם רעיונות לבדיקה, לא המלצות מאומתות. תיאורי מאמץ אינם דירוג קושי רשמי. עצות לעקיפת חסימות אינן היתר גישה.")}</p>)}
+            {display(t.category === "extended" && <p className="fine-print">{tr("תיאורי מאמץ אינם דירוג קושי רשמי. עצות לעקיפת חסימות אינן היתר גישה.")}</p>)}
           </section>
           <section className="detail-section">
             <RouteMap trail={t} />
             <h2>{tr("מקורות ומפות")}</h2>
             <Sources refs={t.refs} />
-            <p className="fine-print">{tr("מקור:")}{display(t.provenance)}{tr(". המסמך המשותף אינו מפורסם; מוצגים נתוני מסלולים בלבד. יש לבדוק מידע רשמי עדכני.")}</p>
+            <p className="fine-print">{tr("יש לבדוק מידע רשמי עדכני לפני היציאה.")}</p>
           </section>
         </div>
         <aside>

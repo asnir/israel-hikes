@@ -44,7 +44,7 @@ export default function FilterFields({
 }) {
   return <>
       <div className="category-tabs">
-        {display([["", "כל המסלולים"], ["verified", i18n.t("verifiedCount", { count: catalog.filter(t => t.category === "verified").length })], ["extended", i18n.t("extendedCount", { count: catalog.filter(t => t.category === "extended").length })], ["segment", i18n.t("segmentCount", { count: catalog.filter(t => t.category === "segment").length })]].map(([id, label]) => <button key={id} onClick={() => update("category", id)} className={f.category === id ? "chosen" : ""}>
+        {display([["", "כל המסלולים"], ["walking", i18n.t("walkingCount", { count: catalog.filter(t => t.category !== "segment").length })], ["segment", i18n.t("segmentCount", { count: catalog.filter(t => t.category === "segment").length })]].map(([id, label]) => <button key={id} onClick={() => update("category", id)} className={f.category === id ? "chosen" : ""}>
             {display(label)}
           </button>))}
       </div>
@@ -59,7 +59,6 @@ export default function FilterFields({
           <Select label="עונה" value={f.season} onChange={v => update("season", v)} options={["אביב", "קיץ", "סתיו", "חורף", "לא ידוע"]} />
           <Select label="צל" value={f.shade} onChange={v => update("shade", v)} options={["צל מוזכר", "בעיקר חשוף", "לא ידוע"]} />
           <Select label="נוף" value={f.landscape} onChange={v => update("landscape", v)} options={["נחל", "מעיינות", "הר", "יער", "חוף", "מכתש", "מערות"]} />
-          <Select label="מקור" value={f.provenance} onChange={v => update("provenance", v)} options={["מקורות פומביים", "מסמך משותף"]} />
           <Select label="מרחק נסיעה משוער" value={f.drive} onChange={v => update("drive", v)} options={["עד 100 ק״מ", "מעל 100 ק״מ", "לא ידוע"]} />
           <p className="fine-print">{tr("מידע חסר הוא ״לא ידוע״, לא ״אין״. תגיות נוף נגזרות מתיאורי המקור.")}</p>
         </div>)}

@@ -3,7 +3,7 @@ import { language } from "../i18n";
 import { tr, display, distance } from "../i18n";
 import { Link } from "react-router-dom";
 import { ArrowUpLeft, Mountain, Route, Bookmark, AlertTriangle } from "lucide-react";
-import { categoryLabels, type Trail } from "../lib/catalog";
+import { type Trail } from "../lib/catalog";
 export default function TrailCard({
   trail: t,
   saved,
@@ -23,9 +23,6 @@ export default function TrailCard({
       </div>}
       <div className="card-body">
         <div className="card-top">
-          <span className={"badge " + t.category}>
-            {display(categoryLabels[t.category])}
-          </span>
           <button className={"icon-button " + (saved ? "saved" : "")} aria-label={display(saved ? "הסרת מסלול מהשמורים" : "שמירת מסלול")} onClick={onSave}>
             <Bookmark size={19} fill={saved ? "currentColor" : "none"} />
           </button>
@@ -46,7 +43,7 @@ export default function TrailCard({
         </div>
         <p className="card-summary">{display(t.summary)}</p>
         {display(t.flag && <p className="hazard">
-            <AlertTriangle size={16} />{tr("בדיקת סגירות מ-9.10.2026:")}{display(t.flag)}
+            <AlertTriangle size={16} />{tr("אזהרת גישה:")}{display(t.flag)}
           </p>)}
         <div className="tags">
           {display(t.landscape.slice(0, 2).map(s => <span key={s}>{display(s)}</span>))}
@@ -57,9 +54,6 @@ export default function TrailCard({
             <ArrowUpLeft size={22} />
           </Link>
         </div>
-        <small>
-          {display(t.provenance)}
-        </small>
       </div>
     </article>;
 }

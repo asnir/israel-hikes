@@ -1219,5 +1219,18 @@
   "currentLocation10": "meters",
   "currentLocation11": "Distances depend on the selected starting point. They are estimates, not walking trail length.",
   "selectedOrigin": "Selected starting point",
-  "roadLocationDisclosure": "Requesting road routing sends the starting point to OSRM. It is never sent automatically."
+  "roadLocationDisclosure": "Requesting road routing sends the starting point to OSRM. It is never sent automatically.",
+  "s_32ed5a2116eb": "Access warning:",
+  "s_0b34aff6ea23": "Information is not updated in real time. Check closures, weather and access before leaving.",
+  "s_536065110ed4": "Cost",
+  "s_8cb00da2e917": "Effort descriptions are not official difficulty ratings. Advice about bypassing a blockage is not permission to access it.",
+  "s_d0eee692b653": "Check current official information before leaving.",
+  "s_5e6af24e08ab": "Check current official information, weather and access before leaving.",
+  "s_c1c643a0eef5": "Information is not updated automatically. The map shows start points, not navigation tracks.",
+  "s_e0e43afb9f4a": "Before leaving, check closures, military restrictions and water availability along the trail.",
+  "s_2951d34dc994": "174 walking routes and59 sections of four long-distance trails. Search by region, length, difficulty, season and landscape, and read each route's sources and maps.",
+  "s_c6bfe67ac13d": "Missing information is shown as \"unknown\". Landscape tags help with searching but do not replace reading the route description.",
+  "s_1af10380d5f2": "The site does not show real-time trail conditions. Before every walk, check closures, military restrictions, weather and water with official sources.",
+  "s_fe73f9a8a393": "City road distances are OSRM estimates, not live information. Origins are approximate city points. Older Ramat Gan and Jerusalem estimates are kept separately and may start away from the city centre. Travel times are not shown; open Waze or Google Maps for a current estimate.",
+  "walkingCount": "{{count}} walking routes"
 }

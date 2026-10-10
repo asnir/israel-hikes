@@ -1498,7 +1498,7 @@ button:disabled {opacity:.65;cursor:not-allowed;}
 .card-photo, .card-landscape {float:inline-end; width:96px; height:96px; margin:18px 18px 8px 12px; border-radius:10px; overflow:hidden;}
 .card-photo img {height:96px; object-position:center;}
 .card-body {display:block; padding:18px 20px;}
-.card-top {min-height:44px;}
+.card-top {min-height:44px;justify-content:flex-end;}
 .card-facts {clear:both;}
 .card-summary {margin-top:12px;}
 .card-bottom {margin-top:16px;}

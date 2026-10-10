@@ -44,7 +44,7 @@ export default function LongDetail() {
           <section className="detail-section">
             <h2>{tr("גבולות המידע")}</h2>
             <p>{display(t.caveat)}</p>
-            <p>{tr("לא נבדקו סגירות, הגבלות צבא או זמינות מים לאורך כל השביל. מידע המקורות נשמר מבדיקת 9.10.2026.")}</p>
+            <p>{tr("לפני היציאה יש לבדוק סגירות, הגבלות צבא וזמינות מים לאורך השביל.")}</p>
           </section>
           <section className="detail-section">
             <h2>{tr("מקורות")}</h2>

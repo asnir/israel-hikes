@@ -4,7 +4,7 @@ import { type Drive } from "./drive";
 export function matches(t: Trail, q: string, f: Filters, d: Drive | null) {
   return (
     (!q || searchText(t).includes(q.trim().toLocaleLowerCase("he"))) &&
-    (!f.category || t.category === f.category) &&
+    (!f.category || (f.category === "walking" ? t.category !== "segment" : t.category === f.category)) &&
     (!f.region || t.region === f.region) &&
     (!f.length ||
       (f.length === "לא ידוע"
