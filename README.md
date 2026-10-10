@@ -102,3 +102,7 @@ Setup and secret boundaries: see `CONTACT_SETUP.md`. Bilingual private-review fo
 `sitemap.xml` lists public pages, including each trail and long-trail hub. `llms.txt` describes discovery and safety limits. Hebrew facts are preserved. Missing start points are `null`; coordinates describe start points, not route tracks. Source-check dates are snapshots, not live verification. These feeds grant no new rights to third-party data or photos. No MCP, agent account or write API is added.
 
 Snapshots are generated from `src/lib/catalog.ts` during every build, so data changes cannot leave a separate hand-maintained catalog behind. Deployment verification checks all structured trail endpoint bytes as well as the page assets before production can proceed.
+
+### Browser choices
+
+Discovery remembers a validated city, search, filters, sort, view and saved-only selection in this browser. Reset choices clears discovery settings without deleting saved trails, language or accessibility preferences. GPS positions, searched addresses and road-routing results are not stored or restored. Browsing still works when storage is blocked. Accounts and cross-device sync are future work.

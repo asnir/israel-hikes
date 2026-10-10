@@ -1505,3 +1505,6 @@ button:disabled {opacity:.65;cursor:not-allowed;}
 .card-landscape {padding:12px; justify-content:center;}
 .card-landscape span {display:none;}
 .card-landscape svg {width:56px; height:56px; flex-shrink:0;}
+
+.preference-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.preference-controls small { color: var(--muted); max-width: 54ch; }
