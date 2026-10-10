@@ -7,7 +7,7 @@ test('Each checked trail photo has its own directory and reusable gallery record
   const assetId=id === "ext-89" ? "ext-96" : id === "ext-112" ? "ext-137" : id === "ext-44" ? "ext-64" : id;
   assert.equal(photo.src,`/photos/${assetId}/hero.webp`);
   assert.equal(photo.thumbSrc,`/photos/${assetId}/thumb.webp`);
-  assert.equal(photo.gallery.length, ["ext-64","ext-44"].includes(id) ? 3 : 1);
+  assert.equal(photo.gallery.length, ["ext-64","ext-44","hanadiv","shofet"].includes(id) ? 3 : 1);
   assert.equal(photo.gallery[0].src,photo.src);
   for(const entry of photo.gallery) {
    assert.ok(statSync('public'+entry.src).size>1000);
