@@ -1,6 +1,8 @@
 import { chromium } from "playwright-core";
 import { build } from "esbuild";
 import AxeBuilder from "@axe-core/playwright";
+import setup from "argon2id/lib/setup.js";
+import fs from "node:fs";
 import assert from "node:assert/strict";
 await build({
   entryPoints: ["worker/admin-auth.ts"],
@@ -10,6 +12,17 @@ await build({
   format: "esm",
 });
 const { AdminAuth } = await import("/tmp/hikes-auth-ui.mjs");
+await build({
+  entryPoints: ["worker/admin-password.ts"],
+  outfile: "/tmp/hikes-password-ui.mjs",
+  bundle: true,
+  platform: "node",
+  format: "esm",
+});
+const { makeCredential } = await import("/tmp/hikes-password-ui.mjs");
+const wasm = fs.readFileSync("node_modules/argon2id/dist/no-simd.wasm"),
+  loader = async (o) => WebAssembly.instantiate(wasm, o),
+  hasher = await setup(loader, loader);
 const rows = new Map(),
   mail = [],
   jobs = [];
@@ -23,6 +36,8 @@ const store = {
 };
 const env = {
   ADMIN_AUTH_ENABLED: "true",
+  ADMIN_PASSWORD_ENABLED: "true",
+  ADMIN_PASSWORD_PEPPER: "p".repeat(64),
   ADMIN_ORIGIN: "https://hikes.example",
   ADMIN_SECRET: "a".repeat(64),
   ADMIN_ALLOWLIST: '["first@example.invalid","second@example.invalid"]',
@@ -33,7 +48,35 @@ const env = {
     },
   },
 };
-const h = new AdminAuth(store, env, (p) => jobs.push(p));
+const hashKey = await crypto.subtle.importKey(
+  "raw",
+  new TextEncoder().encode(env.ADMIN_SECRET),
+  { name: "HMAC", hash: "SHA-256" },
+  false,
+  ["sign"],
+);
+const id = Buffer.from(
+  await crypto.subtle.sign(
+    "HMAC",
+    hashKey,
+    new TextEncoder().encode("email:first@example.invalid"),
+  ),
+).toString("hex");
+rows.set(
+  "credential:" + id,
+  await makeCredential(
+    "synthetic only UI passphrase",
+    hasher,
+    env.ADMIN_PASSWORD_PEPPER,
+  ),
+);
+const h = new AdminAuth(
+  store,
+  env,
+  (p) => jobs.push(p),
+  () => Date.now(),
+  async () => hasher,
+);
 const browser = await chromium.launch({ headless: true });
 try {
   const context = await browser.newContext();
@@ -88,6 +131,30 @@ try {
     .waitFor();
   await page.getByRole("button", { name: "Sign out" }).click();
   await page.getByRole("button", { name: "Send code" }).waitFor();
+  await page
+    .getByLabel("Username (email)", { exact: true })
+    .fill("first@example.invalid");
+  await page.locator("#password").fill("wrong synthetic passphrase");
+  await page.getByRole("button", { name: "Sign in with password" }).click();
+  await page
+    .getByRole("status")
+    .filter({ hasText: "request failed" })
+    .waitFor();
+  assert.equal(await page.locator("#password").inputValue(), "");
+  await page.locator("#password").fill("synthetic only UI passphrase");
+  await page.getByRole("button", { name: "Sign in with password" }).click();
+  await page
+    .getByText("Authenticated. Admin is read-only. Editing is not enabled.")
+    .waitFor();
+  await page.getByRole("button", { name: "Sign out" }).click();
+  await page.getByRole("button", { name: "Sign in with password" }).waitFor();
+  for (const w of [390, 1440]) {
+    await page.setViewportSize({ width: w, height: 1000 });
+    await page.screenshot({
+      path: `/downloads/password-login-${w}.png`,
+      fullPage: true,
+    });
+  }
   console.log(
     "Synthetic admin UI login/logout, mobile/desktop layout and accessibility passed",
   );
