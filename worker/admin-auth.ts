@@ -19,6 +19,7 @@ interface Storage {
   put(key: string, value: unknown): Promise<void>;
   delete(key: string | string[]): Promise<unknown>;
   list(): Promise<Map<string, { expires: number }>>;
+  getAlarm(): Promise<number | null>;
   setAlarm(time: number): Promise<unknown>;
 }
 type Challenge = {
@@ -83,8 +84,75 @@ export class AdminAuth {
     this.running = p.catch(() => {});
     return p;
   }
-  fetch(request: Request) {
-    return this.serialize(() => this.handle(request));
+  async fetch(request: Request): Promise<Response> {
+    const cfg = this.config();
+    if (!cfg) return response({ error: "Admin unavailable" }, 503);
+    const url = new URL(request.url);
+    if (url.origin !== cfg.origin) return response({ error: "Forbidden" }, 403);
+    if (
+      ![
+        "/api/admin/auth/request",
+        "/api/admin/auth/verify",
+        "/api/admin/auth/logout",
+      ].includes(url.pathname)
+    )
+      return this.serialize(() => this.handle(request));
+    if (request.method !== "POST")
+      return response({ error: "Method not allowed" }, 405);
+    if (
+      request.headers.get("Origin") !== cfg.origin ||
+      request.headers.get("Sec-Fetch-Site") === "cross-site"
+    )
+      return response({ error: "Forbidden" }, 403);
+    if (
+      request.headers.get("Content-Type")?.split(";")[0].trim() !==
+      "application/json"
+    )
+      return response({ error: "JSON required" }, 415);
+    if (Number(request.headers.get("Content-Length") || 0) > 1024)
+      return response({ error: "Too large" }, 413);
+    const reader = request.body?.getReader();
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    try {
+      const read = async () => {
+        const chunks: Uint8Array[] = [];
+        let size = 0;
+        if (reader)
+          while (true) {
+            const r = await reader.read();
+            if (r.done) break;
+            size += r.value.byteLength;
+            if (size > 1024) throw new Error("size");
+            chunks.push(r.value);
+          }
+        const buffer = new Uint8Array(size);
+        let at = 0;
+        for (const c of chunks) {
+          buffer.set(c, at);
+          at += c.length;
+        }
+        return new TextDecoder().decode(buffer);
+      };
+      const text = await Promise.race([
+        read(),
+        new Promise<never>((_, reject) => {
+          timer = setTimeout(() => reject(new Error("timeout")), 2000);
+        }),
+      ]);
+      return await this.serialize(() => this.handle(request, text));
+    } catch (e) {
+      void reader?.cancel().catch(() => {});
+      return response(
+        { error: "Invalid body" },
+        e instanceof Error && e.message === "timeout"
+          ? 408
+          : e instanceof Error && e.message === "size"
+            ? 413
+            : 400,
+      );
+    } finally {
+      if (timer) clearTimeout(timer);
+    }
   }
   private config() {
     try {
@@ -194,7 +262,7 @@ export class AdminAuth {
       return null;
     }
   }
-  private async handle(request: Request): Promise<Response> {
+  private async handle(request: Request, text = ""): Promise<Response> {
     const cfg = this.config();
     if (!cfg) return response({ error: "Admin unavailable" }, 503);
     const url = new URL(request.url);
@@ -248,29 +316,6 @@ export class AdminAuth {
       return response({ error: "JSON required" }, 415);
     if (Number(request.headers.get("Content-Length") || 0) > 1024)
       return response({ error: "Too large" }, 413);
-    const reader = request.body?.getReader();
-    let text = "";
-    if (reader) {
-      const chunks: Uint8Array[] = [];
-      let size = 0;
-      while (true) {
-        const r = await reader.read();
-        if (r.done) break;
-        size += r.value.byteLength;
-        if (size > 1024) {
-          await reader.cancel();
-          return response({ error: "Too large" }, 413);
-        }
-        chunks.push(r.value);
-      }
-      const buffer = new Uint8Array(size);
-      let at = 0;
-      for (const c of chunks) {
-        buffer.set(c, at);
-        at += c.length;
-      }
-      text = new TextDecoder().decode(buffer);
-    }
     let data: Record<string, unknown>;
     try {
       data = JSON.parse(text);
@@ -303,9 +348,12 @@ export class AdminAuth {
     const now = this.now(),
       ipKey = await this.digest("ip:" + ip),
       emailKey = await this.digest("email:" + email);
+    await this.prune();
     const rows = await this.storage.list();
-    if (rows.size >= 512) return response({ error: "Admin unavailable" }, 503);
-    await this.storage.setAlarm(now + 3600000);
+    if (rows.size >= 500) return response({ error: "Admin unavailable" }, 503);
+    const alarm = await this.storage.getAlarm();
+    if (alarm === null || alarm > now + 3600000)
+      await this.storage.setAlarm(now + 3600000);
     if (path.endsWith("/request")) {
       const id = random(),
         ck = cookie("challenge", id, 300),
@@ -318,9 +366,12 @@ export class AdminAuth {
             202,
             ck,
           );
-      const ipOK = await this.budget("request-ip:" + ipKey, 10, 3600000, 60000),
-        globalOK = await this.budget("requests", 100, 3600000);
-      if (!ipOK || !globalOK || !cfg.allowed.includes(email)) return generic();
+      if (!(await this.budget("requests", 100, 3600000))) return generic();
+      if (
+        !(await this.budget("request-ip:" + ipKey, 10, 3600000, 60000)) ||
+        !cfg.allowed.includes(email)
+      )
+        return generic();
       if (
         !(await this.budget("mail-hour:" + emailKey, 3, 3600000, 60000)) ||
         !(await this.budget("mail-day:" + emailKey, 10, 86400000)) ||
@@ -362,8 +413,8 @@ export class AdminAuth {
     if (typeof data.code !== "string" || !/^\d{8}$/.test(data.code))
       return response({ error: "Invalid code" }, 401);
     if (
-      !(await this.budget("verify-ip:" + ipKey, 30, 900000)) ||
-      !(await this.budget("verify-global", 300, 900000))
+      !(await this.budget("verify-global", 300, 900000)) ||
+      !(await this.budget("verify-ip:" + ipKey, 30, 900000))
     )
       return response({ error: "Invalid code" }, 401);
     const id = readCookie(request, "challenge");
@@ -409,13 +460,16 @@ export class AdminAuth {
       cookie("session", token, SESSION_SECONDS),
     );
   }
+  private async prune() {
+    const rows = await this.storage.list();
+    const expired = [...rows]
+      .filter(([, v]) => v.expires <= this.now())
+      .map(([k]) => k);
+    if (expired.length) await this.storage.delete(expired);
+  }
   alarm() {
     return this.serialize(async () => {
-      const rows = await this.storage.list();
-      const expired = [...rows]
-        .filter(([, v]) => v.expires <= this.now())
-        .map(([k]) => k);
-      if (expired.length) await this.storage.delete(expired);
+      await this.prune();
       await this.storage.setAlarm(this.now() + 3600000);
     });
   }
