@@ -1,3 +1,4 @@
+import { publicText } from "../lib/public-text";
 import trailPhotos from "../data/trail-photos.json";
 import { language } from "../i18n";
 import { tr, display, distance } from "../i18n";
@@ -43,7 +44,7 @@ export default function TrailCard({
         </div>
         <p className="card-summary">{display(t.summary)}</p>
         {display(t.flag && <p className="hazard">
-            <AlertTriangle size={16} />{tr("אזהרת גישה:")}{display(t.flag)}
+            <AlertTriangle size={16} />{tr("אזהרת גישה:")}{publicText(tr(t.flag))}
           </p>)}
         <div className="tags">
           {display(t.landscape.slice(0, 2).map(s => <span key={s}>{display(s)}</span>))}
