@@ -46,7 +46,7 @@ function Footer() {
             {display(l)}
           </a>))}
       </div>
-      <small>{tr("מידע נבדק לאחרונה ב-9.10.2026. המידע אינו מתעדכן אוטומטית. המפה מציגה נקודות התחלה, לא שבילי ניווט.")}</small>
+      <small>{tr("המידע אינו מתעדכן אוטומטית. המפה מציגה נקודות התחלה, לא שבילי ניווט.")}</small>
     </footer>;
 }
 export default function App() {
@@ -68,4 +68,4 @@ export default function App() {
       <Footer />
       <AccessibilityMenu />
     </>;
-}
+                 }
