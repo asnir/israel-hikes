@@ -36,7 +36,9 @@ test('Public feeds preserve source caution/provenance and contain no owner/conta
  assert(!/docs\.google\.com\/document|CONTACT_ADMIN|TURNSTILE|requestId|visitorEmail/.test(text));
  const worker=await fs.readFile('worker/index.ts','utf8');assert(worker.indexOf('catalogResponse(request')<worker.indexOf('env.SERVICE_ENABLED'));assert(worker.indexOf('if(catalogRead)')<worker.indexOf('env.CONTACT.get'));
 });
-test('Generated feeds are part of exact deployment verification',async()=>{
+test('Generated feeds and licensed photo assets are part of exact deployment verification',async()=>{
+ await fs.mkdir(root+'/photos',{recursive:true});
+ await fs.writeFile(root+'/photos/encoded-assets.json',JSON.stringify([{path:'photos/ext-137/hero.webp'}]));
  const {listReadAssets}=await import('../scripts/check-live-assets.mjs');const paths=await listReadAssets(root);
- assert(paths.includes('llms.txt'));assert(paths.includes('sitemap.xml'));assert(paths.includes('data/catalog.json'));assert.equal(paths.filter(p=>p.startsWith('data/trails/')).length,catalog.length);
+ assert(paths.includes('photos/ext-137/hero.webp'));assert(paths.includes('photos/encoded-assets.json'));assert(paths.includes('llms.txt'));assert(paths.includes('sitemap.xml'));assert(paths.includes('data/catalog.json'));assert.equal(paths.filter(p=>p.startsWith('data/trails/')).length,catalog.length);
 });
