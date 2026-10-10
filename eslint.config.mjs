@@ -2,7 +2,7 @@ import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 export default tseslint.config(
- {ignores:['dist/**','node_modules/**']},
+ {ignores:['dist/**','node_modules/**','worker/vendor/libsodium/*.mjs']},
  js.configs.recommended,
  {rules:{'no-empty':['error',{allowEmptyCatch:true}]}},
  ...tseslint.configs.recommended,

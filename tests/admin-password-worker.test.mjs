@@ -19,8 +19,8 @@ await build({
     {
       name: "wasm",
       setup(build) {
-        build.onResolve({ filter: /no-simd\.wasm$/ }, () => ({
-          path: "./argon.wasm",
+        build.onResolve({ filter: /sodium\.wasm$/ }, () => ({
+          path: "./sodium.wasm",
           external: true,
         }));
       },
@@ -34,8 +34,8 @@ test("real workerd imported WASM + DO password-only login with no sender, wrong 
         { type: "ESModule", path: "/tmp/password-integration.mjs" },
         {
           type: "CompiledWasm",
-          path: "/tmp/argon.wasm",
-          contents: fs.readFileSync("node_modules/argon2id/dist/no-simd.wasm"),
+          path: "/tmp/sodium.wasm",
+          contents: fs.readFileSync("worker/vendor/libsodium/sodium.wasm"),
         },
       ],
       modulesRoot: "/tmp",

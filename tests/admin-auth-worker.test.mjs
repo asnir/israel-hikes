@@ -14,8 +14,8 @@ await build({
     {
       name: "wasm",
       setup(build) {
-        build.onResolve({ filter: /no-simd\.wasm$/ }, () => ({
-          path: "./argon.wasm",
+        build.onResolve({ filter: /sodium\.wasm$/ }, () => ({
+          path: "./sodium.wasm",
           external: true,
         }));
       },
@@ -32,9 +32,9 @@ test("real Worker + Durable Object route default-denies admin and keeps public s
             { type: "ESModule", path: "/tmp/hikes-admin-worker.mjs" },
             {
               type: "CompiledWasm",
-              path: "/tmp/argon.wasm",
+              path: "/tmp/sodium.wasm",
               contents: fs.readFileSync(
-                "node_modules/argon2id/dist/no-simd.wasm",
+                "worker/vendor/libsodium/sodium.wasm",
               ),
             },
           ],

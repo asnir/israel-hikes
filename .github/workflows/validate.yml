@@ -60,6 +60,8 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: node scripts/diagnose-worker-metadata.mjs
+      - name: Generate integrity-checked libsodium Worker assets
+        run: node scripts/extract-libsodium.mjs
       - name: Select narrow one-time dashboard bootstrap version
         id: preview-wrangler
         env:
@@ -111,6 +113,8 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: node scripts/verify-cloudflare.mjs
+      - name: Generate integrity-checked libsodium Worker assets
+        run: node scripts/extract-libsodium.mjs
       - name: Select narrow one-time dashboard bootstrap version
         id: production-wrangler
         env:
