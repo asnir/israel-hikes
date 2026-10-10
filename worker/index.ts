@@ -1,8 +1,9 @@
+import {d1Snapshot,type TrailStoreEnv} from "./trail-store";
 import {catalogResponse} from "./catalog";
 import {ContactHandler,enabled,type ContactEnv} from "./contact";
 import { DurableObject } from "cloudflare:workers";
 /** Cloudflare Worker: static SPA + rate-limited, cached upstream services. */
-interface Env extends ContactEnv {
+interface Env extends ContactEnv, TrailStoreEnv {
   CONTACT: DurableObjectNamespace;
   ASSETS: Fetcher;
   UPSTREAM: DurableObjectNamespace;
@@ -15,7 +16,7 @@ export default {
   async fetch(request: Request, env: Env) {
     const url = new URL(request.url);
     if (!url.pathname.startsWith("/api/")) return env.ASSETS.fetch(request);
-    const catalogRead=await catalogResponse(request,env.ASSETS);
+    const catalogRead=await d1Snapshot(request,env) || await catalogResponse(request,env.ASSETS);
     if(catalogRead)return catalogRead;
     if(url.pathname==="/api/contact-config")return Response.json({enabled:enabled(env),siteKey:enabled(env)?env.TURNSTILE_SITE_KEY:null},{headers:{"Cache-Control":"no-store"}});
     if(url.pathname==="/api/contact"||url.pathname.startsWith("/api/contact-inbox"))return env.CONTACT.get(env.CONTACT.idFromName("contact")).fetch(request);
