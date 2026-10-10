@@ -19,6 +19,6 @@ test('Former admin paths use ordinary assets or unknown API handling, not authen
  await build({entryPoints:['worker/index.ts'],outfile:'/tmp/no-auth-worker.mjs',bundle:true,format:'esm',platform:'node',plugins:[{name:'do',setup(b){b.onResolve({filter:/^cloudflare:workers$/},()=>({path:'do',namespace:'fixture'}));b.onLoad({filter:/.*/,namespace:'fixture'},()=>({contents:'export class DurableObject {}'}));}}]});
  const {default:worker}=await import('/tmp/no-auth-worker.mjs');let calls=0;
  const env={ASSETS:{fetch:async()=>{calls++;return new Response('ordinary SPA')}},SERVICE_ENABLED:'true'};
- for(const p of ['/admin','/admin/setup','/a-random-unknown-path'])assert.equal(await(await worker.fetch(new Request('https://synthetic.invalid'+p),env)).text(),'ordinary SPA');assert.equal(calls,3);
- for(const p of ['/api/admin/session','/api/admin/auth/password','/api/a-random-unknown-path'])assert.equal((await worker.fetch(new Request('https://synthetic.invalid'+p),env)).status,404);
+ for(const p of ['/admin','/admin/setup','/contact','/contact-inbox','/a-random-unknown-path'])assert.equal(await(await worker.fetch(new Request('https://synthetic.invalid'+p),env)).text(),'ordinary SPA');assert.equal(calls,5);
+ for(const p of ['/api/admin/session','/api/admin/auth/password','/api/contact','/api/contact-config','/api/contact-inbox','/api/contact-inbox/summary','/api/a-random-unknown-path'])assert.equal((await worker.fetch(new Request('https://synthetic.invalid'+p),env)).status,404);
 });
