@@ -10,6 +10,17 @@ await build({
   format: "esm",
   platform: "browser",
   external: ["cloudflare:workers"],
+  plugins: [
+    {
+      name: "wasm",
+      setup(build) {
+        build.onResolve({ filter: /no-simd\.wasm$/ }, () => ({
+          path: "./argon.wasm",
+          external: true,
+        }));
+      },
+    },
+  ],
 });
 test("real Worker + Durable Object route default-denies admin and keeps public site/contact isolated", async () => {
   const mf = new Miniflare(
@@ -17,9 +28,17 @@ test("real Worker + Durable Object route default-denies admin and keeps public s
       workers: [
         {
           name: "test",
-          modules: true,
+          modules: [
+            { type: "ESModule", path: "/tmp/hikes-admin-worker.mjs" },
+            {
+              type: "CompiledWasm",
+              path: "/tmp/argon.wasm",
+              contents: fs.readFileSync(
+                "node_modules/argon2id/dist/no-simd.wasm",
+              ),
+            },
+          ],
           modulesRoot: "/tmp",
-          scriptPath: "/tmp/hikes-admin-worker.mjs",
           compatibilityDate: "2026-10-09",
           bindings: { ADMIN_AUTH_ENABLED: "false" },
           durableObjects: {
