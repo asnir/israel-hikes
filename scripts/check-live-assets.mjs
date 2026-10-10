@@ -5,6 +5,8 @@ import {pathToFileURL} from 'node:url';
 import assert from 'node:assert/strict';
 export async function listReadAssets(root="dist"){
  const names=['llms.txt','sitemap.xml','data/catalog.json'];
+ const photoManifest=JSON.parse(await fs.readFile(path.join(root,'photos/encoded-assets.json'),'utf8'));
+ names.push('photos/encoded-assets.json',...photoManifest.map(asset=>asset.path));
  for(const name of await fs.readdir(path.join(root,'data/trails')))names.push(`data/trails/${name}`);
  return names;
 }
