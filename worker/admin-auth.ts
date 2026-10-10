@@ -1,3 +1,5 @@
+import {strengthClient} from './strength-client.generated';
+import {PasswordLifecycle,type LifecycleStorage,type LifecycleTransaction} from './password-lifecycle';
 import {
   verifyPassword,
   validCredential,
@@ -9,6 +11,9 @@ import {
 import { SignJWT, jwtVerify } from "jose";
 export interface AdminEnv {
   ADMIN_AUTH_ENABLED?: string;
+  ADMIN_LIFECYCLE_ENABLED?: string;
+  ADMIN_LIFECYCLE_SECRET?: string;
+  ADMIN_BOOTSTRAP_SECRET?: string;
   ADMIN_PASSWORD_ENABLED?: string;
   ADMIN_PASSWORD_PEPPER?: string;
   ADMIN_OTP_ENABLED?: string;
@@ -30,6 +35,7 @@ interface Storage {
   put(key: string, value: unknown): Promise<void>;
   delete(key: string | string[]): Promise<unknown>;
   list(): Promise<Map<string, { expires: number }>>;
+  transaction?<T>(callback:(txn:LifecycleTransaction)=>Promise<T>):Promise<T>;
   getAlarm(): Promise<number | null>;
   setAlarm(time: number): Promise<unknown>;
 }
@@ -84,6 +90,7 @@ function readCookie(request: Request, name: string) {
 }
 export class AdminAuth {
   private running: Promise<unknown> = Promise.resolve();
+  private lifecycle?:PasswordLifecycle;
   constructor(
     private storage: Storage,
     private env: AdminEnv,
@@ -107,6 +114,9 @@ export class AdminAuth {
         "/api/admin/auth/verify",
         "/api/admin/auth/logout",
         "/api/admin/auth/password",
+        "/api/admin/auth/link",
+        "/api/admin/auth/bootstrap",
+        "/api/admin/auth/complete",
       ].includes(url.pathname)
     )
       return this.serialize(() => this.handle(request));
@@ -122,7 +132,7 @@ export class AdminAuth {
       "application/json"
     )
       return response({ error: "JSON required" }, 415);
-    if (Number(request.headers.get("Content-Length") || 0) > 1024)
+    if (Number(request.headers.get("Content-Length") || 0) > (url.pathname.endsWith("/complete")?4096:1024))
       return response({ error: "Too large" }, 413);
     const reader = request.body?.getReader();
     let timer: ReturnType<typeof setTimeout> | undefined;
@@ -135,7 +145,7 @@ export class AdminAuth {
             const r = await reader.read();
             if (r.done) break;
             size += r.value.byteLength;
-            if (size > 1024) throw new Error("size");
+            if (size > (url.pathname.endsWith("/complete")?4096:1024)) throw new Error("size");
             chunks.push(r.value);
           }
         const buffer = new Uint8Array(size);
@@ -287,6 +297,8 @@ export class AdminAuth {
           expires: number;
           credentialRevision?: string;
           passwordKeyTag?: string;
+          authenticatedAt?:number;
+          method?:string;
         }>(key);
       if (
         !row ||
@@ -312,7 +324,7 @@ export class AdminAuth {
         )
           return null;
       }
-      return { key };
+      return { key, email:row.email, authenticatedAt:row.authenticatedAt||0, method:row.method };
     } catch {
       return null;
     }
@@ -328,7 +340,25 @@ export class AdminAuth {
       "/api/admin/auth/verify",
       "/api/admin/auth/logout",
       "/api/admin/auth/password",
+        "/api/admin/auth/link",
+        "/api/admin/auth/bootstrap",
+        "/api/admin/auth/complete",
     ];
+    if(path==="/admin/setup") {
+      if(request.method!=="GET")return response({},405);
+      if(!this.lifecycleReady())return response({error:"Admin unavailable"},503);
+      return new Response(setupPage,{headers:{...baseHeaders,"Content-Type":"text/html; charset=utf-8"}});
+    }
+    if(path==="/admin/strength.js") {
+      if(request.method!=="GET")return response({},405);
+      if(!this.lifecycleReady())return response({},503);
+      return new Response(strengthClient,{headers:{...baseHeaders,"Content-Type":"text/javascript; charset=utf-8"}});
+    }
+    if(path==="/admin/setup.js") {
+      if(request.method!=="GET")return response({},405);
+      if(!this.lifecycleReady())return response({error:"Admin unavailable"},503);
+      return new Response(setupScript,{headers:{...baseHeaders,"Content-Type":"text/javascript; charset=utf-8"}});
+    }
     if (path === "/admin" || path === "/admin/") {
       if (request.method !== "GET")
         return response({ error: "Method not allowed" }, 405);
@@ -337,6 +367,7 @@ export class AdminAuth {
           !!(await this.session(request)),
           this.otpReady(),
           this.passwordReady(),
+          this.lifecycleReady(),
         ),
         {
           headers: {
@@ -380,7 +411,7 @@ export class AdminAuth {
       "application/json"
     )
       return response({ error: "JSON required" }, 415);
-    if (Number(request.headers.get("Content-Length") || 0) > 1024)
+    if (Number(request.headers.get("Content-Length") || 0) > (url.pathname.endsWith("/complete")?4096:1024))
       return response({ error: "Too large" }, 413);
     let data: Record<string, unknown>;
     try {
@@ -390,6 +421,7 @@ export class AdminAuth {
     } catch {
       return response({ error: "Invalid input" }, 400);
     }
+    if(["/api/admin/auth/link","/api/admin/auth/bootstrap","/api/admin/auth/complete"].includes(path))return this.handleLifecycle(request,data);
     const fields = path.endsWith("/password")
       ? ["username", "password"]
       : path.endsWith("/request")
@@ -579,6 +611,8 @@ export class AdminAuth {
     await this.storage.put("session:" + (await this.digest("session:" + jti)), {
       email: emailKey,
       expires,
+      authenticatedAt:now,
+      method:revision?"password":"otp",
       ...(revision
         ? {
             credentialRevision: revision,
@@ -594,6 +628,91 @@ export class AdminAuth {
       cookie("session", token, SESSION_SECONDS),
     );
   }
+  private lifecycleReady() {
+    return this.env.ADMIN_LIFECYCLE_ENABLED==="true"&&this.passwordReady()&&!!this.storage.transaction&&!!this.env.ADMIN_LIFECYCLE_SECRET&&this.env.ADMIN_LIFECYCLE_SECRET.length>=64&&this.env.ADMIN_LIFECYCLE_SECRET!==this.env.ADMIN_SECRET&&this.env.ADMIN_LIFECYCLE_SECRET!==this.env.ADMIN_PASSWORD_PEPPER;
+  }
+  private async handleLifecycle(request: Request, data: Record<string, unknown>) {
+    if (!this.lifecycleReady()) return response({ error: "Admin unavailable" }, 503);
+    const cfg = this.config()!, path = new URL(request.url).pathname;
+    const complete = path.endsWith('/complete'), bootstrap = path.endsWith('/bootstrap');
+    const fields = complete ? ['token', 'password'] : bootstrap ? ['username', 'secret'] : ['username', 'purpose', 'password'];
+    if (Object.keys(data).some(k => !fields.includes(k)) || fields.some(k => typeof data[k] !== 'string')) {
+      return response({ error: "Invalid input" }, 400);
+    }
+    const ip = request.headers.get('CF-Connecting-IP');
+    if (!ip || ip.length > 64) return response({ error: "Admin unavailable" }, 503);
+    await this.prune();
+    const window = 900000, ipKey = await this.digest('ip:' + ip);
+    const failureKey = 'lifecycle-failure-ip:' + ipKey;
+    if (!await this.budgetAvailable(failureKey, 30, window)) return response({ error: "Request failed" }, 429);
+    const fail = async (status = 403) => {
+      // Bound anonymous failure buckets independently from credential/session capacity.
+      const rates = [...await this.storage.list()].filter(([key]) => key.startsWith('rate:lifecycle-failure-ip:'));
+      if (rates.length < 100 || rates.some(([key]) => key.startsWith('rate:' + failureKey + ':'))) {
+        await this.budget(failureKey, 30, window);
+      }
+      return response({ error: "Request failed" }, status);
+    };
+    const alarm = await this.storage.getAlarm();
+    if (alarm === null || alarm > this.now() + 3600000) await this.storage.setAlarm(this.now() + 3600000);
+    this.lifecycle ??= new PasswordLifecycle(this.storage as LifecycleStorage, {
+      origin: cfg.origin, secret: this.env.ADMIN_LIFECYCLE_SECRET!, pepper: this.env.ADMIN_PASSWORD_PEPPER!,
+    }, this.now, this.passwordHasher!);
+    if (complete) {
+      const context = cfg.allowed.flatMap(email => [email, ...email.split(/[@.]/)]);
+      const result = await this.lifecycle.consume(data.token, data.password, context,
+        await Promise.all(cfg.allowed.map(email => this.digest('email:' + email))));
+      if (result.unavailable) return response({ error: "Admin unavailable" }, 503);
+      if (result.ok) return response({ ok: true, message: "Password saved. Sign in separately." });
+      // Valid-link strength feedback is cheap and does not consume failure budget.
+      if (result.feedback) return response({ error: result.feedback }, 400);
+      return fail(400);
+    }
+    let actor: string, purpose: 'setup' | 'reset' | 'invite';
+    if (bootstrap) {
+      const secret = this.env.ADMIN_BOOTSTRAP_SECRET;
+      if (!secret || secret.length < 64 || secret === this.env.ADMIN_SECRET ||
+        secret === this.env.ADMIN_PASSWORD_PEPPER || secret === this.env.ADMIN_LIFECYCLE_SECRET ||
+        typeof data.secret !== 'string' || data.secret.length > 128 || !await this.matches('bootstrap:' + data.secret, await this.digest('bootstrap:' + secret))) {
+        return fail();
+      }
+      actor = ''; purpose = 'setup';
+    } else {
+      const session = await this.session(request);
+      if (!session) return fail();
+      actor = session.email;
+      if (!['setup', 'reset', 'invite'].includes(String(data.purpose))) return fail();
+      purpose = data.purpose as typeof purpose;
+      if (session.method === 'otp') {
+        if (this.now() - session.authenticatedAt > 300000 || data.password !== '') return fail();
+      } else {
+        const reauthKey = 'lifecycle-reauth-account:' + actor;
+        if (!await this.budgetAvailable(reauthKey, 5, window)) return response({ error: "Request failed" }, 429);
+        const credential = await this.storage.get('credential:' + actor);
+        if (!validPassword(data.password) || !validCredential(credential)) {
+          await this.budget(reauthKey, 5, window); return fail();
+        }
+        try {
+          if (!await verifyPassword(data.password, credential, await this.passwordHasher!(), this.env.ADMIN_PASSWORD_PEPPER!)) {
+            await this.budget(reauthKey, 5, window); return fail();
+          }
+        } catch { return response({ error: "Admin unavailable" }, 503); }
+      }
+    }
+    // Authenticate first, then check membership with uniform failure status.
+    const target = normalize(data.username);
+    if (!cfg.allowed.includes(target)) return fail();
+    const targetKey = await this.digest('email:' + target);
+    if (bootstrap) actor = targetKey;
+    // Peer-admin bearer delivery is not enabled without recipient-owned delivery.
+    if (actor !== targetKey) return fail();
+    if (!await this.budgetAvailable('lifecycle-issued:' + actor, 5, window)) return response({ error: "Request failed" }, 429);
+    try {
+      const token = await this.lifecycle.issue({ target: targetKey, actor, purpose, bootstrap });
+      await this.budget('lifecycle-issued:' + actor, 5, window);
+      return response({ url: cfg.origin + '/admin/setup#' + token, expiresIn: 900, purpose, role: 'admin-read-only' });
+    } catch { return response({ error: "Request failed" }, 400); }
+  }
   private async prune() {
     const rows = await this.storage.list();
     const expired = [...rows]
@@ -608,15 +727,19 @@ export class AdminAuth {
     });
   }
 }
-function page(authenticated: boolean, otp = true, password = false) {
+function page(authenticated: boolean, otp = true, password = false, lifecycle=false) {
   const otpForm = otp
     ? '<section aria-labelledby="otp-title"><h2 id="otp-title">Email code</h2><form id="login"><label>Email <input id="email" type="email" autocomplete="username" maxlength="254" required></label><button id="send" type="button">Send code</button><p><label>Login code <input id="code" aria-describedby="code-help" inputmode="numeric" pattern="[0-9]{8}" autocomplete="one-time-code" maxlength="8"></label></p><p id="code-help">Enter the 8-digit code from your email. It expires in 5 minutes.</p><button type="submit">Sign in</button></form></section>'
     : "";
   const passwordForm = password
     ? '<section aria-labelledby="password-title"><h2 id="password-title">Password</h2><form id="password-login"><label>Username (email) <input id="username" type="email" autocomplete="username" maxlength="254" required></label><label>Password <input id="password" type="password" autocomplete="current-password" maxlength="256" required></label><button type="submit">Sign in with password</button></form><p>No public registration or password reset is available.</p></section>'
     : "";
-  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Admin login - Israel Hikes</title><link rel="stylesheet" href="/admin/login.css"><body><main><h1>Israel Hikes admin</h1>${authenticated ? '<p>Authenticated. Admin is read-only. Editing is not enabled.</p><button id="logout">Sign out</button>' : otpForm + passwordForm}<p id="status" role="status" aria-live="polite"></p><p><a href="/">Return to trails</a></p></main><script src="/admin/login.js" defer></script></body></html>`;
+  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Admin login - Israel Hikes</title><link rel="stylesheet" href="/admin/login.css"><body><main><h1>Israel Hikes admin</h1>${authenticated ? '<p>Authenticated. Admin is read-only. Editing is not enabled.</p><button id="logout">Sign out</button>'+ (lifecycle?issuerForm:'') : otpForm + passwordForm}<p id="status" role="status" aria-live="polite"></p><p><a href="/">Return to trails</a></p></main><script src="/admin/login.js" defer></script></body></html>`;
 }
-const loginScript = `document.getElementById('password-login')?.addEventListener('submit',async e=>{e.preventDefault();const field=document.getElementById('password');try{await call('password',{username:document.getElementById('username').value,password:field.value});field.value='';location.reload()}catch(e){field.value='';status.textContent=e.message}});const status=document.getElementById('status');const email=document.getElementById('email');async function call(path,body){const r=await fetch('/api/admin/auth/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok)throw Error('The request failed. Check the details or try again later.');return r.json()}document.getElementById('send')?.addEventListener('click',async()=>{if(!email.reportValidity())return;try{status.textContent=(await call('request',{email:email.value})).message}catch(e){status.textContent=e.message}});document.getElementById('login')?.addEventListener('submit',async e=>{e.preventDefault();try{await call('verify',{email:email.value,code:document.getElementById('code').value});location.reload()}catch(e){status.textContent=e.message}});document.getElementById('logout')?.addEventListener('click',async()=>{try{await call('logout',{});location.reload()}catch(e){status.textContent=e.message}});`;
+const loginScript = `document.getElementById('link-issuer')?.addEventListener('submit',async e=>{e.preventDefault();const pw=document.getElementById('reauth');const result=document.getElementById('link-result');result.textContent='';try{const r=await call('link',{username:document.getElementById('recipient').value,purpose:document.getElementById('purpose').value,password:pw.value});const a=document.createElement('a');a.href=r.url;a.textContent=r.url;result.replaceChildren(a)}catch(e){result.textContent=e.message}finally{pw.value=''}});document.getElementById('password-login')?.addEventListener('submit',async e=>{e.preventDefault();const field=document.getElementById('password');try{await call('password',{username:document.getElementById('username').value,password:field.value});field.value='';location.reload()}catch(e){field.value='';status.textContent=e.message}});const status=document.getElementById('status');const email=document.getElementById('email');async function call(path,body){const r=await fetch('/api/admin/auth/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok)throw Error('The request failed. Check the details or try again later.');return r.json()}document.getElementById('send')?.addEventListener('click',async()=>{if(!email.reportValidity())return;try{status.textContent=(await call('request',{email:email.value})).message}catch(e){status.textContent=e.message}});document.getElementById('login')?.addEventListener('submit',async e=>{e.preventDefault();try{await call('verify',{email:email.value,code:document.getElementById('code').value});location.reload()}catch(e){status.textContent=e.message}});document.getElementById('logout')?.addEventListener('click',async()=>{try{await call('logout',{});location.reload()}catch(e){status.textContent=e.message}});`;
 
 const loginStyle = `*{box-sizing:border-box}body{margin:0;background:#f3f7f4;color:#19382a;font:18px/1.55 system-ui,sans-serif}main{width:min(100% - 32px,520px);margin:48px auto;padding:28px;background:white;border:1px solid #cad9ce;border-radius:16px}h1{font-size:28px;line-height:1.25;margin:0 0 24px}label{display:block;font-weight:600}input{display:block;width:100%;padding:12px;margin:8px 0 16px;border:1px solid #637a6b;border-radius:8px;font:inherit}button{min-height:44px;padding:10px 18px;background:#185f39;color:white;border:0;border-radius:8px;font:inherit;cursor:pointer}a{color:#185f39}input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #ad6400;outline-offset:3px}#status{min-height:28px}#code-help{font-size:16px;color:#394f42}@media(max-width:450px){main{margin:24px auto;padding:20px}h1{font-size:25px}}`;
+
+const issuerForm=`<section><h2>Your password links</h2><form id="link-issuer"><label>Your username <input id="recipient" type="email" autocomplete="off" required></label><label>Operation <select id="purpose"><option value="setup">Initial setup</option><option value="reset">Password reset</option></select></label><label>Your current password <input id="reauth" type="password" autocomplete="current-password"></label><p>For email-code login, sign in again within 5 minutes and leave password empty. Links expire in 15 minutes. Only self-service links are enabled. Links do not add identities or roles.</p><button>Create private link</button></form><p id="link-result" role="status"></p><p>Send this private link only to the named recipient. Anyone with the link can set your password. Peer invitations need a recipient-owned delivery flow before they can be enabled. New identities require separate approval and configuration.</p></section>`;
+const setupPage=`<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Set password - Israel Hikes</title><link rel="stylesheet" href="/admin/login.css"><body><main><h1>Set your password</h1><form id="setup"><label>New password <input id="new-password" type="password" autocomplete="new-password" aria-describedby="strength" required></label><p id="strength" role="status">Use at least 15 characters. Choose several unrelated words or a password manager-generated password. Common and predictable passwords are rejected.</p><label>Confirm password <input id="confirm-password" type="password" autocomplete="new-password" required></label><button>Save password</button></form><p id="status" role="status" aria-live="polite"></p><a href="/admin">Sign in</a></main><script src="/admin/setup.js"></script></body></html>`;
+const setupScript=`let token=location.hash.slice(1);history.replaceState(null,'',location.pathname);import('/admin/strength.js').then(m=>m.attachStrength());const form=document.getElementById('setup'),pw=document.getElementById('new-password'),confirm=document.getElementById('confirm-password'),status=document.getElementById('status');if(!token){form.hidden=true;status.textContent='Link missing. Ask for a new private link.'}form.addEventListener('submit',async e=>{e.preventDefault();if(pw.value!==confirm.value){status.textContent='Passwords do not match.';return}const value=pw.value;pw.value='';confirm.value='';try{const r=await fetch('/api/admin/auth/complete',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({token,password:value})});const result=await r.json();if(!r.ok)throw Error(result.error||'Request failed');token='';form.hidden=true;status.textContent='Password saved. Sign in separately.'}catch(e){status.textContent=e.message}});`;

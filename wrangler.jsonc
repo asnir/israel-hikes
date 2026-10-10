@@ -15,6 +15,7 @@
   "vars": {
     "ADMIN_AUTH_ENABLED":"false",
     "ADMIN_PASSWORD_ENABLED":"false",
+    "ADMIN_LIFECYCLE_ENABLED":"false",
     "NOMINATIM_URL": "https://nominatim.openstreetmap.org",
     "OSRM_URL": "https://router.project-osrm.org",
     "SERVICE_ENABLED": "true",

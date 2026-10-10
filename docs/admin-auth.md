@@ -52,3 +52,22 @@ Additional sources:
 - https://developers.cloudflare.com/workers/runtime-apis/webassembly/
 - https://developers.cloudflare.com/durable-objects/platform/limits/
 - https://github.com/cloudflare/workerd/issues/1346
+
+## Password lifecycle (disabled by default)
+
+`ADMIN_LIFECYCLE_ENABLED=false` remains set in both environments. Activation needs separately reviewed secrets, owner permission and the memory-cleanup gate. No public registration or anonymous reset email exists.
+
+- POST `/api/admin/auth/bootstrap`: distinct bootstrap secret, allowlisted username. Issues a15-minute fragment link; marker expires with link. An expired/lost link can be reissued after expiry without wiping storage. Successful consume removes marker; an existing credential cannot bootstrap again. Revoke an unconsumed link by deleting its HMAC-indexed lifecycle row and matching expiring bootstrap marker through an approved maintenance path, never clear all storage.
+- POST `/api/admin/auth/link`: authenticated self-service only. Password sessions reauthenticate with account-bounded failed guesses; OTP sessions must be younger than5minutes and submit no password. Peer-admin bearer links are disabled until recipient-owned delivery is implemented. Existing identities/roles stay unchanged.
+- POST `/api/admin/auth/complete`: signed purpose/audience/issuer/typ/revision/role and live server-side state checked before strength/KDF. Single transactional credential replacement invalidates old password/OTP sessions/challenges/links. No auto-login.
+- GET `/admin/setup`: token only in fragment, scrubbed immediately with replaceState. Same-origin scripts only; local browser strength feedback and server policy.15Unicode characters minimum,256UTF-8 bytes maximum, estimator rejects predictable values; no arbitrary composition rule.
+
+Anonymous failures have per-IP buckets capped independently at100rows; there is no anonymous shared global issuance/completion budget. Successful completion and valid-link weak-password feedback spend no failure quota. Authenticated issuance has an account cap. KDF failure returns503while link remains valid. This limits shared-bucket lockout; distributed request-level abuse still requires operational protections before activation.
+
+### Recovery and capacity tradeoffs
+
+Bootstrap permits one outstanding link, not one issuance ever. An expired link can be replaced while no valid credential exists; issuance revokes older target links. Remove/rotate the bootstrap secret after provisioning. The invite purpose is reserved until recipient-owned delivery is implemented and is not offered by the UI.
+
+The100distinct failed-IP row cap deliberately fails open for additional IPs to avoid row-capacity denial of service. Tokens are256-bit random references/signatures and bootstrap secrets must be at least64characters; brute-force feasibility is not based on this cap. This does not make distributed request abuse impossible. Existing password-login per-IP rows/global bucket need equivalent capacity hardening before activation.
+
+Activation requires working OTP recovery, or separately approved manual credential recovery. With OTP disabled, a forgotten password cannot self-reset without an authenticated session. Manual recovery requires owner-authorized scoped removal of that target's credential, lifecycle/bootstrap/session/challenge rows and fresh bootstrap after secret rotation; never wipe the entire DO. No manual storage deletion is performed by this code or authorized by this document.
