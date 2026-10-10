@@ -1,6 +1,17 @@
+import {
+  verifyPassword,
+  validCredential,
+  validPassword,
+  dummyCredential,
+  type Credential,
+  type PasswordHasher,
+} from "./admin-password";
 import { SignJWT, jwtVerify } from "jose";
 export interface AdminEnv {
   ADMIN_AUTH_ENABLED?: string;
+  ADMIN_PASSWORD_ENABLED?: string;
+  ADMIN_PASSWORD_PEPPER?: string;
+  ADMIN_OTP_ENABLED?: string;
   ADMIN_ORIGIN?: string;
   ADMIN_SECRET?: string;
   ADMIN_ALLOWLIST?: string;
@@ -78,6 +89,7 @@ export class AdminAuth {
     private env: AdminEnv,
     private waitUntil: (p: Promise<unknown>) => void = () => {},
     private now = () => Date.now(),
+    private passwordHasher?: () => Promise<PasswordHasher>,
   ) {}
   private serialize<T>(f: () => Promise<T>): Promise<T> {
     const p = this.running.then(f, f);
@@ -94,6 +106,7 @@ export class AdminAuth {
         "/api/admin/auth/request",
         "/api/admin/auth/verify",
         "/api/admin/auth/logout",
+        "/api/admin/auth/password",
       ].includes(url.pathname)
     )
       return this.serialize(() => this.handle(request));
@@ -154,6 +167,21 @@ export class AdminAuth {
       if (timer) clearTimeout(timer);
     }
   }
+  private otpReady() {
+    return (
+      this.env.ADMIN_OTP_ENABLED !== "false" &&
+      !!this.env.ADMIN_EMAIL &&
+      emailPattern.test(normalize(this.env.ADMIN_EMAIL_FROM))
+    );
+  }
+  private passwordReady() {
+    return (
+      this.env.ADMIN_PASSWORD_ENABLED === "true" &&
+      !!this.passwordHasher &&
+      !!this.env.ADMIN_PASSWORD_PEPPER &&
+      this.env.ADMIN_PASSWORD_PEPPER.length >= 64
+    );
+  }
   private config() {
     try {
       const allowed: unknown = JSON.parse(this.env.ADMIN_ALLOWLIST || "");
@@ -162,10 +190,9 @@ export class AdminAuth {
         this.env.ADMIN_AUTH_ENABLED !== "true" ||
         !this.env.ADMIN_SECRET ||
         this.env.ADMIN_SECRET.length < 64 ||
-        !this.env.ADMIN_EMAIL ||
+        (!this.otpReady() && !this.passwordReady()) ||
         origin.protocol !== "https:" ||
         origin.origin !== this.env.ADMIN_ORIGIN ||
-        !emailPattern.test(normalize(this.env.ADMIN_EMAIL_FROM)) ||
         !Array.isArray(allowed) ||
         allowed.length !== 2 ||
         new Set(allowed).size !== 2 ||
@@ -247,7 +274,12 @@ export class AdminAuth {
       )
         return null;
       const key = "session:" + (await this.digest("session:" + payload.jti)),
-        row = await this.storage.get<{ email: string; expires: number }>(key);
+        row = await this.storage.get<{
+          email: string;
+          expires: number;
+          credentialRevision?: string;
+          passwordKeyTag?: string;
+        }>(key);
       if (
         !row ||
         row.expires <= this.now() ||
@@ -257,6 +289,21 @@ export class AdminAuth {
         ).includes(row.email)
       )
         return null;
+      if (row.credentialRevision) {
+        const credential = await this.storage.get<Credential>(
+          "credential:" + row.email,
+        );
+        if (
+          !this.passwordReady() ||
+          !validCredential(credential) ||
+          credential.revision !== row.credentialRevision ||
+          row.passwordKeyTag !==
+            (await this.digest(
+              "password-pepper:" + this.env.ADMIN_PASSWORD_PEPPER,
+            ))
+        )
+          return null;
+      }
       return { key };
     } catch {
       return null;
@@ -272,13 +319,24 @@ export class AdminAuth {
       "/api/admin/auth/request",
       "/api/admin/auth/verify",
       "/api/admin/auth/logout",
+      "/api/admin/auth/password",
     ];
     if (path === "/admin" || path === "/admin/") {
       if (request.method !== "GET")
         return response({ error: "Method not allowed" }, 405);
-      return new Response(page(!!(await this.session(request))), {
-        headers: { ...baseHeaders, "Content-Type": "text/html; charset=utf-8" },
-      });
+      return new Response(
+        page(
+          !!(await this.session(request)),
+          this.otpReady(),
+          this.passwordReady(),
+        ),
+        {
+          headers: {
+            ...baseHeaders,
+            "Content-Type": "text/html; charset=utf-8",
+          },
+        },
+      );
     }
     if (path === "/admin/login.css") {
       if (request.method !== "GET") return response({}, 405);
@@ -324,11 +382,13 @@ export class AdminAuth {
     } catch {
       return response({ error: "Invalid input" }, 400);
     }
-    const fields = path.endsWith("/request")
-      ? ["email"]
-      : path.endsWith("/verify")
-        ? ["email", "code"]
-        : [];
+    const fields = path.endsWith("/password")
+      ? ["username", "password"]
+      : path.endsWith("/request")
+        ? ["email"]
+        : path.endsWith("/verify")
+          ? ["email", "code"]
+          : [];
     if (
       Object.keys(data).some((k) => !fields.includes(k)) ||
       fields.some((k) => typeof data[k] !== "string")
@@ -339,7 +399,13 @@ export class AdminAuth {
       if (s) await this.storage.delete(s.key);
       return response({ ok: true }, 200, cookie("session", "", 0));
     }
-    const email = normalize(data.email);
+    const passwordMode = path.endsWith("/password");
+    if (
+      (passwordMode && !this.passwordReady()) ||
+      (!passwordMode && !this.otpReady())
+    )
+      return response({ error: "Admin unavailable" }, 503);
+    const email = normalize(passwordMode ? data.username : data.email);
     if (email.length > 254 || !emailPattern.test(email))
       return response({ error: "Invalid input" }, 400);
     const ip = request.headers.get("CF-Connecting-IP");
@@ -354,6 +420,44 @@ export class AdminAuth {
     const alarm = await this.storage.getAlarm();
     if (alarm === null || alarm > now + 3600000)
       await this.storage.setAlarm(now + 3600000);
+    if (passwordMode) {
+      if (!validPassword(data.password))
+        return response({ error: "Invalid credentials" }, 401);
+      if (
+        !(await this.budget("password-global", 20, 900000)) ||
+        !(await this.budget("password-ip:" + ipKey, 5, 900000))
+      )
+        return response({ error: "Invalid credentials" }, 401);
+      if (
+        cfg.allowed.includes(email) &&
+        !(await this.budget("password-account:" + emailKey, 5, 900000))
+      )
+        return response({ error: "Invalid credentials" }, 401);
+      const credential = cfg.allowed.includes(email)
+        ? await this.storage.get<Credential>("credential:" + emailKey)
+        : undefined;
+      const candidate = validCredential(credential)
+        ? credential
+        : dummyCredential;
+      let valid: boolean;
+      try {
+        valid = await verifyPassword(
+          data.password,
+          candidate,
+          await this.passwordHasher!(),
+          this.env.ADMIN_PASSWORD_PEPPER!,
+        );
+      } catch {
+        return response({ error: "Admin unavailable" }, 503);
+      }
+      if (
+        !valid ||
+        !validCredential(credential) ||
+        !cfg.allowed.includes(email)
+      )
+        return response({ error: "Invalid credentials" }, 401);
+      return this.createSession(emailKey, cfg, credential.revision);
+    }
     if (path.endsWith("/request")) {
       const id = random(),
         ck = cookie("challenge", id, 300),
@@ -439,6 +543,14 @@ export class AdminAuth {
       return response({ error: "Invalid code" }, 401);
     }
     await this.storage.delete(key);
+    return this.createSession(emailKey, cfg);
+  }
+  private async createSession(
+    emailKey: string,
+    cfg: { secret: Uint8Array; origin: string },
+    revision?: string,
+  ) {
+    const now = this.now();
     const jti = random(),
       expires = now + SESSION_SECONDS * 1000;
     const token = await new SignJWT({})
@@ -453,6 +565,14 @@ export class AdminAuth {
     await this.storage.put("session:" + (await this.digest("session:" + jti)), {
       email: emailKey,
       expires,
+      ...(revision
+        ? {
+            credentialRevision: revision,
+            passwordKeyTag: await this.digest(
+              "password-pepper:" + this.env.ADMIN_PASSWORD_PEPPER,
+            ),
+          }
+        : {}),
     });
     return response(
       { authenticated: true, readOnly: true },
@@ -474,9 +594,15 @@ export class AdminAuth {
     });
   }
 }
-function page(authenticated: boolean) {
-  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Admin login - Israel Hikes</title><link rel="stylesheet" href="/admin/login.css"><body><main><h1>Israel Hikes admin</h1>${authenticated ? '<p>Authenticated. Admin is read-only. Editing is not enabled.</p><button id="logout">Sign out</button>' : '<form id="login"><label>Email <input id="email" type="email" autocomplete="username" maxlength="254" required></label><button id="send" type="button">Send code</button><p><label>Login code <input id="code" aria-describedby="code-help" inputmode="numeric" pattern="[0-9]{8}" autocomplete="one-time-code" maxlength="8"></label></p><p id="code-help">Enter the 8-digit code from your email. It expires in 5 minutes.</p><button type="submit">Sign in</button></form>'}<p id="status" role="status" aria-live="polite"></p><p><a href="/">Return to trails</a></p></main><script src="/admin/login.js" defer></script></body></html>`;
+function page(authenticated: boolean, otp = true, password = false) {
+  const otpForm = otp
+    ? '<section aria-labelledby="otp-title"><h2 id="otp-title">Email code</h2><form id="login"><label>Email <input id="email" type="email" autocomplete="username" maxlength="254" required></label><button id="send" type="button">Send code</button><p><label>Login code <input id="code" aria-describedby="code-help" inputmode="numeric" pattern="[0-9]{8}" autocomplete="one-time-code" maxlength="8"></label></p><p id="code-help">Enter the 8-digit code from your email. It expires in 5 minutes.</p><button type="submit">Sign in</button></form></section>'
+    : "";
+  const passwordForm = password
+    ? '<section aria-labelledby="password-title"><h2 id="password-title">Password</h2><form id="password-login"><label>Username (email) <input id="username" type="email" autocomplete="username" maxlength="254" required></label><label>Password <input id="password" type="password" autocomplete="current-password" maxlength="256" required></label><button type="submit">Sign in with password</button></form><p>No public registration or password reset is available.</p></section>'
+    : "";
+  return `<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Admin login - Israel Hikes</title><link rel="stylesheet" href="/admin/login.css"><body><main><h1>Israel Hikes admin</h1>${authenticated ? '<p>Authenticated. Admin is read-only. Editing is not enabled.</p><button id="logout">Sign out</button>' : otpForm + passwordForm}<p id="status" role="status" aria-live="polite"></p><p><a href="/">Return to trails</a></p></main><script src="/admin/login.js" defer></script></body></html>`;
 }
-const loginScript = `const status=document.getElementById('status');const email=document.getElementById('email');async function call(path,body){const r=await fetch('/api/admin/auth/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok)throw Error('The request failed. Check the details or try again later.');return r.json()}document.getElementById('send')?.addEventListener('click',async()=>{if(!email.reportValidity())return;try{status.textContent=(await call('request',{email:email.value})).message}catch(e){status.textContent=e.message}});document.getElementById('login')?.addEventListener('submit',async e=>{e.preventDefault();try{await call('verify',{email:email.value,code:document.getElementById('code').value});location.reload()}catch(e){status.textContent=e.message}});document.getElementById('logout')?.addEventListener('click',async()=>{try{await call('logout',{});location.reload()}catch(e){status.textContent=e.message}});`;
+const loginScript = `document.getElementById('password-login')?.addEventListener('submit',async e=>{e.preventDefault();const field=document.getElementById('password');try{await call('password',{username:document.getElementById('username').value,password:field.value});field.value='';location.reload()}catch(e){field.value='';status.textContent=e.message}});const status=document.getElementById('status');const email=document.getElementById('email');async function call(path,body){const r=await fetch('/api/admin/auth/'+path,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok)throw Error('The request failed. Check the details or try again later.');return r.json()}document.getElementById('send')?.addEventListener('click',async()=>{if(!email.reportValidity())return;try{status.textContent=(await call('request',{email:email.value})).message}catch(e){status.textContent=e.message}});document.getElementById('login')?.addEventListener('submit',async e=>{e.preventDefault();try{await call('verify',{email:email.value,code:document.getElementById('code').value});location.reload()}catch(e){status.textContent=e.message}});document.getElementById('logout')?.addEventListener('click',async()=>{try{await call('logout',{});location.reload()}catch(e){status.textContent=e.message}});`;
 
 const loginStyle = `*{box-sizing:border-box}body{margin:0;background:#f3f7f4;color:#19382a;font:18px/1.55 system-ui,sans-serif}main{width:min(100% - 32px,520px);margin:48px auto;padding:28px;background:white;border:1px solid #cad9ce;border-radius:16px}h1{font-size:28px;line-height:1.25;margin:0 0 24px}label{display:block;font-weight:600}input{display:block;width:100%;padding:12px;margin:8px 0 16px;border:1px solid #637a6b;border-radius:8px;font:inherit}button{min-height:44px;padding:10px 18px;background:#185f39;color:white;border:0;border-radius:8px;font:inherit;cursor:pointer}a{color:#185f39}input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #ad6400;outline-offset:3px}#status{min-height:28px}#code-help{font-size:16px;color:#394f42}@media(max-width:450px){main{margin:24px auto;padding:20px}h1{font-size:25px}}`;
