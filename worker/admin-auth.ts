@@ -179,7 +179,8 @@ export class AdminAuth {
       this.env.ADMIN_PASSWORD_ENABLED === "true" &&
       !!this.passwordHasher &&
       !!this.env.ADMIN_PASSWORD_PEPPER &&
-      this.env.ADMIN_PASSWORD_PEPPER.length >= 64
+      this.env.ADMIN_PASSWORD_PEPPER.length >= 64 &&
+      this.env.ADMIN_PASSWORD_PEPPER !== this.env.ADMIN_SECRET
     );
   }
   private config() {
@@ -233,6 +234,13 @@ export class AdminAuth {
       parseInt(v, 16),
     );
     return crypto.subtle.verify("HMAC", key, bytes, encoder.encode(value));
+  }
+  private async budgetAvailable(key: string, limit: number, window: number) {
+    const bucket = Math.floor(this.now() / window);
+    const row = await this.storage.get<{ count: number }>(
+      `rate:${key}:${bucket}`,
+    );
+    return !row || row.count < limit;
   }
   private async budget(
     key: string,
@@ -423,16 +431,22 @@ export class AdminAuth {
     if (passwordMode) {
       if (!validPassword(data.password))
         return response({ error: "Invalid credentials" }, 401);
+      const window = 900000;
       if (
-        !(await this.budget("password-global", 20, 900000)) ||
-        !(await this.budget("password-ip:" + ipKey, 5, 900000))
+        !(await this.budgetAvailable("password-ip:" + ipKey, 5, window)) ||
+        !(await this.budgetAvailable("password-global", 20, window)) ||
+        (cfg.allowed.includes(email) &&
+          !(await this.budgetAvailable(
+            "password-account:" + emailKey,
+            5,
+            window,
+          )))
       )
         return response({ error: "Invalid credentials" }, 401);
-      if (
-        cfg.allowed.includes(email) &&
-        !(await this.budget("password-account:" + emailKey, 5, 900000))
-      )
-        return response({ error: "Invalid credentials" }, 401);
+      await this.budget("password-ip:" + ipKey, 5, window);
+      await this.budget("password-global", 20, window);
+      if (cfg.allowed.includes(email))
+        await this.budget("password-account:" + emailKey, 5, window);
       const credential = cfg.allowed.includes(email)
         ? await this.storage.get<Credential>("credential:" + emailKey)
         : undefined;
