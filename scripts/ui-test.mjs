@@ -29,9 +29,9 @@ try {
   }
   assert.equal(await page.locator(".trail-card").count(), 24);
   await page
-    .getByRole("button", { name: "5 מסלולים שנבדקו", exact: true })
+    .getByRole("button", { name: "174 מסלולי הליכה", exact: true })
     .click();
-  assert.equal(await page.locator(".trail-card").count(), 5);
+  assert.equal(await page.locator(".trail-card").count(), 24);
   await page
     .getByRole("button", { name: "שמירת מסלול", exact: true })
     .first()
