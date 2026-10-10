@@ -278,6 +278,30 @@
         "captionHe": "פלג בנחל עמוד בגליל העליון, ינואר 2006. לא זיהוי של בריכה מסוימת או תיעוד של זרימה, רחצה וגישה כיום.",
         "captionEn": "A stream in Nahal Amud in the Upper Galilee, January 2006. Not an identification of a particular pool or a record of current flow, swimming or access.",
         "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      },
+      {
+        "src": "/photos/ext-64/01.webp",
+        "captionHe": "מראה בנחל עמוד בגליל העליון, ינואר 2006. צילום היסטורי בלבד, לא זיהוי של בריכה מסוימת או אישור לשחייה או לגישה.",
+        "captionEn": "A view of Nahal Amud in the Upper Galilee, January 2006. Historical photograph, not identification of a particular pool or permission to swim or enter.",
+        "author": "Pacman",
+        "authorEn": "Pacman",
+        "title": "Amud stream.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Amud_stream.JPG",
+        "licence": "Public domain",
+        "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      },
+      {
+        "src": "/photos/ext-64/02.webp",
+        "captionHe": "גשר הליכה מעל נחל עמוד, יוני 2010. לא תיעוד של מצבו כיום או אישור שהמעבר פתוח ובטוח.",
+        "captionEn": "A footbridge over Nahal Amud, June 2010. Not a record of its current condition or assurance that the crossing is open or safe.",
+        "author": "yfrimer",
+        "authorEn": "yfrimer",
+        "title": "Bridge over Nahal Amud - panoramio.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bridge_over_Nahal_Amud_-_panoramio.jpg",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
       }
     ]
   },
@@ -305,7 +329,31 @@
         "captionHe": "פלג בנחל עמוד בגליל העליון, ינואר 2006. לא זיהוי של בריכה מסוימת או תיעוד של זרימה, רחצה וגישה כיום.",
         "captionEn": "A stream in Nahal Amud in the Upper Galilee, January 2006. Not an identification of a particular pool or a record of current flow, swimming or access.",
         "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      },
+      {
+        "src": "/photos/ext-64/01.webp",
+        "captionHe": "מראה בנחל עמוד בגליל העליון, ינואר 2006. צילום היסטורי בלבד, לא זיהוי של בריכה מסוימת או אישור לשחייה או לגישה.",
+        "captionEn": "A view of Nahal Amud in the Upper Galilee, January 2006. Historical photograph, not identification of a particular pool or permission to swim or enter.",
+        "author": "Pacman",
+        "authorEn": "Pacman",
+        "title": "Amud stream.JPG",
+        "source": "https://commons.wikimedia.org/wiki/File:Amud_stream.JPG",
+        "licence": "Public domain",
+        "licenceUrl": "https://commons.wikimedia.org/wiki/Commons:Public_domain",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      },
+      {
+        "src": "/photos/ext-64/02.webp",
+        "captionHe": "גשר הליכה מעל נחל עמוד, יוני 2010. לא תיעוד של מצבו כיום או אישור שהמעבר פתוח ובטוח.",
+        "captionEn": "A footbridge over Nahal Amud, June 2010. Not a record of its current condition or assurance that the crossing is open or safe.",
+        "author": "yfrimer",
+        "authorEn": "yfrimer",
+        "title": "Bridge over Nahal Amud - panoramio.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Bridge_over_Nahal_Amud_-_panoramio.jpg",
+        "licence": "CC BY-SA 3.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
       }
     ]
   }
-}
+      }
