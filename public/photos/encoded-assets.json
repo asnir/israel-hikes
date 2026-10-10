@@ -48,5 +48,25 @@
     "path": "photos/shofet/02.webp",
     "sha256": "aa33fb3f24de3b3aeebe5ed13a183d03af6672b1abfbc10d6220e69a30f8a834",
     "size": 271064
+  },
+  {
+    "path": "photos/ext-10/hero.webp",
+    "sha256": "9ba74edfeed583103abc07ffc54a2fa30452dac66caf1bc581025cdcd700d9d1",
+    "size": 355848
+  },
+  {
+    "path": "photos/ext-10/thumb.webp",
+    "sha256": "67d112ba1418b420d5b5bcd815c6c31f0b6bad4818fca5e855a3beb85c65ef00",
+    "size": 35608
+  },
+  {
+    "path": "photos/ext-10/01.webp",
+    "sha256": "d2f5809f5dcdf6268bd65c2802bf8046c9abb4483fc634fdd19f35fc5e7331b1",
+    "size": 303610
+  },
+  {
+    "path": "photos/ext-10/02.webp",
+    "sha256": "fca055c1d69b7b1f80d7ffeac6c26a93152a6c09c66f5bbdce5920af9ebf257d",
+    "size": 195828
   }
 ]

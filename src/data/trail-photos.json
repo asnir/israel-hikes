@@ -403,5 +403,56 @@
         "changes": "Resized and converted to WebP; displayed with a responsive crop."
       }
     ]
+  },
+  "ext-10": {
+    "src": "/photos/ext-10/hero.webp",
+    "title": "99822 nahal saar waterfall PikiWiki Israel.jpg",
+    "author": "יואל פיקסלר / PikiWiki Israel",
+    "authorEn": "photografed by yoel fixler Pikiwiki Israel",
+    "source": "https://commons.wikimedia.org/wiki/File:99822_nahal_saar_waterfall_PikiWiki_Israel.jpg",
+    "licence": "CC BY 2.5",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+    "captionHe": "מפל בנחל סער, 2019. תצלום היסטורי של אתר בנחל, לא תיעוד של כל מסלול ההליכה או של זרימה וגישה כיום.",
+    "captionEn": "A waterfall on Nahal Saar, 2019. A historical site photograph, not documentation of the whole walking route or current flow and access.",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+    "thumbSrc": "/photos/ext-10/thumb.webp",
+    "gallery": [
+      {
+        "src": "/photos/ext-10/hero.webp",
+        "title": "99822 nahal saar waterfall PikiWiki Israel.jpg",
+        "author": "יואל פיקסלר / PikiWiki Israel",
+        "authorEn": "photografed by yoel fixler Pikiwiki Israel",
+        "source": "https://commons.wikimedia.org/wiki/File:99822_nahal_saar_waterfall_PikiWiki_Israel.jpg",
+        "licence": "CC BY 2.5",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.5",
+        "captionHe": "מפל בנחל סער, 2019. תצלום היסטורי של אתר בנחל, לא תיעוד של כל מסלול ההליכה או של זרימה וגישה כיום.",
+        "captionEn": "A waterfall on Nahal Saar, 2019. A historical site photograph, not documentation of the whole walking route or current flow and access.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      },
+      {
+        "src": "/photos/ext-10/01.webp",
+        "title": "PikiWiki Israel 11913 Saar waterfall.JPG",
+        "author": "יוסי עזרא / PikiWiki Israel",
+        "authorEn": "Yossi Ezra / PikiWiki Israel",
+        "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_11913_Saar_waterfall.JPG",
+        "licence": "Public domain",
+        "licenceUrl": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_11913_Saar_waterfall.JPG",
+        "captionHe": "מפל בנחל סער, 2011. תצלום היסטורי של אתר בנחל, לא תיעוד של כל מסלול ההליכה או של זרימה וגישה כיום.",
+        "captionEn": "A waterfall on Nahal Saar, 2011. A historical site photograph, not documentation of the whole walking route or current flow and access.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      },
+      {
+        "src": "/photos/ext-10/02.webp",
+        "title": "PikiWiki Israel 11914 Saar waterfall.JPG",
+        "author": "יוסי עזרא / PikiWiki Israel",
+        "authorEn": "Yossi Ezra / PikiWiki Israel",
+        "source": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_11914_Saar_waterfall.JPG",
+        "licence": "Public domain",
+        "licenceUrl": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_11914_Saar_waterfall.JPG",
+        "captionHe": "מפל בנחל סער, 2011. תצלום היסטורי של אתר בנחל, לא תיעוד של כל מסלול ההליכה או של זרימה וגישה כיום.",
+        "captionEn": "A waterfall on Nahal Saar, 2011. A historical site photograph, not documentation of the whole walking route or current flow and access.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      }
+    ]
   }
 }
