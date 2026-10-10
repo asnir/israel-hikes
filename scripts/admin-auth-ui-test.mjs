@@ -77,6 +77,8 @@ const h = new AdminAuth(
   () => Date.now(),
   async () => hasher,
 );
+const screenshotDir = process.env.SCREENSHOT_DIR || "/tmp/admin-auth-ui";
+fs.mkdirSync(screenshotDir, { recursive: true });
 const browser = await chromium.launch({ headless: true });
 try {
   const context = await browser.newContext();
@@ -151,7 +153,7 @@ try {
   for (const w of [390, 1440]) {
     await page.setViewportSize({ width: w, height: 1000 });
     await page.screenshot({
-      path: `/downloads/password-login-${w}.png`,
+      path: `${screenshotDir}/password-login-${w}.png`,
       fullPage: true,
     });
   }
