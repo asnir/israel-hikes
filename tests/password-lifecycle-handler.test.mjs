@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {build} from 'esbuild';
-import {createHash} from 'node:crypto';
+import setup from 'argon2id/lib/setup.js';
+import fs from 'node:fs';
+const wasm=fs.readFileSync('node_modules/argon2id/dist/no-simd.wasm');
+const reference=await setup(async imports=>WebAssembly.instantiate(wasm,imports),async imports=>WebAssembly.instantiate(wasm,imports));
 await build({entryPoints:['worker/admin-auth.ts'],outfile:'/tmp/lifecycle-handler.mjs',bundle:true,platform:'node',format:'esm'});
 const {AdminAuth}=await import('/tmp/lifecycle-handler.mjs');
 const origin='https://hikes.example';
@@ -19,7 +22,7 @@ function fixture(patch={}) {
     ADMIN_LIFECYCLE_ENABLED:'true',ADMIN_LIFECYCLE_SECRET:'l'.repeat(64),ADMIN_BOOTSTRAP_SECRET:'b'.repeat(64),
     ADMIN_PASSWORD_PEPPER:'p'.repeat(64),ADMIN_SECRET:'a'.repeat(64),ADMIN_ORIGIN:origin,
     ADMIN_ALLOWLIST:'["first@example.invalid","second@example.invalid"]',...patch};
-  const h=new AdminAuth(store,env,()=>{},()=>1800000000000,async()=>p=>{calls++;return new Uint8Array(createHash('sha256').update(p.password).digest());});
+  const h=new AdminAuth(store,env,()=>{},()=>1800000000000,async()=>p=>{calls++;return reference(p);});
   const post=(path,body,headers={})=>h.fetch(new Request(origin+'/api/admin/auth/'+path,{method:'POST',headers:{Origin:origin,'Content-Type':'application/json','CF-Connecting-IP':'192.0.2.1',...headers},body:JSON.stringify(body)}));
   return {h,post,env,rows:()=>rows,calls:()=>calls};
 }
