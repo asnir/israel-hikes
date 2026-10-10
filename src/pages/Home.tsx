@@ -2,7 +2,7 @@ import { loadPreferences, savePreferences, defaultPreferences } from "../lib/dis
 import i18n, { tr, display } from "../i18n";
 import { matches } from "../lib/filter";
 import { lazy, Suspense, useMemo, useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Search, SlidersHorizontal, Map, LayoutGrid, ArrowUpLeft, Bookmark, Compass } from "lucide-react";
 import { catalog, longTrails, type Trail } from "../lib/catalog";
 import { estimate, roughEstimate, routeBatch, type Drive } from "../lib/drive";
@@ -14,6 +14,16 @@ import { useSaved } from "../lib/saved";
 import Hero from "../components/Hero";
 import FilterFields, { initialFilters, type Filters } from "../components/Filters";
 export default function Home() {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash !== "#origin-choice") return;
+    const frame = requestAnimationFrame(() => {
+      const select = document.querySelector<HTMLSelectElement>("#origin-choice select");
+      select?.focus({preventScroll:true});
+      document.getElementById("origin-choice")?.scrollIntoView({block:"center"});
+    });
+    return () => cancelAnimationFrame(frame);
+  }, [location.hash]);
   const [restored] = useState(loadPreferences);
   const [storageAvailable, StorageAvailable] = useState(true);
   const [q, Q] = useState(restored.search),
@@ -115,7 +125,7 @@ export default function Home() {
             </button>
           </div>
           <FilterFields f={f} update={update} advanced={advanced} />
-          <OriginSearch city={city} setCity={v => {
+          <div id="origin-choice"><OriginSearch city={city} setCity={v => {
           C(v);
           originVersion.current++;
           O(null);
@@ -132,7 +142,7 @@ export default function Home() {
           Sort("distance"); L(24);
           R({});
           RS("");
-        }} />
+        }} /></div>
           {display(origin && <div className="dynamic-origin">
               <span>{tr("מוצא:")} <bdi>{origin.label}</bdi></span>
               <button className="button" onClick={calculate} disabled={routing || staleLocation}>
