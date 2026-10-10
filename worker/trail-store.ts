@@ -14,7 +14,7 @@ export async function d1Snapshot(request:Request,env:TrailStoreEnv):Promise<Resp
   const record=await env.TRAILS_DB.prepare("SELECT body FROM public_snapshots WHERE path = ?1").bind(url.pathname).first<{body:string}>();
   if(!record)return null;
   JSON.parse(record.body);
-  return new Response(request.method==="HEAD"?null:record.body,{headers:{"Content-Type":"application/json; charset=utf-8","X-Content-Type-Options":"nosniff","Cache-Control":"public, max-age=300"}});
+  return new Response(request.method==="HEAD"?null:record.body,{headers:{"Content-Type":"application/json; charset=utf-8","X-Content-Type-Options":"nosniff","Cache-Control":"public, max-age=300","X-Trail-Read-Source":"d1"}});
  }catch{
   // Free-tier exhaustion and migration failures must not break the public catalog.
   return null;
