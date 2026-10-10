@@ -18,5 +18,15 @@
     "path": "photos/ext-64/thumb.webp",
     "size": 11328,
     "sha256": "e1f204e4b661219b6ff6dce89bf26c77198f2fc7c0e5a434527b0e305848fd11"
+  },
+  {
+    "path": "photos/ext-64/01.webp",
+    "sha256": "2bb1c64d16ed4e09be64fd5d9fef63934621f1a1019a18c6c8dc43265b174009",
+    "size": 342196
+  },
+  {
+    "path": "photos/ext-64/02.webp",
+    "sha256": "d6abed260c8f7fc7ccc58a1a65decc536a166cf6154f80a9056588f1ed05294e",
+    "size": 308148
   }
 ]
