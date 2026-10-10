@@ -76,6 +76,10 @@ jobs:
           command: deploy --config wrangler.preview.jsonc --name israel-hikes-preview
       - name: Verify preview serves this exact build
         run: node scripts/check-live-assets.mjs https://israel-hikes-preview.amikamsnir.workers.dev/
+      - name: Verify D1 source is active in preview
+        if: github.event_name == 'pull_request' && github.head_ref == 'feat/d1-read-foundation'
+        run: |
+          node --input-type=module -e "import assert from 'node:assert/strict'; for (const path of ['/api/catalog','/api/trails/ofer']) { const r=await fetch('https://israel-hikes-preview.amikamsnir.workers.dev'+path); assert.equal(r.status,200); assert.equal(r.headers.get('X-Trail-Read-Source'),'d1'); }"
       - name: Save exact tested static assets for production
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
