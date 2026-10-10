@@ -195,5 +195,63 @@
         "changes": "Resized and converted to WebP; displayed with a responsive crop."
       }
     ]
+  },
+  "ext-137": {
+    "src": "/photos/ext-137/hero.webp",
+    "thumbSrc": "/photos/ext-137/thumb.webp",
+    "title": "Nahal David waterfall, Ein Gedi (531059035).jpg",
+    "titleEn": "Nahal David waterfall, Ein Gedi",
+    "author": "Mary Madigan",
+    "authorEn": "Mary Madigan",
+    "source": "https://commons.wikimedia.org/wiki/File:Nahal_David_waterfall%2C_Ein_Gedi_(531059035).jpg",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "captionHe": "מפל בנחל דוד, עין גדי, מאי 2006. צילום מאתר המסלול, לא זיהוי של מפל שולמית או גב חלון ולא תיעוד של מצב המים או הגישה כיום.",
+    "captionEn": "Waterfall at Nahal David, Ein Gedi, May 2006. The route site, not an identification of Shulamit Falls or Window Pool, or a record of current water or access conditions.",
+    "changes": "Resized and converted to WebP; thumbnail cropped. Displayed with a responsive crop.",
+    "gallery": [
+      {
+        "src": "/photos/ext-137/hero.webp",
+        "title": "Nahal David waterfall, Ein Gedi (531059035).jpg",
+        "titleEn": "Nahal David waterfall, Ein Gedi",
+        "author": "Mary Madigan",
+        "authorEn": "Mary Madigan",
+        "source": "https://commons.wikimedia.org/wiki/File:Nahal_David_waterfall%2C_Ein_Gedi_(531059035).jpg",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "captionHe": "מפל בנחל דוד, עין גדי, מאי 2006. צילום מאתר המסלול, לא זיהוי של מפל שולמית או גב חלון ולא תיעוד של מצב המים או הגישה כיום.",
+        "captionEn": "Waterfall at Nahal David, Ein Gedi, May 2006. The route site, not an identification of Shulamit Falls or Window Pool, or a record of current water or access conditions.",
+        "changes": "Resized and converted to WebP; thumbnail cropped. Displayed with a responsive crop."
+      }
+    ]
+  },
+  "ext-112": {
+    "src": "/photos/ext-137/hero.webp",
+    "thumbSrc": "/photos/ext-137/thumb.webp",
+    "title": "Nahal David waterfall, Ein Gedi (531059035).jpg",
+    "titleEn": "Nahal David waterfall, Ein Gedi",
+    "author": "Mary Madigan",
+    "authorEn": "Mary Madigan",
+    "source": "https://commons.wikimedia.org/wiki/File:Nahal_David_waterfall%2C_Ein_Gedi_(531059035).jpg",
+    "licence": "CC BY 2.0",
+    "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "captionHe": "מפל בנחל דוד, עין גדי, מאי 2006. צילום מאתר המסלול, לא זיהוי של מפל שולמית או גב חלון ולא תיעוד של מצב המים או הגישה כיום.",
+    "captionEn": "Waterfall at Nahal David, Ein Gedi, May 2006. The route site, not an identification of Shulamit Falls or Window Pool, or a record of current water or access conditions.",
+    "changes": "Resized and converted to WebP; thumbnail cropped. Displayed with a responsive crop.",
+    "gallery": [
+      {
+        "src": "/photos/ext-137/hero.webp",
+        "title": "Nahal David waterfall, Ein Gedi (531059035).jpg",
+        "titleEn": "Nahal David waterfall, Ein Gedi",
+        "author": "Mary Madigan",
+        "authorEn": "Mary Madigan",
+        "source": "https://commons.wikimedia.org/wiki/File:Nahal_David_waterfall%2C_Ein_Gedi_(531059035).jpg",
+        "licence": "CC BY 2.0",
+        "licenceUrl": "https://creativecommons.org/licenses/by/2.0/",
+        "captionHe": "מפל בנחל דוד, עין גדי, מאי 2006. צילום מאתר המסלול, לא זיהוי של מפל שולמית או גב חלון ולא תיעוד של מצב המים או הגישה כיום.",
+        "captionEn": "Waterfall at Nahal David, Ein Gedi, May 2006. The route site, not an identification of Shulamit Falls or Window Pool, or a record of current water or access conditions.",
+        "changes": "Resized and converted to WebP; thumbnail cropped. Displayed with a responsive crop."
+      }
+    ]
   }
 }

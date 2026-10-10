@@ -4,7 +4,7 @@ import {readFileSync, statSync} from 'node:fs';
 test('Each checked trail photo has its own directory and reusable gallery record',()=>{
  const data=JSON.parse(readFileSync('src/data/trail-photos.json'));
  for(const [id,photo] of Object.entries(data)) {
-  const assetId=id === "ext-89" ? "ext-96" : id;
+  const assetId=id === "ext-89" ? "ext-96" : id === "ext-112" ? "ext-137" : id;
   assert.equal(photo.src,`/photos/${assetId}/hero.webp`);
   assert.equal(photo.thumbSrc,`/photos/${assetId}/thumb.webp`);
   assert.equal(photo.gallery.length,1);

@@ -1,7 +1,10 @@
 import { defineConfig } from "vite";
+import fs from "node:fs";
+import path from "node:path";
+import {preparePhotos} from "./scripts/photo-assets.mjs";
 import react from "@vitejs/plugin-react";
 export default defineConfig({
-  plugins: [react()],
+  plugins: [{name:"licensed-photo-assets",configResolved(){preparePhotos()},closeBundle(){const manifest=JSON.parse(fs.readFileSync("public/photos/encoded-assets.json","utf8"));for(const asset of manifest)fs.rmSync(path.join("dist",asset.path+".base64"),{force:true})}},react()],
   build: {
     sourcemap:false,
     rollupOptions: {

@@ -6,3 +6,6 @@ dist/
 *.tsbuildinfo
 playwright-report/
 test-results/
+
+public/photos/ext-137/hero.webp
+public/photos/ext-137/thumb.webp
