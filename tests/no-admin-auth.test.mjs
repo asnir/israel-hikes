@@ -1,18 +1,17 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-test('Admin login code and dependencies removed while contact privacy and migration history remain',()=>{
+test('Admin login code and dependencies removed while general hardening and migration history remain',()=>{
  const p=JSON.parse(fs.readFileSync('package.json'));
  for(const dep of ['jose','argon2id','libsodium-wrappers-sumo','@zxcvbn-ts/core','@zxcvbn-ts/language-en','@zxcvbn-ts/language-common'])assert.equal(p.dependencies?.[dep]||p.devDependencies?.[dep],undefined);
  for(const name of ['admin-auth.ts','admin-password.ts','password-runtime.ts','password-lifecycle.ts','password-strength.ts','sodium-factory.ts'])assert.equal(fs.existsSync('worker/'+name),false);
- const worker=fs.readFileSync('worker/index.ts','utf8');assert.ok(!worker.includes('AdminAuth'));assert.ok(!worker.includes('/admin'));assert.ok(worker.includes('ContactGateway'));
+ const worker=fs.readFileSync('worker/index.ts','utf8');assert.ok(!worker.includes('AdminAuth'));assert.ok(!worker.includes('/admin'));assert.ok(!worker.includes('ContactGateway'));
  for(const name of ['wrangler.jsonc','wrangler.preview.jsonc']){
   const config=JSON.parse(fs.readFileSync(name,'utf8').replace(/,\s*([}\]])/g,'$1'));
   assert.deepEqual(config.assets.run_worker_first,['/api/*']);assert.ok(!config.durable_objects.bindings.some(b=>b.name==='ADMIN_AUTH'));
   assert.ok(!Object.keys(config.vars).some(k=>k.startsWith('ADMIN_')));
-  assert.equal(config.migrations.at(-1).tag,'v4-remove-admin-auth');assert.deepEqual(config.migrations.at(-1).deleted_classes,['AdminAuthGateway']);
+  assert.equal(config.migrations.at(-2).tag,'v4-remove-admin-auth');assert.deepEqual(config.migrations.at(-2).deleted_classes,['AdminAuthGateway']);
  }
- assert.ok(fs.readFileSync('worker/contact.ts','utf8').includes('CONTACT_ADMIN_SECRET'));
  assert.ok(fs.existsSync('.github/workflows/security.yml'));assert.ok(fs.existsSync('SECURITY.md'));
 });
 test('Former admin paths use ordinary assets or unknown API handling, not authentication',async()=>{

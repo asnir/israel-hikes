@@ -1,4 +1,3 @@
-import {Link} from "react-router-dom";
 import { language } from "../i18n";
 export default function AccessibilityStatement(){const he=language()==='he';return <main id="main" className="page detail"><h1>{he?'הצהרת נגישות':'Accessibility statement'}</h1>
 <p>{he?'עודכן ב-9 באוקטובר 2026. מטרת האתר היא לאפשר שימוש נוח בעברית ובאנגלית, גם באמצעות מקלדת וטכנולוגיות מסייעות.':'Updated on 9 October 2026. We aim to make this site usable in Hebrew and English, including with a keyboard and assistive technology.'}</p>
@@ -7,7 +6,5 @@ export default function AccessibilityStatement(){const he=language()==='he';retu
 <h2>{he?'בדיקות ומגבלות':'Checks and limitations'}</h2>
 <p>{he?'נבדקו תצוגות ברוחב 390 ו-1440 פיקסלים וניווט בסיסי במקלדת, לצד בדיקות אוטומטיות. הבדיקות אינן אישור לעמידה מלאה בתקן הישראלי ת״י 5568 או ב-WCAG. טרם בוצעה ביקורת נגישות עצמאית עם משתמשי קורא מסך.':'Layouts at 390 and 1440 pixels, basic keyboard use and automated checks have been reviewed. These checks do not certify full compliance with Israeli Standard 5568 or WCAG. An independent accessibility audit with screen-reader users has not yet been completed.'}</p>
 <p>{he?'מפות אינטראקטיביות ושירותי ניווט חיצוניים עשויים להיות פחות נגישים ואינם בשליטתנו. מידע המסלול, נקודת ההתחלה והמקורות מוצגים גם כטקסט. כפתור הנגישות אינו תחליף לנגישות האתר ואינו ערובה משפטית.':'Interactive maps and external navigation services may be less accessible and are outside our control. Trail information, start points and sources are also available as text. The accessibility menu does not replace accessible design or provide a legal guarantee.'}</p>
-<h2>{he?'דיווח על קושי':'Report a barrier'}</h2>
-<p>{he?'אפשר להשתמש בטופס יצירת הקשר באתר לדיווח פרטי, עם כתובת הדף, תיאור הבעיה, הדפדפן והטכנולוגיה המסייעת. אין לשלוח מידע רפואי או סודות. הפנייה אינה מתפרסמת אוטומטית.':'You can use the on-site contact form to send a private report, including the page URL, issue, browser and assistive technology. Do not send medical information or secrets. Nothing is automatically published.'}</p>
-<Link to="/contact">{he?'טופס יצירת קשר':'Contact form'}</Link>
+<p>{he?'ערוץ פניות אינו זמין כרגע באתר.':'A contact channel is not currently available on this site.'}</p>
 </main>}

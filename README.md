@@ -83,7 +83,7 @@ npm run check
 
 `check` validates data/privacy patterns, runs unit tests, builds production assets, and runs browser and axe checks. Browser tests use the local production preview and do not depend on the public geocoder or routing service. `scripts/ui-test.mjs` separately checks the real local Worker flow and needs network access. Required `validate` CI runs unit, build, browser and automated accessibility checks. These checks are not a full accessibility audit.
 
-Accessibility controls include larger text, higher contrast, reduced motion and underlined links. A statement explains tested paths, limits and the private contact form. Do not send medical details or secrets. Visitor submissions are reviewed; sanitized issues require owner approval before publication. Monitoring is operational, separate from this website, and must be configured rather than assumed from repository notifications.
+Accessibility controls include larger text, higher contrast, reduced motion and underlined links. A statement explains tested paths and limits. No contact form or visitor-submission inbox is currently available.
 
 Regional photographs are stored locally with individual attribution and licence records in `src/data/photos.json`. They are context, not pictures of a specific trail or current conditions. Missing photo coverage is explicit. Map and GPX sections retain original source links: Israel Hiking Map is currently unsupported, so source availability is not guaranteed. No track is fabricated or relicensed. External maps load only on request.
 
@@ -91,13 +91,9 @@ Regional photographs are stored locally with individual attribution and licence 
 
 Store `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` as repository Actions secrets, never in code. The token must be restricted to the intended account. Confirm Workers Free in that account and approve the deployment route before enabling it. The workflow stays disabled until the repository Actions variable `CLOUDFLARE_DEPLOY_ENABLED` is exactly `true`. Only main pushes after passing `validate` may deploy; pull requests never receive deployment secrets. A read-only token-active check runs first; it cannot certify token scope or the billing plan. The pinned official Cloudflare action deploys only the Worker named `israel-hikes`, not other Workers. No step upgrades billing. Changes to an already-paid account can still incur usage charges, so plan verification is required before enabling deployment.
 
-## Private contact form
-
-Setup and secret boundaries: see `CONTACT_SETUP.md`. Bilingual private-review form, text fields only and no uploads. SQLite Durable Object stores allowlisted text for up to30days. No automatic public issues, PRs or edits. Disabled until genuine Turnstile keys, exact hostnames and per-environment inbox secrets are configured. An hourly private-inbox watcher must be set up separately after activation; this build alone does not provide ongoing alerts. Unit and UI tests use mocked CAPTCHA, do not claim live activation.
-
 ## Read-only structured trail data
 
-`GET /api/catalog` lists every trail ID with summary, cautions and public source links. `GET /api/trails/{id}` returns route facts and public detail fields without internal review metadata or fixed-origin driving estimates. Public categories are walking routes and trail sections. HEAD is supported; other methods return 405 and unknown IDs return JSON 404, not the SPA fallback. Catalog reads use static assets, not the contact database or an upstream provider, and stay available when upstream services are disabled.
+`GET /api/catalog` lists every trail ID with summary, cautions and public source links. `GET /api/trails/{id}` returns route facts and public detail fields without internal review metadata or fixed-origin driving estimates. Public categories are walking routes and trail sections. HEAD is supported; other methods return 405 and unknown IDs return JSON 404, not the SPA fallback. Catalog reads use static assets, not a database or an upstream provider, and stay available when upstream services are disabled.
 
 `sitemap.xml` lists public pages, including each trail and long-trail hub. `llms.txt` describes discovery and safety limits. Hebrew facts are preserved. Missing start points are `null`; coordinates describe start points, not route tracks. Source-check dates are snapshots, not live verification. These feeds grant no new rights to third-party data or photos. No MCP, agent account or write API is added.
 

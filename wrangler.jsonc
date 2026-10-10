@@ -9,15 +9,12 @@
     "run_worker_first": ["/api/*"],
   },
   "durable_objects": {
-    "bindings": [{ "name": "UPSTREAM", "class_name": "UpstreamGateway" }, {"name":"CONTACT","class_name":"ContactGateway"}],
+    "bindings": [{ "name": "UPSTREAM", "class_name": "UpstreamGateway" }],
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["UpstreamGateway"] }, {"tag":"v2","new_sqlite_classes":["ContactGateway"]},{"tag":"v3","new_sqlite_classes":["AdminAuthGateway"]},{"tag":"v4-remove-admin-auth","deleted_classes":["AdminAuthGateway"]}],
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["UpstreamGateway"] }, {"tag":"v2","new_sqlite_classes":["ContactGateway"]},{"tag":"v3","new_sqlite_classes":["AdminAuthGateway"]},{"tag":"v4-remove-admin-auth","deleted_classes":["AdminAuthGateway"]},{"tag":"v5-remove-contact","deleted_classes":["ContactGateway"]}],
   "vars": {
     "NOMINATIM_URL": "https://nominatim.openstreetmap.org",
     "OSRM_URL": "https://router.project-osrm.org",
     "SERVICE_ENABLED": "true",
-    "CONTACT_ENABLED":"true",
-    "TURNSTILE_SITE_KEY":"0x4AAAAAAFSJ_s55yp2kS7m6",
-    "CONTACT_HOSTNAME":"israel-hikes.amikamsnir.workers.dev",
   },
 }

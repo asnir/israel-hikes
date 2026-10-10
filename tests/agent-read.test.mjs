@@ -46,7 +46,7 @@ test('Public feeds preserve source cautions and contain no owner/contact/account
  const text=await fs.readFile(`${root}/data/catalog.json`,'utf8');
  assert(!/lastSourceCheck|"provenance"|"category": "(?:verified|extended)"/.test(text));
  assert(!/docs\.google\.com\/document|CONTACT_ADMIN|TURNSTILE|requestId|visitorEmail/.test(text));
- const worker=await fs.readFile('worker/index.ts','utf8');assert(worker.indexOf('catalogResponse(request')<worker.indexOf('env.SERVICE_ENABLED'));assert(worker.indexOf('if(catalogRead)')<worker.indexOf('env.CONTACT.get'));
+ const worker=await fs.readFile('worker/index.ts','utf8');assert(worker.indexOf('catalogResponse(request')<worker.indexOf('env.SERVICE_ENABLED'));assert(worker.indexOf('if(catalogRead)')<worker.indexOf('env.UPSTREAM.get'));assert.ok(!worker.includes('env.CONTACT.get'));
 });
 test('Generated feeds and licensed photo assets are part of exact deployment verification',async()=>{
  await fs.mkdir(root+'/photos',{recursive:true});
