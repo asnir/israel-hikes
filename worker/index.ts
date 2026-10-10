@@ -1,3 +1,4 @@
+import {loadPasswordHasher} from "./password-runtime";
 import {AdminAuth,type AdminEnv} from "./admin-auth";
 import {catalogResponse} from "./catalog";
 import {ContactHandler,enabled,type ContactEnv} from "./contact";
@@ -191,4 +192,4 @@ export class UpstreamGateway extends DurableObject<Env> {
 
 export class ContactGateway extends DurableObject<Env>{private handler=new ContactHandler(this.ctx.storage,this.env);fetch(request:Request){return this.handler.fetch(request)}alarm(){return this.handler.alarm()}}
 
-export class AdminAuthGateway extends DurableObject<Env>{private handler=new AdminAuth(this.ctx.storage,this.env,p=>this.ctx.waitUntil(p));fetch(request:Request){return this.handler.fetch(request)}alarm(){return this.handler.alarm()}}
+export class AdminAuthGateway extends DurableObject<Env>{private handler=new AdminAuth(this.ctx.storage,this.env,p=>this.ctx.waitUntil(p),()=>Date.now(),loadPasswordHasher);fetch(request:Request){return this.handler.fetch(request)}alarm(){return this.handler.alarm()}}
