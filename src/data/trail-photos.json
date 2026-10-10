@@ -253,5 +253,59 @@
         "changes": "Resized and converted to WebP; thumbnail cropped. Displayed with a responsive crop."
       }
     ]
+  },
+  "ext-64": {
+    "src": "/photos/ext-64/hero.webp",
+    "thumbSrc": "/photos/ext-64/thumb.webp",
+    "title": "Amud stream 2.JPG",
+    "author": "Pacman",
+    "authorEn": "Pacman",
+    "source": "https://commons.wikimedia.org/wiki/File:Amud_stream_2.JPG",
+    "licence": "Public domain",
+    "licenceUrl": "https://commons.wikimedia.org/wiki/File:Amud_stream_2.JPG#Licensing",
+    "captionHe": "פלג בנחל עמוד בגליל העליון, ינואר 2006. לא זיהוי של בריכה מסוימת או תיעוד של זרימה, רחצה וגישה כיום.",
+    "captionEn": "A stream in Nahal Amud in the Upper Galilee, January 2006. Not an identification of a particular pool or a record of current flow, swimming or access.",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+    "gallery": [
+      {
+        "src": "/photos/ext-64/hero.webp",
+        "title": "Amud stream 2.JPG",
+        "author": "Pacman",
+        "authorEn": "Pacman",
+        "source": "https://commons.wikimedia.org/wiki/File:Amud_stream_2.JPG",
+        "licence": "Public domain",
+        "licenceUrl": "https://commons.wikimedia.org/wiki/File:Amud_stream_2.JPG#Licensing",
+        "captionHe": "פלג בנחל עמוד בגליל העליון, ינואר 2006. לא זיהוי של בריכה מסוימת או תיעוד של זרימה, רחצה וגישה כיום.",
+        "captionEn": "A stream in Nahal Amud in the Upper Galilee, January 2006. Not an identification of a particular pool or a record of current flow, swimming or access.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      }
+    ]
+  },
+  "ext-44": {
+    "src": "/photos/ext-64/hero.webp",
+    "thumbSrc": "/photos/ext-64/thumb.webp",
+    "title": "Amud stream 2.JPG",
+    "author": "Pacman",
+    "authorEn": "Pacman",
+    "source": "https://commons.wikimedia.org/wiki/File:Amud_stream_2.JPG",
+    "licence": "Public domain",
+    "licenceUrl": "https://commons.wikimedia.org/wiki/File:Amud_stream_2.JPG#Licensing",
+    "captionHe": "פלג בנחל עמוד בגליל העליון, ינואר 2006. לא זיהוי של בריכה מסוימת או תיעוד של זרימה, רחצה וגישה כיום.",
+    "captionEn": "A stream in Nahal Amud in the Upper Galilee, January 2006. Not an identification of a particular pool or a record of current flow, swimming or access.",
+    "changes": "Resized and converted to WebP; displayed with a responsive crop.",
+    "gallery": [
+      {
+        "src": "/photos/ext-64/hero.webp",
+        "title": "Amud stream 2.JPG",
+        "author": "Pacman",
+        "authorEn": "Pacman",
+        "source": "https://commons.wikimedia.org/wiki/File:Amud_stream_2.JPG",
+        "licence": "Public domain",
+        "licenceUrl": "https://commons.wikimedia.org/wiki/File:Amud_stream_2.JPG#Licensing",
+        "captionHe": "פלג בנחל עמוד בגליל העליון, ינואר 2006. לא זיהוי של בריכה מסוימת או תיעוד של זרימה, רחצה וגישה כיום.",
+        "captionEn": "A stream in Nahal Amud in the Upper Galilee, January 2006. Not an identification of a particular pool or a record of current flow, swimming or access.",
+        "changes": "Resized and converted to WebP; displayed with a responsive crop."
+      }
+    ]
   }
 }

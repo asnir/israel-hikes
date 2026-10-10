@@ -8,5 +8,15 @@
     "path": "photos/ext-137/thumb.webp",
     "size": 30080,
     "sha256": "a4e951da624633acb2be9af8fed379a8ab1ab838c31b63ef4d06ff9c504187d8"
+  },
+  {
+    "path": "photos/ext-64/hero.webp",
+    "size": 281606,
+    "sha256": "df219f6c04997ddc5b97f4baff0b838fe67c9beffcecd8aab043060c2ed8c840"
+  },
+  {
+    "path": "photos/ext-64/thumb.webp",
+    "size": 11328,
+    "sha256": "e1f204e4b661219b6ff6dce89bf26c77198f2fc7c0e5a434527b0e305848fd11"
   }
 ]
