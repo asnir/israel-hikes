@@ -11,7 +11,7 @@
     "deploy": "wrangler deploy",
     "validate": "node scripts/validate-data.mjs",
     "test:unit": "node --test tests/*.test.mjs",
-    "test:e2e": "node scripts/critical-ui-test.mjs && node scripts/i18n-test.mjs && node scripts/contact-ui-test.mjs && node scripts/user-journey-test.mjs && node scripts/inbox-ui-test.mjs && node scripts/drive-info-ui-test.mjs && node scripts/card-navigation-ui-test.mjs && node scripts/location-ui-test.mjs && node scripts/thumbnail-ui-test.mjs && node scripts/public-labels-ui-test.mjs && node scripts/david-photo-ui-test.mjs && node scripts/preferences-ui-test.mjs && node scripts/amud-photo-ui-test.mjs && node scripts/detail-origin-ui-test.mjs && node scripts/amud-gallery-ui-test.mjs && node scripts/more-galleries-ui-test.mjs",
+    "test:e2e": "node scripts/critical-ui-test.mjs && node scripts/i18n-test.mjs && node scripts/contact-ui-test.mjs && node scripts/user-journey-test.mjs && node scripts/inbox-ui-test.mjs && node scripts/drive-info-ui-test.mjs && node scripts/card-navigation-ui-test.mjs && node scripts/location-ui-test.mjs && node scripts/thumbnail-ui-test.mjs && node scripts/public-labels-ui-test.mjs && node scripts/david-photo-ui-test.mjs && node scripts/preferences-ui-test.mjs && node scripts/amud-photo-ui-test.mjs && node scripts/detail-origin-ui-test.mjs && node scripts/amud-gallery-ui-test.mjs && node scripts/more-galleries-ui-test.mjs && node scripts/admin-auth-ui-test.mjs",
     "test:a11y": "node scripts/accessibility-test.mjs",
     "check": "npm run lint && npm run lint:css && npm run typecheck && npm run validate && npm run test:unit && npm run build && npm run test:e2e && npm run test:a11y",
     "trail": "node scripts/trail.mjs",
@@ -28,6 +28,7 @@
   "dependencies": {
     "@fontsource/heebo": "^5.3.0",
     "i18next": "^26.4.2",
+    "jose": "6.2.12",
     "leaflet": "^1.9.4",
     "lucide-react": "^1.54.0",
     "react": "^19.3.0",
