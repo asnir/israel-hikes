@@ -28,5 +28,25 @@
     "path": "photos/ext-64/02.webp",
     "sha256": "d6abed260c8f7fc7ccc58a1a65decc536a166cf6154f80a9056588f1ed05294e",
     "size": 308148
+  },
+  {
+    "path": "photos/hanadiv/01.webp",
+    "sha256": "a701430289b4249dd8ea5f4a0c0e938001df87860ba1a5d5b493d77cd929f035",
+    "size": 189726
+  },
+  {
+    "path": "photos/hanadiv/02.webp",
+    "sha256": "cdf05d8b44beb4b57114bd992bcd46b46fc46e3d01c94e01165e75b698a025e3",
+    "size": 184248
+  },
+  {
+    "path": "photos/shofet/01.webp",
+    "sha256": "06dab45b9a6a9e9910ba965adec959f7697a00b8f8c2bb44b38f7bac3fb8b416",
+    "size": 162472
+  },
+  {
+    "path": "photos/shofet/02.webp",
+    "sha256": "aa33fb3f24de3b3aeebe5ed13a183d03af6672b1abfbc10d6220e69a30f8a834",
+    "size": 271064
   }
 ]
