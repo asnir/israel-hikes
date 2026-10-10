@@ -24,14 +24,6 @@ export function haversine(a: [number, number], b: [number, number]) {
   );
 }
 export function estimate(t: Trail, city: string): Drive | null {
-  if (city === "legacy") {
-    const d = t.access?.ramatGan;
-    return d ? { ...d, method: "legacy" } : null;
-  }
-  if (city === "jerusalem-legacy") {
-    const d = t.access?.jerusalem;
-    return d ? { ...d, method: "legacy" } : null;
-  }
   const m = (
     matrix as Record<string, Record<string, { km: number; minutes: number }>>
   )[city]?.[t.id];
