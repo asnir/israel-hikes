@@ -33,7 +33,7 @@ test('Public projection hides review metadata and fixed-origin drive fields with
 test('Discovery covers public pages, not admin inbox; XML and llms discovery refer to real IDs',async()=>{
  const sitemap=await fs.readFile(`${root}/sitemap.xml`,'utf8');const llms=await fs.readFile(`${root}/llms.txt`,'utf8');
  for(const trail of catalog)assert(sitemap.includes(`/trail/${trail.id}</loc>`));
- assert(!sitemap.includes('contact-inbox'));assert.match(llms,/\/api\/catalog/);assert.match(llms,/read.only/i);assert.match(llms,/licen/i);
+ assert(!sitemap.includes('/contact'));assert(!sitemap.includes('contact-inbox'));assert.match(llms,/\/api\/catalog/);assert.match(llms,/read.only/i);assert.match(llms,/licen/i);
 });
 test('Read endpoints never reach upstream/contact, allow only GET/HEAD, reject malformed and unknown IDs',async()=>{
  const assets={fetch:async request=>{const path=new URL(request.url).pathname;try{return new Response(await fs.readFile(root+path),{headers:{'Content-Type':'application/json'}});}catch{return new Response('<html>SPA</html>',{headers:{'Content-Type':'text/html'}});}}};
