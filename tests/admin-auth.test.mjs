@@ -23,7 +23,13 @@ class Store {
   async list() {
     return new Map(this.rows);
   }
-  async setAlarm() {}
+  alarmTime = null;
+  async getAlarm() {
+    return this.alarmTime;
+  }
+  async setAlarm(t) {
+    this.alarmTime = t;
+  }
 }
 const origin = "https://hikes.example";
 const env = {
@@ -452,4 +458,68 @@ test("configuration revocation, wrong JWT audience/alg/signature, duplicate cook
     duplex: "half",
   });
   assert.equal((await s2.h.fetch(streamed)).status, 413);
+});
+test("unfinished body never blocks logout/read and times out without mutation", async () => {
+  const s = setup(),
+    session = await login(s),
+    c = cookie(session);
+  const stream = new ReadableStream({ start() {} });
+  const stalled = s.h.fetch(
+    new Request(origin + "/api/admin/auth/request", {
+      method: "POST",
+      headers: {
+        Origin: origin,
+        "Content-Type": "application/json",
+        "CF-Connecting-IP": "192.0.2.1",
+      },
+      body: stream,
+      duplex: "half",
+    }),
+  );
+  const fast = await Promise.race([
+    s.h.fetch(request("/api/admin/auth/logout", {}, c)),
+    new Promise((resolve) =>
+      setTimeout(() => resolve(new Response("", { status: 599 })), 100),
+    ),
+  ]);
+  assert.equal(fast.status, 200);
+  assert.equal((await stalled).status, 408);
+});
+test("global denial bounds IP cardinality and traffic cannot postpone cleanup; expired capacity recovers", async () => {
+  const s = setup();
+  s.store.alarmTime = null;
+  for (let i = 0; i < 511; i++) {
+    await s.h.fetch(
+      request(
+        "/api/admin/auth/request",
+        { email: "outsider@example.invalid" },
+        undefined,
+        { "CF-Connecting-IP": `192.0.2.${i}` },
+      ),
+    );
+    if (i === 0) s.advance(1);
+  }
+  assert.ok(s.store.rows.size <= 110);
+  const alarm = s.store.alarmTime;
+  s.advance(1000);
+  await s.h.fetch(
+    request(
+      "/api/admin/auth/request",
+      { email: "outsider@example.invalid" },
+      undefined,
+      { "CF-Connecting-IP": "192.0.2.252" },
+    ),
+  );
+  assert.equal(s.store.alarmTime, alarm);
+  s.advance(3600001);
+  await s.h.fetch(
+    request("/api/admin/auth/request", { email: "first@example.invalid" }),
+  );
+  await s.flush();
+  assert.equal(s.mail.length, 1);
+  assert.ok(s.store.rows.size < 20);
+  const s2 = setup();
+  for (let i = 0; i < 512; i++) s2.store.rows.set("old:" + i, { expires: 1 });
+  assert.equal((await challenge(s2)).r.status, 202);
+  assert.equal(s2.mail.length, 1);
 });
