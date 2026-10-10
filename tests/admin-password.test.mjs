@@ -282,3 +282,43 @@ test("pepper rotation revokes existing password sessions, failed credentials sto
   assert.ok(!state.includes(email));
   assert.ok(!state.includes(secret));
 });
+test("IP-throttled attempts cannot consume global password budget or block another admin IP", async () => {
+  const s = await setupAuth();
+  for (let i = 0; i < 50; i++)
+    await s.h.fetch(
+      req({ username: "outsider@example.invalid", password: pw }),
+    );
+  assert.equal(s.calls(), 5);
+  const global = [...s.rows].find(([k]) =>
+    k.startsWith("rate:password-global:"),
+  )[1];
+  assert.equal(global.count, 5);
+  const r = await s.h.fetch(
+    req({ username: email, password: pw }, undefined, {
+      "CF-Connecting-IP": "192.0.2.2",
+    }),
+  );
+  assert.equal(r.status, 200);
+});
+test("pepper cannot equal session signing key; account denial does not spend global budget", async () => {
+  const s = await setupAuth();
+  s.e.ADMIN_PASSWORD_PEPPER = keySecret;
+  assert.equal(
+    (await s.h.fetch(req({ username: email, password: pw }))).status,
+    503,
+  );
+  const s2 = await setupAuth();
+  for (let i = 0; i < 30; i++)
+    await s2.h.fetch(
+      req(
+        { username: email, password: "wrong testing passphrase" },
+        undefined,
+        { "CF-Connecting-IP": `192.0.2.${i}` },
+      ),
+    );
+  const global = [...s2.rows].find(([k]) =>
+    k.startsWith("rate:password-global:"),
+  )[1];
+  assert.equal(global.count, 5);
+  assert.equal(s2.calls(), 5);
+});
