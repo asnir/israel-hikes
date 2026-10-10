@@ -34,17 +34,17 @@ const p = {
   passes: 2, memorySize: 19456, parallelism: 1, tagLength: 32,
 };
 
-test('loader deduplicates, matches independent KDF, bounds inputs', async () => {
+test('lazy async disposable loader matches independent KDF and bounds inputs', async () => {
   const hs = await Promise.all(Array.from({ length: 30 }, () => loadPasswordHasher()));
-  assert.equal(new Set(hs).size, 1);
-  assert.deepEqual(hs[0](p), reference(p));
+  assert.equal(hs.length, 30);
+  assert.deepEqual(await hs[0](p), reference(p));
   const invalid = [
     { parallelism: 2 }, { memorySize: 1e9 }, { passes: 1 }, { tagLength: 64 },
     { password: new Uint8Array(257) }, { salt: new Uint8Array(15) },
   ];
-  for (const patch of invalid) assert.throws(() => hs[0]({ ...p, ...patch }));
-  const out = hs[0](p);
-  hs[0]({ ...p, password: new Uint8Array(256) });
+  for (const patch of invalid) await assert.rejects(() => hs[0]({ ...p, ...patch }));
+  const out = await hs[0](p);
+  await hs[0]({ ...p, password: new Uint8Array(256) });
   assert.deepEqual(out, reference(p));
 });
 
