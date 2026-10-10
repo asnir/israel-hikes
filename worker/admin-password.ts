@@ -6,7 +6,7 @@ export type PasswordHasher = (params: {
   passes: number;
   memorySize: number;
   tagLength: number;
-}) => Uint8Array;
+}) => Uint8Array | Promise<Uint8Array>;
 export interface Credential {
   algorithm: "argon2id";
   version: 19;
@@ -55,10 +55,10 @@ async function pepperKey(secret: string, usage: "sign" | "verify") {
     [usage],
   );
 }
-function derive(password: string, salt: string, hash: PasswordHasher) {
+async function derive(password: string, salt: string, hash: PasswordHasher) {
   const input = encoder.encode(password);
   try {
-    return hash({
+    return await hash({
       password: input,
       salt: bytes(salt),
       parallelism: 1,
@@ -77,7 +77,7 @@ export async function makeCredential(
 ): Promise<Credential> {
   if (!validPassword(password)) throw Error("Invalid password");
   const salt = hex(crypto.getRandomValues(new Uint8Array(16))),
-    derived = derive(password, salt, hash);
+    derived = await derive(password, salt, hash);
   try {
     const digest = hex(
       new Uint8Array(
@@ -110,7 +110,7 @@ export async function verifyPassword(
   secret: string,
 ) {
   if (!validPassword(password) || !validCredential(credential)) return false;
-  const derived = derive(password, credential.salt, hash);
+  const derived = await derive(password, credential.salt, hash);
   try {
     return await crypto.subtle.verify(
       "HMAC",

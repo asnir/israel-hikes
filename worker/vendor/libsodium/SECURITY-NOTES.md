@@ -1,9 +1,9 @@
-# Adapter security notes
+# Best-effort WASM heap hygiene trial
 
-The integrity-checked assets come from libsodium-sumo and libsodium-wrappers-sumo0.8.4. Extraction preserves upstream license notices and uses the official high-level crypto_pwhash wrapper with its instantiateWasm loader hook. This packaging adapter has not had an independent cryptographic audit.
+Pinned official libsodium0.8.4core and wrapper body, no custom cryptographic ABI. Extractor hash-checks original files before enclosing the unchanged wrapper in a per-instance creation factory. Dependency changes must re-review that transformation, generated manifest and declarations.
 
-Initialization must occur in a handler. Failed initialization disables password hashing until isolate replacement; later/concurrent calls share the same rejected promise and do not retry RNG work or choose another algorithm. Auth fails closed without creating a session.
+Each fixed-parameter KDF uses a fresh instance. Memory pre-grown to32MiB before any password bytes enter it. Captured buffer must stay identical after computation, and returned output must be a standalone JS copy. Whole captured linear memory is overwritten in finally and the instance is never reused. One active instance, no unbounded queue. Transient init failures receive sanitized503with1second backoff; buffer-growth/copy-integrity failures lock out hashing until isolate recycle.
 
-The official wrapper does not fully wipe derived output in WASM memory. Caller-side wiping cannot promise complete internal zeroization. This residual risk needs an explicit security decision before enabling auth. Preview auth stays disabled.
+This is heap hygiene, not guaranteed zeroization. Request JSON strings, data.password, TextEncoder/body buffers, WebCrypto/V8/host copies and transient bytes are not fully controllable. No body logging, password-bearing error messages or claims about DO lifetime. Existing peppered HMAC,256-byte cap and caller-side awaited wipes remain required. Captured init-failure memory is wiped, but every host/init temporary cannot be proven erased.
 
-Generated assets are ignored and must be regenerated with the verified extractor before every Worker bundle/deploy, including the production job that promotes already-tested static assets. Static dist promotion stays unchanged. The old argon2id package is a dev-only independent test fixture, not the production runtime.
+Activation still blocked pending independent generated-wrapper review, rewritten old tests, real workerd load/RSS/GC measurements and preview CPU/total-memory telemetry. Auth remains disabled.

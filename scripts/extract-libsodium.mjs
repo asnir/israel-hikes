@@ -37,10 +37,15 @@ for (const name of ['libsodium-sumo', 'libsodium-wrappers-sumo']) {
 }
 // Remove only pinned inline bytes. The required hook prevents fallback loading.
 fs.writeFileSync(`${OUTPUT}/raw.mjs`, raw.replace(found[0][0], '""'));
-fs.writeFileSync(
-  `${OUTPUT}/wrapper.mjs`,
-  wrapper.replace(upstreamImport, 'import e from"../../sodium-factory";'),
-);
+// Isolate the unchanged upstream wrapper body in a factory for one-use instances.
+const exportIndex = wrapper.lastIndexOf('export default t;');
+if (exportIndex < 0 || wrapper.indexOf('export default t;') !== exportIndex) {
+  throw Error('Unexpected wrapper export layout');
+}
+const body = wrapper.slice(upstreamImport.length, exportIndex);
+const factoryWrapper = 'import e from"../../sodium-factory";export async function createSodium(){' +
+  body + 'try{await s;return t;}catch(error){t.libsodium?.HEAPU8?.fill(0);throw error;}}';
+fs.writeFileSync(`${OUTPUT}/wrapper.mjs`, factoryWrapper);
 const outputs = Object.fromEntries(
   ['sodium.wasm', 'raw.mjs', 'wrapper.mjs'].map((name) => [
     name,
@@ -50,6 +55,7 @@ const outputs = Object.fromEntries(
     },
   ]),
 );
-const manifest = { version: '0.8.4', upstream: expected, outputs };
+const instancePolicy = 'one-use wrapper factory; whole WASM memory wipe after output copy; never reuse';
+const manifest = { instancePolicy, version: '0.8.4', upstream: expected, outputs };
 fs.writeFileSync(`${OUTPUT}/manifest.json`, JSON.stringify(manifest, null, 2) + '\n');
 console.log(manifest);

@@ -29,7 +29,7 @@ await build({
   bundle: true, format: 'esm', platform: 'node',
 });
 
-test('fresh isolate failed initialization is sticky, no RNG retries, auth503 and no session', () => {
+test('lazy runtime RNG failure backs off, auth503 no session and retry after cooldown', () => {
   const body = `
 import assert from 'node:assert/strict';
 import {webcrypto} from 'node:crypto';
@@ -39,15 +39,12 @@ Object.defineProperty(globalThis, 'crypto', { configurable: true, value: {
  getRandomValues() { rngCalls++; throw Error('synthetic RNG failure'); }
 }});
 const {loadPasswordHasher} = await import('/tmp/sodium-failure-runtime.mjs');
-const first = loadPasswordHasher();
-const later = loadPasswordHasher();
-assert.equal(first, later);
-const results = await Promise.allSettled([first, later]);
-assert.ok(results.every(r => r.status === 'rejected'));
-const count = rngCalls;
-assert.ok(count > 0);
-await assert.rejects(loadPasswordHasher());
-assert.equal(rngCalls, count);
+const hasher=await loadPasswordHasher();
+assert.equal(rngCalls,0);
+const params={password:new Uint8Array(32),salt:new Uint8Array(16),passes:2,memorySize:19456,parallelism:1,tagLength:32};
+await assert.rejects(()=>hasher(params));
+const count=rngCalls;assert.ok(count>0);
+await assert.rejects(()=>hasher(params));assert.equal(rngCalls,count);
 const {AdminAuth} = await import('/tmp/sodium-failure-auth.mjs');
 const rows = new Map();
 const storage = {get:async k=>rows.get(k),put:async(k,v)=>rows.set(k,v),
@@ -67,6 +64,8 @@ assert.equal(r.status,503);
 assert.equal(r.headers.get('Set-Cookie'),null);
 assert.ok(![...rows.keys()].some(k=>k.startsWith('session:')));
 assert.equal(rngCalls,count);
+await new Promise(r=>setTimeout(r,1050));
+await assert.rejects(()=>hasher(params));assert.ok(rngCalls>count);
 `;
   fs.writeFileSync('/tmp/sodium-fresh-failure.mjs', body);
   const result = spawnSync(process.execPath, ['/tmp/sodium-fresh-failure.mjs'], {

@@ -5,3 +5,5 @@ Use the Security tab's "Report a vulnerability" option to send a private report.
 
 ## Supported version
 Security fixes target the current deployed version and the main branch.
+
+Detected WASM memory growth locks the runtime closed. An unwipeable copy may already have existed in freed memory; the assertion is detection, not proof of all-copy erasure. Repeated transient-unavailability telemetry and real AdminAuth DO multi-batch memory pressure remain activation gates.
