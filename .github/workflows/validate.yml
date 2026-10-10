@@ -33,7 +33,7 @@ jobs:
       - run: npm run test:a11y
   deploy-preview:
     needs: [validate, secrets, security]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.CLOUDFLARE_DEPLOY_ENABLED == 'true'
+    if: vars.CLOUDFLARE_DEPLOY_ENABLED == 'true' && ((github.event_name == 'push' && github.ref == 'refs/heads/main') || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'feat/d1-read-foundation'))
     runs-on: ubuntu-latest
     timeout-minutes: 10
     concurrency:
