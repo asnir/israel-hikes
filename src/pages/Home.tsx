@@ -1,3 +1,4 @@
+import { loadPreferences, savePreferences, defaultPreferences } from "../lib/discovery-preferences";
 import i18n, { tr, display } from "../i18n";
 import { matches } from "../lib/filter";
 import { lazy, Suspense, useMemo, useState, useRef, useEffect } from "react";
@@ -13,12 +14,14 @@ import { useSaved } from "../lib/saved";
 import Hero from "../components/Hero";
 import FilterFields, { initialFilters, type Filters } from "../components/Filters";
 export default function Home() {
-  const [q, Q] = useState(""),
-    [f, F] = useState<Filters>(initialFilters),
-    [view, V] = useState<"grid" | "map">("grid"),
+  const [restored] = useState(loadPreferences);
+  const [storageAvailable, StorageAvailable] = useState(true);
+  const [q, Q] = useState(restored.search),
+    [f, F] = useState<Filters>(restored.filters),
+    [view, V] = useState<"grid" | "map">(restored.view),
     [lim, L] = useState(24),
     [advanced, A] = useState(false),
-    [city, C] = useState(""),
+    [city, C] = useState(restored.city),
     [origin, O] = useState<{
       point: [number, number];
       label: string;
@@ -28,12 +31,18 @@ export default function Home() {
     [routing, BR] = useState(false),
     [routingStatus, RS] = useState(""),
     [selected, S] = useState<Trail | null>(null),
-    [onlySaved, OS] = useState(false),
-    [sort, Sort] = useState("default");
+    [onlySaved, OS] = useState(restored.onlySaved),
+    [sort, Sort] = useState(restored.sort);
   const {
     saved,
     toggle
   } = useSaved();
+  useEffect(() => { StorageAvailable(savePreferences({city,search:q,filters:f,sort,view,onlySaved})); }, [city,q,f,sort,view,onlySaved]);
+  function resetPreferences() {
+    const empty=defaultPreferences();
+    Q(empty.search);F(empty.filters);C(empty.city);Sort(empty.sort);V(empty.view);OS(false);L(24);A(false);
+    originVersion.current++;O(null);R({});RS("");S(null);
+  }
   const originVersion = useRef(0);
   const update = (k: keyof Filters, v: string) => {
     F({
@@ -134,6 +143,10 @@ export default function Home() {
               <small>{tr("בלחיצה על חישוב כביש, נקודת המוצא נשלחת לשירות OSRM. אין שליחה אוטומטית.")}</small>
               {display(routingStatus && <p role="status">{display(routingStatus)}</p>)}
             </div>)}
+          <div className="preference-controls">
+            <small>{tr(storageAvailable ? "הבחירות נשמרות בדפדפן הזה בלבד. מיקום וכתובות אינם נשמרים." : "הדפדפן אינו מאפשר שמירת בחירות. אפשר להמשיך לגלוש כרגיל.")}</small>
+            <button type="button" className="button" onClick={resetPreferences}>{tr("איפוס הבחירות")}</button>
+          </div>
           <div className="filter-footer">
             <p>{tr("מרחקים תלויים בנקודת המוצא שנבחרה. אלה אומדנים, לא אורך מסלול ההליכה.")}</p>
             {display((active > 0 || q) && <button onClick={() => {
