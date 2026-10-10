@@ -1,5 +1,3 @@
-import ContactInbox from "./pages/ContactInbox";
-import Contact from "./pages/Contact";
 import AccessibilityMenu from "./components/AccessibilityMenu";
 import AccessibilityStatement from "./pages/AccessibilityStatement";
 import { useTranslation } from "react-i18next";
@@ -26,7 +24,6 @@ function Header() {
         <Link to="/">{tr("מסלולים")}</Link>
         <Link to="/long">{tr("שבילים ארוכים")}</Link>
         <Link to="/about">{tr("על המאגר")}</Link>
-        <Link to="/contact">{language()==="he"?"יצירת קשר":"Contact"}</Link>
       </nav>
       <div className="language-switch" role="group" aria-label={language() === "he" ? "שפת האתר" : "Site language"}>
         <button type="button" lang="he" aria-pressed={language() === "he"} onClick={() => i18n.changeLanguage("he")}>עברית</button>
@@ -59,8 +56,6 @@ export default function App() {
         <Route path="/trail/:id" element={<TrailDetail />} />
         <Route path="/long" element={<LongHub />} />
         <Route path="/long/:id" element={<LongDetail />} />
-        <Route path="/contact-inbox" element={<ContactInbox />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/accessibility" element={<AccessibilityStatement />} />
         <Route path="/about" element={<About />} />
         <Route path="*" element={<NotFound />} />

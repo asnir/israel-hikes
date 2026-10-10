@@ -1,9 +1,7 @@
 import {catalogResponse} from "./catalog";
-import {ContactHandler,enabled,type ContactEnv} from "./contact";
 import { DurableObject } from "cloudflare:workers";
 /** Cloudflare Worker: static SPA + rate-limited, cached upstream services. */
-interface Env extends ContactEnv {
-  CONTACT: DurableObjectNamespace;
+interface Env {
   ASSETS: Fetcher;
   UPSTREAM: DurableObjectNamespace;
   NOMINATIM_URL?: string;
@@ -17,8 +15,6 @@ export default {
     if (!url.pathname.startsWith("/api/")) return env.ASSETS.fetch(request);
     const catalogRead=await catalogResponse(request,env.ASSETS);
     if(catalogRead)return catalogRead;
-    if(url.pathname==="/api/contact-config")return Response.json({enabled:enabled(env),siteKey:enabled(env)?env.TURNSTILE_SITE_KEY:null},{headers:{"Cache-Control":"no-store"}});
-    if(url.pathname==="/api/contact"||url.pathname.startsWith("/api/contact-inbox"))return env.CONTACT.get(env.CONTACT.idFromName("contact")).fetch(request);
     if (env.SERVICE_ENABLED === "false")
       return Response.json({ error: "Services disabled" }, { status: 503 });
     if (
@@ -185,5 +181,3 @@ export class UpstreamGateway extends DurableObject<Env> {
       await this.ctx.storage.setAlarm(Date.now() + 86400000);
   }
 }
-
-export class ContactGateway extends DurableObject<Env>{private handler=new ContactHandler(this.ctx.storage,this.env);fetch(request:Request){return this.handler.fetch(request)}alarm(){return this.handler.alarm()}}
