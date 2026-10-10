@@ -12,7 +12,9 @@
     "bindings": [{ "name": "UPSTREAM", "class_name": "UpstreamGateway" }, {"name":"CONTACT","class_name":"ContactGateway"}],
   },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["UpstreamGateway"] }, {"tag":"v2","new_sqlite_classes":["ContactGateway"]}],
+  "d1_databases": [{"binding":"TRAILS_DB","database_name":"israel-hikes-preview-trails","database_id":"953f3229-bfd0-4d72-a25c-e95d3c08aaa3"}],
   "vars": {
+    "TRAIL_READ_SOURCE":"d1",
     "NOMINATIM_URL": "https://nominatim.openstreetmap.org",
     "OSRM_URL": "https://router.project-osrm.org",
     "SERVICE_ENABLED": "true",
