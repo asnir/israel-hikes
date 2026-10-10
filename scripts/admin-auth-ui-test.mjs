@@ -18,6 +18,7 @@ const store = {
   put: async (k, v) => rows.set(k, v),
   delete: async (k) => rows.delete(k),
   list: async () => new Map(rows),
+  getAlarm: async () => null,
   setAlarm: async () => {},
 };
 const env = {
