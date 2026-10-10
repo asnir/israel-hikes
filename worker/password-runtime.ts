@@ -12,5 +12,8 @@ export function loadPasswordHasher() {
       module: wasm,
       instance: await WebAssembly.instantiate(wasm, imports),
     }),
-  ));
+  ).catch((error) => {
+    hasher = undefined;
+    throw error;
+  }));
 }
