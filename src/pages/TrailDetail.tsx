@@ -1,3 +1,7 @@
+import { useState } from "react";
+import { loadPreferences } from "../lib/discovery-preferences";
+import { cities, estimate } from "../lib/drive";
+import { drivingDistance } from "../i18n";
 import { publicText } from "../lib/public-text";
 import RouteMap from "../components/RouteMap";
 import NavigationMenu from "../components/NavigationMenu";
@@ -16,9 +20,18 @@ function AccessBlock({
   trail: Trail;
 }) {
   const a = t.access;
+  const [chosen] = useState(loadPreferences);
+  const city = cities.find(city => city.id === chosen.city);
+  const drive = city ? estimate(t, city.id) : null;
   return <section className="detail-section access-section" aria-labelledby="arrival-heading">
       <h2 id="arrival-heading"><Car size={23} aria-hidden="true" />{tr("הגעה ברכב")}</h2>
       <p>{tr("נסיעה לנקודת ההתחלה, לא אורך המסלול או זמן ההליכה.")}</p>
+      {city && drive && <div className="chosen-origin-distance">
+        <p>{tr("נקודת המוצא שנבחרה קודם:")} <bdi>{display(city.name)}</bdi></p>
+        <p><strong>{drivingDistance(drive.km)}</strong> · {tr("אומדן מרחק כביש")}</p>
+        <p className="fine-print">{tr("הבחירה שמורה בדפדפן, ואינה המיקום הנוכחי שלכם. נקודת יישוב בקירוב, לא כתובת מדויקת.")}</p>
+        <Link className="text-link" to="/#origin-choice">{tr("שינוי נקודת המוצא")}<ArrowUpLeft size={18} /></Link>
+      </div>}
       <NavigationMenu trail={t} />
       {display(a && <p className="fine-print">{tr("יעד:")}{display(a.label)}{tr(". תחילת התוואי אינה בהכרח חניה נגישה או אישור כניסה ברכב. אין כאן ניווט לאורך מסלול ההליכה.")}</p>)}
       {display(a?.source && <Sources refs={[["מקור נקודת ההתחלה", a.source]]} />)}
