@@ -1236,5 +1236,8 @@
   "chooseStartingCity": "Choose a starting city",
   "discoveryStorageNotice": "Choices are saved in this browser only. Locations and addresses are not saved.",
   "discoveryStorageUnavailable": "This browser cannot save choices. You can keep browsing normally.",
-  "resetDiscoveryPreferences": "Reset choices"
+  "resetDiscoveryPreferences": "Reset choices",
+  "selectedOrigin0": "Previously selected origin:",
+  "selectedOrigin1": "This choice is saved in this browser, not your current location. Approximate town location, not an exact address.",
+  "selectedOrigin2": "Change origin"
 }

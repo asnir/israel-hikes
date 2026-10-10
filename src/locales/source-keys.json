@@ -1227,5 +1227,8 @@
   "בחרו עיר מוצא": "chooseStartingCity",
   "הבחירות נשמרות בדפדפן הזה בלבד. מיקום וכתובות אינם נשמרים.": "discoveryStorageNotice",
   "הדפדפן אינו מאפשר שמירת בחירות. אפשר להמשיך לגלוש כרגיל.": "discoveryStorageUnavailable",
-  "איפוס הבחירות": "resetDiscoveryPreferences"
+  "איפוס הבחירות": "resetDiscoveryPreferences",
+  "נקודת המוצא שנבחרה קודם:": "selectedOrigin0",
+  "הבחירה שמורה בדפדפן, ואינה המיקום הנוכחי שלכם. נקודת יישוב בקירוב, לא כתובת מדויקת.": "selectedOrigin1",
+  "שינוי נקודת המוצא": "selectedOrigin2"
 }

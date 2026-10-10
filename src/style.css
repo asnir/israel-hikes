@@ -1508,3 +1508,7 @@ button:disabled {opacity:.65;cursor:not-allowed;}
 
 .preference-controls { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
 .preference-controls small { color: var(--muted); max-width: 54ch; }
+
+.chosen-origin-distance { padding: 14px; margin-bottom: 16px; border-radius: 10px; background: #fff; }
+.chosen-origin-distance p { margin: 0 0 8px; }
+#origin-choice { scroll-margin-top: 90px; }
