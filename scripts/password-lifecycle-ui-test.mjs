@@ -1,3 +1,6 @@
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import {build} from 'esbuild';
 import {chromium} from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
@@ -9,6 +12,7 @@ const auth=new AdminAuth({transaction:async()=>{},get:async()=>undefined,list:as
  ADMIN_LIFECYCLE_SECRET:'l'.repeat(64),ADMIN_PASSWORD_PEPPER:'p'.repeat(64),ADMIN_SECRET:'a'.repeat(64),
  ADMIN_ORIGIN:'https://hikes.example',ADMIN_ALLOWLIST:'["first@example.invalid","second@example.invalid"]',
 },()=>{},()=>1800000000000,async()=>()=>new Uint8Array(32));
+const screenshotDir=fs.mkdtempSync(path.join(os.tmpdir(),'lifecycle-ui-'));
 const browser=await chromium.launch({headless:true});
 try {
  for(const width of [390,1440]) {
@@ -38,7 +42,7 @@ try {
   await page.locator('button').click();
   await page.locator('#status').filter({hasText:'Passwords do not match'}).waitFor();
   assert.equal(complete,undefined);
-  await page.screenshot({path:`/downloads/lifecycle-setup-${width}.png`,fullPage:true});
+  await page.screenshot({path:`${screenshotDir}/lifecycle-setup-${width}.png`,fullPage:true});
   const axe=await new AxeBuilder({page}).analyze();assert.equal(axe.violations.length,0,JSON.stringify(axe.violations));
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
   await page.locator('#confirm-password').fill('violet marmot lantern glacier octopus');
