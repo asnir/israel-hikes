@@ -1,0 +1,5 @@
+raw.mjs
+wrapper.mjs
+sodium.wasm
+manifest.json
+libsodium*-LICENSE

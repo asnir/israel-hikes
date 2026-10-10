@@ -18,9 +18,12 @@
     "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc --noEmit && tsc -p tsconfig.worker.json",
     "lint:css": "stylelint \"src/**/*.css\" --max-warnings 0",
-    "prebuild": "node scripts/photo-assets.mjs",
-    "pretest": "node scripts/photo-assets.mjs",
-    "pretest:unit": "node scripts/photo-assets.mjs"
+    "prebuild": "node scripts/extract-libsodium.mjs && node scripts/photo-assets.mjs",
+    "pretest": "node scripts/extract-libsodium.mjs && node scripts/photo-assets.mjs",
+    "pretest:unit": "node scripts/extract-libsodium.mjs && node scripts/photo-assets.mjs",
+    "pretypecheck": "node scripts/extract-libsodium.mjs",
+    "predeploy": "node scripts/extract-libsodium.mjs",
+    "check:packaging": "node scripts/check-worker-packaging.mjs"
   },
   "keywords": [],
   "author": "",
@@ -34,8 +37,7 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-i18next": "^17.0.16",
-    "react-router-dom": "^7.18.4",
-    "argon2id": "1.0.1"
+    "react-router-dom": "^7.18.4"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
@@ -48,13 +50,15 @@
     "esbuild": "^0.28.2",
     "eslint": "^10.12.0",
     "globals": "^17.13.0",
+    "libsodium-wrappers-sumo": "0.8.4",
     "stylelint": "^17.16.0",
     "stylelint-config-recommended": "^18.0.0",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.71.1",
     "vite": "^8.3.4",
     "worker-runtime-types": "npm:@cloudflare/workers-types@^5.20261009.1",
-    "wrangler": "^4.149.0"
+    "wrangler": "^4.149.0",
+    "argon2id": "1.0.1"
   },
   "private": true,
   "type": "module"
