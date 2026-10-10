@@ -18,7 +18,7 @@ export default function Home() {
     [view, V] = useState<"grid" | "map">("grid"),
     [lim, L] = useState(24),
     [advanced, A] = useState(false),
-    [city, C] = useState("legacy"),
+    [city, C] = useState(""),
     [origin, O] = useState<{
       point: [number, number];
       label: string;

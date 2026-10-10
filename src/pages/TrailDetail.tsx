@@ -1,14 +1,13 @@
+import { publicText } from "../lib/public-text";
 import RouteMap from "../components/RouteMap";
 import NavigationMenu from "../components/NavigationMenu";
 import TrailGallery from "../components/TrailGallery";
 import trailPhotos from "../data/trail-photos.json";
 import AreaPhoto from "../components/AreaPhoto";
-import { tr, display, drivingDistance } from "../i18n";
-import { useState } from "react";
+import { tr, display } from "../i18n";
 import { Link, useParams } from "react-router-dom";
 import { ArrowUpLeft, ArrowRight, Bookmark, AlertTriangle, Compass, Car } from "lucide-react";
 import { catalog, type Trail } from "../lib/catalog";
-import { cities, estimate, methodLabel } from "../lib/drive";
 import { Facts, Sources, NotFound, safetyLinks } from "../components/Common";
 import { useSaved } from "../lib/saved";
 function AccessBlock({
@@ -17,25 +16,9 @@ function AccessBlock({
   trail: Trail;
 }) {
   const a = t.access;
-  const [city, C] = useState("legacy");
-  const d = estimate(t, city);
-  const origin = city === "legacy" ? "רמת גן" : city === "jerusalem-legacy" ? "ירושלים" : cities.find(c => c.id === city)?.name || "לא ידוע";
   return <section className="detail-section access-section" aria-labelledby="arrival-heading">
       <h2 id="arrival-heading"><Car size={23} aria-hidden="true" />{tr("הגעה ברכב")}</h2>
       <p>{tr("נסיעה לנקודת ההתחלה, לא אורך המסלול או זמן ההליכה.")}</p>
-      <label className="filter-field">{tr("מוצא לאומדן")}<select value={city} onChange={e => C(e.target.value)}>
-          <option value="legacy">{tr("רמת גן · אומדן קודם")}</option>
-          <option value="jerusalem-legacy">{tr("ירושלים · אומדן קודם")}</option>
-          {display(cities.map(c => <option key={c.id} value={c.id}>
-              {display(c.name)}
-            </option>))}
-        </select>
-      </label>
-      <p className="drive-large">
-        <span>{tr("נסיעה ממוצא:")} <strong>{display(origin)}</strong><br />{d ? drivingDistance(d.km) : tr("אומדן נסיעה לא ידוע")}</span>
-      </p>
-      <p className="fine-print">
-        {display(d ? methodLabel[d.method] + "." : "נקודת התחלה או מרחק לא אומתו.")}{display(" ")}{tr("האומדנים מרמת גן ומירושלים הם נתוני מוצא קודמים, ולא מדידה חדשה ממרכז העיר.")}</p>
       <NavigationMenu trail={t} />
       {display(a && <p className="fine-print">{tr("יעד:")}{display(a.label)}{tr(". תחילת התוואי אינה בהכרח חניה נגישה או אישור כניסה ברכב. אין כאן ניווט לאורך מסלול ההליכה.")}</p>)}
       {display(a?.source && <Sources refs={[["מקור נקודת ההתחלה", a.source]]} />)}
@@ -74,7 +57,7 @@ export default function TrailDetail() {
       </div>
       {display(t.flag && <div className="hazard-block">
           <AlertTriangle />
-          <b>{tr("אזהרת גישה:")}{display(t.flag)}</b>
+          <b>{tr("אזהרת גישה:")}{publicText(tr(t.flag))}</b>
         </div>)}
       <div className="detail-columns">
         <div>

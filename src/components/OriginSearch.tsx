@@ -60,8 +60,7 @@ export default function OriginSearch({
         E("");
       }}>
           {city === "custom" && <option value="custom" disabled>{tr("נקודת מוצא שנבחרה")}</option>}
-          <option value="legacy">{tr("רמת גן · אומדן קודם")}</option>
-          <option value="jerusalem-legacy">{tr("ירושלים · אומדן קודם")}</option>
+          <option value="">{tr("בחרו עיר מוצא")}</option>
           {display(cities.map(c => <option key={c.id} value={c.id}>
               {display(c.name)}{tr("· מרכז בקירוב")}</option>))}
         </select>

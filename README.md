@@ -97,7 +97,7 @@ Setup and secret boundaries: see `CONTACT_SETUP.md`. Bilingual private-review fo
 
 ## Read-only structured trail data
 
-`GET /api/catalog` lists every trail ID with summary, provenance, cautions and public source links. `GET /api/trails/{id}` returns the normalized trail facts and original public detail fields. HEAD is supported; other methods return 405 and unknown IDs return JSON 404, not the SPA fallback. Catalog reads use static assets, not the contact database or an upstream provider, and stay available when upstream services are disabled.
+`GET /api/catalog` lists every trail ID with summary, cautions and public source links. `GET /api/trails/{id}` returns route facts and public detail fields without internal review metadata or fixed-origin driving estimates. Public categories are walking routes and trail sections. HEAD is supported; other methods return 405 and unknown IDs return JSON 404, not the SPA fallback. Catalog reads use static assets, not the contact database or an upstream provider, and stay available when upstream services are disabled.
 
 `sitemap.xml` lists public pages, including each trail and long-trail hub. `llms.txt` describes discovery and safety limits. Hebrew facts are preserved. Missing start points are `null`; coordinates describe start points, not route tracks. Source-check dates are snapshots, not live verification. These feeds grant no new rights to third-party data or photos. No MCP, agent account or write API is added.
 

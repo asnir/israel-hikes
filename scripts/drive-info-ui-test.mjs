@@ -14,13 +14,11 @@ try {
   assert.equal(await page.locator('.card-bottom').first().innerText().then(s=>/\d/.test(s)),false,'No driving numbers in card footer');
   await page.screenshot({path:folder+`/cards-${lang}-${width}.png`});
   await page.goto('http://127.0.0.1:4179/trail/hanadiv?lang='+lang);await page.waitForSelector('.access-section');
-  const text=await page.locator('.access-section').innerText();assert.ok(text.includes(lang==='he'?'רמת גן':'Ramat Gan'));assert.ok(text.includes('78'));assert.ok(!text.includes('80'));assert.ok(!text.includes(lang==='he'?'זמן נסיעה:':'Driving time:'));assert.ok(text.includes(lang==='he'?'לא אורך המסלול':'not trail length'));
-  const facts=await page.locator('.detail-columns > div > .detail-section').first().innerText();assert.ok(!facts.includes('78'));assert.ok(!facts.includes('80'));
+  const text=await page.locator('.access-section').innerText();assert.ok(!/Ramat Gan|Tel Aviv|רמת גן|תל אביב|78/.test(text));assert.equal(await page.locator('.access-section select,.drive-large').count(),0);assert.ok(await page.locator('.access-section button').count());
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   await page.locator('.access-section').scrollIntoViewIfNeeded();await page.screenshot({path:folder+`/page-arrival-${lang}-${width}.png`});
   await page.locator('.access-section').screenshot({path:folder+`/arrival-${lang}-${width}.png`});
-  await page.locator('.access-section select').selectOption('telaviv');assert.ok((await page.locator('.drive-large').innerText()).includes(lang==='he'?'תל אביב':'Tel Aviv'));
   if(lang==='en')assert.deepEqual((await page.locator('body').innerText()).split('\n').filter(s=>/[א-ת]/.test(s)),['עברית']);
  }
- console.log('Driving information: card separation, legacy Ramat Gan, selected city, bilingual labels and no mobile overflow passed.');
+ console.log('Driving information: card separation, no fixed-origin estimates, navigation preserved, bilingual labels and no mobile overflow passed.');
 }finally{await browser?.close();server.kill()}

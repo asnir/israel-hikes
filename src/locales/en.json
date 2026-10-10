@@ -1232,5 +1232,6 @@
   "s_c6bfe67ac13d": "Missing information is shown as \"unknown\". Landscape tags help with searching but do not replace reading the route description.",
   "s_1af10380d5f2": "The site does not show real-time trail conditions. Before every walk, check closures, military restrictions, weather and water with official sources.",
   "s_fe73f9a8a393": "City road distances are OSRM estimates, not live information. Origins are approximate city points. Older Ramat Gan and Jerusalem estimates are kept separately and may start away from the city centre. Travel times are not shown; open Waze or Google Maps for a current estimate.",
-  "walkingCount": "{{count}} walking routes"
+  "walkingCount": "{{count}} walking routes",
+  "chooseStartingCity": "Choose a starting city"
 }
