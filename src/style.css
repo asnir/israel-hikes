@@ -1512,3 +1512,13 @@ button:disabled {opacity:.65;cursor:not-allowed;}
 .chosen-origin-distance { padding: 14px; margin-bottom: 16px; border-radius: 10px; background: #fff; }
 .chosen-origin-distance p { margin: 0 0 8px; }
 #origin-choice { scroll-margin-top: 90px; }
+
+.gallery-fullsize { display: block; }
+.gallery-fullsize:focus-visible { outline: 3px solid #195340; outline-offset: 3px; }
+.gallery-thumbnails { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; max-width: 540px; margin: 14px auto; }
+.gallery-thumbnails button { padding: 3px; border: 2px solid transparent; border-radius: 8px; background: #fff; cursor: pointer; }
+.gallery-thumbnails button[aria-pressed="true"] { border-color: #195340; }
+.gallery-thumbnails button:focus-visible { outline: 3px solid #195340; outline-offset: 3px; }
+.gallery-thumbnails img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
+
+.gallery-open-link { display: block; width: fit-content; margin: 6px 0; text-decoration: underline; }
